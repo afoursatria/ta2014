@@ -26,6 +26,8 @@
  * @property string $use_last_login_ip
  * @property string $use_last_login_date
  */
+
+//ini icha nambah komen buat tes push
 class User extends CActiveRecord
 {	
 	public $verifyCode;
