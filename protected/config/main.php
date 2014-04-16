@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.yii-mail.YiiMailMessage',
 	),
 
 	'modules'=>array(
@@ -42,8 +43,8 @@ return array(
 			'urlFormat'=>'path',
 			'rules'=>array(
 				'user/<id:\d+>'=>'user/profile',
-				// '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				// '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
 		
@@ -79,6 +80,22 @@ return array(
 				*/
 			),
 		),
+
+		//preloading mail extentions
+		'mail' => array(
+       	 	'class' => 'ext.yii-mail.YiiMail',
+       	 	'transportType'=>'smtp',
+        	'transportOptions'=>array(
+            	'host'=>'smtp.gmail.com',
+            	'username'=>'afour.satria@gmail.com',
+            	'password'=>'21amel27',
+            	'port' => '465',
+        		'encryption'=>'ssl' 
+        	),
+        'viewPath' => 'application.views',
+        'logging' => true,
+    	'dryRun' => false             
+    	),
 	),
 
 	// application-level parameters that can be accessed

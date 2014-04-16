@@ -62,6 +62,7 @@ class UserController extends Controller
 			
 			if($model->validate()){
 				$model->save();
+				$this->sendMail();
 				$this->redirect(array('site/index'));
 			}
 		}
@@ -142,6 +143,7 @@ class UserController extends Controller
 	{
 		$model=new User('search');
 		$model->unsetAttributes();  // clear any default values
+		
 		if(isset($_GET['Species']))
 			$model->attributes=$_GET['Species'];
 
@@ -149,6 +151,28 @@ class UserController extends Controller
 			'model'=>$model,
 		));
 	}
+
+	public function sendMail()
+    {   
+        $message            = new YiiMailMessage;
+          
+        //this points to the file verificationRequest.php inside the view path
+        $message->view = "user\\verificationRequest";
+        $criteria=new CDbCriteria;
+		$criteria->select='use_email';  // only select the 'use_email' column
+		$criteria->condition='rol_id=1';
+		$adminModel1=User::model()->findAll($criteria);
+        $params              = array('myMail'=>$adminModel1);
+        $message->subject    = 'Verifikasi Akun Baru';
+      	 $message->setBody($params, 'text/html');               
+
+        foreach($adminModel1 as $email) {
+			$message->addTo($email->use_email);        	
+		}
+		$message->setFrom(array('afour.satria@gmail.com' => 'Herbal DB'));   
+      	Yii::app()->mail->send($message); 
+		$this->redirect(array('site/index'));
+    }
 
 	// Uncomment the following methods and override them if needed
 	/*
@@ -159,18 +183,6 @@ class UserController extends Controller
 			'inlineFilterName',
 			array(
 				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
 				'propertyName'=>'propertyValue',
 			),
 		);

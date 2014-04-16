@@ -180,4 +180,14 @@ class User extends CActiveRecord
     	
 		return true;
     }
+
+    public function notVerifiedUser() {
+
+		$criteria=new CDbCriteria;
+		$criteria->condition = "use_is_active = 0";
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 }
