@@ -36,13 +36,14 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			// 'loginUrl'=>array('user/login'),
 		),
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'user/<id:\d+>'=>'user/profile',
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
@@ -88,7 +89,7 @@ return array(
         	'transportOptions'=>array(
             	'host'=>'smtp.gmail.com',
             	'username'=>'afour.satria@gmail.com',
-            	'password'=>'21amel27',
+            	'password'=>'xxxxxxx',
             	'port' => '465',
         		'encryption'=>'ssl' 
         	),

@@ -3,7 +3,7 @@
 /* @var $model Species */
 
 $this->breadcrumbs=array(
-	'Species'=>array('index'),
+	// 'Species'=>array('index'),
 	'Manage',
 );
 
@@ -32,14 +32,18 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'species-grid',
+	'id'=>'user-grid',
 	'dataProvider'=>$model->notVerifiedUser(),
 	// 'filter'=>$model,
 	'columns'=>array(
 		'use_fullname',
 		'use_username',
 		'use_email',
-		'rol_id',
+		'roles.rol_name',
+		// array(
+  //   		'name'=>'rol_id',
+  //   		'value'=>$data->role->rol_name,
+		// ),
 		array(
 			'class'=>'CButtonColumn',
 		),

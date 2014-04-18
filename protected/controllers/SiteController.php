@@ -81,6 +81,7 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		//inisiasi model
 		$model=new LoginForm;
 
 		// if it is ajax validation request
@@ -96,6 +97,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
+				// $this->redirect(array('user/profile'));
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
@@ -109,5 +111,30 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+
+	/**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'register' page.
+	 */
+	public function actionRegister()
+	{
+		$model=new User;
+
+		if(isset($_POST['User']))
+		{	
+
+			$model->attributes=$_POST['User'];
+			
+			if($model->validate()){
+				$model->save();
+				$this->sendMail();
+				$this->redirect(array('site/index'));
+			}
+		}
+
+		$this->render('register',array(
+			'model'=>$model,
+		));
 	}
 }
