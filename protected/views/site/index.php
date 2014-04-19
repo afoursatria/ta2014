@@ -5,36 +5,33 @@ $this->pageTitle=Yii::app()->name;
 ?>
 
 <?php
-	if(Yii::app()->user->hasState("username"))
-		echo 'You are logged in as ' . CHtml::link(Yii::app()->user->username, array('user/profile', 'id'=>Yii::app()->user->id));
+	if(!Yii::app()->user->isGuest)
+		echo 'You are logged in as ' . CHtml::link(Yii::app()->user->id, array('user/profile/', 'id'=>Yii::app()->user->getState("no")));
 	else
-		echo CHtml::link('Login', array('user/login'));
+		echo CHtml::link('Login', array('login'));
 ?> 
 <br />
 <?php 
-	if(Yii::app()->user->hasState("username") == false)
-	echo CHtml::link('Daftar Baru', array('user/register')); ?>
+	if(Yii::app()->user->getState("role") == null)
+	echo CHtml::link('Daftar Baru', array('register')); ?>
 <br />
 
 <?php 
-	if(Yii::app()->user->hasState("username")){
-		if(Yii::app()->user->role == 1)
+	if(Yii::app()->user->getState("role") == 1){
 			echo CHtml::link('List User', array('/user/admin'));	
 	}
 ?>
 <br />
 
-<!-- <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<?php
+	$this->renderPartial('_search');
+		// echo CHtml::link('Send Email', array('user/sendMail'));
+?>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
+<form method="get">
+<input type="search" placeholder="Species Name" name="q" value="<?php isset($_GET['q']) ? CHtml::encode($_GET['q']) : '' ;
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p> -->
+?>" />
+<input type="submit" value="search" />
+</form>

@@ -22,53 +22,46 @@ class UserController extends Controller
 		);
 	}
 
-	public function actionLogin()
+	public function filters()
 	{
-		//inisiasi model
-		$model=new LoginForm;
-		$model->setScenario('login');
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
-		// collect user input data
-		if(isset($_POST['LoginForm']))
-		{
-			$model->attributes=$_POST['LoginForm'];
-			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				// $this->redirect(array('user/profile'));
-				$this->redirect(Yii::app()->user->returnUrl);
-		}
-		// display the login form
-		$this->render('index',array('model'=>$model));
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
+		);
 	}
+
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'register' page.
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
 	 */
-	public function actionRegister()
-	{
-		$model=new User;
-		$model->setScenario('register');
-
-		if(isset($_POST['User']))
-		{	
-
-			$model->attributes=$_POST['User'];
-			
-			if($model->validate()){
-				$model->save();
-				$this->redirect(array('site/index'));
-			}
-		}
-
-		$this->render('register',array(
-			'model'=>$model,
-		));
+	public function accessRules()
+	{	
+		$criteria=new CDbCriteria;
+		$criteria->select='use_username';  // only select the 'use_email' column
+		$criteria->condition='rol_id=1';
+		$adminModel=User::model()->findAll($criteria);
+	
+		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			 	'actions'=>array('create','profile', 'update', 'changePassword'),
+			 	'users'=>array('@'),
+				// 'expression'=>
+				// 	'if(YiiMailMessage::app()->user->hasState("username")){
+				// 		!Yii::app()->user->role==2 OR Yii::app()->user->role==3;}',		
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete','verify'),
+			 	'users'=>array('@'),				
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
 	}
 
 	public function actionProfile($id)
@@ -98,7 +91,6 @@ class UserController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadProfile($id);
-		$model->setScenario('update');
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -142,12 +134,52 @@ class UserController extends Controller
 	{
 		$model=new User('search');
 		$model->unsetAttributes();  // clear any default values
+		
 		if(isset($_GET['Species']))
 			$model->attributes=$_GET['Species'];
 
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	public function sendMail()
+    {   
+        $message            = new YiiMailMessage;
+          
+        //this points to the file verificationRequest.php inside the view path
+        $message->view = "user\\verificationRequest";
+        $criteria=new CDbCriteria;
+		$criteria->select='use_email';  // only select the 'use_email' column
+		$criteria->condition='rol_id=1';
+		$adminModel1=User::model()->findAll($criteria);
+        $params              = array('myMail'=>$adminModel1);
+        $message->subject    = 'Verifikasi Akun Baru';
+      	 $message->setBody($params, 'text/html');               
+
+        foreach($adminModel1 as $email) {
+			$message->addTo($email->use_email);        	
+		}
+		$message->setFrom(array('afour.satria@gmail.com' => 'Herbal DB'));   
+      	Yii::app()->mail->send($message); 
+		$this->redirect(array('site/index'));
+    }
+
+    public function actionVerify($id)
+	{
+		$model=User::model()->findByPk($id);
+    		$model->use_is_active='1';
+
+    	if(isset($_POST['User']))
+		{
+    		$model->use_is_active='1';
+			echo('a');
+			if($model->validate() && $model->save())
+				$this->redirect(array('profile','id'=>$model->use_id));
+		}
+
+		// $this->redirect(Yii::app()->user->returnUrl);
+		
 	}
 
 	// Uncomment the following methods and override them if needed
@@ -159,18 +191,6 @@ class UserController extends Controller
 			'inlineFilterName',
 			array(
 				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
 				'propertyName'=>'propertyValue',
 			),
 		);

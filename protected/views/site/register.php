@@ -11,7 +11,7 @@
 
     <div class="row">
         <?php echo CHtml::activeLabel($model,'Gender'); ?>
-        <?php echo CHtml::activeDropdownList($model,'use_gender', 
+        <?php echo CHtml::activeRadioButtonList($model,'use_gender', 
             array(  0 => 'Laki-laki',
                     1 => 'Perempuan')) ?>
     </div>

@@ -29,7 +29,6 @@ $this->menu=array(
 		'spe_familyname',
 		'spe_foundername',
 		'spe_foto',
-		// 'ref_id',
 		array(
     		'name'=>'ref_id',
     		'value'=>$model->ref->ref_name,

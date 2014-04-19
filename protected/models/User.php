@@ -30,11 +30,11 @@
 //ini icha nambah komen buat tes push
 class User extends CActiveRecord
 {	
-	public $verifyCode;
-	public $repeat_password;
-	private $_identity;
-
-    
+	
+    public $currentPassword;
+    public $newPassword;
+    public $newPasswordRepeat;
+    public $verifyCode;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -65,7 +65,7 @@ class User extends CActiveRecord
 			// array('use_password, use_pass_ori', 'length', 'min'=>6, 'max'=>12),
 			array('use_password','compare', 'compareAttribute'=>'repeat_password', 'on'=>'users'),
 			array('use_last_login_ip', 'length', 'max'=>15),
-			array('use_address', 'safe'),
+			array('use_is_active', 'safe'),
 			// The following rule is used by searchedrch().
 			// @todo Please remove those attributes that should not be searched.
 			array('use_id, use_fullname, use_email, use_gender, use_birthdate, use_occupation, use_country, use_city, use_address, use_foto, use_cv, rol_id, use_username, use_password, use_pass_ori, use_is_active, use_update_date, use_update_by, use_reg_date, use_last_login_ip, use_last_login_date', 'safe', 'on'=>'search'),
@@ -80,6 +80,7 @@ class User extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			    'roles' => array(self::BELONGS_TO, 'Roles', 'rol_id'),
 		);
 	}
 
@@ -180,4 +181,35 @@ class User extends CActiveRecord
     	
 		return true;
     }
+
+    public function verifyUser()
+    {
+    	$this->use_is_active = 1;
+    	$this->save();
+    	echo($this->use_is_active);
+    	return true;
+
+    }
+
+    public function notVerifiedUser() 
+    {
+
+		$criteria=new CDbCriteria;
+		$criteria->condition = "use_is_active = 0";
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
+
+	public function verifiedUser() 
+    {
+
+		$criteria=new CDbCriteria;
+		$criteria->condition = "use_is_active = 1";
+
+		return new CActiveDataProvider($this, array(
+			'criteria'=>$criteria,
+		));
+	}
 }

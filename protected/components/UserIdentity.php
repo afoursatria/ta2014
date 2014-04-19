@@ -40,10 +40,10 @@ public function authenticate()
 		}
 		else
 		{
-			$this->_id=$user->use_id;
-			$this->setState('id', $user->use_id);	
-			$this->setState('username', $user->use_username);
-			$this->setState('password', $user->use_password);
+			$this->_id=$user->use_username;
+			$this->setState('no', $user->use_id);	
+			// $this->setState('username', $user->use_username);
+			// $this->setState('password', $user->use_password);
 			$this->setState('role', $user->rol_id);		
 			$this->errorCode=self::ERROR_NONE;
 		}

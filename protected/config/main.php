@@ -16,6 +16,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.yii-mail.YiiMailMessage',
 	),
 
 	'modules'=>array(
@@ -35,15 +36,16 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			// 'loginUrl'=>array('user/login'),
 		),
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'user/<id:\d+>'=>'user/profile',
-				// '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				// '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
+				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
+				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
 		
@@ -79,6 +81,22 @@ return array(
 				*/
 			),
 		),
+
+		//preloading mail extentions
+		'mail' => array(
+       	 	'class' => 'ext.yii-mail.YiiMail',
+       	 	'transportType'=>'smtp',
+        	'transportOptions'=>array(
+            	'host'=>'smtp.gmail.com',
+            	'username'=>'afour.satria@gmail.com',
+            	'password'=>'xxxxxxx',
+            	'port' => '465',
+        		'encryption'=>'ssl' 
+        	),
+        'viewPath' => 'application.views',
+        'logging' => true,
+    	'dryRun' => false             
+    	),
 	),
 
 	// application-level parameters that can be accessed

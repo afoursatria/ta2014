@@ -37,7 +37,7 @@ class Species extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array(',spe_species_id, spe_speciesname', 'required'),
+			array('spe_species_id, spe_speciesname', 'required'),
 			array('ref_id, spe_insert_by, spe_update_by, spe_verified_by', 'numerical', 'integerOnly'=>true),
 			array('spe_species_id, spe_insert_date, spe_update_date, spe_verified_date', 'length', 'max'=>20),
 			array('spe_speciesname, spe_varietyname, spe_familyname, spe_foundername, spe_foto', 'length', 'max'=>100),
