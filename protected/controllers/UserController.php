@@ -55,7 +55,7 @@ class UserController extends Controller
 				// 		!Yii::app()->user->role==2 OR Yii::app()->user->role==3;}',		
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','verify'),
 			 	'users'=>array('@'),				
 			),
 			array('deny',  // deny all users
@@ -91,7 +91,6 @@ class UserController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadProfile($id);
-		$model->setScenario('update');
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -165,6 +164,23 @@ class UserController extends Controller
       	Yii::app()->mail->send($message); 
 		$this->redirect(array('site/index'));
     }
+
+    public function actionVerify($id)
+	{
+		$model=User::model()->findByPk($id);
+    		$model->use_is_active='1';
+
+    	if(isset($_POST['User']))
+		{
+    		$model->use_is_active='1';
+			echo('a');
+			if($model->validate() && $model->save())
+				$this->redirect(array('profile','id'=>$model->use_id));
+		}
+
+		// $this->redirect(Yii::app()->user->returnUrl);
+		
+	}
 
 	// Uncomment the following methods and override them if needed
 	/*

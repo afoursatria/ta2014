@@ -21,7 +21,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>List of New User</h1>
+<h1>List of User</h1>
 
 
 <?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
@@ -31,21 +31,25 @@ $('.search-form form').submit(function(){
 //)); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'user-grid',
-	'dataProvider'=>$model->notVerifiedUser(),
-	// 'filter'=>$model,
-	'columns'=>array(
-		'use_fullname',
-		'use_username',
-		'use_email',
-		'roles.rol_name',
-		// array(
-  //   		'name'=>'rol_id',
-  //   		'value'=>$data->role->rol_name,
-		// ),
-		array(
-			'class'=>'CButtonColumn',
-		),
-	),
-)); ?>
+<?php
+
+$this->widget('zii.widgets.jui.CJuiTabs',array(
+    'tabs'=>array(
+        'New User'=>array('id'=>'newUser-id','content'=>$this->renderPartial(
+                                        '_newUser',
+                                        array('model'=>$model,'Values'=>'This Is My Renderpartial Page'),TRUE
+                                        )),       
+        'All Registered User'=>array('id'=>'registeredUser-id','content'=>$this->renderPartial(
+                                        '_allUserList',
+                                        array('model'=>$model,'Values'=>'This Is My Renderpartial Page'),TRUE
+                                        )),       // 'Render Partial'=>array('id'=>'test-id','content'=>$this->renderPartial(
+      	// panel 3 contains the content rendered by a partial view
+        // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
+    ),
+    // additional javascript options for the tabs plugin
+    'options'=>array(
+        'collapsible'=>true,
+    ),
+    'id'=>'MyTab-Menu',
+));
+?>
