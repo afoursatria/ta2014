@@ -28,10 +28,3 @@ $this->pageTitle=Yii::app()->name;
 	$this->renderPartial('_search');
 		// echo CHtml::link('Send Email', array('user/sendMail'));
 ?>
-
-<form method="get">
-<input type="search" placeholder="Species Name" name="q" value="<?php isset($_GET['q']) ? CHtml::encode($_GET['q']) : '' ;
-
-?>" />
-<input type="submit" value="search" />
-</form>

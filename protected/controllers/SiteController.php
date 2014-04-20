@@ -83,6 +83,7 @@ class SiteController extends Controller
 	{
 		//inisiasi model
 		$model=new LoginForm;
+		$this->setScenario("login");
 
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
@@ -121,6 +122,7 @@ class SiteController extends Controller
 	{
 		$model=new User;
 
+		$this->setScenario("register");	
 		if(isset($_POST['User']))
 		{	
 

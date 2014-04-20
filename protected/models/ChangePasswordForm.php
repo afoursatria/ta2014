@@ -30,7 +30,7 @@ class ChangePasswordForm extends CFormModel
     {
         return array(
             array('currentPassword', 'validateCurrentPassword'),
-            array('currentPassword, newPassword, newPasswordRepeat', 'required'),
+            array('currentPassword, newPassword, newPasswordRepeat', 'required', 'on'=>'changePassword'),
             array('newPassword', 'compare', 'compareAttribute'=>'newPasswordRepeat'),
             // array('newPassword', 'match', 'pattern'=>'/^[a-z0-9_\-]{5,}/i', 'message'=>'Your password does not meet our password complexity policy.'),
         );
@@ -38,7 +38,7 @@ class ChangePasswordForm extends CFormModel
 
     public function init()
     {
-    $this->_user = User::model()->findByAttributes( array( 'use_username'=>Yii::app()->user->username ) );
+    $this->_user = User::model()->findByAttributes( array( 'use_username'=>Yii::app()->user->id ) );
     }
 
     /**

@@ -11972,3 +11972,1770 @@ Stack trace:
 REQUEST_URI=/newherbaldb/index.php/playTest/udpateTxt
 HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
 ---
+2014/04/20 14:49:51 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.role" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('role')
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(14): CWebUser->__get('role')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): CController->render('view', Array)
+#7 [internal function]: SpeciesController->actionView('3819')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/newherbaldb/index.php/species/3819
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index
+---
+2014/04/20 14:50:59 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "getSate".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('getSate', Array)
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(14): CWebUser->getSate('role')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): CController->render('view', Array)
+#7 [internal function]: SpeciesController->actionView('3819')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/newherbaldb/index.php/species/3819
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index
+---
+2014/04/20 14:51:36 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "getSate".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('getSate', Array)
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(14): CWebUser->getSate('role')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): CController->render('view', Array)
+#7 [internal function]: SpeciesController->actionView('3819')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/newherbaldb/index.php/species/3819
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index
+---
+2014/04/20 14:51:37 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "getSate".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('getSate', Array)
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(14): CWebUser->getSate('role')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): CController->render('view', Array)
+#7 [internal function]: SpeciesController->actionView('3819')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/newherbaldb/index.php/species/3819
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index
+---
+2014/04/20 14:51:48 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.role" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('role')
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(15): CWebUser->__get('role')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): CController->render('view', Array)
+#7 [internal function]: SpeciesController->actionView('3819')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/newherbaldb/index.php/species/3819
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index
+---
+2014/04/20 15:01:07 [error] [exception.CException] exception 'CException' with message 'Property "User.image" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('image')
+#1 C:\wamp\www\newherbaldb\protected\views\user\_formUpdate.php(79): CActiveRecord->__get('image')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\views\user\update.php(10): CController->renderPartial('_formUpdate', Array)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#10 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(106): CController->render('update', Array)
+#11 [internal function]: UserController->actionUpdate('38')
+#12 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/newherbaldb/index.php/user/update/38
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 15:16:27 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:16:27 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:20:36 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:20:36 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:21:12 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:21:12 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:21:40 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:21:40 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:23:38 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:23:38 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:23:41 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:23:41 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:24:33 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:24:33 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:24:40 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:24:40 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:25:44 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:25:44 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:25:51 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:25:51 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:26:30 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:26:30 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:26:35 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:26:35 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:29:02 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "setScenario".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('setScenario', Array)
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(96): UserController->setScenario('update')
+#2 [internal function]: UserController->actionUpdate('38')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/update')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/newherbaldb/index.php/user/update/38
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/update/38
+---
+2014/04/20 15:29:51 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:29:51 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:29:54 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:29:54 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:00 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:00 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:00 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:00 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:00 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:02 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:02 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:02 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:02 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:02 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:31:13 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "setScenario".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('setScenario', Array)
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(119): UserController->setScenario('changePassword')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionChangePassword()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('changePassword')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/changePass...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/newherbaldb/index.php/user/changePassword/38
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 15:31:51 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 C:\wamp\www\newherbaldb\protected\models\ChangePasswordForm.php(41): CWebUser->__get('username')
+#2 C:\wamp\www\yii\framework\web\CFormModel.php(39): ChangePasswordForm->init()
+#3 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(119): CFormModel->__construct()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionChangePassword()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('changePassword')
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/changePass...')
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/newherbaldb/index.php/user/changePassword/38
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 15:33:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/te...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/tester1
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/changePassword/38
+---
+2014/04/20 15:33:48 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:33:48 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:33:48 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:33:48 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:33:48 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:10 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:10 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:10 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:10 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:10 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:43 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:43 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:43 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:43 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:35:43 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:40 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:40 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:40 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:40 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:40 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:53 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:53 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:53 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:53 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:36:53 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:40:41 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:40:41 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:40:41 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:40:41 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:40:41 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:17 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:17 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:17 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:17 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:17 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:32 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:32 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:32 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:32 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:43:32 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:21 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:21 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:21 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:21 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:21 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:22 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:22 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:22 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:22 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:22 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:27 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:27 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:27 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:27 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:27 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:30 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:30 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:30 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:30 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:45:30 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:15 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:15 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:15 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:15 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:15 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:17 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:17 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:17 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:17 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:17 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:25 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:25 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:25 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:25 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:53:25 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:50 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:50 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:50 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:50 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:50 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:51 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:51 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:51 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:51 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:51 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:57 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:57 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:57 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:57 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 15:58:57 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:35 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:35 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:35 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:35 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:35 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:37 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:37 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:37 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:37 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:37 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:42 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:42 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:42 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:42 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:02:42 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:05:28 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:05:28 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:05:28 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:05:28 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:05:28 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:31 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:31 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:31 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:31 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:31 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:35 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:35 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:35 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:35 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:06:35 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:25 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:25 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:25 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:25 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:25 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:29 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:29 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:29 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:29 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:07:29 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:12:12 [warning] [application] Failed to set unsafe attribute "use_occupation" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:12:12 [warning] [application] Failed to set unsafe attribute "use_city" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:12:12 [warning] [application] Failed to set unsafe attribute "use_country" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:12:12 [warning] [application] Failed to set unsafe attribute "use_address" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:12:12 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (101)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 16:18:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20width=%22200%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 16:18:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20width=%22200%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 16:18:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20width=%22200%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 16:18:56 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20width=%22200%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 16:19:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20width=%22200%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+---
+2014/04/20 20:44:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20width=%22200%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 20:47:21 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20style=%22width=200px%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 20:47:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20style=%22width=200px%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 20:47:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20style=%22width=200px%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 20:47:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20style=%22width=200px%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 20:47:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20style=%22width=200px%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+---
+2014/04/20 20:49:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20style=%22width=200px%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 20:57:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\yii\framework\web\CController.php:336
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('profile')
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/profile/<i...')
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/newherbaldb/index.php/user/profile/%3Cimg%20style=%22width:25;%22%20src=%22/newherbaldb/photo/tester1.jpg%22%20alt=%22image%22%20/%3E
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/profile/38
+---
+2014/04/20 21:02:04 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "loadModel".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('loadModel', Array)
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(127): UserController->loadModel('39')
+#2 [internal function]: UserController->actionDelete('39')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\CController.php(1116): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/newherbaldb/index.php/user/delete/39?ajax=user-grid
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/admin
+---
+2014/04/20 21:02:31 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "loadModel".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('loadModel', Array)
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(127): UserController->loadModel('39')
+#2 [internal function]: UserController->actionDelete('39')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\CController.php(1116): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/newherbaldb/index.php/user/delete/39?ajax=user-grid
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/admin
+---
+2014/04/20 21:03:53 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "loadModel".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('loadModel', Array)
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(127): UserController->loadModel('40')
+#2 [internal function]: UserController->actionDelete('40')
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(UserController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework\web\CController.php(1116): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('delete')
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/delete')
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/newherbaldb/index.php/user/delete/40?ajax=user-grid
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/admin
+---
+2014/04/20 21:44:12 [error] [php] Undefined variable: localname (C:\wamp\www\newherbaldb\protected\views\species\view.php:29)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (29)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 21:44:41 [error] [exception.CException] exception 'CException' with message 'SpeciesController cannot find the requested view "_alias".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\newherbaldb\protected\views\species\view.php(34): CController->renderPartial('_alias', Array, true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#3 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): CController->render('view', Array)
+#6 [internal function]: SpeciesController->actionView('3819')
+#7 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/newherbaldb/index.php/species/3819
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index
+---
+2014/04/20 21:47:46 [error] [php] Undefined variable: localName (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:2)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (2)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:48:05 [error] [php] Undefined variable: localName (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:2)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (2)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:49:13 [error] [php] Undefined variable: localName (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:2)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (2)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:49:39 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:4)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (4)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:49:45 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:4)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (4)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:53:08 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:4)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (4)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:53:10 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:4)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (4)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:53:12 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\_localname.php:4)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(48): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\_localname.php (4)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (48)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+2014/04/20 21:55:50 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\view.php:17)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (17)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 21:56:12 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\view.php:17)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (17)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 21:56:13 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\view.php:17)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (17)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 21:56:14 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\view.php:17)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/3819
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (17)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (83)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 22:08:09 [error] [exception.CException] exception 'CException' with message 'SpeciesController cannot find the requested view "_alias".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\newherbaldb\protected\views\species\view.php(52): CController->renderPartial('_alias', Array, true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#3 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(83): CController->render('view', Array)
+#6 [internal function]: SpeciesController->actionView('3819')
+#7 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/newherbaldb/index.php/species/3819
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index
+---
+2014/04/20 22:21:30 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\species\_alias.php:7)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(52): SpeciesController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(84): SpeciesController->render()
+#7 unknown(0): SpeciesController->actionView()
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/2
+in C:\wamp\www\newherbaldb\protected\views\species\_alias.php (7)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (52)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (84)
+2014/04/20 22:27:14 [error] [php] Undefined variable: virtue (C:\wamp\www\newherbaldb\protected\views\species\view.php:55)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(84): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/2
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (55)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (84)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 22:28:04 [error] [php] Undefined variable: virtue (C:\wamp\www\newherbaldb\protected\views\species\view.php:55)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(84): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/2
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (55)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (84)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 22:28:05 [error] [php] Undefined variable: virtue (C:\wamp\www\newherbaldb\protected\views\species\view.php:55)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(84): SpeciesController->render()
+#3 unknown(0): SpeciesController->actionView()
+#4 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#8 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/2
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (55)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (84)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 22:29:13 [error] [exception.CException] exception 'CException' with message 'Property "Virtue.ali_speciesname" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('ali_speciesname')
+#1 C:\wamp\www\newherbaldb\protected\views\species\_virtue.php(4): CActiveRecord->__get('ali_speciesname')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\views\species\view.php(56): CController->renderPartial('_virtue', Array, true)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(85): CController->render('view', Array)
+#11 [internal function]: SpeciesController->actionView('2')
+#12 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/newherbaldb/index.php/species/2
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index?q=agla
+---
+2014/04/20 22:41:12 [error] [php] include(Species_contents.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(261): spl_autoload_call()
+#1 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(84): SpeciesController->loadContents()
+#2 unknown(0): SpeciesController->actionView()
+#3 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#7 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/2
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (261)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (84)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/20 22:41:37 [error] [exception.CException] exception 'CException' with message 'Property "Species_content.vir_value" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('vir_value')
+#1 C:\wamp\www\newherbaldb\protected\views\species\_virtue.php(4): CActiveRecord->__get('vir_value')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\views\species\view.php(56): CController->renderPartial('_virtue', Array, true)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(86): CController->render('view', Array)
+#11 [internal function]: SpeciesController->actionView('2')
+#12 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/newherbaldb/index.php/species/2
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index?q=agla
+---
+2014/04/20 22:48:58 [error] [exception.CException] exception 'CException' with message 'Property "Species_content.con_contentname" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('con_contentname')
+#1 C:\wamp\www\newherbaldb\protected\views\species\_contents.php(4): CActiveRecord->__get('con_contentname')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\views\species\view.php(60): CController->renderPartial('_contents', Array, true)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(86): CController->render('view', Array)
+#11 [internal function]: SpeciesController->actionView('2')
+#12 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/newherbaldb/index.php/species/2
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index?q=agla
+---
+2014/04/20 22:48:59 [error] [exception.CException] exception 'CException' with message 'Property "Species_content.con_contentname" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('con_contentname')
+#1 C:\wamp\www\newherbaldb\protected\views\species\_contents.php(4): CActiveRecord->__get('con_contentname')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\views\species\view.php(60): CController->renderPartial('_contents', Array, true)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(86): CController->render('view', Array)
+#11 [internal function]: SpeciesController->actionView('2')
+#12 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/newherbaldb/index.php/species/2
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index?q=agla
+---
+2014/04/20 22:49:13 [error] [exception.CException] exception 'CException' with message 'Property "Species_content.content" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('content')
+#1 C:\wamp\www\newherbaldb\protected\views\species\_contents.php(4): CActiveRecord->__get('content')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\newherbaldb\protected\views\species\view.php(60): CController->renderPartial('_contents', Array, true)
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(86): CController->render('view', Array)
+#11 [internal function]: SpeciesController->actionView('2')
+#12 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/newherbaldb/index.php/species/2
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index?q=agla
+---
