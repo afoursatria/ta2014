@@ -1,6 +1,6 @@
 <?php
 	$this->breadcrumbs=array(
-	'Profile'=>array('profile','id'=>Yii::app()->user->id),
+	'Profile'=>array('profile','id'=>Yii::app()->user->no),
 	'Change Password'
 	);
 ?>

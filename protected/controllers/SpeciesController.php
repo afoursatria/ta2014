@@ -41,9 +41,9 @@ class SpeciesController extends Controller
 				'expression'=>'!Yii::app()->user->role==2 OR Yii::app()->user->role==3',
 			
 			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+			// array('deny',  // deny all users
+			// 	'users'=>array('*'),
+			// ),
 		);
 	}
 
@@ -79,6 +79,9 @@ class SpeciesController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 			'localName'=>$this->loadLocalName($id),
+			'aliases'=>$this->loadAliases($id),
+			'virtue'=>$this->loadVirtue($id),
+			'contents'=>$this->loadContents($id),
 			'dataProvider'=>$listLocalName,
 		));
 	}
@@ -157,7 +160,7 @@ class SpeciesController extends Controller
 		{
 			$q = $_GET['q'];
 			$criteria->compare('spe_speciesname', $q, true, 'OR');
-			$criteria->compare('spe_varietyname', $q, true, 'OR');
+			// $criteria->compare('spe_varietyname', $q, true, 'OR');
 		}
 
 		$dataProvider=new CActiveDataProvider('Species', array(
@@ -210,7 +213,52 @@ class SpeciesController extends Controller
 	 */
 	public function loadLocalName($id)
 	{
-		$model=Localname::model()->findByAttributes(array('spe_id'=>$id));
+		$model=Localname::model()->findAllByAttributes(array('spe_id'=>$id));
+		// if($model===null)
+		// 	throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer $id the ID of the model to be loaded
+	 * @return Localname the loaded model
+	 * @throws CHttpException
+	 */
+	public function loadAliases($id)
+	{
+		$model=Aliases::model()->findAllByAttributes(array('spe_id'=>$id));
+		// if($model===null)
+		// 	throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer $id the ID of the model to be loaded
+	 * @return Localname the loaded model
+	 * @throws CHttpException
+	 */
+	public function loadVirtue($id)
+	{
+		$model=Virtue::model()->findAllByAttributes(array('spe_id'=>$id));
+		// if($model===null)
+		// 	throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	/**
+	 * Returns the data model based on the primary key given in the GET variable.
+	 * If the data model is not found, an HTTP exception will be raised.
+	 * @param integer $id the ID of the model to be loaded
+	 * @return Localname the loaded model
+	 * @throws CHttpException
+	 */
+	public function loadContents($id)
+	{
+		$model=Species_content::model()->findAllByAttributes(array('spe_id'=>$id));
 		// if($model===null)
 		// 	throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

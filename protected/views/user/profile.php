@@ -14,6 +14,11 @@
 		'use_city',
 		'use_country',
 		'use_address',
+		array(        
+           	'name'=>'picture',
+           	'type'=>'raw',
+            'value'=>CHtml::image(Yii::app()->request->baseUrl."/photo/".$model->use_foto.'.jpg','image',array("style"=>"width:200px;")),
+           	),
 	),
 	'nullDisplay'=>'-',
 )); ?>

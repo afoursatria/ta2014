@@ -93,12 +93,23 @@ class UserController extends Controller
 		$model=$this->loadProfile($id);
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		$model->setScenario("update");
 		if(isset($_POST['User']))
 		{
+
+			$rnd = rand(0,9999);  // generate random number between 0-9999
 			$model->attributes=$_POST['User'];
-			if($model->save())
-				$this->redirect(array('profile','id'=>$model->use_id));
+			$uploadedFile=CUploadedFile::getInstance($model,'use_foto');
+            $fileName = $model->use_username;  // random number + file name
+            $model->use_foto = $fileName;
+ 
+			if($model->save()){
+				if(!empty($uploadedFile))
+				{  // check if uploaded file is set or not
+					$uploadedFile->saveAs(Yii::app()->basePath.'/../photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
+					$this->redirect(array('profile','id'=>$model->use_id));
+				}
+			}
 		}
 
 		$this->render('update',array(
@@ -106,9 +117,24 @@ class UserController extends Controller
 		));
 	}
 
+	/**
+	 * Deletes a particular model.
+	 * If deletion is successful, the browser will be redirected to the 'admin' page.
+	 * @param integer $id the ID of the model to be deleted
+	 */
+	public function actionDelete($id)
+	{
+		$this->loadProfile($id)->delete();
+
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+	}
+
 	public function actionChangePassword()
 	{
 		$model=new ChangePasswordForm;
+		$model->setScenario('changePassword');
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 

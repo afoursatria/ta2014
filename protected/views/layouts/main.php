@@ -33,7 +33,7 @@
 				array('label'=>'List of Species', 'url'=>array('/species/index')),
 				array('label'=>'List of Compound', 'url'=>array('/contents/index')),
 				array('label'=>'FAQs', 'url'=>array('/site/faqs')),
-
+				array('label'=>'Contact', 'url'=>array('/site/contact')),	
 				array('label'=>'User Management', 'url'=>array('/user/admin'), 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->name = '1'), 
 				// array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->id.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

@@ -13,16 +13,7 @@
 		// ),
 		array(
 		    'class'=>'CButtonColumn',
-		    'template'=>'{update}',
-		    'buttons'=>array
-    		(
-		        'update' => array
-		        (
-		            'label'=>'Update',
-		            'imageUrl'=>Yii::app()->request->baseUrl.'/images/email.png',
-		            'url'=>'Yii::app()->createUrl("users/email", array("id"=>$data->use_id))',
-		        ),
-   			),
+		    'template'=>'{update}{delete}',
 		),
 	),
 )); ?>

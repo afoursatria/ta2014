@@ -11,10 +11,10 @@ $this->menu=array(
 	array('label'=>'List Species', 'url'=>array('index')),
 	array('label'=>'Add Species', 'url'=>array('create')),
 	array('label'=>'Update Species', 'url'=>array('update', 'id'=>$model->spe_id)),
-	array('label'=>'Delete Species', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->spe_id),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>!(Yii::app()->user->role) == '1'),
-	array('label'=>'Manage Species', 'url'=>array('admin'), 'visible'=>!(Yii::app()->user->role) == '1'),
+	array('label'=>'Delete Species', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->spe_id),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>!(Yii::app()->user->getState("role"))),
+	array('label'=>'Manage Species', 'url'=>array('admin'), 'visible'=>!(Yii::app()->user->getState("role"))),
 	array('label'=>'Add Local Name', 'url'=>array('/localname/create', 'id'=>$model->spe_id)),
-	array('label'=>'Update Local Name', 'url'=>array('/localname/update', 'id'=>$localName->loc_id)),
+	// array('label'=>'Update Local Name', 'url'=>array('/localname/update', 'id'=>$localName->loc_id)),
 );
 ?>
 
@@ -36,6 +36,38 @@ $this->menu=array(
 	),
 	'nullDisplay'=>'-',
 )); ?>
+
+
+<?php
+
+$this->widget('zii.widgets.jui.CJuiTabs',array(
+    'tabs'=>array(
+        'Local Name'=>array('id'=>'localName-id','content'=>$this->renderPartial(
+                            '_localname',
+                            array('localName'=>$localName),TRUE
+                            )),       
+        'Alias'=>array('id'=>'aliases-id','content'=>$this->renderPartial(
+	                        '_alias',
+	                        array('aliases'=>$aliases),TRUE
+                            )),
+        'Virtue'=>array('id'=>'virtue-id','content'=>$this->renderPartial(
+                            '_virtue',
+                            array('virtue'=>$virtue),TRUE
+                            )),                                              
+      	'Contents'=>array('id'=>'contents-id','content'=>$this->renderPartial(
+	                        '_contents',
+	                        array('contents'=>$contents),TRUE
+	                        )),                                              
+      	// panel 3 contains the content rendered by a partial view
+        // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
+    ),
+    // additional javascript options for the tabs plugin
+    'options'=>array(
+        // 'collapsible'=>true,
+    ),
+    'id'=>'MyTab-Menu',
+));
+?>
 
 <h1>Local Name</h1>
 <?php

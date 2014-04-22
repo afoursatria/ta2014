@@ -4,22 +4,28 @@
 )); ?>
 
     <?php
-        $category = array(1=>'Species', 2=>'Localname');
-            $options = array(
-                'id' => 'country_id',
-                'ajax' => array('type'=>'POST'
-                                , 'url'=>CController::createUrl('playTest/udpateTxt')
-                                , 'update'=>'#param_id'  //selector to update
-                )
-            );
-        
-        echo CHtml::dropDownList('', '', $category, $options);
+        echo CHtml::dropDownList('category', '', array(
+            'Species'=>'Species', 'Localname'=>'Localname'), 
+        array(
+            'prompt'=>'Select Category',
+            'ajax'=>array(
+                'type'=>'POST',
+                'url'=>Yii::app()->createUrl('site/loadCategory'),
+                'update'=>'#input_name',
+            )));
     ?>
 
-    <div id="param_id" class="row">
+    <div id="input_name" class="row">
         <?php 
-            echo CHtml::textField( 'temp_id') ;
+            echo CHtml::textField('temp') ;
         ?>
     </div>
+
+    <div class="row submit">
+        <?php echo CHtml::submitButton('Search'); ?>
+    </div>
+<div id="search_result">
+
+</div>
 
 <?php $this->endWidget(); ?>

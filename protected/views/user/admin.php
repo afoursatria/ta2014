@@ -42,7 +42,7 @@ $this->widget('zii.widgets.jui.CJuiTabs',array(
         'All Registered User'=>array('id'=>'registeredUser-id','content'=>$this->renderPartial(
                                         '_allUserList',
                                         array('model'=>$model,'Values'=>'This Is My Renderpartial Page'),TRUE
-                                        )),       // 'Render Partial'=>array('id'=>'test-id','content'=>$this->renderPartial(
+                                        )),
       	// panel 3 contains the content rendered by a partial view
         // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
     ),

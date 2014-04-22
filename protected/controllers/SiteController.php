@@ -83,6 +83,7 @@ class SiteController extends Controller
 	{
 		//inisiasi model
 		$model=new LoginForm;
+		$this->setScenario("login");
 
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
@@ -121,6 +122,7 @@ class SiteController extends Controller
 	{
 		$model=new User;
 
+		$this->setScenario("register");	
 		if(isset($_POST['User']))
 		{	
 
@@ -136,5 +138,16 @@ class SiteController extends Controller
 		$this->render('register',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionLoadCategory(){
+		$param_category = $_POST['category'];
+
+		if ($param_category == "Species") {
+		}
+
+        // echo CHtml::activeTextField($model,'aa');
+		// echo CHtml::tag('input', array( 'type'=>'search' , 'placeholder' => 'insert '.$param_category.' name'));
+
 	}
 }
