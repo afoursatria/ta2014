@@ -139,4 +139,15 @@ class SiteController extends Controller
 			'model'=>$model,
 		));
 	}
+
+	public function actionLoadCategory(){
+		$param_category = $_POST['category'];
+
+		if ($param_category == "Species") {
+		}
+
+        // echo CHtml::activeTextField($model,'aa');
+		// echo CHtml::tag('input', array( 'type'=>'search' , 'placeholder' => 'insert '.$param_category.' name'));
+
+	}
 }

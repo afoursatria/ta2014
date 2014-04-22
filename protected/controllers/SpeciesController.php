@@ -41,9 +41,9 @@ class SpeciesController extends Controller
 				'expression'=>'!Yii::app()->user->role==2 OR Yii::app()->user->role==3',
 			
 			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-			),
+			// array('deny',  // deny all users
+			// 	'users'=>array('*'),
+			// ),
 		);
 	}
 
@@ -160,7 +160,7 @@ class SpeciesController extends Controller
 		{
 			$q = $_GET['q'];
 			$criteria->compare('spe_speciesname', $q, true, 'OR');
-			$criteria->compare('spe_varietyname', $q, true, 'OR');
+			// $criteria->compare('spe_varietyname', $q, true, 'OR');
 		}
 
 		$dataProvider=new CActiveDataProvider('Species', array(

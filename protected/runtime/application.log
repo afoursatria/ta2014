@@ -13739,3 +13739,622 @@ Stack trace:
 REQUEST_URI=/newherbaldb/index.php/species/2
 HTTP_REFERER=http://localhost/newherbaldb/index.php/species/index?q=agla
 ---
+2014/04/21 11:25:10 [error] [php] Missing argument 1 for CHtml::textField(), called in C:\wamp\www\newherbaldb\protected\views\site\_search.php on line 21 and defined (C:\wamp\www\yii\framework\web\helpers\CHtml.php:593)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#1 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#2 C:\wamp\www\newherbaldb\protected\views\site\index.php(28): SiteController->renderPartial()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#7 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(31): SiteController->render()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/
+in C:\wamp\www\newherbaldb\protected\views\site\_search.php (21)
+in C:\wamp\www\newherbaldb\protected\views\site\index.php (28)
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (31)
+2014/04/21 11:26:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loadCategory".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('loadCategory')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 11:26:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loadCategory".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('loadCategory')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 11:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loadCategory".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('loadCategory')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 11:38:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loadCategory".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('loadCategory')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 11:46:41 [error] [php] include(:category.php) [<a href='function.include'>function.include</a>]: failed to open stream: Invalid argument (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(150): CActiveDataProvider->__construct()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (150)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:46:45 [error] [php] include(:category.php) [<a href='function.include'>function.include</a>]: failed to open stream: Invalid argument (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(150): CActiveDataProvider->__construct()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (150)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:47:36 [error] [php] include(:category.php) [<a href='function.include'>function.include</a>]: failed to open stream: Invalid argument (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(150): CActiveDataProvider->__construct()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (150)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:48:27 [error] [php] include(:category.php) [<a href='function.include'>function.include</a>]: failed to open stream: Invalid argument (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(150): CActiveDataProvider->__construct()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (150)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:48:29 [error] [php] include(:category.php) [<a href='function.include'>function.include</a>]: failed to open stream: Invalid argument (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\wamp\www\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(150): CActiveDataProvider->__construct()
+#4 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#5 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (150)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:50:16 [error] [php] Undefined index:  country_name (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:144)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:50:18 [error] [php] Undefined index:  country_name (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:144)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:52:40 [error] [php] Undefined index:  category (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:144)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 11:52:43 [error] [php] Undefined index:  category (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:144)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:02:16 [error] [php] Object of class Localname could not be converted to string (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(596): inputField()
+#1 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): textField()
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:02:43 [error] [php] Object of class Species could not be converted to string (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(596): inputField()
+#1 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): textField()
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:03:47 [error] [php] Object of class Species could not be converted to string (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(596): inputField()
+#1 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): textField()
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:04:06 [error] [php] Object of class Species could not be converted to string (C:\wamp\www\yii\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(596): inputField()
+#1 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): textField()
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#5 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#6 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:04:30 [error] [php] Undefined variable: model (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:154)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:04:45 [error] [php] Undefined variable: model (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:154)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:05:11 [error] [php] Undefined variable: model (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:154)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:08:09 [error] [php] Undefined variable: model (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:154)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (154)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:10:28 [error] [exception.CException] exception 'CException' with message 'Property "Species." is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Species), '')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Species), '', Array)
+#4 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): CHtml::activeTextField(Object(Species), '', Array)
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 12:10:44 [error] [exception.CException] exception 'CException' with message 'Property "Species.aa" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('aa')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('aa')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Species), 'aa')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Species), 'aa', Array)
+#4 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): CHtml::activeTextField(Object(Species), 'aa', Array)
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 12:11:11 [error] [exception.CException] exception 'CException' with message 'Property "Species.aa" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('aa')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('aa')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Species), 'aa')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Species), 'aa', Array)
+#4 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): CHtml::activeTextField(Object(Species), 'aa')
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 12:11:25 [error] [exception.CException] exception 'CException' with message 'Property "Localname.aa" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('aa')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('aa')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Localname), 'aa')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Localname), 'aa', Array)
+#4 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(154): CHtml::activeTextField(Object(Localname), 'aa')
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/
+---
+2014/04/21 12:12:09 [error] [exception.CException] exception 'CException' with message 'Property "Species.aa" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('aa')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('aa')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Species), 'aa')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Species), 'aa', Array)
+#4 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(155): CHtml::activeTextField(Object(Species), 'aa')
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:12:19 [error] [exception.CException] exception 'CException' with message 'Property "Species.aa" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('aa')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('aa')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Species), 'aa')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Species), 'aa', Array)
+#4 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(155): CHtml::activeTextField(Object(Species), 'aa')
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:12:47 [error] [exception.CException] exception 'CException' with message 'Property "Localname.aa" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('aa')
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('aa')
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Localname), 'aa')
+#3 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Localname), 'aa', Array)
+#4 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(155): CHtml::activeTextField(Object(Localname), 'aa')
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLoadCategory()
+#6 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('loadCategory')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loadCatego...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:14:00 [error] [php] Object of class Localname could not be converted to string (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/loadCategory
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (153)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/04/21 12:36:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:36:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 12:37:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 14:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 14:53:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/04/21 14:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewSearchResult".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('viewSearchResul...')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('viewSearchResul...')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/viewSearch...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/viewSearchResult
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
