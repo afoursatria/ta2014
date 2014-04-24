@@ -11,9 +11,7 @@
 		array(
 		    'class'=>'CButtonColumn',
 		    'template'=>'{update}',
-		    'updateButtonUrl'=>'Yii::app()->createUrl("user/verify", array("id"=>$data->use_id))',		            
-		  
-		    
+		    'updateButtonUrl'=>'Yii::app()->createUrl("user/verify", array("id"=>$data->use_id))',		              
 		),
 	),
 )); ?>

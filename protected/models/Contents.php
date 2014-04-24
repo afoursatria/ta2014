@@ -39,7 +39,7 @@ class Contents extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('con_insert_by, con_insert_date, con_update_by, con_update_date', 'required'),
+			array('con_contentname, con_knapsack_id, con_metabolite_id, con_pubchem_id, contgroup_id, con_source', 'required'),
 			array('contgroup_id, con_insert_by, con_update_by, con_verified_by', 'numerical', 'integerOnly'=>true),
 			array('con_contentname', 'length', 'max'=>200),
 			array('con_knapsack_id, con_pubchem_id, con_insert_date, con_update_date, con_verified_date', 'length', 'max'=>20),
@@ -67,16 +67,16 @@ class Contents extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'con_id' => 'Con',
-			'con_contentname' => 'Con Contentname',
-			'con_knapsack_id' => 'Con Knapsack',
-			'con_metabolite_id' => 'Con Metabolite',
-			'con_pubchem_id' => 'Con Pubchem',
-			'contgroup_id' => 'Contgroup',
-			'con_source' => 'Con Source',
+			'con_id' => 'Con id',
+			'con_contentname' => 'Content name',
+			'con_knapsack_id' => 'Knapsack ID',
+			'con_metabolite_id' => 'Metabolite ID',
+			'con_pubchem_id' => 'Pubchem ID',
+			'contgroup_id' => 'Content Group',
+			'con_source' => 'Content Source',
 			'con_speciesname' => 'Con Speciesname',
-			'con_file_mol1' => 'Con File Mol1',
-			'con_file_mol2' => 'Con File Mol2',
+			'con_file_mol1' => 'File Mol1',
+			'con_file_mol2' => 'File Mol2',
 			'con_insert_by' => 'Con Insert By',
 			'con_insert_date' => 'Con Insert Date',
 			'con_update_by' => 'Con Update By',

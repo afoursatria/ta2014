@@ -31,7 +31,7 @@ class Ref extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ref_name, ref_insert_by, ref_insert_date, ref_update_by, ref_update_date', 'required'),
+			array('ref_name', 'required'),
 			array('ref_insert_by, ref_update_by, ref_verified_by', 'numerical', 'integerOnly'=>true),
 			array('ref_name', 'length', 'max'=>100),
 			array('ref_insert_date, ref_update_date, ref_verified_date', 'length', 'max'=>20),

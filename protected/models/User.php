@@ -30,7 +30,7 @@
 //ini icha nambah komen buat tes push
 class User extends CActiveRecord
 {	
-	
+	public $repeat_password;
     public $currentPassword;
     public $newPassword;
     public $newPasswordRepeat;

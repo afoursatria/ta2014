@@ -25,6 +25,6 @@ $this->pageTitle=Yii::app()->name;
 
 
 <?php
-	$this->renderPartial('_search');
+	$this->renderPartial('_search', array('dataProvider'=>$dataProvider));
 		// echo CHtml::link('Send Email', array('user/sendMail'));
 ?>

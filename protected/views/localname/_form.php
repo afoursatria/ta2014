@@ -13,15 +13,19 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+	'enableClientValidation' => true,
+    'clientOptions' => array(
+        'validateOnSubmit' => true,
+    ),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php //echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'spe_id'); ?>
-		<?php echo $form->textField($model,'spe_id', array('value'=>$speId->spe_id, 'readOnly'=>true)); ?>
+		<?php echo $form->dropDownList($model,'spe_id', CHtml::listData(Species::model()->findAll(array('order' => 'spe_speciesname ASC')),'spe_id','spe_speciesname')); ?>
 		<?php echo $form->error($model,'spe_id'); ?>
 	</div>
 
@@ -41,7 +45,7 @@
 		<?php echo $form->labelEx($model,'ref_id'); ?>
 		<?php 
 			$opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
-			echo $form->dropDownList($model,'ref_id', $opts, array('empty'=>'Choose Reference')); ?>
+			echo $form->dropDownList($model,'ref_id', $opts, array('prompt'=>'Choose reference')); ?>
 		<?php echo $form->error($model,'ref_id'); ?>
 	</div>
 	<div class="row buttons">

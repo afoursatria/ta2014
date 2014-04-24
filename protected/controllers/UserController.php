@@ -48,7 +48,7 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-			 	'actions'=>array('create','profile', 'update', 'changePassword'),
+			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData'),
 			 	'users'=>array('@'),
 				// 'expression'=>
 				// 	'if(YiiMailMessage::app()->user->hasState("username")){
@@ -208,6 +208,74 @@ class UserController extends Controller
 		
 	}
 
+	public function actionInsertData()
+	{
+		$speciesModel = new Species;
+		$localnameModel = new Localname;
+		$aliasesModel = new ALiases;
+		$virtueModel = new virtue;
+		$referenceModel = new Ref;
+		$compoundModel = new Contents;
+		$contentGroupModel = new Contentgroup;
+
+		if(isset($_POST['Species']))
+		{
+			$speciesModel->attributes=$_POST['Species'];
+			if($speciesModel->save())
+				$this->redirect(array('view','id'=>$speciesModel->spe_id)); //bisa success alert
+		}
+
+		if(isset($_POST['Localname']))
+		{
+			$localnameModel->attributes=$_POST['Localname'];
+			if($localnameModel->save())
+				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+		}
+
+		if(isset($_POST['Aliases']))
+		{
+			$aliasesModel->attributes=$_POST['Aliases'];
+			if($aliasesModel->save())
+				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+		}
+
+		if(isset($_POST['Virtue']))
+		{
+			$virtueModel->attributes=$_POST['Virtue'];
+			if($virtueModel->save())
+				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+		}
+
+		if(isset($_POST['Aliases']))
+		{
+			$aliasesModel->attributes=$_POST['Aliases'];
+			if($aliasesModel->save())
+				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+		}
+
+		if(isset($_POST['Contents']))
+		{
+			$compoundModel->attributes=$_POST['Contents'];
+			if($compoundModel->save())
+				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+		}
+		
+		if(isset($_POST['Contentgroup']))
+		{
+			$contentGroupModel->attributes=$_POST['Contentgroup'];
+			if($contentGroupModel->save())
+				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+		}
+		$this->render('insert_data',array(
+			'speciesModel'=>$speciesModel,
+			'localnameModel'=>$localnameModel,
+			'aliasesModel'=>$aliasesModel,
+			'virtueModel'=>$virtueModel,
+			'referenceModel'=>$referenceModel,
+			'compoundModel'=>$compoundModel,
+			'contentGroupModel'=>$contentGroupModel,
+		));
+	}
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
@@ -222,4 +290,5 @@ class UserController extends Controller
 		);
 	}
 	*/
+
 }

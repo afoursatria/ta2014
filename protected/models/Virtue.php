@@ -37,7 +37,7 @@ class Virtue extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_id, hp_code', 'required'),
+			array('spe_id, hp_code, vir_value', 'required'),
 			array('spe_id, hp_code, ref_id, vir_insert_by, vir_update_by, vir_verified_by', 'numerical', 'integerOnly'=>true),
 			array('vir_type', 'length', 'max'=>12),
 			array('vir_insert_date, vir_update_date, vir_verified_date', 'length', 'max'=>20),
@@ -66,13 +66,13 @@ class Virtue extends CActiveRecord
 	{
 		return array(
 			'vir_id' => 'Vir',
-			'spe_id' => 'Spe',
-			'hp_code' => 'Hp Code',
-			'vir_type' => 'Vir Type',
-			'vir_value' => 'Vir Value',
-			'vir_value_en' => 'Vir Value En',
-			'vir_value_latin' => 'Vir Value Latin',
-			'ref_id' => 'Ref',
+			'spe_id' => 'Species',
+			'hp_code' => 'Herbal Part',
+			'vir_type' => 'Virtue Type',
+			'vir_value' => 'Virtue',
+			'vir_value_en' => 'Virtue (English)',
+			'vir_value_latin' => 'Virtue (Latin)',
+			'ref_id' => 'Reference',
 			'vir_insert_by' => 'Vir Insert By',
 			'vir_insert_date' => 'Vir Insert Date',
 			'vir_update_by' => 'Vir Update By',

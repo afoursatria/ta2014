@@ -35,7 +35,7 @@ class Aliases extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ali_insert_by, ali_insert_date, ali_update_by, ali_update_date', 'required'),
+			array('spe_id, ali_speciesname, ali_foundername, ali_varietyname, ref_id', 'required'),
 			array('spe_id, ref_id, ali_insert_by, ali_update_by, ali_verified_by', 'numerical', 'integerOnly'=>true),
 			array('ali_speciesname, ali_foundername, ali_varietyname', 'length', 'max'=>100),
 			array('ali_insert_date, ali_update_date, ali_verified_date', 'length', 'max'=>20),
@@ -63,11 +63,11 @@ class Aliases extends CActiveRecord
 	{
 		return array(
 			'ali_id' => 'Ali',
-			'spe_id' => 'Spe',
-			'ali_speciesname' => 'Ali Speciesname',
-			'ali_foundername' => 'Ali Foundername',
-			'ali_varietyname' => 'Ali Varietyname',
-			'ref_id' => 'Ref',
+			'spe_id' => 'Species',
+			'ali_speciesname' => 'Alias',
+			'ali_foundername' => 'Founder',
+			'ali_varietyname' => 'Variety',
+			'ref_id' => 'Reference',
 			'ali_insert_by' => 'Ali Insert By',
 			'ali_insert_date' => 'Ali Insert Date',
 			'ali_update_by' => 'Ali Update By',

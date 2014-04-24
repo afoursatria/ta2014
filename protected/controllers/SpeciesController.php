@@ -165,7 +165,7 @@ class SpeciesController extends Controller
 
 		$dataProvider=new CActiveDataProvider('Species', array(
 			'criteria'=>$criteria,
-			'sort'=>array('defaultOrder'=>'spe_update_date DESC'),
+			// 'sort'=>array('defaultOrder'=>'spe_update_date DESC'),
 			 // array('order'=>'spe_update_date DESC')
 			 ));
 
