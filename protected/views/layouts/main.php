@@ -28,13 +28,12 @@
 <?php 
     $this->widget('application.components.LangBox');
 ?>
-<div class="container" id="page">
+<div id="page">
 
-	<div id="header clearfix">
+	<div id="header" class="clearfix">
 		<img class="image image-10" src = "<?php echo Yii::app()->request->baseUrl; ?>/images/makara-ui-farmasi.png">
 		<div id="logo"><p class="web-title"><?php echo Yii::t('main_layout',Yii::app()->name); ?></p></div>
-	</div><!-- header -->
-		<!--mainmenu-->
+	
 		<?php $this->widget('zii.widgets.CMenu',array(
         'htmlOptions'=>array('id'=>'mainmenu'),
         'submenuHtmlOptions'=>array('class'=>'p'),
@@ -53,6 +52,7 @@
 			),
 		)); ?>
 	<!-- mainmenu -->
+	</div><!-- header -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
