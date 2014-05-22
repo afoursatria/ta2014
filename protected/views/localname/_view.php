@@ -5,14 +5,23 @@
 
 <div class="view">
 
-<!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_id')); ?>:</b>
+<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('loc_id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->loc_id), array('view', 'id'=>$data->loc_id)); ?>
 	<br />
  -->
-<!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_id')); ?>:</b>
+<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('spe_id')); ?>:</b>
 	<?php echo CHtml::encode($data->spe_id); ?>
 	<br />
  -->
+ 	<?php echo CHtml::link('update', array('localname/update', 'id'=>$data->loc_id));?>
+ 	<br />
+
+	<?php
+	echo CHtml::link('delete',"#", 
+          array('submit'=>array('localname/delete', 'id'=>$data->loc_id), 
+                'confirm' => Yii::t('main_data','Are you sure?'))); ?>
+ 	<br />
+ 	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_localname')); ?>:</b>
 	<?php echo CHtml::encode($data->loc_localname); ?>
 	<br />
@@ -22,7 +31,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
-	<?php echo CHtml::encode($data->ref_id); ?>
+	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref_local->ref_name); ?>
 	<br />
 
 <!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_insert_by')); ?>:</b>

@@ -34,8 +34,8 @@ class Localname extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_id, loc_localname, loc_region', 'required'),
-			array('loc_localname','unique','message'=>'{attribute}:{value} already exists!'),
+			array('spe_id, loc_localname, loc_region,ref_id', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
+			array('loc_localname, loc_region','unique', 'on'=>'create','message'=>'{attribute}:{value} already exists!'),
 			array('spe_id, ref_id, loc_insert_by, loc_update_by, loc_verified_by', 'numerical', 'integerOnly'=>true),
 			array('loc_localname, loc_region', 'length', 'max'=>100),
 			array('loc_insert_date, loc_update_date, loc_verified_date', 'length', 'max'=>20),
@@ -54,6 +54,8 @@ class Localname extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'species'=>array(self::BELONGS_TO, 'Species','spe_id'),
+			'ref_local'=>array(self::BELONGS_TO, 'Ref', 'ref_id'),
 		);
 	}
 
@@ -64,10 +66,10 @@ class Localname extends CActiveRecord
 	{
 		return array(
 			'loc_id' => 'Loc',
-			'spe_id' => 'Species',
-			'loc_localname' => 'Local Name',
-			'loc_region' => 'Region',
-			'ref_id' => 'Reference',
+			'spe_id' => Yii::t('main_data','Species'),
+			'loc_localname' => Yii::t('main_data','Local Name'),
+			'loc_region' => Yii::t('main_data','Region'),
+			'ref_id' => Yii::t('main_data','Reference'),
 			'loc_insert_by' => 'Loc Insert By',
 			'loc_insert_date' => 'Loc Insert Date',
 			'loc_update_by' => 'Loc Update By',
@@ -99,7 +101,7 @@ class Localname extends CActiveRecord
 		$criteria->compare('spe_id',$this->spe_id);
 		$criteria->compare('loc_localname',$this->loc_localname,true);
 		$criteria->compare('loc_region',$this->loc_region,true);
-		$criteria->compare('ref_id',$this->ref_id);
+		$criteria->compare('ref_id',$this->ref_id,true);
 		$criteria->compare('loc_insert_by',$this->loc_insert_by);
 		$criteria->compare('loc_insert_date',$this->loc_insert_date,true);
 		$criteria->compare('loc_update_by',$this->loc_update_by);
@@ -128,11 +130,15 @@ class Localname extends CActiveRecord
     	if ($this->isNewRecord) {
 			$this->loc_insert_by = Yii::app()->user->role;
     		$this->loc_insert_date = new CDbExpression('NOW()');
+			return true;
+
     	}
 
     	else{
     		$this->loc_update_by = Yii::app()->user->role;
     		$this->loc_update_date = new CDbExpression('NOW()');
+			return true;
+
     	}
 
     	/*for status terverifikasi
@@ -141,6 +147,5 @@ class Localname extends CActiveRecord
     	}
     	*/
 
-		return true;
     }
 }

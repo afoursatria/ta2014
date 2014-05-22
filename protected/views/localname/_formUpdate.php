@@ -20,12 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'spe_id'); ?>
-		<?php echo $form->textField($model,'spe_id', array('readOnly'=>true)); ?>
-		<?php echo $form->error($model,'spe_id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'loc_localname'); ?>
 		<?php echo $form->textField($model,'loc_localname',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'loc_localname'); ?>

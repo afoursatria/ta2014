@@ -10,7 +10,7 @@
 	<br /> -->
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_species_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->spe_species_id), array('view', 'id'=>$data->spe_id)); ?>
+	<?php echo CHtml::link(CHtml::encode($data->spe_species_id), array('species/view', 'id'=>$data->spe_id)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_speciesname')); ?>:</b>

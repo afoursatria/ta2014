@@ -10,4 +10,4 @@
                	<a href="http://localhost/blabla ">Verification Page</a>;
                 <br />
         </body>
-       </html>
+</html>

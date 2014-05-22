@@ -27,8 +27,19 @@ class SiteController extends Controller
 	 * halaman utama web dengan menul login dan register user
 	 */
 	public function actionIndex()
-	{
-		$this->render('index');
+	{	
+		// $criteria = new cDbCriteria();
+			
+		$model = new Species('search');
+		$model->unsetAttributes();
+
+		if(isset($_GET['Species']))
+			$model->attributes=$_GET['Species'];
+
+		$this->render('index', array(
+			'model'=>$model,
+			'dataProvider'=>$model->search(),
+			));
 	}
 
 	/**
@@ -83,7 +94,7 @@ class SiteController extends Controller
 	{
 		//inisiasi model
 		$model=new LoginForm;
-		$this->setScenario("login");
+		$model->setScenario("login");
 
 		// if it is ajax validation request
 		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
@@ -122,7 +133,7 @@ class SiteController extends Controller
 	{
 		$model=new User;
 
-		$this->setScenario("register");	
+		$model->setScenario("register");	
 		if(isset($_POST['User']))
 		{	
 
@@ -140,14 +151,41 @@ class SiteController extends Controller
 		));
 	}
 
-	public function actionLoadCategory(){
-		$param_category = $_POST['category'];
-
-		if ($param_category == "Species") {
+	public function actionCategory(){
+		
+		$category = $_POST['Cat'];
+		if ($category === 'Localname') {
+			echo $form->textField($model,'spe_familyname',array('size'=>60,'maxlength'=>100));
+		// echo $category;
+		
 		}
+		// echo $category;
+		// if (condition) {
+		// 	# code...
+		// }
+	}
 
-        // echo CHtml::activeTextField($model,'aa');
-		// echo CHtml::tag('input', array( 'type'=>'search' , 'placeholder' => 'insert '.$param_category.' name'));
+	public function actionGetSearchResult()
+	{
+		if ($_POST['category'] && $_POST['search_key']) {	
+			echo("a");
 
+			// if ($_POST['category'] == 'Species') {
+			// 	$model = new Species;
+			// 	$criteria = new cDbCriteria;
+			// 	$q = $_POST['search_key'];
+			// 	$criteria->compare('spe_speciesname', $q, true, 'OR');
+
+			// 	$dataProvider=new CActiveDataProvider('Species', array(
+			// 	'criteria'=>$criteria,
+			// 	'sort'=>array('defaultOrder'=>'spe_update_date DESC'),
+			// 	 // array('order'=>'spe_update_date DESC')
+			// 	 ));
+
+			// 	$this->render('index',array(
+			// 	'dataProvider'=>$dataProvider,
+			// 	));
+			// }
+		}
 	}
 }

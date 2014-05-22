@@ -10,20 +10,20 @@
 		'use_fullname',
 		'use_email',
 		'use_birthdate',
-		'use_occupation',
-		'use_city',
-		'use_country',
-		'use_address',
+		array(
+			'name'=>'Curriculum Vitae',
+			'type'=>'raw',
+			'value'=>CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf')),
 		array(        
-           	'name'=>'picture',
+           	'name'=>Yii::t('user', 'Photo'),
            	'type'=>'raw',
-            'value'=>CHtml::image(Yii::app()->request->baseUrl."/photo/".$model->use_foto.'.jpg','image',array("style"=>"width:200px;")),
+            'value'=>CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/".$model->use_foto.'.jpg','image',array("style"=>"width:200px;")),
            	),
 	),
 	'nullDisplay'=>'-',
 )); ?>
 
-<?php echo CHtml::link('Update Profile', array('update','id'=>$model->use_id)); ?>
+<?php echo CHtml::link(Yii::t('user','Update Profile'), array('update','id'=>$model->use_id)); ?>
 <br />
 <br />
-<?php echo CHtml::link('Change Password', array('changePassword','id'=>$model->use_id)); ?>
+<?php echo CHtml::link(Yii::t('user','Change Password'), array('changePassword','id'=>$model->use_id)); ?>

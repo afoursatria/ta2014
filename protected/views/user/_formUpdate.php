@@ -47,42 +47,29 @@
     </div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'use_occupation'); ?>
-		<?php echo $form->textField($model,'use_occupation'); ?>
-		<?php echo $form->error($model,'use_occupation'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'use_city'); ?>
-		<?php echo $form->textField($model,'use_city'); ?>
-		<?php echo $form->error($model,'use_city'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'use_country'); ?>
-		<?php echo $form->textField($model,'use_country'); ?>
-		<?php echo $form->error($model,'use_country'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'use_address'); ?>
-		<?php echo $form->textField($model,'use_address'); ?>
-		<?php echo $form->error($model,'use_address'); ?>
-	</div>
-
-	<div class="row">
         <?php echo $form->labelEx($model,'use_foto'); ?>
         <?php echo CHtml::activeFileField($model, 'use_foto'); ?> 
         <?php echo $form->error($model,'use_foto'); ?>
 	</div>
-		
+	
 	<?php if($model->isNewRecord!='1'){ ?>
 	<div class="row">
-     	<?php echo CHtml::image(Yii::app()->request->baseUrl.'/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>  // Image shown here if page is update page
+     	<?php echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'use_cv'); ?>
+		<?php echo $form->fileField($model,'use_cv'); ?>
+		<?php echo $form->error($model,'use_cv'); ?>
+	</div>
+
+	<?php if($model->isNewRecord!='1'){ ?>
+	
+	<div class="row">
+     	<?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Update'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

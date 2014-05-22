@@ -13,11 +13,15 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+	'enableClientValidation' => true,
+    'clientOptions' => array(
+        'validateOnSubmit' => true,
+    ),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php //echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'con_contentname'); ?>
@@ -45,7 +49,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contgroup_id'); ?>
-		<?php echo $form->textField($model,'contgroup_id'); ?>
+		<?php echo $form->dropdownList($model,'contgroup_id', 
+			CHtml::listData(Contentgroup::model()->findAll(array('order' => 'contgroup_name ASC')),'contgroup_id','contgroup_name'),
+			array('prompt'=>Yii::t('main_data','Choose Compound Group'))); ?>
 		<?php echo $form->error($model,'contgroup_id'); ?>
 	</div>
 
@@ -54,63 +60,21 @@
 		<?php echo $form->textField($model,'con_source',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'con_source'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_speciesname'); ?>
-		<?php echo $form->textField($model,'con_speciesname',array('size'=>60,'maxlength'=>100)); ?>
-		<?php echo $form->error($model,'con_speciesname'); ?>
-	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'con_file_mol1'); ?>
-		<?php echo $form->textField($model,'con_file_mol1',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->fileField($model,'con_file_mol1'); ?>
 		<?php echo $form->error($model,'con_file_mol1'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'con_file_mol2'); ?>
-		<?php echo $form->textField($model,'con_file_mol2',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->fileField($model,'con_file_mol2'); ?>
 		<?php echo $form->error($model,'con_file_mol2'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_insert_by'); ?>
-		<?php echo $form->textField($model,'con_insert_by'); ?>
-		<?php echo $form->error($model,'con_insert_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_insert_date'); ?>
-		<?php echo $form->textField($model,'con_insert_date',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'con_insert_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_update_by'); ?>
-		<?php echo $form->textField($model,'con_update_by'); ?>
-		<?php echo $form->error($model,'con_update_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_update_date'); ?>
-		<?php echo $form->textField($model,'con_update_date',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'con_update_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_verified_by'); ?>
-		<?php echo $form->textField($model,'con_verified_by'); ?>
-		<?php echo $form->error($model,'con_verified_by'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'con_verified_date'); ?>
-		<?php echo $form->textField($model,'con_verified_date',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'con_verified_date'); ?>
-	</div>
-
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

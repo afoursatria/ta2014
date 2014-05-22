@@ -5,32 +5,37 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('con_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->con_id), array('view', 'id'=>$data->con_id)); ?>
+	<?php echo CHtml::link('update', array('contents/update', 'id'=>$data->contents->con_id));?>
+ 	<br />
+
+	<?php
+	echo CHtml::link('delete',"#", 
+          array('submit'=>array('contents/delete', 'id'=>$data->contents->con_id), 
+                'confirm' => Yii::t('main_data','Are you sure?'))); ?>
+ 	<br />
+
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_contentname')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->con_contentname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('con_contentname')); ?>:</b>
-	<?php echo CHtml::encode($data->con_contentname); ?>
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_knapsack_id')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->con_knapsack_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('con_knapsack_id')); ?>:</b>
-	<?php echo CHtml::encode($data->con_knapsack_id); ?>
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_metabolite_id')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->con_metabolite_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('con_metabolite_id')); ?>:</b>
-	<?php echo CHtml::encode($data->con_metabolite_id); ?>
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_pubchem_id')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->con_pubchem_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('con_pubchem_id')); ?>:</b>
-	<?php echo CHtml::encode($data->con_pubchem_id); ?>
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('contgroup_id')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->contgroup->contgroup_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('contgroup_id')); ?>:</b>
-	<?php echo CHtml::encode($data->contgroup_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('con_source')); ?>:</b>
-	<?php echo CHtml::encode($data->con_source); ?>
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_source')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->con_source); ?>
 	<br />
 
 	<?php /*

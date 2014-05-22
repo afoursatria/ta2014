@@ -1,0 +1,27 @@
+<?php
+return array(
+	'Register'=>'Daftar Baru',
+	'Registration Form'=>'Form Registrasi',
+	'Fullname'=>'Nama Lengkap',
+	'Gender'=>'Jenis Kelamin',
+	'Male'=>'Laki-laki',
+	'Female'=>'Perempuan',
+	'Birthdate'=>'Tanggal Lahir',
+	'Repeat Password'=>'Ulang Password',
+	'Role'=>'Peran',
+	'Verification Code'=>'Kode Verifikasi',
+	'Username doesn\'t meet criteria'=>'Username tidak memenuhi criteria',
+	'Password doesn\'t meet criteria'=>'Password tidak memenuhi criteria',
+	'This {attribute} is already registered'=>'{attribute} ini sudah terdaftar',
+	'Email is not valid'=>'Email tidak valid',
+	'Verification code is invalid'=>'Kode verifikasi tidak valid',
+	'{attribute} is required'=>'{attribute} dibutuhkan',
+	'Add User'=>'Tambah Pengguna',
+	'New User'=>'Pengguna Baru',
+	'All Registered User'=>'Pengguna yang Terdaftar',
+	'List of User'=>'Daftar Pengguna',
+	'Photo'=>'Foto',
+	'Update Profile'=>'Ubah Profil',
+	'Change Password'=>'Ganti Password',
+	);
+?>

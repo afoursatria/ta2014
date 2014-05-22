@@ -39,11 +39,13 @@ class Contents extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('con_insert_by, con_insert_date, con_update_by, con_update_date', 'required'),
+			array('con_contentname, con_knapsack_id, con_metabolite_id, con_pubchem_id, contgroup_id, con_source', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			array('contgroup_id, con_insert_by, con_update_by, con_verified_by', 'numerical', 'integerOnly'=>true),
 			array('con_contentname', 'length', 'max'=>200),
-			array('con_knapsack_id, con_pubchem_id, con_insert_date, con_update_date, con_verified_date', 'length', 'max'=>20),
-			array('con_metabolite_id, con_source, con_speciesname, con_file_mol1, con_file_mol2', 'length', 'max'=>100),
+			// array('con_file_mol1','file','types'=>'mol1'),
+			// array('con_file_mol2','file','types'=>'mol2'),
+			// array('con_knapsack_id, con_pubchem_id, con_insert_date, con_update_date, con_verified_date', 'length', 'max'=>20),
+			// array('con_metabolite_id, con_source, con_speciesname, con_file_mol1, con_file_mol2', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('con_id, con_contentname, con_knapsack_id, con_metabolite_id, con_pubchem_id, contgroup_id, con_source, con_speciesname, con_file_mol1, con_file_mol2, con_insert_by, con_insert_date, con_update_by, con_update_date, con_verified_by, con_verified_date', 'safe', 'on'=>'search'),
@@ -58,6 +60,7 @@ class Contents extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'contgroup'=>array(self::BELONGS_TO, 'Contentgroup', 'contgroup_id'),
 		);
 	}
 
@@ -67,16 +70,16 @@ class Contents extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'con_id' => 'Con',
-			'con_contentname' => 'Con Contentname',
-			'con_knapsack_id' => 'Con Knapsack',
-			'con_metabolite_id' => 'Con Metabolite',
-			'con_pubchem_id' => 'Con Pubchem',
-			'contgroup_id' => 'Contgroup',
-			'con_source' => 'Con Source',
+			'con_id' => 'Con id',
+			'con_contentname' => Yii::t('main_data','Compound Name'),
+			'con_knapsack_id' => 'Knapsack ID',
+			'con_metabolite_id' => 'Metabolite ID',
+			'con_pubchem_id' => 'Pubchem ID',
+			'contgroup_id' => Yii::t('main_data','Compound Group'),
+			'con_source' => Yii::t('main_data','Compound Source'),
 			'con_speciesname' => 'Con Speciesname',
-			'con_file_mol1' => 'Con File Mol1',
-			'con_file_mol2' => 'Con File Mol2',
+			'con_file_mol1' => Yii::t('main_data','File Mol1'),
+			'con_file_mol2' => Yii::t('main_data','File mol2'),
 			'con_insert_by' => 'Con Insert By',
 			'con_insert_date' => 'Con Insert Date',
 			'con_update_by' => 'Con Update By',

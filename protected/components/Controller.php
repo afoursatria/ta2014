@@ -5,6 +5,20 @@
  */
 class Controller extends CController
 {
+	function init()
+	{
+		parent::init();
+		$app = Yii::app();
+		if (isset($_POST['_lang'])) 
+		{
+			$app->language = $_POST['_lang'];
+			$app->session['_lang'] = $app->language;
+		}
+		elseif (isset($app->session['_lang'])) 
+		{
+			$app->language = $app->session['_lang'];
+		}
+	}
 	/**
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.

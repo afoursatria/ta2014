@@ -36,8 +36,10 @@ class ContactForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'body'=>'Message',
-			'verifyCode'=>'Verification Code',
+			'name'=>Yii::t('main_data','Name'),
+			'subject'=>Yii::t('main_data','Subject'),
+			'body'=>Yii::t('main_data','Message'),
+			'verifyCode'=>Yii::t('main_data','Verification Code'),
 		);
 	}
 }
