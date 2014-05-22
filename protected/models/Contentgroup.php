@@ -32,7 +32,7 @@ class Contentgroup extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('contgroup_code, contgroup_name', 'required'),
+			array('contgroup_code, contgroup_name', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			array('contgroup_insert_by, contgroup_update_by, contgroup_verified_by', 'numerical', 'integerOnly'=>true),
 			array('contgroup_code, contgroup_insert_date, contgroup_update_date, contgroup_verified_date', 'length', 'max'=>20),
 			array('contgroup_name', 'length', 'max'=>100),
@@ -60,8 +60,8 @@ class Contentgroup extends CActiveRecord
 	{
 		return array(
 			'contgroup_id' => 'Contgroup',
-			'contgroup_code' => 'Code',
-			'contgroup_name' => 'Name',
+			'contgroup_code' => Yii::t('main_data','Code'),
+			'contgroup_name' => Yii::t('main_data','Group Name'),
 			'contgroup_insert_by' => 'Contgroup Insert By',
 			'contgroup_insert_date' => 'Contgroup Insert Date',
 			'contgroup_update_by' => 'Contgroup Update By',

@@ -37,7 +37,7 @@ class Species extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_species_id, spe_speciesname', 'required'),
+			array('spe_species_id, spe_speciesname, spe_familyname, spe_foundername, ref_id', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			array('ref_id, spe_insert_by, spe_update_by, spe_verified_by', 'numerical', 'integerOnly'=>true),
 			array('spe_species_id, spe_insert_date, spe_update_date, spe_verified_date', 'length', 'max'=>20),
 			array('spe_speciesname, spe_varietyname, spe_familyname, spe_foundername, spe_foto', 'length', 'max'=>100),
@@ -66,13 +66,13 @@ class Species extends CActiveRecord
 	{
 		return array(
 			'spe_id' => 'Species',
-			'spe_species_id' => 'Species id',
-			'spe_speciesname' => 'Species name',
-			'spe_varietyname' => 'Variety name',
-			'spe_familyname' => 'Family name',
-			'spe_foundername' => 'Founder name',
-			'spe_foto' => 'Foto',
-			'ref_id' => 'Referensi',
+			'spe_species_id' => Yii::t('main_data','Species ID'),
+			'spe_speciesname' => Yii::t('main_data','Species Name'),
+			'spe_varietyname' => Yii::t('main_data','Variety Name'),
+			'spe_familyname' => Yii::t('main_data','Family Name'),
+			'spe_foundername' => Yii::t('main_data','Founder Name'),
+			'spe_foto' => Yii::t('main_data','Foto'),
+			'ref_id' => Yii::t('main_data','Reference'),
 			'spe_insert_by' => 'Insert By',
 			'spe_insert_date' => 'Insert Date',
 			'spe_update_by' => 'Update By',

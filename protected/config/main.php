@@ -7,7 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Herbal DB',
+	'name'=>'Encyclopedia of Indonesia Medicinal Plant',
+	'language'=>'en',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -89,7 +90,7 @@ return array(
         	'transportOptions'=>array(
             	'host'=>'smtp.gmail.com',
             	'username'=>'afour.satria@gmail.com',
-            	'password'=>'xxxxxxx',
+            	'password'=>'21amel27',
             	'port' => '465',
         		'encryption'=>'ssl' 
         	),

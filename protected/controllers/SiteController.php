@@ -30,9 +30,16 @@ class SiteController extends Controller
 	{	
 		// $criteria = new cDbCriteria();
 			
-		$model = new Species;
-		$dataProvider = '';
-		$this->render('index', array('dataProvider'=>$dataProvider));
+		$model = new Species('search');
+		$model->unsetAttributes();
+
+		if(isset($_GET['Species']))
+			$model->attributes=$_GET['Species'];
+
+		$this->render('index', array(
+			'model'=>$model,
+			'dataProvider'=>$model->search(),
+			));
 	}
 
 	/**
@@ -144,9 +151,15 @@ class SiteController extends Controller
 		));
 	}
 
-	public function actionLoadCategory(){
+	public function actionCategory(){
 		
-		// $category = $_POST['cat']
+		$category = $_POST['Cat'];
+		if ($category === 'Localname') {
+			echo $form->textField($model,'spe_familyname',array('size'=>60,'maxlength'=>100));
+		// echo $category;
+		
+		}
+		// echo $category;
 		// if (condition) {
 		// 	# code...
 		// }

@@ -1,24 +1,29 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
-    'id'=>'login-form',
-    'enableClientValidation'=>true,
-    'clientOptions'=>array(
-        'validateOnSubmit'=>true,
-    ),
+    // 'id'=>'login-form',
+    // 'enableClientValidation'=>true,
+    // 'clientOptions'=>array(
+    //     'validateOnSubmit'=>true,
+    // ),
+    'action'=>Yii::app()->createUrl($this->route),
+    'method'=>'get',
 )); ?>
 
+
     <?php
-        echo CHtml::dropDownList('category', '', array(
-            'Species'=>'Species', 'Localname'=>'Localname'), 
-        array(
-            'empty'=>'Select Category',
-            'ajax'=>array(
-                'type'=>'POST',
-                'url'=>Yii::app()->createUrl('site/getSearchResult'),
-                // 'url'=>Yii::app()->createUrl('site/loadCategory'),
-                'data'=>"js:{category: $(this).val()}",                               
-                // 'replace'=>'#search_key',
-            )
-        ));
+
+
+        // echo CHtml::dropDownList('category', '', array(
+        //     'Species'=>'Species', 'Localname'=>'Localname'), 
+        // array(
+        //     'empty'=>'Select Category',
+        //     'ajax'=>array(
+        //         'type'=>'POST',
+        //         'url'=>Yii::app()->createUrl('site/getSearchResult'),
+        //         // 'url'=>Yii::app()->createUrl('site/loadCategory'),
+        //         'data'=>"js:{category: $(this).val()}",                               
+        //         // 'replace'=>'#search_key',
+        //     )
+        // ));
     ?>
 
     <div class="row">

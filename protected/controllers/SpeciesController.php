@@ -68,13 +68,52 @@ class SpeciesController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
+	public function actionView($id, $aliasKey = '', $lnameKey = '', $virtueKey='', $compoundKey='')
 	{
 
+		$lcriteria = new CDbCriteria; //criteria for localname
+		$acriteria = new CDbCriteria; //criteria for alias
+		$vcriteria = new CDbCriteria; //criteria for virtue
+		$scriteria = new CDbCriteria; // criteria for species contents
+		$lcriteria->condition='spe_id='.$id;
+		$acriteria->condition='spe_id='.$id;
+		$vcriteria->condition='spe_id='.$id;
+		$scriteria->condition='spe_id='.$id;
+	
+	 	if( strlen( $lnameKey ) > 0 )
+        $lcriteria->addSearchCondition( 'loc_localname', $lnameKey, true);
+
+		if( strlen( $aliasKey ) > 0 )
+        $acriteria->addSearchCondition( 'ali_speciesname', $aliasKey, true);	   
+		
+		if( strlen( $virtueKey ) > 0 )
+        $vcriteria->addSearchCondition( 'vir_value', $virtueKey, true);
+		
+		if( strlen( $compoundKey ) > 0 )
+		{
+		$scriteria->with ='contents';
+        $scriteria->addSearchCondition('contents.con_contentname', $compoundKey, true);
+		}
+	
 		$listLocalName=new CActiveDataProvider('Localname',array(
-			'criteria'=>array(
-        	'condition'=>'spe_id='.$id	
-    	)));
+			'criteria'=>$lcriteria,
+			'pagination'=> false,
+		));
+
+    	$listAliases=new CActiveDataProvider('Aliases',array(
+			'criteria'=>$acriteria,
+			'pagination'=> false,
+		));
+
+    	$listVirtue=new CActiveDataProvider('Virtue',array(
+			'criteria'=>$vcriteria,
+			'pagination'=> false,
+		));
+
+    	$listContents=new CActiveDataProvider('Species_content',array(
+			'criteria'=>$scriteria,
+			'pagination'=> false,
+		));
 
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
@@ -82,7 +121,10 @@ class SpeciesController extends Controller
 			'aliases'=>$this->loadAliases($id),
 			'virtue'=>$this->loadVirtue($id),
 			'contents'=>$this->loadContents($id),
-			'dataProvider'=>$listLocalName,
+			'localnameDataProvider'=>$listLocalName,
+			'aliasesDataProvider'=>$listAliases,
+			'virtueDataProvider'=>$listVirtue,
+			'contentsDataProvider'=>$listContents,
 		));
 	}
 
@@ -160,7 +202,6 @@ class SpeciesController extends Controller
 		{
 			$q = $_GET['q'];
 			$criteria->compare('spe_speciesname', $q, true, 'OR');
-			// $criteria->compare('spe_varietyname', $q, true, 'OR');
 		}
 
 		$dataProvider=new CActiveDataProvider('Species', array(

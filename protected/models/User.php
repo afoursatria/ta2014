@@ -51,18 +51,20 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('use_username', 'length', 'min'=>6, 'max'=>10, 'tooShort'=>'Username doesn\'t meet criteria','tooLong'=>'Username doesn\'t meet criteria', 'on'=>'register'),
-			array('use_password', 'match', 'pattern'=>'/^[\*a-zA-Z0-9]{6,12}$/', 'message' => 'Invalid characters in password.', 'on'=>'register'),
-			array('use_username, use_password', 'required', 'on'=>'register, login'),
-			array('use_username, use_email', 'unique', 'message'=>'This {attribute} is already registered'),	
-			array('use_fullname, use_email' , 'required', 'on'=>'register, update'),
-			array('use_email', 'email', 'message'=>'Email is not valid'),
-			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'on'=>'register'),
+			array('use_username', 'length', 'min'=>6, 'max'=>10, 'tooShort'=>Yii::t('user','Username doesn\'t meet criteria'),'tooLong'=>Yii::t('user','Username doesn\'t meet criteria'), 'on'=>'register'),
+			array('use_password', 'match', 'pattern'=>'/^[\*a-zA-Z0-9]{6,12}$/', 'message' =>Yii::t('user','Password doesn\'t meet criteria'), 'on'=>'register'),
+			array('use_username, use_password', 'required', 'on'=>'register, login', 'message'=>Yii::t('user','{attribute} is required')),
+			array('use_username, use_email', 'unique', 'message'=>Yii::t('user','This {attribute} is already registered')),	
+			array('use_fullname, use_email, rol_id, use_birthdate, use_gender' , 'required', 'on'=>'register, update', 'message'=>Yii::t('user','{attribute} is required')),
+			array('use_email', 'email', 'message'=>Yii::t('user','Email is not valid')),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'on'=>'register', 'message'=>Yii::t('user','Verification code is invalid')),
+			array('repeat_password', 'required', 'on'=>'register', 'message'=>'Please repeat your password'),
 			// array('use_gender, use_occupation, use_country, use_city, rol_id, use_is_active, use_update_by', 'numerical', 'integerOnly'=>true),
 			array('use_fullname, use_email', 'length', 'max'=>25),
 			array('use_birthdate', 'length', 'max'=>10),
 			array('use_username, use_update_date', 'length', 'max'=>15),
 			array('use_foto', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'), // this will allow empty field when page is update (remember here i create scenario update)
+            array('use_cv', 'file', 'types'=>'pdf', 'allowEmpty'=>true, 'on'=>'update'),
 			array('use_password','compare', 'compareAttribute'=>'repeat_password', 'on'=>'users'),
 			array('use_last_login_ip', 'length', 'max'=>15),
 			array('use_is_active', 'safe'),
@@ -91,17 +93,17 @@ class User extends CActiveRecord
 	{
 		return array(
 			'use_id' => 'Use',
-			'use_fullname' => 'Fullname',
-			'use_email' => 'Email',
-			'use_gender' => 'Gender',
-			'use_birthdate' => 'Birthdate',
+			'use_fullname' => Yii::t('user','Fullname'),
+			'use_email' => Yii::t('user','Email'),
+			'use_gender' => Yii::t('user','Gender'),
+			'use_birthdate' => Yii::t('user','Birthdate'),
 			'use_occupation' => 'Occupation',
 			'use_country' => 'Country',
 			'use_city' => 'City',
 			'use_address' => 'Address',
-			'use_foto' => 'Foto',
-			'use_cv' => 'Cv',
-			'rol_id' => 'Role',
+			'use_foto' => Yii::t('user','Photo'),
+			'use_cv' => 'Curriculum Vitae',
+			'rol_id' => Yii::t('user','Role'),
 			'use_username' => 'Username',
 			'use_password' => 'Password',
 			'use_pass_ori' => 'Pass Ori',
@@ -185,8 +187,6 @@ class User extends CActiveRecord
     public function verifyUser()
     {
     	$this->use_is_active = 1;
-    	$this->save();
-    	echo($this->use_is_active);
     	return true;
 
     }

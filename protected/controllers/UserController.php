@@ -37,22 +37,17 @@ class UserController extends Controller
 	 */
 	public function accessRules()
 	{	
-		$criteria=new CDbCriteria;
-		$criteria->select='use_username';  // only select the 'use_email' column
-		$criteria->condition='rol_id=1';
-		$adminModel=User::model()->findAll($criteria);
-	
+			
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData'),
+			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha'),
 			 	'users'=>array('@'),
-				// 'expression'=>
-				// 	'if(YiiMailMessage::app()->user->hasState("username")){
-				// 		!Yii::app()->user->role==2 OR Yii::app()->user->role==3;}',		
+				 'expression'=>
+				 	'Yii::app()->user->getState("role")==1',		
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete','verify'),
@@ -97,18 +92,31 @@ class UserController extends Controller
 		if(isset($_POST['User']))
 		{
 
-			$rnd = rand(0,9999);  // generate random number between 0-9999
+			$_POST['User']['photo'] = $model->use_foto;
+			$_POST['User']['cv'] = $model->use_cv;
 			$model->attributes=$_POST['User'];
 			$uploadedFile=CUploadedFile::getInstance($model,'use_foto');
-            $fileName = $model->use_username;  // random number + file name
+			$uploadedCV=CUploadedFile::getInstance($model,'use_cv');
+            
+            $fileName = $model->use_username;  
             $model->use_foto = $fileName;
+
+            $cvName = 'CV-'.$model->use_username;  
+            $model->use_cv = $cvName;
  
 			if($model->save()){
 				if(!empty($uploadedFile))
 				{  // check if uploaded file is set or not
-					$uploadedFile->saveAs(Yii::app()->basePath.'/../photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
-					$this->redirect(array('profile','id'=>$model->use_id));
+					$uploadedFile->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
 				}
+
+				if(!empty($uploadedCV))
+				{  // check if uploaded file is set or not
+					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
+				}
+				
+				$this->redirect(array('profile','id'=>$model->use_id));
+
 			}
 		}
 
@@ -159,6 +167,7 @@ class UserController extends Controller
 	public function actionAdmin()
 	{
 		$model=new User('search');
+		$userModel= new User;
 		$model->unsetAttributes();  // clear any default values
 		
 		if(isset($_GET['Species']))
@@ -166,6 +175,7 @@ class UserController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'userModel'=>$userModel,
 		));
 	}
 
@@ -194,19 +204,33 @@ class UserController extends Controller
     public function actionVerify($id)
 	{
 		$model=User::model()->findByPk($id);
-    		$model->use_is_active='1';
-
-    	if(isset($_POST['User']))
-		{
-    		$model->use_is_active='1';
-			echo('a');
-			if($model->validate() && $model->save())
-				$this->redirect(array('profile','id'=>$model->use_id));
-		}
-
-		// $this->redirect(Yii::app()->user->returnUrl);
+    	$model->verifyUser();
+    	if ($model->save()) {
+    		$this->sendMailVerivication($id);
+			$this->redirect(array('user/admin'));		
+    	}
 		
 	}
+
+	public function sendMailVerivication($id)
+    {   
+        $message            = new YiiMailMessage;
+          
+        //this points to the file verificationRequest.php inside the view path
+        $message->view = "user\\verificationApproval";
+        $criteria=new CDbCriteria;
+		$criteria->select='use_email';  // only select the 'use_email' column
+		$criteria->condition='rol_id='.$id;
+		$userModel=User::model()->findByPk($id);
+        $params              = array('myMail'=>$userModel);
+        $message->subject    = 'Your Account is Active Now';
+      	$message->setBody($params, 'text/html');               
+		
+		$message->addTo($userModel->use_email);        	
+
+		$message->setFrom(array('afour.satria@gmail.com' => 'Herbal DB'));   
+      	Yii::app()->mail->send($message); 
+    }
 
 	public function actionInsertData()
 	{
@@ -222,49 +246,72 @@ class UserController extends Controller
 		{
 			$speciesModel->attributes=$_POST['Species'];
 			if($speciesModel->save())
-				$this->redirect(array('view','id'=>$speciesModel->spe_id)); //bisa success alert
+			{
+				Yii::app()->user->setFlash('success', "Species saved!");
+				$this->redirect(array('insertData')); //bisa success alert
+			}
 		}
 
 		if(isset($_POST['Localname']))
 		{
 			$localnameModel->attributes=$_POST['Localname'];
 			if($localnameModel->save())
-				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+			{
+				Yii::app()->user->setFlash('success', "Localname saved!");
+				$this->redirect(array('insertData')); //bisa success alert
+			}
 		}
 
 		if(isset($_POST['Aliases']))
 		{
 			$aliasesModel->attributes=$_POST['Aliases'];
 			if($aliasesModel->save())
-				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+			{
+				Yii::app()->user->setFlash('success', "Aliases saved!");
+				$this->redirect(array('insertData')); //bisa success alert
+			}
 		}
 
 		if(isset($_POST['Virtue']))
 		{
 			$virtueModel->attributes=$_POST['Virtue'];
 			if($virtueModel->save())
-				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+			{
+				Yii::app()->user->setFlash('success', "Virtue saved!");
+				$this->redirect(array('insertData')); //bisa success alert
+			}
 		}
 
-		if(isset($_POST['Aliases']))
+		if(isset($_POST['Ref']))
 		{
-			$aliasesModel->attributes=$_POST['Aliases'];
-			if($aliasesModel->save())
-				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+			$referenceModel->attributes=$_POST['Ref'];
+			if($referenceModel->save())
+			{
+				Yii::app()->user->setFlash('success', "Reference saved!");
+				$this->redirect(array('insertData')); //bisa success alert
+			}
 		}
 
 		if(isset($_POST['Contents']))
 		{
 			$compoundModel->attributes=$_POST['Contents'];
-			if($compoundModel->save())
-				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+			// $compoundModel->con_file_mol1=CUploadedFile::getInstance($compoundModel,'con_file_mol1');
+			// $compoundModel->con_file_mol2=CUploadedFile::getInstance($compoundModel,'con_file_mol2');
+			if($compoundModel->save()){
+                // $model->image->saveAs('path/to/localFile');
+				Yii::app()->user->setFlash('success', "Contents saved!");
+				$this->redirect(array('insertData')); //bisa success alert
+			}
 		}
 		
 		if(isset($_POST['Contentgroup']))
 		{
 			$contentGroupModel->attributes=$_POST['Contentgroup'];
 			if($contentGroupModel->save())
-				$this->redirect(array('view','id'=>$local->spe_id)); //bisa success alert
+			{
+				Yii::app()->user->setFlash('success', "Content group saved!");
+				$this->redirect(array('insertData')); //bisa success alert
+			}
 		}
 		$this->render('insert_data',array(
 			'speciesModel'=>$speciesModel,

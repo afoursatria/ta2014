@@ -21,7 +21,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>List of User</h1>
+<h1><?php echo Yii::t('user','List of User') ;?></h1>
 
 
 <?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
@@ -35,13 +35,17 @@ $('.search-form form').submit(function(){
 
 $this->widget('zii.widgets.jui.CJuiTabs',array(
     'tabs'=>array(
-        'New User'=>array('id'=>'newUser-id','content'=>$this->renderPartial(
+        Yii::t('user','New User')=>array('id'=>'newUser-id','content'=>$this->renderPartial(
                                         '_newUser',
                                         array('model'=>$model,'Values'=>'This Is My Renderpartial Page'),TRUE
                                         )),       
-        'All Registered User'=>array('id'=>'registeredUser-id','content'=>$this->renderPartial(
+        Yii::t('user','All Registered User')=>array('id'=>'registeredUser-id','content'=>$this->renderPartial(
                                         '_allUserList',
                                         array('model'=>$model,'Values'=>'This Is My Renderpartial Page'),TRUE
+                                        )),
+        Yii::t('user','Add User')=>array('id'=>'addUser-id','content'=>$this->renderPartial(
+                                        '/site/register',
+                                        array('model'=>$userModel,'Values'=>'This Is My Renderpartial Page'),TRUE
                                         )),
       	// panel 3 contains the content rendered by a partial view
         // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),

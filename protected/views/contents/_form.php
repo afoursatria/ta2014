@@ -49,7 +49,9 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'contgroup_id'); ?>
-		<?php echo $form->dropdownList($model,'contgroup_id', CHtml::listData(Contentgroup::model()->findAll(array('order' => 'contgroup_name ASC')),'contgroup_id','contgroup_name')); ?>
+		<?php echo $form->dropdownList($model,'contgroup_id', 
+			CHtml::listData(Contentgroup::model()->findAll(array('order' => 'contgroup_name ASC')),'contgroup_id','contgroup_name'),
+			array('prompt'=>Yii::t('main_data','Choose Compound Group'))); ?>
 		<?php echo $form->error($model,'contgroup_id'); ?>
 	</div>
 
@@ -58,21 +60,21 @@
 		<?php echo $form->textField($model,'con_source',array('size'=>60,'maxlength'=>100)); ?>
 		<?php echo $form->error($model,'con_source'); ?>
 	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'con_file_mol1'); ?>
-		<?php echo $form->textField($model,'con_file_mol1',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->fileField($model,'con_file_mol1'); ?>
 		<?php echo $form->error($model,'con_file_mol1'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'con_file_mol2'); ?>
-		<?php echo $form->textField($model,'con_file_mol2',array('size'=>60,'maxlength'=>100)); ?>
+		<?php echo $form->fileField($model,'con_file_mol2'); ?>
 		<?php echo $form->error($model,'con_file_mol2'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

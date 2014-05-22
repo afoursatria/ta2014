@@ -10,8 +10,20 @@
 		
 		array(
 		    'class'=>'CButtonColumn',
-		    'template'=>'{update}',
-		    'updateButtonUrl'=>'Yii::app()->createUrl("user/verify", array("id"=>$data->use_id))',		              
+		    'template'=>'{verify}',
+		      'buttons'=>array(
+				'verify'=>array(
+					'label'=>'Activate',
+					// 'imageUrl'=>Yii::app()->request->baseUrl.'/images/status.png',
+					'url'=>'Yii::app()->createAbsoluteUrl(
+						"user/verify",
+						array("id"=>$data->use_id))',				 
+					'visible'=>'$data->use_is_active==0?TRUE:FALSE',
+					'options' => array(  // set all kind of html options in here
+        				'confirm' =>"Are you sure to activate this account? ",
+        			),
+				),
+			),
 		),
 	),
 )); ?>

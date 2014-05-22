@@ -25,7 +25,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'spe_id'); ?>
-		<?php echo $form->dropDownList($model,'spe_id', CHtml::listData(Species::model()->findAll(array('order' => 'spe_speciesname ASC')),'spe_id','spe_speciesname')); ?>
+		<?php echo $form->dropDownList($model,'spe_id', CHtml::listData(Species::model()->findAll(array('order' => 'spe_speciesname ASC')),'spe_id','spe_speciesname'),
+			array('prompt'=>Yii::t('main_data','Choose Species'))); ?>
 		<?php echo $form->error($model,'spe_id'); ?>
 	</div>
 
@@ -45,11 +46,11 @@
 		<?php echo $form->labelEx($model,'ref_id'); ?>
 		<?php 
 			$opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
-			echo $form->dropDownList($model,'ref_id', $opts, array('prompt'=>'Choose reference')); ?>
+			echo $form->dropDownList($model,'ref_id', $opts, array('prompt'=>Yii::t('main_data','Choose Reference'))); ?>
 		<?php echo $form->error($model,'ref_id'); ?>
 	</div>
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

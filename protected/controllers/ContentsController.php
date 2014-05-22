@@ -37,7 +37,8 @@ class ContentsController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
+				'expression'=>'Yii::app()->user->getState("role")==1',
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -87,6 +88,7 @@ class ContentsController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$speConModel=$this->loadSpeconModel($id); 
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -95,7 +97,7 @@ class ContentsController extends Controller
 		{
 			$model->attributes=$_POST['Contents'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->con_id));
+				$this->redirect(array('species/view','id'=>$speConModel->spe_id));
 		}
 
 		$this->render('update',array(
@@ -114,7 +116,7 @@ class ContentsController extends Controller
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('species/'.$model->spe_id));
 	}
 
 	/**
@@ -153,6 +155,14 @@ class ContentsController extends Controller
 	public function loadModel($id)
 	{
 		$model=Contents::model()->findByPk($id);
+		if($model===null)
+			throw new CHttpException(404,'The requested page does not exist.');
+		return $model;
+	}
+
+	public function loadSpeconModel($id)
+	{
+		$model=Species_content::model()->find('con_id='.$id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

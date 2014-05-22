@@ -37,7 +37,7 @@ class Virtue extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_id, hp_code, vir_value', 'required'),
+			array('spe_id, hp_code, vir_value, vir_type, ref_id', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			array('spe_id, hp_code, ref_id, vir_insert_by, vir_update_by, vir_verified_by', 'numerical', 'integerOnly'=>true),
 			array('vir_type', 'length', 'max'=>12),
 			array('vir_insert_date, vir_update_date, vir_verified_date', 'length', 'max'=>20),
@@ -56,6 +56,7 @@ class Virtue extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'herbal_part'=>array(self::BELONGS_TO, 'HerbalPart', 'hp_code'),
 		);
 	}
 
@@ -66,13 +67,13 @@ class Virtue extends CActiveRecord
 	{
 		return array(
 			'vir_id' => 'Vir',
-			'spe_id' => 'Species',
-			'hp_code' => 'Herbal Part',
-			'vir_type' => 'Virtue Type',
-			'vir_value' => 'Virtue',
-			'vir_value_en' => 'Virtue (English)',
-			'vir_value_latin' => 'Virtue (Latin)',
-			'ref_id' => 'Reference',
+			'spe_id' => Yii::t('main_data','Species'),
+			'hp_code' => Yii::t('main_data','Herbal Part'),
+			'vir_type' => Yii::t('main_data','Virtue Type'),
+			'vir_value' => Yii::t('main_data','Virtue'),
+			'vir_value_en' => Yii::t('main_data','Virtue (English)'),
+			'vir_value_latin' => Yii::t('main_data','Virtue (Latin)'),
+			'ref_id' => Yii::t('main_data','Reference'),
 			'vir_insert_by' => 'Vir Insert By',
 			'vir_insert_date' => 'Vir Insert Date',
 			'vir_update_by' => 'Vir Update By',

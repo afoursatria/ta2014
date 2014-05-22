@@ -37,7 +37,8 @@ class VirtueController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
+				'expression'=>'Yii::app()->user->getState("role")==1',
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -95,7 +96,7 @@ class VirtueController extends Controller
 		{
 			$model->attributes=$_POST['Virtue'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->vir_id));
+				$this->redirect(array('species/view','id'=>$model->spe_id));
 		}
 
 		$this->render('update',array(
@@ -110,11 +111,12 @@ class VirtueController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
+		$model = $this->loadModel($id);
+		$model->delete();	
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('species/'.$model->spe_id));
 	}
 
 	/**

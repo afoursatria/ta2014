@@ -4,17 +4,17 @@
 ?>
 
 <div class="view">
+	<?php echo CHtml::link('update', array('virtue/update', 'id'=>$data->vir_id));?>
+ 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->vir_id), array('view', 'id'=>$data->vir_id)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_id')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_id); ?>
-	<br />
+	<?php
+	echo CHtml::link('delete',"#", 
+          array('submit'=>array('virtue/delete', 'id'=>$data->vir_id), 
+                'confirm' => Yii::t('main_data','Are you sure?'))); ?>
+ 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('hp_code')); ?>:</b>
-	<?php echo CHtml::encode($data->hp_code); ?>
+	<?php echo CHtml::encode($data->herbal_part->hp_part_name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_type')); ?>:</b>

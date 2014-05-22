@@ -37,26 +37,45 @@ $this->menu=array(
 	'nullDisplay'=>'-',
 )); ?>
 
+<?php
+	Yii::app()->clientScript->registerScript('search',
+    "var ajaxUpdateTimeout;
+    var ajaxRequest;
+    $('input#lnameKey').keyup(function(){
+        ajaxRequest = $(this).serialize();
+        clearTimeout(ajaxUpdateTimeout);
+        ajaxUpdateTimeout = setTimeout(function () {
+            $.fn.yiiListView.update(
+// this is the id of the CListView
+                'localname-list',
+                {data: ajaxRequest}
+            )
+        },
+// this is the delay
+        200);
+    });"
+);
+?>
 
 <?php
 
 $this->widget('zii.widgets.jui.CJuiTabs',array(
     'tabs'=>array(
-        'Local Name'=>array('id'=>'localName-id','content'=>$this->renderPartial(
+        Yii::t('main_data','Local Name')=>array('id'=>'localName-id','content'=>$this->renderPartial(
                             '_localname',
-                            array('localName'=>$localName),TRUE
+                            array('dataProvider'=>$localnameDataProvider),TRUE
                             )),       
-        'Alias'=>array('id'=>'aliases-id','content'=>$this->renderPartial(
+        Yii::t('main_data','Alias')=>array('id'=>'aliases-id','content'=>$this->renderPartial(
 	                        '_alias',
-	                        array('aliases'=>$aliases),TRUE
+	                        array('dataProvider'=>$aliasesDataProvider),TRUE
                             )),
-        'Virtue'=>array('id'=>'virtue-id','content'=>$this->renderPartial(
+        Yii::t('main_data','Virtue')=>array('id'=>'virtue-id','content'=>$this->renderPartial(
                             '_virtue',
-                            array('virtue'=>$virtue),TRUE
+                            array('dataProvider'=>$virtueDataProvider),TRUE
                             )),                                              
-      	'Contents'=>array('id'=>'contents-id','content'=>$this->renderPartial(
+      	Yii::t('main_data','Compound')=>array('id'=>'contents-id','content'=>$this->renderPartial(
 	                        '_contents',
-	                        array('contents'=>$contents),TRUE
+	                        array('dataProvider'=>$contentsDataProvider),TRUE
 	                        )),                                              
       	// panel 3 contains the content rendered by a partial view
         // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
@@ -68,21 +87,3 @@ $this->widget('zii.widgets.jui.CJuiTabs',array(
     'id'=>'MyTab-Menu',
 ));
 ?>
-
-<h1>Local Name</h1>
-<?php
-if ($localName !== NULL)
-	// $this->widget('zii.widgets.CListView', array(
-	// 	'data'=>$localName,
-	// 	'attributes'=>array(
-	// 		'loc_localname',
-	// 		'loc_region',
-	// 		'ref_id',
-	// ),	
-	// ));
-	$this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'/localname/_view',
-	));
-	else echo "This Species has no local name"; 
-// $this->renderPartial('/localname/view', array('localName'=>$localName, 'listLocalName'=>$listLocalName)); ?>

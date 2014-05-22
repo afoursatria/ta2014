@@ -31,7 +31,7 @@ class Ref extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ref_name', 'required'),
+			array('ref_name', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			array('ref_insert_by, ref_update_by, ref_verified_by', 'numerical', 'integerOnly'=>true),
 			array('ref_name', 'length', 'max'=>100),
 			array('ref_insert_date, ref_update_date, ref_verified_date', 'length', 'max'=>20),
@@ -50,6 +50,7 @@ class Ref extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'ref' => array(self::BELONGS_TO, 'ref_id', 'ref_name'),
+			// 'ref_local'=>array(self::HAS_MANY, 'Localname', 'ref_id'),
 		);
 	}
 
@@ -60,7 +61,7 @@ class Ref extends CActiveRecord
 	{
 		return array(
 			'ref_id' => 'Ref',
-			'ref_name' => 'Ref Name',
+			'ref_name' => Yii::t('main_data','Reference Name'),
 			'ref_insert_by' => 'Ref Insert By',
 			'ref_insert_date' => 'Ref Insert Date',
 			'ref_update_by' => 'Ref Update By',

@@ -11,20 +11,24 @@
 	'method'=>'get',
 )); ?>
 
+<!--
 	<div class="row">
 		<?php echo $form->label($model,'spe_id'); ?>
 		<?php echo $form->textField($model,'spe_id'); ?>
 	</div>
-
 	<div class="row">
 		<?php echo $form->label($model,'spe_species_id'); ?>
 		<?php echo $form->textField($model,'spe_species_id',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
+-->
 
 	<div class="row">
-		<?php echo $form->label($model,'spe_speciesname'); ?>
-		<?php echo $form->textField($model,'spe_speciesname',array('size'=>60,'maxlength'=>100)); ?>
+		<?php //echo $form->label($model,'spe_speciesname'); ?>
+		<?php
+		// echo CHtml::textField('field_search','', array()); 
+		echo $form->textField($model,'spe_speciesname',array('size'=>60,'maxlength'=>60, 'id'=>'field_search')); ?>
 	</div>
+<!--
 
 	<div class="row">
 		<?php echo $form->label($model,'spe_varietyname'); ?>
@@ -80,6 +84,7 @@
 		<?php echo $form->label($model,'spe_verified_date'); ?>
 		<?php echo $form->textField($model,'spe_verified_date',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
+-->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
