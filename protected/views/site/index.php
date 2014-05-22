@@ -5,18 +5,6 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
 ?>
 
 <?php
-	if(!Yii::app()->user->isGuest)
-		echo Yii::t('main_data','You are logged in as ') . CHtml::link(Yii::app()->user->id, array('user/profile/', 'id'=>Yii::app()->user->getState("no")));
-	else
-		echo CHtml::link(Yii::t('main_layout','Login'), array('login'));
-?> 
-<br />
-<?php 
-	if(Yii::app()->user->getState("role") == null)
-	echo CHtml::link(Yii::t('user','Register'), array('register')); ?>
-<br />
-
-<?php
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
     $('.search-form').toggle();
