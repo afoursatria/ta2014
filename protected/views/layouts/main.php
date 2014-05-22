@@ -4,7 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
-
+	<!-- Favicon-->
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" />
 	<!-- blueprint CSS framework -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
@@ -12,27 +13,33 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
 	<![endif]-->
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+	<!--<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />-->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+	<link href="http://fonts.googleapis.com/css?family=Source+Sans Pro:400,400|News+Cycle:400,400|Fauna+One:400" rel="stylesheet" type="text/css">
+  	<link rel="stylesheet" href="css/standardize.css">
+  	<link rel="stylesheet" href="css/beranda-grid.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body>
+<body class="body beranda clearfix">
 
 <?php 
     $this->widget('application.components.LangBox');
 ?>
 <div class="container" id="page">
 
-	<div id="header">
-		<div id="logo"><?php echo Yii::t('main_layout',Yii::app()->name); ?></div>
+	<div id="header clearfix">
+		<img class="image image-10" src = "<?php echo Yii::app()->request->baseUrl; ?>/images/makara-ui-farmasi.png">
+		<div id="logo"><p class="web-title"><?php echo Yii::t('main_layout',Yii::app()->name); ?></p></div>
 	</div><!-- header -->
-
-	<div id="mainmenu">
+		<!--mainmenu-->
 		<?php $this->widget('zii.widgets.CMenu',array(
+        'htmlOptions'=>array('id'=>'mainmenu'),
+        'submenuHtmlOptions'=>array('class'=>'p'),
 			'items'=>array(
-				array('label'=>Yii::t('main_layout', 'Home'), 'url'=>array('/site/index')),
+				array('label'=>Yii::t('main_layout', 'Home'), 'url'=>array('/site/index'),'itemCssClass'=>'text text-40'),
 				array('label'=>Yii::t('main_layout', 'Insert Data'), 'url'=>array('/user/insertData'), 'visible'=>!Yii::app()->user->isGuest), 
 				array('label'=>Yii::t('main_layout', 'User Management'), 'url'=>array('/user/admin'), 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->getState("role")==1), 
 				// array('label'=>'List of Species', 'url'=>array('/species/index')),
@@ -45,15 +52,15 @@
 				array('label'=>Yii::t('main_layout', 'Logout').' ('.Yii::app()->user->id.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
-	</div><!-- mainmenu -->
+	<!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-
+	<div class="container container-3 clearfix">
 	<?php echo $content; ?>
-
+	</div>
 	<div class="clear"></div>
 
 	<div id="footer">
