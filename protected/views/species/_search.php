@@ -26,7 +26,7 @@
 		<?php //echo $form->label($model,'spe_speciesname'); ?>
 		<?php
 		// echo CHtml::textField('field_search','', array()); 
-		echo $form->textField($model,'spe_speciesname',array('size'=>60,'maxlength'=>60, 'id'=>'field_search')); ?>
+		echo $form->textField($model,'spe_speciesname',array('size'=>60,'maxlength'=>60)); ?>
 	</div>
 <!--
 

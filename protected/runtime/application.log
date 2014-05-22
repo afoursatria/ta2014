@@ -27859,3 +27859,154 @@ in C:\wamp\www\newherbaldb\index.php (13)
 2014/05/21 13:10:16 [warning] [application] Failed to set unsafe attribute "cv" of "User".
 in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (97)
 in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 09:50:08 [error] [php] Undefined index:  Cat (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:156)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/category
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 09:55:37 [error] [php] Undefined index:  Cat (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:156)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/category
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:21:09 [error] [php] Undefined index:  Cat (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:156)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/category
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:22:20 [error] [php] Undefined index:  Cat (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:156)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/category
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:36:03 [error] [php] Undefined index:  country_name (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:169)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/udpateTextField
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (169)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:36:11 [error] [php] Undefined index:  country_name (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:169)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/udpateTextField
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (169)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:37:18 [error] [php] Undefined index:  country_name (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:169)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/udpateTextField
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (169)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:40:29 [error] [php] Undefined index:  country_name (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:169)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/udpateTextField
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (169)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:43:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "updateTextField".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('updateTextField')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('updateTextField')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/updateText...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/site/updateTextField
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---
+2014/05/22 10:43:30 [error] [php] Undefined index:  country_name (C:\wamp\www\newherbaldb\protected\controllers\SiteController.php:169)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/updateTextField
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (169)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 10:47:34 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1351): tag()
+#2 C:\wamp\www\yii\framework\web\helpers\CHtml.php(596): inputField()
+#3 C:\wamp\www\newherbaldb\protected\views\site\index.php(58): textField()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(869): SiteController->renderFile()
+#7 C:\wamp\www\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#8 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(42): SiteController->render()
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\wamp\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#12 C:\wamp\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#14 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/site/index
+in C:\wamp\www\newherbaldb\protected\views\site\index.php (58)
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (42)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 11:58:21 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (97)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 11:58:21 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (97)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 11:58:21 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (97)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 11:58:21 [warning] [application] Failed to set unsafe attribute "cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (97)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 12:02:03 [warning] [application] Failed to set unsafe attribute "con_file_mol1" of "Contents".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (297)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/05/22 12:02:03 [warning] [application] Failed to set unsafe attribute "con_file_mol2" of "Contents".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (297)
+in C:\wamp\www\newherbaldb\index.php (13)

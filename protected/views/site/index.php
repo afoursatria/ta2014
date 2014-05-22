@@ -31,30 +31,62 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+<?php $form=$this->beginWidget('CActiveForm', array(
+        'id'=>'search_form',
+        'enableAjaxValidation'=>false,
+)); ?>
 
-<div class="row">
-		<?php echo CHtml::dropDownList('Cat','', 
-			array(
-				'Species'=>Yii::t('main_data','Species'),
+    <?php
+        $category = array(
+        		'Species'=>Yii::t('main_data','Species'),
 				'Localname'=>Yii::t('main_data','Localname'),
 				'Virtue'=>Yii::t('main_data','Virtue'),
-				'Contents'=>Yii::t('main_data','Compound')),
-			array(
-				'prompt'=>Yii::t('main_data','Choose Category'),
-                'ajax'=>array(
-                    'empty'=>'Choose Category',
-                    'type'=>'POST',
-                    'url' => CController::createUrl('category'),
-                    // 'data'=> array('jdok'=>'js:this.value'),
-                    'update'=>'#field_search',
-                    ))
-			); ?>
-	</div>
-<?php //echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+				'Contents'=>Yii::t('main_data','Compound'));
+            $options = array(
+                'id' => 'category_id',
+                'ajax' => array('type'=>'POST'
+                                , 'url'=>CController::createUrl('site/updateTextField')
+                                , 'update'=>'#param_id'  //selector to update
+                )
+            );
+        
+        echo CHtml::dropDownList('category_name', '', $category, $options);
+    ?>
 
-<?php  $this->renderPartial('/species/_search',array(
-    'model'=>$model,
-)); ?>
+    <div class="row">
+        <?php 
+            echo CHtml::textField('temp_id','',array('id'=>'param_id')) ;
+        ?>
+    </div>
+
+<?php $this->endWidget(); ?>
+
+<div class="row">
+		<?php 
+		// echo CHtml::dropDownList('Cat','', 
+		// 	array(
+		// 		'Species'=>Yii::t('main_data','Species'),
+		// 		'Localname'=>Yii::t('main_data','Localname'),
+		// 		'Virtue'=>Yii::t('main_data','Virtue'),
+		// 		'Contents'=>Yii::t('main_data','Compound')),
+		// 	array(
+		// 		'prompt'=>Yii::t('main_data','Choose Category'),
+  //               'ajax'=>array(
+  //                   'empty'=>'Choose Category',
+  //                   'type'=>'POST',
+  //                   'url' => CController::createUrl('category'),
+  //                   // 'data'=> array('jdok'=>'js:this.value'),
+  //                   'update'=>'#field_search',
+  //                   ))
+		// 	); ?>
+	</div>
+
+<?php 
+	CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
+	echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
+    echo CHtml::submitButton('Search', array('name'=>''));
+    CHtml::endForm();
+?>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -165,27 +165,10 @@ class SiteController extends Controller
 		// }
 	}
 
-	public function actionGetSearchResult()
-	{
-		if ($_POST['category'] && $_POST['search_key']) {	
-			echo("a");
-
-			// if ($_POST['category'] == 'Species') {
-			// 	$model = new Species;
-			// 	$criteria = new cDbCriteria;
-			// 	$q = $_POST['search_key'];
-			// 	$criteria->compare('spe_speciesname', $q, true, 'OR');
-
-			// 	$dataProvider=new CActiveDataProvider('Species', array(
-			// 	'criteria'=>$criteria,
-			// 	'sort'=>array('defaultOrder'=>'spe_update_date DESC'),
-			// 	 // array('order'=>'spe_update_date DESC')
-			// 	 ));
-
-			// 	$this->render('index',array(
-			// 	'dataProvider'=>$dataProvider,
-			// 	));
-			// }
-		}
-	}
+    public function actionUpdateTextField() {
+        $param_category = $_POST['category_name'];
+        if ($param_category === 'Localname') {
+        	echo CHtml::tag('input', array( 'type'=>'text' , 'value' => $param_category));	
+        }
+    }
 }
