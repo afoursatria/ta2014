@@ -89,13 +89,15 @@
 			?>
 			<!-- mainmenu -->
 		</div><!-- header -->
-		<?php if(isset($this->breadcrumbs)):?>
+		
+		<div class="container container-3 clearfix">
+	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
 			)); ?><!-- breadcrumbs -->
 		<?php endif?>
-		<div class="container container-3 clearfix">
 			<?php echo $content; ?>
+		
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
