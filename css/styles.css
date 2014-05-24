@@ -346,6 +346,21 @@ body {
   filter: none;
 }
 
+select#_lang {
+  min-width: 104px;
+  padding: 12px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  float: left;
+      
+}
+
 .nama {
   float: left;
   line-height: 1.38;
@@ -7497,19 +7512,28 @@ ul, ol {
   margin: 0 1.5em 1.5em 0;
 }
 div#topside-nav {
+  right: 17%;
+  display: inline-block;
   position: absolute;
-  right: 23%;
-  display: inline-block;;
+  top: 3%;;
 }
 div#user-stuff {
   float: left;
   font-weight: 400;
 }
 
+#p-bahasa{
+  float:left;
+}
 #user-stuff a{
    color: rgb(103, 189, 221);
+   margin-right: 10px;
 }
 
 form#formId {
   display: inline-block;
+  float: left;
+}
+
+.dropdown-menu {
 }

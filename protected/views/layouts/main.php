@@ -44,6 +44,7 @@
 					if(Yii::app()->user->getState("role") == null)
 						echo CHtml::link(Yii::t('user','Register'), array('register')); ?>
 				</div><!--user staff-->
+				<p id ="p-bahasa">Pilih bahasa: </p>
 				<?php 
 					$this->widget('application.components.LangBox');
 				?>

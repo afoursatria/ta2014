@@ -76,6 +76,21 @@ $('.search-form form').submit(function(){
     CHtml::endForm();
 ?>
 
+<div class="spesies clearfix">
+        <div class="element element-10"></div>
+        <p class="text _text text-72">5 Spesies Paling Sering Dicari&nbsp;</p>
+        <div class="element element-12"></div>
+        <p class="text _text text-79">Zephyranthes Tubispatha</p>
+        <div class="element element-13"></div>
+        <p class="text _text text-85">Cloxinia Maculata</p>
+        <div class="element element-14"></div>
+        <p class="text _text text-91">Cloxinia Maculata</p>
+        <div class="element element-15"></div>
+        <p class="text _text text-96">Cloxinia Maculata</p>
+        <div class="element element-17"></div>
+        <p class="text _text text-99">Cloxinia Maculata</p>
+        <div class="element element-18"></div>
+      </div>
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'//species/_view',
