@@ -44,10 +44,26 @@
 					if(Yii::app()->user->getState("role") == null)
 						echo CHtml::link(Yii::t('user','Register'), array('register')); ?>
 				</div><!--user staff-->
-				<p id ="p-bahasa">Pilih bahasa: </p>
+				<!-- <p id ="p-bahasa">Pilih bahasa: </p> -->
 				<?php 
-					$this->widget('application.components.LangBox');
+					//$this->widget('application.components.LangBox');
 				?>
+				<?php echo CHtml::form('','post',array('id'=>'formId')); ?>
+					<?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
+						'htmlOptions' => array('select' => '$currentlang','id'=>'_lang'),
+					'type'=>'', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+					'buttons'=>array(
+					    array('label'=>'Change Language', 
+					    	'encodeLabel'=>false,
+					    	'items'=>array(
+					        array('label'=> CHtml::image('images/u88.png','ba',array("width"=>"20px" ,"height"=>"15px")).' English', 'url'=>'#'),
+					        '---',
+					        array('label'=> CHtml::image('images/u86.png','ba',array("width"=>"20px" ,"height"=>"15px")).' Bahasa', 'url'=>'#'),
+					    )),
+					),
+					)); 
+					?> 
+				<?php echo CHtml::endForm(); ?> 
 			</div> <!--topside-nav-->
 			
 			<img class="image image-10" src = "<?php echo Yii::app()->request->baseUrl; ?>/images/makara-ui-farmasi.png">

@@ -277,7 +277,7 @@ body {
 #mainmenu li.active a{
   border-top: solid 4px;
   border-color: #3266EB;
-  color: #B4D0F3;
+  color: #D1E2F8;
   padding-top: 5px;
 }
 
@@ -7536,4 +7536,15 @@ form#formId {
 }
 
 .dropdown-menu {
+}
+.btn-group, .btn-group-vertical {
+  vertical-align: middle;
+}
+.btn {
+  padding: 0px 6px;
+  color: rgb(103, 189, 221);
+  font-size: 16px;
+}
+a {
+  color: #428bca;
 }

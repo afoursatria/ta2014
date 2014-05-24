@@ -24,7 +24,7 @@ $('.search-form form').submit(function(){
         'enableAjaxValidation'=>false,
 )); ?>
 
-    <?php
+   <!--  <?php
         $category = array(
         		'Species'=>Yii::t('main_data','Species'),
 				'Localname'=>Yii::t('main_data','Localname'),
@@ -47,7 +47,7 @@ $('.search-form form').submit(function(){
         ?>
     </div>
 
-<?php $this->endWidget(); ?>
+<?php $this->endWidget(); ?> -->
 
 <div class="row">
 		<?php 
@@ -69,28 +69,44 @@ $('.search-form form').submit(function(){
 		// 	); ?>
 	</div>
 
+
+<div class="spesies clearfix">
+    <div class="element element-10"></div>
+    <p class="text _text text-72">5 Spesies Paling Sering Dicari&nbsp;</p>
+    <div class="element element-12"></div>
+    <p class="text _text text-79">Zephyranthes Tubispatha</p>
+    <div class="element element-13"></div>
+    <p class="text _text text-85">Cloxinia Maculata</p>
+    <div class="element element-14"></div>
+    <p class="text _text text-91">Cloxinia Maculata</p>
+    <div class="element element-15"></div>
+    <p class="text _text text-96">Cloxinia Maculata</p>
+    <div class="element element-17"></div>
+    <p class="text _text text-99">Cloxinia Maculata</p>
+    <div class="element element-18"></div>
+</div> <!--senyawa paling dicari-->
+<div class="senyawa clearfix">
+        <div class="element element-19"></div>
+        <p class="text _text text-112">5 Senyawa Paling Sering Dicari&nbsp;</p>
+        <div class="element element-20"></div>
+        <p class="text _text text-118">Zephyranthes Tubispatha</p>
+        <div class="element element-23"></div>
+        <p class="text _text text-121">Cloxinia Maculata</p>
+        <div class="element element-25"></div>
+        <p class="text _text text-125">Cloxinia Maculata</p>
+        <div class="element element-27"></div>
+        <p class="text _text text-130">Cloxinia Maculata</p>
+        <div class="element element-30"></div>
+        <p class="text _text text-133">Cloxinia Maculata</p>
+        <div class="element element-33"></div>
+      </div>
+
 <?php 
-	CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
-	echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
+    CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
+    echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
     echo CHtml::submitButton('Search', array('name'=>''));
     CHtml::endForm();
 ?>
-
-<div class="spesies clearfix">
-        <div class="element element-10"></div>
-        <p class="text _text text-72">5 Spesies Paling Sering Dicari&nbsp;</p>
-        <div class="element element-12"></div>
-        <p class="text _text text-79">Zephyranthes Tubispatha</p>
-        <div class="element element-13"></div>
-        <p class="text _text text-85">Cloxinia Maculata</p>
-        <div class="element element-14"></div>
-        <p class="text _text text-91">Cloxinia Maculata</p>
-        <div class="element element-15"></div>
-        <p class="text _text text-96">Cloxinia Maculata</p>
-        <div class="element element-17"></div>
-        <p class="text _text text-99">Cloxinia Maculata</p>
-        <div class="element element-18"></div>
-      </div>
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'//species/_view',
