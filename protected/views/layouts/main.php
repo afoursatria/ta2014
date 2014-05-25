@@ -17,7 +17,6 @@
 	<!--<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />-->
 	<!-- <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" /> -->
 	<!-- Register CSS-->
-	<link href="http://fonts.googleapis.com/css?family=Source+Sans Pro:400,400|News+Cycle:400,400|Fauna+One:400" rel="stylesheet" type="text/css">
 	<!-- <link rel="stylesheet" href="css/standardize.css"> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
 	<!-- <link rel="stylesheet" href="css/beranda-grid.css"> -->
@@ -80,7 +79,7 @@
 					array('label'=>Yii::t('main_layout', 'News & Event'), 'url'=>array('/news/index')),
 					array('label'=>'FAQs', 'url'=>array('/faqs/')),
 					array('label'=>Yii::t('main_layout', 'Contact'), 'url'=>array('/site/contact')),	
-
+					array('label'=>Yii::t('main_layout', 'About'), 'url'=>array('/site/page','view'=>'about')),	
 				// array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 					array('label'=>Yii::t('main_layout', 'Logout').' ('.Yii::app()->user->id.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),

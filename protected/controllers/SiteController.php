@@ -171,4 +171,7 @@ class SiteController extends Controller
         	echo CHtml::tag('input', array( 'type'=>'text' , 'value' => $param_category));	
         }
     }
+    public function actionAbout() {
+    	$this->render('about');
+	}
 }
