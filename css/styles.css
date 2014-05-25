@@ -40,6 +40,9 @@ body {
   color: rgb(0,0,0);
 }
 
+li{
+  list-style: none;
+}
 .breadcrumbs {
   display: inline-block;
   float: left;
@@ -51,8 +54,9 @@ body {
 
 .container {
   clear: both;
-  width: 80.1666666666%;
   background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.2);
+  width: 80.1666666666%;
 }
 
 .date {
@@ -94,11 +98,10 @@ body {
 }
 
 #footer {
-  float: left;
-  clear: both;
-  width: 80%;
-  height: 119px;
   background-color: rgb(49, 54, 142);
+  display: inline-block;
+  margin-left: 9.9166666666%;
+  width: 80.1666666666%;
 }
 
 #footer-content {
@@ -134,7 +137,6 @@ body {
   float: left;
   width: 80.0833333333%;
   height: 166px;
-  margin-left: 10%;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
   -webkit-transform: none;
   -moz-transform: none;
@@ -152,6 +154,7 @@ body {
   -ms-filter: none;
   filter: none;
   background-color: rgb(255, 255, 255);
+  margin-left: 10%;
 }
 
 .hint-black {
@@ -583,7 +586,7 @@ select#_lang {
   filter: none;
 }
 div#content {
-margin: 5%;
+    margin: 5%;
 }
 .text {
   float: left;
@@ -823,7 +826,7 @@ margin: 5%;
 
 .container-3,
 .container-5 {
-  height: 1260px;
+  height: auto;
   margin-left: 9.9166666666%;
 }
 
@@ -7492,7 +7495,7 @@ margin: 5%;
 }
 
 
-body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure,#footer, header, hgroup, nav, section {
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure,footer, header, hgroup, nav, section {
   vertical-align: baseline;
   margin: 0;
 }
