@@ -90,6 +90,27 @@
 					)
 				); 
 			?>
+			<?php 
+// 			$this->widget('bootstrap.widgets.TbNavbar',array(
+// 'items'=>array(
+//     array(
+//         'class'=>'bootstrap.widgets.TbMenu',
+//         'htmlOptions'=>array('class'=>'pull-right'),
+//         'items'=>array(
+//             array('label'=>'Login', 'url'=>'#', 'visible'=>Yii::app()->user->isGuest, 'items'=>array(
+//                 array(
+//                     'label'=>'{menu}',
+//                     'template'=>'<form id ="loginForm" class="navbar-form pull-left" style="padding-left:15px;padding-right:15px;">
+//                                     <input type="text" class="span2" placeholder="Login">
+//                                     <input type="password" class="span2" placeholder="Password">
+//                                     <button type="submit" class="btn">Submit</button>
+//                                 </form>'
+//                 )
+//             )),
+//         ),
+//     ),
+// ))); 
+?>
 			<!-- mainmenu -->
 		</div><!-- header -->
 		
