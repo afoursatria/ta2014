@@ -28,8 +28,7 @@ if ($localName !== NULL)
 	// 		'ref_id',
 	// ),	
 	// ));
-	$this->widget('bootstrap.widgets.TbGridView', array(
-		'type'=>'striped',
+	$this->widget('zii.widgets.CListView', array(
 	'listLocalName'=>$listLocalName,
 	'itemView'=>'_view',
 	));
