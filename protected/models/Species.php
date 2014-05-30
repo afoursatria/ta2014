@@ -97,6 +97,7 @@ class Species extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
 		$criteria=new CDbCriteria;
 
@@ -115,9 +116,17 @@ class Species extends CActiveRecord
 		$criteria->compare('spe_verified_by',$this->spe_verified_by);
 		$criteria->compare('spe_verified_date',$this->spe_verified_date,true);
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		// return new CActiveDataProvider($this, array(
+		// 	'criteria'=>$criteria,
+		// ));
+
+		return new ApActiveDataProvider(get_class($this), array(
+            /* ... */
+            'alphapagination'=>array(
+				// 	'criteria'=>$criteria,
+                'attribute'=>'spe_speciesname',
+            ),
+        ));
 	}
 
 	/**
@@ -131,7 +140,7 @@ class Species extends CActiveRecord
 		return parent::model($className);
 	}
 
-		public function beforeSave()
+	public function beforeSave()
     {
     	if ($this->isNewRecord) {
 			$this->spe_insert_by = Yii::app()->user->role;
@@ -139,8 +148,10 @@ class Species extends CActiveRecord
     	}
 
     	else{
-    		$this->spe_update_by = Yii::app()->user->role;
-    		$this->spe_update_date = new CDbExpression('NOW()');
+    		if (Yii::app()->user->hasState('role')) {
+	    		$this->spe_update_by = Yii::app()->user->role;
+    			$this->spe_update_date = new CDbExpression('NOW()');
+    		}    		
     	}
 
     	/*for status terverifikasi
@@ -151,4 +162,12 @@ class Species extends CActiveRecord
 
 		return true;
     }
+
+    public function countView()
+    {
+    	$this->spe_viewed_count += 1;
+
+    	return true;
+    }
+
 }

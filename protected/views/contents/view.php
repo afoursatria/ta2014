@@ -3,8 +3,8 @@
 /* @var $model Contents */
 
 $this->breadcrumbs=array(
-	'Contents'=>array('index'),
-	$model->con_id,
+	'Contents'=>array('contents/search'),
+	$model->con_contentname,
 );
 
 $this->menu=array(
@@ -16,26 +16,47 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Contents #<?php echo $model->con_id; ?></h1>
+<h1><?php echo $model->con_contentname; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'con_id',
+		// 'con_id',
 		'con_contentname',
 		'con_knapsack_id',
 		'con_metabolite_id',
 		'con_pubchem_id',
-		'contgroup_id',
+		array(
+    		'name'=>'contgroup_id',
+    		'value'=>$model->contgroup->contgroup_name,
+		),
 		'con_source',
-		'con_speciesname',
 		'con_file_mol1',
 		'con_file_mol2',
-		'con_insert_by',
-		'con_insert_date',
-		'con_update_by',
-		'con_update_date',
-		'con_verified_by',
-		'con_verified_date',
+		// 'con_insert_by',
+		// 'con_insert_date',
+		// 'con_update_by',
+		// 'con_update_date',
+		// 'con_verified_by',
+		// 'con_verified_date',
 	),
+	'nullDisplay'=>'-',
 )); ?>
+<?php
+
+$this->widget('zii.widgets.jui.CJuiTabs',array(
+    'tabs'=>array(
+        Yii::t('main_data','Species')=>array('id'=>'Species-id','content'=>$this->renderPartial(
+                            '_species',
+                            array('dataProvider'=>$speciesDataProvider),TRUE
+                            )),       
+          	// panel 3 contains the content rendered by a partial view
+        // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
+    ),
+    // additional javascript options for the tabs plugin
+    'options'=>array(
+        // 'collapsible'=>true,
+    ),
+    'id'=>'MyTab-Menu',
+));
+?>

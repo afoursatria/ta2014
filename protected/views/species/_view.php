@@ -29,6 +29,15 @@
 	<?php echo CHtml::encode($data->spe_foundername); ?>
 	<br />
 
+	<b><?php echo "Status"; ?>:</b>
+	<?php 
+		if ($data->spe_verified_by == null) {
+		echo Yii::t('main_data', 'not verified');
+		}
+		else echo Yii::t('main_data', 'verified');
+	?>
+	<br />
+
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
 	<?php echo CHtml::encode($data->ref_id); ?>

@@ -28,7 +28,7 @@ class VirtueController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -141,6 +141,24 @@ class VirtueController extends Controller
 			$model->attributes=$_GET['Virtue'];
 
 		$this->render('admin',array(
+			'model'=>$model,
+		));
+	}
+
+	public function actionSearch()
+	{		
+		$model = new Virtue('search');
+		$model->unsetAttributes();
+		// $criteria = new CDbCriteria;
+
+		// $dataProvider = new ApPagination('spe_speciesname');
+		
+		// if( strlen( $speciesKey ) > 0 )
+  //       $criteria->addSearchCondition( 'spe_speciesname', $speciesKey, true);
+
+    	// $dataProvider->applyCondition($criteria);
+
+		$this->render('search', array(
 			'model'=>$model,
 		));
 	}

@@ -28,7 +28,7 @@ class SpeciesController extends Controller
 	{	
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -41,9 +41,9 @@ class SpeciesController extends Controller
 				'expression'=>'!Yii::app()->user->role==2 OR Yii::app()->user->role==3',
 			
 			),
-			// array('deny',  // deny all users
-			// 	'users'=>array('*'),
-			// ),
+			array('deny',  // deny all users
+			 	'users'=>array('*'),
+			),
 		);
 	}
 
@@ -79,7 +79,12 @@ class SpeciesController extends Controller
 		$acriteria->condition='spe_id='.$id;
 		$vcriteria->condition='spe_id='.$id;
 		$scriteria->condition='spe_id='.$id;
-	
+		
+		//count total view species for top species
+		$species = $this->loadModel($id);
+		$species->countView();
+		$species->save();
+
 	 	if( strlen( $lnameKey ) > 0 )
         $lcriteria->addSearchCondition( 'loc_localname', $lnameKey, true);
 
@@ -227,6 +232,38 @@ class SpeciesController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+
+	public function actionSearch($speciesKey ='')
+	{		
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
+
+// 		$post = Post::model()->find('post_id=:post_id AND status=:status',
+// array(
+//   ':post_id'=>8,
+//   ':status'=>'active',
+// ));
+		$criteria = new CDbCriteria;
+	 	$criteria->order = "spe_viewed_count DESC";
+		$criteria->limit = 5;
+		$topSpecies = Species::model()->findAll($criteria);
+
+		$speciesCriteria = new CDbCriteria;
+
+		if( strlen( $speciesKey ) > 0 ){
+        	$speciesCriteria->addSearchCondition( 'spe_speciesname', $speciesKey, true);
+        }
+
+        $listSpecies=new ApActiveDataProvider('Species',array(
+			'criteria'=>$speciesCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'spe_speciesname'),
+		));
+
+		$this->render('search', array(
+			'dataProvider'=>$listSpecies,
+			'topSpecies'=>$topSpecies,
 		));
 	}
 

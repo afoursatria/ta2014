@@ -28,7 +28,7 @@ class ContentsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view', 'search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -50,10 +50,34 @@ class ContentsController extends Controller
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
-	public function actionView($id)
-	{
+	public function actionView($id, $speciesKey='')
+	{	
+		$content = $this->loadModel($id);
+		$content->countView();
+		$content->save(false);
+
+		// get spe_id related to con_id
+		$criteria = new CDbCriteria;
+		$criteria->condition = "con_id = $id";
+		$species = Species_content::model()->findAll($criteria);
+
+		$scriteria = new CDbCriteria; //criteria for localname
+		foreach ($species as $spe ) {
+			$scriteria->addCondition('spe_id='.$spe->spe_id, 'OR');		
+		}
+		
+		if( strlen( $speciesKey ) > 0 )
+        $scriteria->addSearchCondition( 'spe_speciesname', $speciesKey, true);
+
+		$listSpecies=new CActiveDataProvider('Species',array(
+			'criteria'=>$scriteria,
+			'pagination'=> false,
+		));
+
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'content'=>$content,
+			'speciesDataProvider'=>$listSpecies,
 		));
 	}
 
@@ -142,6 +166,36 @@ class ContentsController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+
+	public function actionSearch($compoundKey = '')
+	{		
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
+		
+		$criteria = new CDbCriteria();
+	 	$criteria->order = "con_viewed_count DESC";
+		$criteria->limit = 5;
+		$topCompound = Contents::model()->findAll($criteria);
+
+		$searchCriteria = new CDbCriteria();
+		$searchCriteria->with= array('Contents');
+		$model= new Species_content;
+
+		$compoundCriteria = new CDbCriteria;
+		$compoundCriteria->with= array('contents');
+		if( strlen( $compoundKey ) > 0 )
+        	$compoundCriteria->addSearchCondition( 'con_contentname', $compoundKey, true);
+
+		$listCompound=new ApActiveDataProvider('Species_content',array(
+			'criteria'=>$compoundCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'con_contentname'),
+		));
+		
+		$this->render('search', array(
+			'dataProvider'=>$listCompound,
+			'topCompound'=>$topCompound,
 		));
 	}
 

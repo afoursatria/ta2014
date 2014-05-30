@@ -11,17 +11,18 @@
         'validateOnSubmit'=>true,
     ),
 )); ?>
+    <?php echo $form->errorSummary($model); ?>
 
 <p class="note">Fields with <span class="required">*</span> are required.</p>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Fullname')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','use_fullname')); ?>
         <?php echo $form->textField($model,'use_fullname'); ?>
         <?php echo $form->error($model,'use_fullname'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Gender')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','use_gender')); ?>
         <?php echo $form->radioButtonList($model,'use_gender', 
             array( 0 => Yii::t('user','Male'),
                     1 => Yii::t('user','Female'))); ?>
@@ -29,7 +30,7 @@
     </div>
     
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Birthdate')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','use_birthdate')); ?>
         <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
         'model'=>$model, 'attribute'=>'use_birthdate',
         'options'=>array(
@@ -43,31 +44,31 @@
     </div>
     
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Email')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','use_email')); ?>
         <?php echo $form->textField($model,'use_email'); ?>
         <?php echo $form->error($model,'use_email'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Username')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','use_username')); ?>
         <?php echo $form->textField($model,'use_username'); ?>
         <?php echo $form->error($model,'use_username'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Password')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','use_password')); ?>
         <?php echo $form->textField($model,'use_password'); ?>
         <?php echo $form->error($model,'use_password'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Repeat Password')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','repeat_password')); ?>
         <?php echo $form->textField($model,'repeat_password'); ?>
         <?php echo $form->error($model,'repeat_password'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Role')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','rol_id')); ?>
          <?php 
             if (!Yii::app()->user->isGuest)  
                 echo $form->dropdownList($model,'rol_id', 
@@ -87,7 +88,7 @@
     <?php if(CCaptcha::checkRequirements()): ?>
     <div class="row">
 
-        <?php echo $form->labelEx($model,Yii::t('user','Verification Code')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','verifyCode')); ?>
         <div>
         <?php $this->widget('CCaptcha', array('buttonLabel'=>Yii::t('main_data','Refresh code'))); ?>
         <?php echo $form->textField($model,'verifyCode'); ?>

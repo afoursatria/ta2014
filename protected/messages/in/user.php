@@ -23,5 +23,12 @@ return array(
 	'Photo'=>'Foto',
 	'Update Profile'=>'Ubah Profil',
 	'Change Password'=>'Ganti Password',
+	'Forget Password'=>'Lupa Password',
+	'Your Email is not registered'=>'Email anda tidak terdaftar',
+	'Current Password'=>'Password Saat Ini',
+	'New Password'=>'Password Baru',
+	'Repeat New Password'=>'Ulang Password Baru',
+	'Your current password does not match'=>'Password saat ini tidak sesuai',
+	'{attribute} cannot be blank'=>'{attribute} harus diisi',
 	);
 ?>

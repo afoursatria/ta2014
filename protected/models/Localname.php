@@ -94,6 +94,7 @@ class Localname extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
 		$criteria=new CDbCriteria;
 
@@ -109,9 +110,17 @@ class Localname extends CActiveRecord
 		$criteria->compare('loc_verified_by',$this->loc_verified_by);
 		$criteria->compare('loc_verified_date',$this->loc_verified_date,true);
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		// return new CActiveDataProvider($this, array(
+		// 	'criteria'=>$criteria,
+		// ));
+
+		return new ApActiveDataProvider(get_class($this), array(
+            /* ... */
+            'alphapagination'=>array(
+				// 	'criteria'=>$criteria,
+                'attribute'=>'loc_localname',
+            ),
+        ));
 	}
 
 	/**

@@ -15,7 +15,8 @@
  	<br />
 
 	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_contentname')); ?>:</b>
-	<?php echo CHtml::encode($data->contents->con_contentname); ?>
+	<?php echo CHtml::link(CHtml::encode($data->contents->con_contentname), array('contents/view', 'id'=>$data->contents->con_id)); ?>
+	<?php //echo CHtml::encode($data->contents->con_contentname); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_knapsack_id')); ?>:</b>
@@ -36,6 +37,14 @@
 
 	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_source')); ?>:</b>
 	<?php echo CHtml::encode($data->contents->con_source); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_file_mol1')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->con_file_mol1); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_file_mol2')); ?>:</b>
+	<?php echo CHtml::encode($data->contents->con_file_mol2); ?>
 	<br />
 
 	<?php /*

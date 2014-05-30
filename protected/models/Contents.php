@@ -42,8 +42,8 @@ class Contents extends CActiveRecord
 			array('con_contentname, con_knapsack_id, con_metabolite_id, con_pubchem_id, contgroup_id, con_source', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			array('contgroup_id, con_insert_by, con_update_by, con_verified_by', 'numerical', 'integerOnly'=>true),
 			array('con_contentname', 'length', 'max'=>200),
-			// array('con_file_mol1','file','types'=>'mol1'),
-			// array('con_file_mol2','file','types'=>'mol2'),
+			array('con_file_mol1','file', 'allowEmpty' => true, 'types'=>'mol', 'wrongType' => Yii::t('main_data','File Mol1 must be a mol.')),
+			array('con_file_mol2','file', 'allowEmpty' => true, 'types'=>'mol2', 'wrongType' => Yii::t('main_data','Filem Mol2 must be a mol2.')),
 			// array('con_knapsack_id, con_pubchem_id, con_insert_date, con_update_date, con_verified_date', 'length', 'max'=>20),
 			// array('con_metabolite_id, con_source, con_speciesname, con_file_mol1, con_file_mol2', 'length', 'max'=>100),
 			// The following rule is used by search().
@@ -61,6 +61,7 @@ class Contents extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'contgroup'=>array(self::BELONGS_TO, 'Contentgroup', 'contgroup_id'),
+			'specon'=>array(self::HAS_MANY,'Species_content', 'con_id'),
 		);
 	}
 
@@ -77,7 +78,7 @@ class Contents extends CActiveRecord
 			'con_pubchem_id' => 'Pubchem ID',
 			'contgroup_id' => Yii::t('main_data','Compound Group'),
 			'con_source' => Yii::t('main_data','Compound Source'),
-			'con_speciesname' => 'Con Speciesname',
+			'con_speciesname' => 'Species Name',
 			'con_file_mol1' => Yii::t('main_data','File Mol1'),
 			'con_file_mol2' => Yii::t('main_data','File mol2'),
 			'con_insert_by' => 'Con Insert By',
@@ -104,6 +105,7 @@ class Contents extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
 		$criteria=new CDbCriteria;
 
@@ -124,9 +126,17 @@ class Contents extends CActiveRecord
 		$criteria->compare('con_verified_by',$this->con_verified_by);
 		$criteria->compare('con_verified_date',$this->con_verified_date,true);
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		// return new CActiveDataProvider($this, array(
+		// 	'criteria'=>$criteria,
+		// ));
+
+		return new ApActiveDataProvider(get_class($this), array(
+            /* ... */
+            'alphapagination'=>array(
+				// 	'criteria'=>$criteria,
+                'attribute'=>'con_contentname',
+            ),
+        ));
 	}
 
 	/**
@@ -139,4 +149,11 @@ class Contents extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function countView()
+    {
+    	
+    	$this->con_viewed_count += 1;
+    	return true;
+    }
 }

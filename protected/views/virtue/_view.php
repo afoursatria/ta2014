@@ -14,7 +14,9 @@
  	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('hp_code')); ?>:</b>
-	<?php echo CHtml::encode($data->herbal_part->hp_part_name); ?>
+	<?php if ($data->herbal_part!==null) {echo CHtml::encode($data->herbal_part->hp_part_name);}
+	else echo "-";
+	?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_type')); ?>:</b>

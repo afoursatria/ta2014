@@ -3,19 +3,11 @@
 
 class ChangePasswordForm extends CFormModel
 {
-    /**
-     * @var string
-     */
+
     public $currentPassword;
 
-    /**
-     * @var string
-     */
     public $newPassword;
 
-    /**
-     * @var string
-     */
     public $newPasswordRepeat;
 
     /**
@@ -30,9 +22,18 @@ class ChangePasswordForm extends CFormModel
     {
         return array(
             array('currentPassword', 'validateCurrentPassword'),
-            array('currentPassword, newPassword, newPasswordRepeat', 'required', 'on'=>'changePassword'),
+            array('currentPassword, newPassword, newPasswordRepeat', 'required', 'on'=>'changePassword', 'message'=>Yii::t('user','{attribute} cannot be blank')),
             array('newPassword', 'compare', 'compareAttribute'=>'newPasswordRepeat'),
             // array('newPassword', 'match', 'pattern'=>'/^[a-z0-9_\-]{5,}/i', 'message'=>'Your password does not meet our password complexity policy.'),
+        );
+    }
+
+    public function attributeLabels()
+    {
+        return array(
+            'currentPassword'=>Yii::t('user','Current Password'),
+            'newPassword'=>Yii::t('user','New Password'),
+            'newPasswordRepeat'=>Yii::t('user','Repeat New Password'),
         );
     }
 
@@ -62,7 +63,7 @@ class ChangePasswordForm extends CFormModel
     {
         if( md5($this->currentPassword) !== $this->_user->use_password )
         {
-            $this->addError($attribute,'Your current password does not match');
+            $this->addError($attribute,Yii::t('user','Your current password does not match'));
         }
     }
 }

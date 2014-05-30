@@ -143,9 +143,16 @@ class UserController extends Controller
 	{
 		$model=new ChangePasswordForm;
 		$model->setScenario('changePassword');
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
+		
+		// if it is ajax validation request
+		
+			// echo CActiveForm::validate($model);
+			// Yii::app()->end();
+		
+		if(isset($_POST['ajax']) && $_POST['ajax']==='changePassword-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
 		if(isset($_POST['ChangePasswordForm']))
 		{
 			$model->attributes=$_POST['ChangePasswordForm'];
@@ -155,10 +162,8 @@ class UserController extends Controller
 					$this->redirect(array('profile','id'=>Yii::app()->user->id));
 				}
 		}
-
-		$this->render('changePassword',array(
-			'model'=>$model,
-		));
+		}
+		$this->render('changePassword',array('model'=>$model));
 	}
 
 	/**
@@ -178,28 +183,6 @@ class UserController extends Controller
 			'userModel'=>$userModel,
 		));
 	}
-
-	public function sendMail()
-    {   
-        $message            = new YiiMailMessage;
-          
-        //this points to the file verificationRequest.php inside the view path
-        $message->view = "user\\verificationRequest";
-        $criteria=new CDbCriteria;
-		$criteria->select='use_email';  // only select the 'use_email' column
-		$criteria->condition='rol_id=1';
-		$adminModel1=User::model()->findAll($criteria);
-        $params              = array('myMail'=>$adminModel1);
-        $message->subject    = 'Verifikasi Akun Baru';
-      	 $message->setBody($params, 'text/html');               
-
-        foreach($adminModel1 as $email) {
-			$message->addTo($email->use_email);        	
-		}
-		$message->setFrom(array('afour.satria@gmail.com' => 'Herbal DB'));   
-      	Yii::app()->mail->send($message); 
-		$this->redirect(array('site/index'));
-    }
 
     public function actionVerify($id)
 	{

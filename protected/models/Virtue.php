@@ -98,6 +98,7 @@ class Virtue extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
 		$criteria=new CDbCriteria;
 
@@ -116,9 +117,17 @@ class Virtue extends CActiveRecord
 		$criteria->compare('vir_verified_by',$this->vir_verified_by);
 		$criteria->compare('vir_verified_date',$this->vir_verified_date,true);
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		// return new CActiveDataProvider($this, array(
+		// 	'criteria'=>$criteria,
+		// ));
+
+		return new ApActiveDataProvider(get_class($this), array(
+            /* ... */
+            'alphapagination'=>array(
+				// 	'criteria'=>$criteria,
+                'attribute'=>'vir_value',
+            ),
+        ));
 	}
 
 	/**

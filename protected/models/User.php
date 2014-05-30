@@ -57,7 +57,7 @@ class User extends CActiveRecord
 			array('use_username, use_email', 'unique', 'message'=>Yii::t('user','This {attribute} is already registered')),	
 			array('use_fullname, use_email, rol_id, use_birthdate, use_gender' , 'required', 'on'=>'register, update', 'message'=>Yii::t('user','{attribute} is required')),
 			array('use_email', 'email', 'message'=>Yii::t('user','Email is not valid')),
-			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'on'=>'register', 'message'=>Yii::t('user','Verification code is invalid')),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(),'on'=>'register', 'message'=>Yii::t('user','Verification code is invalid')),
 			array('repeat_password', 'required', 'on'=>'register', 'message'=>'Please repeat your password'),
 			// array('use_gender, use_occupation, use_country, use_city, rol_id, use_is_active, use_update_by', 'numerical', 'integerOnly'=>true),
 			array('use_fullname, use_email', 'length', 'max'=>25),
@@ -97,15 +97,13 @@ class User extends CActiveRecord
 			'use_email' => Yii::t('user','Email'),
 			'use_gender' => Yii::t('user','Gender'),
 			'use_birthdate' => Yii::t('user','Birthdate'),
-			'use_occupation' => 'Occupation',
-			'use_country' => 'Country',
-			'use_city' => 'City',
 			'use_address' => 'Address',
 			'use_foto' => Yii::t('user','Photo'),
 			'use_cv' => 'Curriculum Vitae',
 			'rol_id' => Yii::t('user','Role'),
 			'use_username' => 'Username',
 			'use_password' => 'Password',
+			'verifyCode' => Yii::t('user','Verification Code'),
 			'use_pass_ori' => 'Pass Ori',
 			'use_is_active' => 'Is Active',
 			'use_update_date' => 'Use Update Date',
@@ -182,6 +180,16 @@ class User extends CActiveRecord
     	}
     	
 		return true;
+    }
+
+    public function beforeValidate()
+    {
+    	if (!$this->isNewRecord) {
+    		$this->use_update_date=new CDbExpression('NOW()');
+			$this->use_update_by=Yii::app()->user->getState('no');
+    	}
+
+    	return parent::beforeValidate();
     }
 
     public function verifyUser()

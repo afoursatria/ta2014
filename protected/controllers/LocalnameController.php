@@ -28,7 +28,7 @@ class LocalnameController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -143,6 +143,26 @@ class LocalnameController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+
+	public function actionSearch($lnameKey='')
+	{		
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
+
+		$lnameCriteria = new CDbCriteria;
+
+		if( strlen( $lnameKey ) > 0 )
+        $lnameCriteria->addSearchCondition( 'loc_localname', $lnameKey, true);
+		
+		$listLocalname=new ApActiveDataProvider('Localname',array(
+			'criteria'=>$lnameCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'loc_localname'),
+		));
+    	
+		$this->render('search', array(
+			'dataProvider'=>$listLocalname,
 		));
 	}
 

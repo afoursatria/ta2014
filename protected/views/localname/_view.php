@@ -31,7 +31,8 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
-	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref_local->ref_name); ?>
+	<?php if (!is_null($data->ref_local)) echo CHtml::encode($data->ref_local->ref_name); 
+		else echo "-";?>
 	<br />
 
 <!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_insert_by')); ?>:</b>
