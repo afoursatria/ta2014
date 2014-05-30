@@ -107,30 +107,35 @@ li{
 #footer-content {
   float: left;
   width: 78.8541666666%;
-  height: 90px;
 }
 
-#footer-content .text {
-  display: inline-block;
+#footer-content-bottom{
+    background-color: #00791e;
+    width: 100%;
+    margin: 0;
+    display: inline-block;
+  
+}
+
+#footer-content .text, #footer-content-bottom .text{
   font-style: normal;
   font-size: 12px;
   font-weight: 400;
   color: rgb(255, 255, 255);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
-  filter: none;
+  display: inline-block;
+}
+
+#footer-content-bottom .text{
+    text-align: center;
+    float: none;
+
+}
+
+#footer-content-bottom a{
+    text-align: center;
+    float: none;
+    color: #95CEEE;
+
 }
 
 #header {
@@ -138,20 +143,6 @@ li{
   width: 80.0833333333%;
   height: 166px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
-  -webkit-transform: none;
-  -moz-transform: none;
-  -o-transform: none;
-  -ms-transform: none;
-  transform: none;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  -ms-transition: none;
-  transition: none;
-  -webkit-filter: none;
-  -moz-filter: none;
-  -o-filter: none;
-  -ms-filter: none;
   filter: none;
   background-color: rgb(255, 255, 255);
   margin-left: 10%;
@@ -391,6 +382,54 @@ select#_lang {
   filter: none;
 }
 
+.yiiPager {
+  list-style: none;
+  padding: 0 12px; margin: 0;
+  margin: 100px;
+  overflow: hidden;
+  border-radius: 5px;
+  
+  /* 3d effect using box-shadows */
+  display: inline-block;
+  height: 42px;
+}
+
+/* Now the list items */
+.yiiPager li {
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  bottom: -11px;
+}
+
+.yiiPager li:first-child {margin: 0}
+
+/* The real fun begins here :D */
+.yiiPager li a {
+  background: #a1d0dd;
+  display: block;
+  border-radius: 3px;
+  padding: 0 12px;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  height: 27px;
+  font: 12px / 27px "PT Sans", Arial, sans-serif;
+  /* Now the 3d effect */
+  box-shadow: 0px 3px #7fafbc, 0px 4px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Basic design is ready, now let's make it animate when hovered or clicked */
+/* For this, we'll use transition property */
+
+.yiiPager li a:hover {background: #bae0ea}
+.yiiPager li a:active {
+  background: #bae0ea;
+  /* Now, let's make it look like its pressed down when clicked */
+  bottom: -3px;
+  box-shadow: 0px 0px #7fafbc, 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
 .senyawa {
   width: 100%;
   height: 210px;
@@ -589,7 +628,7 @@ div#content {
     margin: 5%;
 }
 .text {
-  float: left;
+    float: left;
 }
 
 .user-entry {
@@ -687,6 +726,33 @@ div#content {
   text-align: center;
 }
 
+input#search-button{
+  background-color: #6fba26;
+  padding: 10px;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  box-shadow: inset 0px 1px 0px #b2f17f, 0px 6px 0px #3d6f0d;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
+
+
+input#search-button:active{
+    top: 7px;
+box-shadow: inset 0px 1px 0px #b2f17f, inset 0px -1px 0px #3d6f0d;
+color: #ffffff;
+text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+background-color: #6fba26;
+border: none;
+}
+
+input#search-button:focus{
+  outline: none;
+}
 ._input {
   display: block;
   float: left;
@@ -999,15 +1065,15 @@ div#content {
   margin-left: 10%;
 }
 
-#footer-content-3 {
+.footer-content-3 {
   margin: 18px 0 0 10.625%;
 }
 
-#footer-content-1,
-#footer-content-2,
-#footer-content-4,
-#footer-content-5 {
-  margin: 20px 0 0 9.0625%;
+.footer-content-1,
+.footer-content-2,
+.footer-content-4,
+.footer-content-5 {
+    margin: 20px 0 0 9.0625%;
 }
 
 .hint-black-1 {
@@ -1821,15 +1887,14 @@ div#content {
   filter: none;
 }
 
-#content ._input-2 {
-  width: 35.5184743742%;
+#speNameKey {
+  width: 72.518474%;
   height: 35px;
-  margin: 30px 0 0 2.6221692491%;
+  margin: 0 6% 0 2.6221692491%;
   border: 1px solid rgb(49, 54, 142);
   border-radius: 6px;
   background-color: rgb(242, 242, 242);
   box-shadow: 0 2px 5px rgb(0, 121, 46);
-  color: rgb(255, 255, 255);
   -webkit-transform: none;
   -moz-transform: none;
   -o-transform: none;
@@ -2923,7 +2988,7 @@ div#content {
     font-size: 14px;
   }
 
-  #content ._input-2 {
+  #speNameKey {
     width: 59.8314606741%;
     margin-left: 2.2471910112%;
     box-shadow: 0 2px 5px rgb(0, 121, 46);
@@ -3871,7 +3936,7 @@ div#content {
     margin-left: 87.8787878787%;
   }
 
-  #content ._input-2 {
+  #speNameKey {
     clear: both;
     width: 49.4417862838%;
     margin-top: -322px;
@@ -4674,7 +4739,7 @@ div#content {
     margin-left: 88.202247191%;
   }
 
-  #content ._input-2 {
+  #speNameKey {
     width: 45.1310861423%;
     margin-top: -289px;
     margin-left: 2.2471910112%;
@@ -5519,7 +5584,7 @@ div#content {
     margin-top: -291px;
   }
 
-  #content ._input-2 {
+  #speNameKey {
     width: 44.3564356435%;
     margin-top: -291px;
     margin-left: 2.5742574257%;
@@ -5907,14 +5972,14 @@ div#content {
     margin-left: 1.6778523489%;
   }
 
-  #footer #footer-content-2 {
+  #footer .footer-content-2 {
     width: 122.7154046997%;
   }
 
-  #footer #footer-content-1,
-  #footer #footer-content-3,
-  #footer #footer-content-4,
-  #footer #footer-content-5 {
+  #footer .footer-content-1,
+  #footer .footer-content-3,
+  #footer .footer-content-4,
+  #footer .footer-content-5 {
     width: 122.6562499999%;
   }
 
@@ -6459,7 +6524,7 @@ div#content {
     margin-left: 78.869047619%;
   }
 
-  #content ._input-2 {
+  #speNameKey {
     width: 88.3928571428%;
     margin-top: -310px;
     margin-left: 5.0595238095%;
@@ -6882,15 +6947,15 @@ div#content {
     margin-left: 10%;
   }
 
-  #footer #footer-content-2 {
+  #footer .footer-content-2 {
     width: 103.1372549019%;
     margin-left: 1.1764705882%;
   }
 
-  #footer #footer-content-1,
-  #footer #footer-content-3,
-  #footer #footer-content-4,
-  #footer #footer-content-5 {
+  #footer .footer-content-1,
+  #footer .footer-content-3,
+  #footer .footer-content-4,
+  #footer .footer-content-5 {
     width: 103.125%;
     margin-left: 1.171875%;
   }
@@ -7459,7 +7524,7 @@ div#content {
     margin-top: -261px;
   }
 
-  #content ._input-2 {
+  #speNameKey {
     width: 79.0178571428%;
     margin-top: -341px;
     margin-left: 10.2678571428%;
@@ -7526,8 +7591,6 @@ form#formId {
   float: left;
 }
 
-.dropdown-menu {
-}
 .btn-group, .btn-group-vertical {
   vertical-align: middle;
 }
@@ -7536,6 +7599,32 @@ form#formId {
   color: rgb(103, 189, 221);
   font-size: 16px;
 }
+
 a {
   color: #428bca;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pager {
+    clear: both;
+
+}
+ul.yiiPager li {
+    float: left;
+
+}
+ul.yiiPager {
+    display: inline-block !important;
+
+}
+
+.list-view .summary {
+  margin: 10px 0 5px 0 !important;
+}
+
+#engdrop{
+    background-color: #000;; 
 }

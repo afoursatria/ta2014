@@ -107,14 +107,16 @@ $('.search-form form').submit(function(){
         <?php 
     CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
     echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
-    echo CHtml::submitButton('Search', array('name'=>''));
+    echo CHtml::submitButton('Search', array('name'=>'','id'=>'search-button'));
     CHtml::endForm();
 ?>
-        <?php $this->widget('zii.widgets.CListView', array(
-    'dataProvider'=>$dataProvider,
-    'itemView'=>'//species/_view',
-    'id'=> 'specieslistview',
-)); ?>
+        <?php 
+        $this->widget('zii.widgets.CListView', array(
+        'dataProvider'=>$dataProvider,
+        'itemView'=>'//species/_view',
+        'id'=> 'specieslistview',
+        )); 
+?>
     </div>
 </div><!--row-->
 

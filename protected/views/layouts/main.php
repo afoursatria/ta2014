@@ -24,7 +24,7 @@
 	<!-- Register JS -->
 	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
-	<link rel="script" type="text/js" href=" />
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -45,24 +45,28 @@
 				</div><!--user staff-->
 				<!-- <p id ="p-bahasa">Pilih bahasa: </p> -->
 				<?php 
-					//$this->widget('application.components.LangBox');
+					$this->widget('application.components.LangBox');
 				?>
-				<?php echo CHtml::form('','post',array('id'=>'formId')); ?>
-					<?php $this->widget('bootstrap.widgets.TbButtonGroup', array(
-						'htmlOptions' => array('select' => '$currentlang','id'=>'_lang'),
-					'type'=>'', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-					'buttons'=>array(
-					    array('label'=>'Change Language', 
-					    	'encodeLabel'=>false,
-					    	'items'=>array(
-					        array('label'=> CHtml::image('images/u88.png','ba',array("width"=>"20px" ,"height"=>"15px")).' English', 'url'=>'#'),
-					        '---',
-					        array('label'=> CHtml::image('images/u86.png','ba',array("width"=>"20px" ,"height"=>"15px")).' Bahasa', 'url'=>'#'),
-					    )),
-					),
-					)); 
+				<?php 
+				// echo CHtml::form('','post',array('id'=>'formId')); ?>
+					<?php 
+					// $this->widget('bootstrap.widgets.TbButtonGroup', array(
+					// 	'htmlOptions' => array('select' => '$currentlang','id'=>'_lang'),
+					// 'type'=>'', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
+					// 'buttons'=>array(
+					//     array('label'=>'Change Language', 
+					//     	'encodeLabel'=>false,
+					//     	'items'=>array(
+					//         array('label'=> CHtml::image('images/u88.png','ba',array("width"=>"20px" ,"height"=>"15px")).' English', 'url'=>'#'),
+					//         '---',
+					//         array('label'=> CHtml::image('images/u86.png','ba',array("width"=>"20px" ,"height"=>"15px")).' Bahasa', 'url'=>'#'),
+					//     )),
+					// ),
+					// )); 
 					?> 
-				<?php echo CHtml::endForm(); ?> 
+				<?php 
+				// echo CHtml::endForm(); 
+				?> 
 			</div> <!--topside-nav-->
 			
 			<img class="image image-10" src = "<?php echo Yii::app()->request->baseUrl; ?>/images/makara-ui-farmasi.png">
@@ -100,9 +104,26 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-			All Rights Reserved.<br/>
-			<?php echo Yii::powered(); ?>
+		    <div id= "footer-content" class ="footer-content-5 clearfix">
+				<p class="text _text text-140">Beranda</p>
+				<div class="separator1 separator1-5"></div>
+				<p class="text _text text-145">Daftar Spesies</p>
+				<p class="text _text text-150">Daftar Nama Lokal</p>
+				<p class="text _text text-155">Unggah</p>
+				<p class="text _text text-160">Tentang Kami</p>
+				<p class="text _text text-165">Acara dan Berita</p>
+				<p class="text _text text-170">Daftar Senyawa</p>
+				<p class="text _text text-175">Daftar Khasiat</p>
+				<p class="text text-180">Kontak</p>
+				<p class="text _text text-185">Daftar Nama Alias</p>
+				<div class="separator2 separator2-5"></div>
+				<div class="separator3 separator3-5"></div>
+				<div class="separator4 separator4-5"></div>
+		    </div>
+		    <div id ="footer-content-bottom" class = "footer-content-5 text-center">
+				<p class ="text">Copyright &copy; <?php echo date('Y'); ?> by My Company. 	<?php echo Yii::powered(); ?><br/>
+				All Rights Reserved.<br/></p>
+			</div><!--bottom footer-->
 		</div><!-- footer -->
 	</div><!-- page -->
 </body>
