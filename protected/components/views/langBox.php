@@ -4,7 +4,7 @@
 	        <?php 
 	        echo CHtml::dropDownList(
 	        	'_lang', $currentLang, 
-	        	array('en' => CHtml::image('images/u88.png'), 'in' => 'Bahasa'), 
+	        	array('en' => '<span id="engdrops"></span>Eng', 'in' => 'Bahasa'), 
 	        	array(
 	        	'submit' => '',
 	        	'encode' => false,
@@ -20,5 +20,3 @@
 	    </div>
 	</div>
 <?php echo CHtml::endForm(); ?>
-
-//tambahin div

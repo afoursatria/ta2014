@@ -59,45 +59,32 @@ $this->menu=array(
 
 <?php
 
-// $this->widget('zii.widgets.jui.CJuiTabs',array(
-//     'tabs'=>array(
-//         Yii::t('main_data','Local Name')=>array('id'=>'localName-id','content'=>$this->
-//             renderPartial(
-//                             '_localname',
-//                             array('dataProvider'=>$localnameDataProvider),TRUE
-//                             )),       
-//         Yii::t('main_data','Alias')=>array('id'=>'aliases-id','content'=>$this->renderPartial(
-// 	                        '_alias',
-// 	                        array('dataProvider'=>$aliasesDataProvider),TRUE
-//                             )),
-//         Yii::t('main_data','Virtue')=>array('id'=>'virtue-id','content'=>$this->renderPartial(
-//                             '_virtue',
-//                             array('dataProvider'=>$virtueDataProvider),TRUE
-//                             )),                                              
-//       	Yii::t('main_data','Compound')=>array('id'=>'contents-id','content'=>$this->renderPartial(
-// 	                        '_contents',
-// 	                        array('dataProvider'=>$contentsDataProvider),TRUE
-// 	                        )),                                              
-//       	// panel 3 contains the content rendered by a partial view
-//         // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
-//     ),
-//     // additional javascript options for the tabs plugin
-//     'options'=>array(
-//         // 'collapsible'=>true,
-//     ),
-//     'id'=>'MyTab-Menu',
-// ));
-?>
-<?php $this->widget('bootstrap.widgets.TbTabs', array(
-    'type'=>'tabs', // 'tabs' or 'pills'
+$this->widget('bootstrap.widgets.TbTabs',array(
     'tabs'=>array(
-        array('label'=>'Local Name', 'content'=>$this->renderPartial('_localname',
-                            array('dataProvider'=>$localnameDataProvider)), 'active'=>true, 'htmlOptions'=>array('id'=>'localName-id')),
-        array('label'=>'Alias', 'content'=>$this->renderPartial('_alias',
-                            array('dataProvider'=>$aliasesDataProvider)), 'htmlOptions'=>array('id'=>'aliases-id')),
-        array('label'=>'Virtue', 'content'=>$this->renderPartial('_virtue',
-                            array('dataProvider'=>$virtueDataProvider)), 'htmlOptions'=>array('id'=>'virtue-id')),
-        array('label'=>'Compound', 'content'=>$this->renderPartial('_contents',
-                            array('dataProvider'=>$contentsDataProvider)), 'htmlOptions'=>array('id'=>'contents-id')),
+        Yii::t('main_data','Local Name')=>array('label'=>'Local Name','id'=>'localName-id','active'=>true,'content'=>$this->
+            renderPartial(
+                            '_localname',
+                            array('dataProvider'=>$localnameDataProvider),TRUE
+                            )),       
+        Yii::t('main_data','Alias')=>array('label'=>'Alias','id'=>'aliases-id','content'=>$this->renderPartial(
+	                        '_alias',
+	                        array('dataProvider'=>$aliasesDataProvider),TRUE
+                            )),
+        Yii::t('main_data','Virtue')=>array('label'=>'Virtue','id'=>'virtue-id','content'=>$this->renderPartial(
+                            '_virtue',
+                            array('dataProvider'=>$virtueDataProvider),TRUE
+                            )),                                              
+      	Yii::t('main_data','Compound')=>array('label'=>'Compound','id'=>'contents-id','content'=>$this->renderPartial(
+	                        '_contents',
+	                        array('dataProvider'=>$contentsDataProvider),TRUE
+	                        )),                                              
+      	// panel 3 contains the content rendered by a partial view
+        // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
     ),
-)); ?>
+    // additional javascript options for the tabs plugin
+    // 'options'=>array(
+    //     // 'collapsible'=>true,
+    // ),
+    'id'=>'MyTab-Menu',
+));
+?>

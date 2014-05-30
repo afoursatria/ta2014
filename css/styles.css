@@ -7571,7 +7571,7 @@ div#topside-nav {
   right: 17%;
   display: inline-block;
   position: absolute;
-  top: 3%;;
+  top: 22%;;
 }
 div#user-stuff {
   float: left;
@@ -7626,5 +7626,9 @@ ul.yiiPager {
 }
 
 #engdrop{
-    background-color: #000;; 
+    background-color: #000; 
+}
+.nav>li {
+    float: left;
+
 }
