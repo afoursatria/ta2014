@@ -7636,3 +7636,7 @@ ul.yiiPager {
 tr:hover {
 color: #76D172;
 }
+
+span.red {
+color: red;
+}
