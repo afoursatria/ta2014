@@ -4,19 +4,22 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id'=>'register-form',
+    'type'=>'inline',
     'enableClientValidation'=>true,
     'clientOptions'=>array(
         'validateOnSubmit'=>true,
     ),
+    'htmlOptions'=>array('class'=>'well'),
 )); ?>
 
 <p class="note">Fields with <span class="required">*</span> are required.</p>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Fullname')); ?>
-        <?php echo $form->textField($model,'use_fullname'); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Fullname*')); ?>
+        <?php echo $form->textFieldRow($model,'use_fullname'); ?>
+        <span class="form-hint"></span>
         <?php echo $form->error($model,'use_fullname'); ?>
     </div>
 
