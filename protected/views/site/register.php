@@ -17,14 +17,14 @@
 <p class="note">Fields with <span class="required">*</span> are required.</p>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Fullname*')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Fullname')); ?><span class="red">*</span>
         <?php echo $form->textFieldRow($model,'use_fullname'); ?>
-        <span class="form-hint"></span>
+        <span class="form-hint">Max.Length 25 characters</span>
         <?php echo $form->error($model,'use_fullname'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Gender')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Gender')); ?><span class="red">*</span>
         <?php echo $form->radioButtonList($model,'use_gender', 
             array( 0 => Yii::t('user','Male'),
                     1 => Yii::t('user','Female'))); ?>
@@ -32,7 +32,7 @@
     </div>
     
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Birthdate')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Birthdate')); ?><span class="red">*</span>
         <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
         'model'=>$model, 'attribute'=>'use_birthdate',
         'options'=>array(
@@ -42,23 +42,23 @@
         'changeMonth'=>'true',
             ),
         )); ?>
-        <?php echo $form->error($model,'use_birthdate'); ?>
+        <?php echo $form->error($model,'use_birthdate'); ?><span class="red">*</span>
     </div>
     
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Email')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Email')); ?><span class="red">*</span>
         <?php echo $form->textField($model,'use_email'); ?>
         <?php echo $form->error($model,'use_email'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Username')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Username')); ?><span class="red">*</span>
         <?php echo $form->textField($model,'use_username'); ?>
         <?php echo $form->error($model,'use_username'); ?>
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Password')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Password')); ?><span class="red">*</span>
         <?php echo $form->textField($model,'use_password'); ?>
         <?php echo $form->error($model,'use_password'); ?>
     </div>
@@ -70,7 +70,7 @@
     </div>
 
     <div class="row">
-        <?php echo $form->labelEx($model,Yii::t('user','Role')); ?>
+        <?php echo $form->labelEx($model,Yii::t('user','Role')); ?><span class="red">*</span>
          <?php 
             if (!Yii::app()->user->isGuest)  
                 echo $form->dropdownList($model,'rol_id', 
