@@ -7632,3 +7632,7 @@ ul.yiiPager {
     float: left;
 
 }
+
+tr:hover {
+color: #76D172;
+}
