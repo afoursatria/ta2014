@@ -142,6 +142,13 @@ class SiteController extends Controller
 	{
 		$model = new ResetPasswordForm;
 
+		// if it is ajax validation request
+		if(isset($_POST['ajax']) && $_POST['ajax']==='resetPassword-form')
+		{
+			echo CActiveForm::validate($model);
+			Yii::app()->end();
+		}
+
 		if (isset($_POST['ResetPasswordForm'])) {
 			$model->attributes=$_POST['ResetPasswordForm'];
 			
@@ -176,5 +183,25 @@ class SiteController extends Controller
 		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB UI'));   
       	Yii::app()->mail->send($message); 
 		$this->redirect(array('site/index'));
+    }
+
+    public function sendResetPasswordMail($email)
+    {   
+        $message            = new YiiMailMessage;
+          
+        //this points to the file verificationRequest.php inside the view path
+        $message->view = "user\\resetPasswordMail";
+        $criteria=new CDbCriteria;
+		$criteria->select='use_email';  // only select the 'use_email' column
+		$criteria->condition='use_email='.$email;
+		$userModel=User::model()->find($criteria);
+        $params              = array('myMail'=>$userModel);
+        $message->subject    = 'Password Reset';
+      	$message->setBody($params, 'text/html');               
+		
+		$message->addTo($userModel->use_email);        	
+
+		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB'));   
+      	Yii::app()->mail->send($message); 
     }
 }

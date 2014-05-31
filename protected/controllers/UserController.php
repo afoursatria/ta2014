@@ -189,21 +189,21 @@ class UserController extends Controller
 		$model=User::model()->findByPk($id);
     	$model->verifyUser();
     	if ($model->save()) {
-    		$this->sendMailVerivication($id);
+    		$this->sendVerificationMail($id);
 			$this->redirect(array('user/admin'));		
     	}
 		
 	}
 
-	public function sendMailVerivication($id)
+	public function sendVerificationMail($id)
     {   
         $message            = new YiiMailMessage;
           
         //this points to the file verificationRequest.php inside the view path
         $message->view = "user\\verificationApproval";
         $criteria=new CDbCriteria;
-		$criteria->select='use_email';  // only select the 'use_email' column
-		$criteria->condition='rol_id='.$id;
+		// $criteria->select='use_email';  // only select the 'use_email' column
+		// $criteria->condition='rol_id='.$id;
 		$userModel=User::model()->findByPk($id);
         $params              = array('myMail'=>$userModel);
         $message->subject    = 'Your Account is Active Now';
@@ -211,7 +211,7 @@ class UserController extends Controller
 		
 		$message->addTo($userModel->use_email);        	
 
-		$message->setFrom(array('afour.satria@gmail.com' => 'Herbal DB'));   
+		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB'));   
       	Yii::app()->mail->send($message); 
     }
 

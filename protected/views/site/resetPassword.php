@@ -4,6 +4,9 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'resetPassword-form',
 	'enableClientValidation'=>true,
+    'clientOptions'=>array(
+        'validateOnSubmit'=>true,
+        ),
 )); ?>
 
 	<?php //echo $form->errorSummary($model); ?>
@@ -30,5 +33,5 @@
 	<div class="row submit">
         <?php echo CHtml::submitButton('Reset'); ?>
     </div>
-</div>
 <?php $this->endWidget(); ?>
+</div>
