@@ -107,7 +107,7 @@ $('.search-form form').submit(function(){
         <?php 
     CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
     echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
-    echo CHtml::submitButton('Search', array('name'=>'','id'=>'search-button'));
+    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
     CHtml::endForm();
 ?>
         <?php 

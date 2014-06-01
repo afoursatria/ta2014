@@ -1,6 +1,6 @@
 /*=========Fonts=========*/
 @font-face {
-    font-family: '';
+    font-family: 'News Cycle';
     src: url('../fonts/newscycle-regular-webfont.eot');
     src: url('../fonts/newscycle-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('../fonts/newscycle-regular-webfont.woff') format('woff'),
@@ -726,33 +726,48 @@ div#content {
   text-align: center;
 }
 
-input#search-button{
-  background-color: #6fba26;
+input.button{
   padding: 10px;
   position: relative;
-  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   text-decoration: none;
-  box-shadow: inset 0px 1px 0px #b2f17f, 0px 6px 0px #3d6f0d;
   margin-top: 10px;
   border-radius: 5px;
   color: #fff;
   border: none;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 
-input#search-button:active{
-    top: 7px;
-box-shadow: inset 0px 1px 0px #b2f17f, inset 0px -1px 0px #3d6f0d;
-color: #ffffff;
-text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
-background-color: #6fba26;
-border: none;
+input.button:active{
+  top: 7px;
+  color: #ffffff;
+  text-shadow: 0px 1px 1px rgba(255,255,255,0.3);
+  border: none;
 }
 
-input#search-button:focus{
+input.button:focus{
   outline: none;
 }
+
+#green.button{
+  background-color: #00791e;
+  box-shadow: inset 0px 1px 0px #00791e, 0px 6px 0px #045518;
+}
+
+#green.button:active{
+    box-shadow: inset 0px 1px 0px #00791e, inset 0px -1px 0px #3d6f0d;
+}
+
+#blue.button{
+  background-color: #31368e;
+  box-shadow: inset 0px 1px 0px #31368e, 0px 6px 0px #111558;
+}
+
+#blue.button:active{
+    box-shadow: inset 0px 1px 0px #b2f17f, inset 0px -1px 0px #3d6f0d;
+}
+
 ._input {
   display: block;
   float: left;
@@ -7639,4 +7654,30 @@ color: #76D172;
 
 span.red {
 color: red;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    font-family: inherit;
+
+}
+.help-block {
+    color: #F14545;
+    margin-top: 0px;
+    margin-left: 11px;
+
+}
+span.form-hint {
+    margin-left: 1%;
+
+}
+#register-form.row {
+    margin-top: 10%;
+}
+
+
+#register-form .row {
+    margin-top: 1%;
+
+}
+.help-block.error {
+
 }
