@@ -61,16 +61,20 @@
 	</div>
 	<div class="row">
 		<span class="col-xs-3"><?php echo $form->labelEx($model,'use_cv'); ?></span>
-		<?php echo $form->fileField($model,'use_cv'); ?>
-		<?php echo $form->error($model,'use_cv'); ?>
-	</div>
-
-	<?php if($model->isNewRecord!='1'){ ?>
-	<div class="row">
-     	<?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
+		<span class="col-xs-9"><?php echo $form->fileField($model,'use_cv'); ?>
+			<div class="row">
+				<?php echo $form->error($model,'use_cv'); ?>
+			</div>
+			<div class="row">
+				<?php if($model->isNewRecord!='1'){ ?>
+		     	<?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
+			</div>
+		</span>
 	</div>
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update')); ?>
+		<div class="col-xs-3"></div>
+		<div class="col-xs-9">
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'), array('id'=>'blue','class'=>'button')); ?></div>
 	</div>
 
 <?php $this->endWidget(); ?>

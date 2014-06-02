@@ -66,8 +66,8 @@
     'stacked'=>false, // whether this is a stacked menu
     'items'=>
      array(
-		array('label'=>'Login', 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
 		array('label'=>'Register', 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),	
+		array('label'=>'Login', 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
 		array('label'=>'You are logged in as '.Yii::app()->user->id, 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
                 array(
                     'label'=>'Profile',
