@@ -31,35 +31,4 @@
 	 
 	 	<div class = "element"></div>
 	 </div>
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
-	<?php echo CHtml::encode($data->ref_id); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_insert_by')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_insert_by); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_insert_date')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_insert_date); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_update_by')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_update_by); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_update_date')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_update_date); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_verified_by')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_verified_by); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_verified_date')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_verified_date); ?>
-	<br />
-
-	*/ ?>
-
 </div>

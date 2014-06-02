@@ -26,10 +26,10 @@
 ?>
 
 <?php
-    $this->widget('bootstrap.widgets.TbGridView', array(
-    'type'=>'striped',
+    $this->widget('zii.widgets.CListView', array(
+    //'type'=>'striped',
     'dataProvider'=>$dataProvider,
-    // 'itemView'=>'/localname/_view',
+    'itemView'=>'/localname/_view',
 	'emptyText'=>Yii::t('main_data','This Species has no virtue'),
 	'summaryText'=>Yii::t('main_data','Displaying {end} result'),
 	'id'=>'virtue-list',

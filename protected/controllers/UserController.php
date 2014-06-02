@@ -166,7 +166,7 @@ class UserController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new User('search');
+		$model=new User;
 		$userModel= new User;
 		$model->unsetAttributes();  // clear any default values
 		

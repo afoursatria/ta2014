@@ -31,93 +31,11 @@
 <body class="body beranda clearfix">
 	<div id="page">
 		<div id="header" class="clearfix">
-			<div id ="topside-nav">
-				<div id = "user-stuff">
-					<?php
-					// if(!Yii::app()->user->isGuest)
-					// 	echo Yii::t('main_data','You are logged in as ') . CHtml::link(Yii::app()->user->id, array('user/profile/', 'id'=>Yii::app()->user->getState("no")));
-					// else
-					// 	echo CHtml::link(Yii::t('main_layout','Login'), array('login'));
-					?> 
-					<?php 
-					// if(Yii::app()->user->getState("role") == null)
-					// 	echo CHtml::link(Yii::t('user','Register'), array('register')); 
-					?>
-				</div><!--user staff-->
+			<!-- <div id ="topside-nav"> -->
 				<!-- <p id ="p-bahasa">Pilih bahasa: </p> -->
-				<?php 
-					$this->widget('application.components.LangBox');
-				?>
-				<?php 
-				// echo CHtml::form('','post',array('id'=>'formId')); ?>
-					<?php 
-					// $this->widget('bootstrap.widgets.TbButtonGroup', array(
-					// 	'htmlOptions' => array('select' => '$currentlang','id'=>'_lang'),
-					// 'type'=>'', // '', 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-					// 'buttons'=>array(
-					//     array('label'=>'Change Language', 
-					//     	'encodeLabel'=>false,
-					//     	'items'=>array(
-					//         array('label'=> CHtml::image('images/u88.png','ba',array("width"=>"20px" ,"height"=>"15px")).' English', 'url'=>'#'),
-					//         '---',
-					//         array('label'=> CHtml::image('images/u86.png','ba',array("width"=>"20px" ,"height"=>"15px")).' Bahasa', 'url'=>'#'),
-					//     )),
-					// ),
-					// )); 
-					?> 
-				<?php 
-				// echo CHtml::endForm(); 
-				?> 
-			</div> <!--topside-nav-->
-						<?php 
-			$this->widget('bootstrap.widgets.TbNavbar',array(
-'items'=>array(
-    array(
-        'class'=>'bootstrap.widgets.TbMenu',
-        'htmlOptions'=>array('class'=>'pull-right'),
-        'items'=>
-        array(
-		array('label'=>'Register', 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),
-        	
-            array('label'=>'Login', 'url'=>'#', 'visible'=>Yii::app()->user->isGuest, 'items'=>array(
-                array(
-                    'label'=>'{menu}',
-                    'template'=>'<form id="login-form" action="/sewed/index.php/site/login" method="post">	
-                    <p class="note">Fields with <span class="required">*</span> are required.</p>
-					<div class="row">
-					<label for="LoginForm_username" class="required">Username <span class="required">*</span></label>		
-					<input name="LoginForm[username]" id="LoginForm_username" type="text" />		
-					<div class="errorMessage" id="LoginForm_username_em_" style="display:none"></div>	</div>
-					<div class="row">
-					<label for="LoginForm_password" class="required">Password <span class="required">*</span></label>		<input name="LoginForm[password]" id="LoginForm_password" type="password" />
-					<div class="errorMessage" id="LoginForm_password_em_" style="display:none"></div>	</div>	
-					<div>
-					<div class="errorMessage" id="LoginForm_use_is_active_em_" style="display:none"></div>	</div>
-					<div class="row submit">
-        			<input type="submit" name="yt0" value="Login" />    </div>
-					</div>
-					</form>'
-                )
-            )
-			),
-		array('label'=>'You are logged in as '.Yii::app()->user->id, 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
-                array(
-                    'label'=>'Profile',
-                    'url'=>array('user/profile/', 'id'=>Yii::app()->user->getState("no")),
-                ),
-                array(
-                	'label'=>'Logout',
-                	'url'=>array('/site/logout')
-                )
-            )
-			),
-        ),
-    ),
-))); 
-?>
-			<img class="image image-10" src = "<?php echo Yii::app()->request->baseUrl; ?>/images/makara-ui-farmasi.png">
+				<img class="image image-10" src = "<?php echo Yii::app()->request->baseUrl; ?>/images/makara-ui-farmasi.png">
 			<p class="web-title"><?php echo Yii::t('main_layout',Yii::app()->name); ?></p>
-			<?php $this->widget('zii.widgets.CMenu',array(
+				<?php $this->widget('zii.widgets.CMenu',array(
 				'htmlOptions'=>array('id'=>'mainmenu'),
 				'submenuHtmlOptions'=>array('class'=>'p'),
 				'items'=>array(
@@ -137,9 +55,35 @@
 					)
 				); 
 			?>
-			<!-- mainmenu -->
-		</div><!-- header -->
-		
+			<div id= "topside-nav">
+				<?php 
+					$this->widget('application.components.LangBox');
+				?>
+	
+			<?php
+				$this->widget('bootstrap.widgets.TbMenu', array(
+    'type'=>'list', // '', 'tabs', 'pills' (or 'list')
+    'stacked'=>false, // whether this is a stacked menu
+    'items'=>
+     array(
+		array('label'=>'Login', 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
+		array('label'=>'Register', 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),	
+		array('label'=>'You are logged in as '.Yii::app()->user->id, 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
+                array(
+                    'label'=>'Profile',
+                    'url'=>array('user/profile/', 'id'=>Yii::app()->user->getState("no")),
+                ),
+                array(
+                	'label'=>'Logout',
+                	'url'=>array('/site/logout')
+                )
+            )
+			),
+        ),
+)); 
+?>
+</div>
+		</div><!--header-->
 		<div class="container container-3 clearfix">
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
@@ -147,7 +91,6 @@
 			)); ?><!-- breadcrumbs -->
 		<?php endif?>
 			<?php echo $content; ?>
-		
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
