@@ -1,5 +1,11 @@
 <h1>Reset Password</h1>
 
+<?php if(Yii::app()->user->hasFlash('success')):?>
+    <div class="info">
+        <?php echo Yii::app()->user->getFlash('success'); ?>
+    </div>
+<?php endif; ?>
+
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'resetPassword-form',

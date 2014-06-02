@@ -45,13 +45,12 @@ class UserController extends Controller
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha'),
-			 	'users'=>array('@'),
-				 'expression'=>
-				 	'Yii::app()->user->getState("role")==1',		
+			 	'users'=>array('@'),		
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete','verify'),
-			 	'users'=>array('@'),				
+			 	'expression'=>
+				 	'Yii::app()->user->getState("role")==1',				
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -139,7 +138,7 @@ class UserController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	public function actionChangePassword()
+	public function actionChangePassword($id)
 	{
 		$model=new ChangePasswordForm;
 		$model->setScenario('changePassword');
@@ -149,19 +148,14 @@ class UserController extends Controller
 			// echo CActiveForm::validate($model);
 			// Yii::app()->end();
 		
-		if(isset($_POST['ajax']) && $_POST['ajax']==='changePassword-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
 		if(isset($_POST['ChangePasswordForm']))
 		{
 			$model->attributes=$_POST['ChangePasswordForm'];
 			if($model->validate() && $model->changePassword())
 				{
 					Yii::app()->user->setFlash('success','Password has been changed');
-					$this->redirect(array('profile','id'=>Yii::app()->user->id));
+					$this->refresh();
 				}
-		}
 		}
 		$this->render('changePassword',array('model'=>$model));
 	}

@@ -34,12 +34,10 @@ class Localname extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_id, loc_localname, loc_region,ref_id', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
-			array('loc_localname, loc_region','unique', 'on'=>'create','message'=>'{attribute}:{value} already exists!'),
-			array('spe_id, ref_id, loc_insert_by, loc_update_by, loc_verified_by', 'numerical', 'integerOnly'=>true),
-			array('loc_localname, loc_region', 'length', 'max'=>100),
-			array('loc_insert_date, loc_update_date, loc_verified_date', 'length', 'max'=>20),
-			array('spe_id', 'safe'),
+			array('spe_id, loc_localname, loc_region,ref_id', 'required', 'on'=>'insert', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
+			array('loc_localname, loc_region','unique', 'on'=>'insert','message'=>'{attribute}:{value} already exists!'),
+			array('loc_localname, loc_region', 'length', 'max'=>100, 'on'=>'insert'),
+			array('loc_insert_date, loc_update_date, loc_verified_date', 'length', 'max'=>20, 'on'=>'insert'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('loc_id, spe_id, loc_localname, loc_region, ref_id, loc_insert_by, loc_insert_date, loc_update_by, loc_update_date, loc_verified_by, loc_verified_date', 'safe', 'on'=>'search'),
@@ -156,5 +154,13 @@ class Localname extends CActiveRecord
     	}
     	*/
 
+    }
+
+    public function verify()
+    {
+    	$this->loc_is_verified = 1;
+    	$this->loc_verified_by = Yii::app()->user->getState('no');
+    	$this->loc_verified_date = new CDbExpression('NOW()');
+    	return true;
     }
 }

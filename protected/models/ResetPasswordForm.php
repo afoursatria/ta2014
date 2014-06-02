@@ -10,6 +10,8 @@ class ResetPasswordForm extends CFormModel
 
 	public $verifyCode;
 
+    private $newPass; 
+
 	private $_user;
 
 	public function rules()
@@ -24,23 +26,27 @@ class ResetPasswordForm extends CFormModel
 
     public function init()
     {
-    	$this->_user = User::model()->findByAttributes( array( 'use_email'=>$this->email ) );
+    	// $this->_user = User::model()->find( 'use_email=:use_email',array( 'use_email'=>$this->email ) );
+        $this->newPass = $this->generateRandomPass();
+
     }
 
     public function validateEmail($attribute,$params)
     { 
   
-        // $this->_user = User::model()->findByAttributes( array( 'use_email'=>$this->email ) );
-        if(empty($this->_user->use_email))
+        $this->_user = User::model()->findByAttributes( array( 'use_email'=>    $this->email ) );
+        if($this->_user === Null)
         {
-            $this->addError($attribute,Yii::t('user', 'Your Email is not registered'));
-            
+            $this->addError($attribute,Yii::t('user', 'Your Email is not registered'));         
         }
     }
 
     public function resetPass()
     {
-        $newPass = generateRandomPass();
+        $this->_user->use_password = md5($this->newPass);
+        if ($this->_user->save())
+            return true;
+        return false;
     }
 
     private function generateRandomPass($length = 8)
@@ -56,7 +62,7 @@ class ResetPasswordForm extends CFormModel
             $charIndex = mt_rand(0, $validCharLength-1);
             $numberIndex = mt_rand(0, $validNumberLength-1);
 
-            if ($length % 2 = 0) {
+            if ($i%2 === 0) {
                 $result .= $validCharacters[$charIndex]; 
             }
 
@@ -64,5 +70,15 @@ class ResetPasswordForm extends CFormModel
         }
 
         return $result;
+    }
+
+    public function getNewPassword()
+    {
+        return $this->newPass;
+    }
+
+    public function getEmail()
+    {
+        return $this->_user;
     }
 }

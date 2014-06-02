@@ -47,6 +47,21 @@
 	<?php echo CHtml::encode($data->contents->con_file_mol2); ?>
 	<br />
 
+	<b><?php echo "Status"; ?>:</b>
+	<?php 
+		if ($data->contents->con_is_verified == 0) {
+		echo Yii::t('main_data', 'not verified');
+		}
+		else echo Yii::t('main_data', 'verified');
+	?>
+	<br />
+
+	<?php
+	if (Yii::app()->user->getState('role') == 1 && $data->contents->con_is_verified == 0) {
+		echo CHtml::link("Verify", array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => 'Are you sure you want to verify?'));
+	 } 
+    ?>
+
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('con_speciesname')); ?>:</b>
 	<?php echo CHtml::encode($data->con_speciesname); ?>

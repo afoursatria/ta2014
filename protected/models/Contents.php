@@ -39,11 +39,9 @@ class Contents extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('con_contentname, con_knapsack_id, con_metabolite_id, con_pubchem_id, contgroup_id, con_source', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
-			array('contgroup_id, con_insert_by, con_update_by, con_verified_by', 'numerical', 'integerOnly'=>true),
-			array('con_contentname', 'length', 'max'=>200),
-			array('con_file_mol1','file', 'allowEmpty' => true, 'types'=>'mol', 'wrongType' => Yii::t('main_data','File Mol1 must be a mol.')),
-			array('con_file_mol2','file', 'allowEmpty' => true, 'types'=>'mol2', 'wrongType' => Yii::t('main_data','Filem Mol2 must be a mol2.')),
+			array('con_contentname, con_knapsack_id, con_metabolite_id, con_pubchem_id, contgroup_id, con_source', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank'), 'on'=>'insert'),
+			array('con_file_mol1','file', 'allowEmpty' => true, 'types'=>'mol', 'wrongType' => Yii::t('main_data','File Mol1 must be a mol.'), 'on'=>'insert, update'),
+			array('con_file_mol2','file', 'allowEmpty' => true, 'types'=>'mol2', 'wrongType' => Yii::t('main_data','Filem Mol2 must be a mol2.'), 'on'=>'insert, update'),
 			// array('con_knapsack_id, con_pubchem_id, con_insert_date, con_update_date, con_verified_date', 'length', 'max'=>20),
 			// array('con_metabolite_id, con_source, con_speciesname, con_file_mol1, con_file_mol2', 'length', 'max'=>100),
 			// The following rule is used by search().
@@ -150,10 +148,34 @@ class Contents extends CActiveRecord
 		return parent::model($className);
 	}
 
+
+	public function beforeSave()
+    {
+    	if ($this->isNewRecord) {
+			$this->con_insert_by = Yii::app()->user->getState('no');
+    		$this->con_insert_date = new CDbExpression('NOW()');
+    		return true;
+    	}
+
+    	else{
+	    		$this->con_update_by = Yii::app()->user->getState('no');
+    			$this->con_update_date = new CDbExpression('NOW()');
+    			return true;    		
+    	}
+    }
+
 	public function countView()
     {
     	
     	$this->con_viewed_count += 1;
+    	return true;
+    }
+
+    public function verify()
+    {
+    	$this->con_is_verified = 1;
+    	$this->con_verified_by = Yii::app()->user->getState('no');
+    	$this->con_verified_date = new CDbExpression('NOW()');
     	return true;
     }
 }

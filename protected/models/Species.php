@@ -170,4 +170,12 @@ class Species extends CActiveRecord
     	return true;
     }
 
+    public function verify()
+    {
+    	$this->spe_is_verified = 1;
+    	$this->spe_verified_by = Yii::app()->user->getState('no');
+    	$this->spe_verified_date = new CDbExpression('NOW()');
+    	return true;
+
+    }
 }

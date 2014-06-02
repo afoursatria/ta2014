@@ -36,7 +36,7 @@ class ContentsController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'verify'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getState("role")==1',
 			),
@@ -197,6 +197,15 @@ class ContentsController extends Controller
 			'dataProvider'=>$listCompound,
 			'topCompound'=>$topCompound,
 		));
+	}
+
+	public function actionVerify($id)
+	{
+		$model=Contents::model()->findByPk($id);
+    	$model->verify();
+    	if ($model->save()) {
+			$this->redirect(array('search'));		
+    	}
 	}
 
 	/**

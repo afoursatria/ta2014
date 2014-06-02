@@ -23,7 +23,7 @@ class ChangePasswordForm extends CFormModel
         return array(
             array('currentPassword', 'validateCurrentPassword'),
             array('currentPassword, newPassword, newPasswordRepeat', 'required', 'on'=>'changePassword', 'message'=>Yii::t('user','{attribute} cannot be blank')),
-            array('newPassword', 'compare', 'compareAttribute'=>'newPasswordRepeat'),
+            array('newPasswordRepeat', 'compare', 'compareAttribute'=>'newPassword'),
             // array('newPassword', 'match', 'pattern'=>'/^[a-z0-9_\-]{5,}/i', 'message'=>'Your password does not meet our password complexity policy.'),
         );
     }

@@ -37,31 +37,14 @@ class SpeciesController extends Controller
 				// 'expression'=>'allowContributor,allowExpert',
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'expression'=>'!Yii::app()->user->role==2 OR Yii::app()->user->role==3',
+				'actions'=>array('admin','delete', 'verify'),
+				'expression'=>'Yii::app()->user->getState("role")==1',
 			
 			),
 			array('deny',  // deny all users
 			 	'users'=>array('*'),
 			),
 		);
-	}
-
-	public function allowContributor()
-	{
-		if(Yii::app()->user->role == 3)
-			return true;
-		else
-			return false;
-	}
-
-
-	public function allowExpert()
-	{
-		if(Yii::app()->user->role == 2)
-			return true;
-		else
-			return false;
 	}
 
 	/**
@@ -239,11 +222,6 @@ class SpeciesController extends Controller
 	{		
 		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
-// 		$post = Post::model()->find('post_id=:post_id AND status=:status',
-// array(
-//   ':post_id'=>8,
-//   ':status'=>'active',
-// ));
 		$criteria = new CDbCriteria;
 	 	$criteria->order = "spe_viewed_count DESC";
 		$criteria->limit = 5;
@@ -265,6 +243,17 @@ class SpeciesController extends Controller
 			'dataProvider'=>$listSpecies,
 			'topSpecies'=>$topSpecies,
 		));
+	}
+
+
+	public function actionVerify($id)
+	{
+		$model=Species::model()->findByPk($id);
+    	$model->verify();
+    	if ($model->save()) {
+			$this->redirect(array('search'));		
+    	}
+		
 	}
 
 	/**

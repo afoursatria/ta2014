@@ -142,18 +142,18 @@ class SiteController extends Controller
 	{
 		$model = new ResetPasswordForm;
 
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='resetPassword-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
-
 		if (isset($_POST['ResetPasswordForm'])) {
 			$model->attributes=$_POST['ResetPasswordForm'];
 			
-			if ($model->validate()) {
-				# code...
+			echo $model->email;
+			if ($model->getEmail() == Null) {
+				echo "kosong";
+			}
+			
+			if ($model->validate() && $model->resetPass()) {
+				$this->sendResetPasswordMail($model->email, $model->getNewPassword());
+				Yii::app()->user->setFlash('success','Reset password has been sent to your email');
+				$this->refresh();
 			}
 		}
 		$this->render('resetPassword', array(
@@ -185,17 +185,15 @@ class SiteController extends Controller
 		$this->redirect(array('site/index'));
     }
 
-    public function sendResetPasswordMail($email)
+    public function sendResetPasswordMail($email, $newPass)
     {   
         $message            = new YiiMailMessage;
           
-        //this points to the file verificationRequest.php inside the view path
+        //this points to the file resetPasswordMail.php inside the view path
         $message->view = "user\\resetPasswordMail";
-        $criteria=new CDbCriteria;
-		$criteria->select='use_email';  // only select the 'use_email' column
-		$criteria->condition='use_email='.$email;
-		$userModel=User::model()->find($criteria);
-        $params              = array('myMail'=>$userModel);
+        
+		$userModel=User::model()->find('use_email=:use_email', array('use_email'=>$email));
+        $params              = array('myMail'=>$userModel, 'newPass'=>$newPass);
         $message->subject    = 'Password Reset';
       	$message->setBody($params, 'text/html');               
 		
