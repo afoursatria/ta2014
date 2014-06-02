@@ -18,65 +18,105 @@ $this->breadcrumbs=array(
 </div>
 
 <?php else: ?>
+<div class = "contact row">
+	<div class = "col-xs-9">
+		<p>
+		<? echo Yii::t('main_data','If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.');?>
+		</p>
+		<div class="form">
+			<?php $form=$this->beginWidget('CActiveForm', array(
+				'id'=>'custom-form',
+				'enableClientValidation'=>true,
+				'clientOptions'=>array(
+					'validateOnSubmit'=>true,
+				),
+			)); ?>
+			<p class="note">Fields with <span class="required">*</span> are required.</p>
+			<div class="row">
+				<?php echo $form->labelEx($model,'name'); ?>
+			</div>
+		    <div class="row">
+		    	<span class="form-hint vertical">(Max.Length 25 characters)</span>
+			</div>
+			<div class="row">
+				<?php echo $form->textField($model,'name'); ?>
+			</div>
+			<div class="row">
+				<?php echo $form->error($model,'name'); ?>
+			</div>
+			<div class="row">
+				<?php echo $form->labelEx($model,'email'); ?>
+			</div>
+			 <div class="row">
+		        <span class="form-hint vertical">(Email has to be a valid email address)</span>
+			</div>
+			<div class="row">
+				<?php echo $form->textField($model,'email'); ?>
+		    </div>
+			<div class="row">
+				<?php echo $form->error($model,'email'); ?>
+			</div>
+			<div class="row">
+				<?php echo $form->labelEx($model,'subject'); ?>
+			</div>
+			 <div class="row">
+		    	<span class="form-hint vertical">(Max.Length 128 characters)</span>
+			</div>
+			<div class="row">
+				<?php echo $form->textField($model,'subject',array('size'=>50,'maxlength'=>128)); ?>
+		    </div>
+			<div class="row">	
+				<?php echo $form->error($model,'subject'); ?>
+			</div>
+			<div class="row">
+				<?php echo $form->labelEx($model,'body'); ?>
+			</div>
+			<div class="row">
+				<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
+			</div>
+			<div class="row">
+				<?php echo $form->error($model,'body'); ?>
+			</div>
+			<?php if(CCaptcha::checkRequirements()): ?>
+			<div class="row">
+				<?php echo $form->labelEx($model,'verifyCode'); ?>
+			</div>
+			<div class = "row">
+				<span class="form-hint vertical">(Verify Code needs to be entered correctly)</span>
+			</div>
+			<div class = "row">
+				<?php $this->widget('CCaptcha', array('buttonLabel'=>Yii::t('main_data','Refresh code'))); ?>
+			</div>
+				<div class="row hint"><?php echo Yii::t('main_data','Please enter the letters as they are shown in the image above. <br/>Letters are not case-sensitive');?>.</div>
+			<div class = "row">
+				<?php echo $form->textField($model,'verifyCode'); ?>
+			</div>
+				<?php echo $form->error($model,'verifyCode'); ?>
 
-<p>
-<? echo Yii::t('main_data','If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.');?>
-</p>
+				<?php endif; ?>
 
-<div class="form">
-
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'contact-form',
-	'enableClientValidation'=>true,
-	'clientOptions'=>array(
-		'validateOnSubmit'=>true,
-	),
-)); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name'); ?>
-		<?php echo $form->error($model,'name'); ?>
+				<div class="row buttons">
+					<div class="col-xs-9">
+					<?php echo CHtml::submitButton('Submit', array('id'=>'blue','class'=>'button')); ?>
+				</div>
+			</div>
+			<?php $this->endWidget(); ?>
+		</div><!-- form -->
+	</div><!-- col-xs-9 -->
+	<div class="col-xs-3">
+		 <div class="sidebar-right clearfix">
+        <p class="text text-114">Email</p>
+        <p class="text text-117">admin@herbaldbindo.com</p>
+        <div class="element element-22"></div>
+        <p class="text text-120">Penanggung Jawab</p>
+        <p class="text text-123">Heru Suhartanto</p>
+        <p class="text text-124">Arry Yanuar</p>
+        <p class="text text-128">M. Afour Satria</p>
+        <p class="text text-129">Annisa Prida R</p>
+        <div class="element element-29"></div>
+        <img class="image image-35" src="<?php echo Yii::app()->request->baseUrl; ?>/images/mail(2).png">
+        <img class="image image-36" src="<?php echo Yii::app()->request->baseUrl; ?>/images/twitter.png">
+      </div>
 	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email'); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'subject'); ?>
-		<?php echo $form->textField($model,'subject',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'subject'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'body'); ?>
-		<?php echo $form->textArea($model,'body',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'body'); ?>
-	</div>
-
-	<?php if(CCaptcha::checkRequirements()): ?>
-	<div class="row">
-		<?php echo $form->labelEx($model,'verifyCode'); ?>
-		<div>
-		<?php $this->widget('CCaptcha', array('buttonLabel'=>Yii::t('main_data','Refresh code'))); ?>
-		<?php echo $form->textField($model,'verifyCode'); ?>
-		</div>
-		<?php echo $form->error($model,'verifyCode'); ?>
-		<div class="hint"><?php echo Yii::t('main_data','Please enter the letters as they are shown in the image above. <br/>Letters are not case-sensitive');?>.</div>
-	</div>
-	<?php endif; ?>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
-
+</div><!-- row -->
 <?php endif; ?>

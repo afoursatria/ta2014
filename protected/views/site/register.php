@@ -5,7 +5,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-    'id'=>'register-form',
+    'id'=>'custom-form',
     'type'=>'inline',
     'enableClientValidation'=>true,
     'clientOptions'=>array(
@@ -89,18 +89,17 @@
     
     <?php if(CCaptcha::checkRequirements()): ?>
     <div class= "row">
-
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Verification Code')); ?><span class="red">*</span></span>
-        <div class = "col-xs-9">
-        <div class = "row">
-        <?php $this->widget('CCaptcha', array('buttonLabel'=>Yii::t('main_data','Refresh code'))); ?>
+        <div class = "form col-xs-9">
+            <div class = "row">
+            <?php $this->widget('CCaptcha', array('buttonLabel'=>Yii::t('main_data','Refresh code'))); ?>
+            </div>
+            <div class = "row">
+            <?php echo $form->textField($model,'verifyCode'); ?>
+            </div>
+            <div class="row hint"><?php echo Yii::t('main_data','Please enter the letters as they are shown in the image above. <br/>(Letters are not case-sensitive)');?>.</div>
+            <?php echo $form->error($model,'verifyCode'); ?>
         </div>
-        <div class = "row">
-        <?php echo $form->textField($model,'verifyCode'); ?>
-        </div>
-        <div class="row hint"><?php echo Yii::t('main_data','Please enter the letters as they are shown in the image above. <br/>(Letters are not case-sensitive)');?>.</div>
-        <?php echo $form->error($model,'verifyCode'); ?>
-    </div>
         
     </div>
     <?php endif; ?>
