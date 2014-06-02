@@ -7669,7 +7669,7 @@ span.form-hint {
 
 }
 #custom-form .row {
-    margin-top: 1%;
+    margin-top: 2%;
     margin-left: 0;
 }
 .help-block.error {
@@ -7720,5 +7720,25 @@ float: left;
 }
 form#login-form {
     padding: 5px 2px;;
+
+}
+
+#custom-form .col-xs-2, #custom-form .col-xs-5 {
+padding-left: 0;
+}
+
+.well {
+
+}
+div.login.col-xs-5 {
+margin: 0 30%;
+}
+.login .button {
+    margin: 0 auto;
+    width: 70px;
+
+}
+div.row.submit {
+    text-align: center;
 
 }

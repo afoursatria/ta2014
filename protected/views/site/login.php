@@ -7,26 +7,27 @@ $this->breadcrumbs=array(
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Login</h1>
+<h1 class="text-center">Login</h1>
 
-<div class="form">
+<div class="login col-xs-5">
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'login-form',
+	'id'=>'custom-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
+	  'htmlOptions'=>array('class'=>'col-xs-12 well'),
 )); ?>
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
+		<span class ="col-xs-5"><?php echo $form->labelEx($model,'username'); ?></span>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'password'); ?>
+		<span class ="col-xs-5"><?php echo $form->labelEx($model,'password'); ?></span>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
@@ -35,7 +36,7 @@ $this->pageTitle=Yii::app()->name;
 		<?php echo $form->error($model, 'use_is_active'); ?>
 	</div>
 	<div class="row submit">
-        <?php echo CHtml::submitButton('Login'); ?>
+        <?php echo CHtml::submitButton('Login',array('name'=>'','id'=>'green','class'=>'text-center button')); ?>
     </div>
 </div>
 <?php $this->endWidget(); ?>
