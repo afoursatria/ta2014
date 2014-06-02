@@ -4,7 +4,7 @@
 ?>
 
 <div class="view">
-
+	<div class="entry">
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->ref_id), array('view', 'id'=>$data->ref_id)); ?>
 	<br />
@@ -39,5 +39,6 @@
 	<br />
 
 	*/ ?>
-
+	<div class = "element"></div>
+	 </div>
 </div>

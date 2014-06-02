@@ -72,7 +72,7 @@ class LocalnameController extends Controller
 		{
 			$model->attributes=$_POST['Localname'];
 			if($model->save())
-				$this->redirect(array('/species/view/','id'=>$speId->spe_id));
+				$this->redirect(array('view','id'=>$model->loc_id));
 		}
 
 		$this->render('create',array(

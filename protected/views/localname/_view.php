@@ -5,7 +5,7 @@
 
 <div class="view">
 
-
+		<div class="entry">
  	<?php echo CHtml::link('update', array('localname/update', 'id'=>$data->loc_id));?>
  	<br />
 
@@ -54,5 +54,6 @@
 	<br />
 
 	*/ ?>
-
+<div class = "element"></div>
+	 </div>
 </div>

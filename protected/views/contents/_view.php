@@ -4,7 +4,7 @@
 ?>
 
 <div class="view">
-
+	<div class="entry">
 	<?php echo CHtml::link('update', array('contents/update', 'id'=>$data->contents->con_id));?>
  	<br />
 
@@ -76,5 +76,6 @@
 	<br />
 
 	*/ ?>
-
+	 	<div class = "element"></div>
+	 </div>
 </div>
