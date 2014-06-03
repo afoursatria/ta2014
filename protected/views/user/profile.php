@@ -17,7 +17,9 @@
 		array(        
            	'name'=>Yii::t('user', 'Photo'),
            	'type'=>'raw',
-            'value'=>CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/".$model->use_foto.'.jpg','image',array("style"=>"width:200px;")),
+            'value'=> 
+            	$model->use_foto == null ? CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/default.jpg",'image',array("style"=>"width:200px;"))
+            	: CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/".$model->use_foto.'.jpg','image',array("style"=>"width:200px;")),
            	),
 	),
 	'nullDisplay'=>'-',

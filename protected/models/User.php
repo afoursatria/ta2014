@@ -51,7 +51,7 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('use_username', 'length', 'min'=>6, 'max'=>10, 'tooShort'=>Yii::t('user','Username doesn\'t meet criteria'),'tooLong'=>Yii::t('user','Username doesn\'t meet criteria'), 'on'=>'register'),
+			array('use_username', 'length', 'min'=>6, 'max'=>12, 'tooShort'=>Yii::t('user','Username doesn\'t meet criteria'),'tooLong'=>Yii::t('user','Username doesn\'t meet criteria'), 'on'=>'register'),
 			array('use_password', 'match', 'pattern'=>'/^[\*a-zA-Z0-9]{6,12}$/', 'message' =>Yii::t('user','Password doesn\'t meet criteria'), 'on'=>'register'),
 			array('use_username, use_password', 'required', 'on'=>'register, login', 'message'=>Yii::t('user','{attribute} is required')),
 			array('use_username, use_email', 'unique', 'message'=>Yii::t('user','This {attribute} is already registered')),	
@@ -63,7 +63,7 @@ class User extends CActiveRecord
 			array('use_fullname, use_email', 'length', 'max'=>25),
 			array('use_birthdate', 'length', 'max'=>10),
 			array('use_username, use_update_date', 'length', 'max'=>15),
-			array('use_foto', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'), // this will allow empty field when page is update (remember here i create scenario update)
+			array('use_foto', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update, register'), // this will allow empty field when page is update
             array('use_cv', 'file', 'types'=>'pdf', 'allowEmpty'=>true, 'on'=>'update'),
 			array('use_password','compare', 'compareAttribute'=>'repeat_password', 'on'=>'users'),
 			array('use_last_login_ip', 'length', 'max'=>15),
@@ -104,11 +104,10 @@ class User extends CActiveRecord
 			'use_username' => 'Username',
 			'use_password' => 'Password',
 			'verifyCode' => Yii::t('user','Verification Code'),
-			'use_pass_ori' => 'Pass Ori',
-			'use_is_active' => 'Is Active',
+			'use_is_active' => Yii::t('user','Status'),
 			'use_update_date' => 'Use Update Date',
 			'use_update_by' => 'Use Update By',
-			'use_reg_date' => 'Use Reg Date',
+			'use_reg_date' => Yii::t('user','Registration Date'),
 			'use_last_login_ip' => 'Use Last Login Ip',
 			'use_last_login_date' => 'Use Last Login Date',
 		);
@@ -137,16 +136,12 @@ class User extends CActiveRecord
 		$criteria->compare('use_email',$this->use_email,true);
 		$criteria->compare('use_gender',$this->use_gender);
 		$criteria->compare('use_birthdate',$this->use_birthdate,true);
-		$criteria->compare('use_occupation',$this->use_occupation);
-		$criteria->compare('use_country',$this->use_country);
-		$criteria->compare('use_city',$this->use_city);
 		$criteria->compare('use_address',$this->use_address,true);
 		$criteria->compare('use_foto',$this->use_foto,true);
 		$criteria->compare('use_cv',$this->use_cv,true);
 		$criteria->compare('rol_id',$this->rol_id);
 		$criteria->compare('use_username',$this->use_username,true);
 		$criteria->compare('use_password',$this->use_password,true);
-		$criteria->compare('use_pass_ori',$this->use_pass_ori,true);
 		$criteria->compare('use_is_active',$this->use_is_active);
 		$criteria->compare('use_update_date',$this->use_update_date,true);
 		$criteria->compare('use_update_by',$this->use_update_by);
@@ -196,28 +191,27 @@ class User extends CActiveRecord
     {
     	$this->use_is_active = 1;
     	return true;
-
     }
 
-    public function notVerifiedUser() 
-    {
+ //    public function notVerifiedUser() 
+ //    {
 
-		$criteria=new CDbCriteria;
-		$criteria->condition = "use_is_active = 0";
+	// 	$criteria=new CDbCriteria;
+	// 	$criteria->condition = "use_is_active = 0";
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+	// 	return new CActiveDataProvider($this, array(
+	// 		'criteria'=>$criteria,
+	// 	));
+	// }
 
-	public function verifiedUser() 
-    {
+	// public function verifiedUser() 
+ //    {
 
-		$criteria=new CDbCriteria;
-		$criteria->condition = "use_is_active = 1";
+	// 	$criteria=new CDbCriteria;
+	// 	$criteria->condition = "use_is_active = 1";
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+	// 	return new CActiveDataProvider($this, array(
+	// 		'criteria'=>$criteria,
+	// 	));
+	// }
 }

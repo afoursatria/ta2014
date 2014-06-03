@@ -30,7 +30,7 @@
 	CHtml::beginForm(CHtml::normalizeUrl(array('species/search')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('speciesKey', (isset($_GET['speciesKey'])) ? $_GET['speciesKey'] : '', 
         array('placeholder'=>Yii::t('main_data','Species Name'), 'id'=>'speciesKey'));
-    echo CHtml::submitButton('Search', array('name'=>''));
+    echo CHtml::submitButton(Yii::t('main_data','Search'), array('name'=>''));
     CHtml::endForm();
 ?>
 

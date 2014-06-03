@@ -52,10 +52,13 @@
         <?php echo $form->error($model,'use_foto'); ?>
 	</div>
 	
-	<?php if($model->isNewRecord!='1'){ ?>
+	<?php if(!$model->isNewRecord){ ?>
 	<div class="row">
-     	<?php echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
-	
+     	<?php
+     	if($model->use_foto == null){
+	     	echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/default.jpg',"image",array("width"=>200));} 
+     	else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'use_cv'); ?>
 		<?php echo $form->fileField($model,'use_cv'); ?>

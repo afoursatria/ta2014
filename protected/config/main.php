@@ -89,8 +89,8 @@ return array(
        	 	'transportType'=>'smtp',
         	'transportOptions'=>array(
             	'host'=>'smtp.gmail.com',
-            	'username'=>'afour.satria@gmail.com',
-            	'password'=>'21amel27',
+            	'username'=>'herbaldb.ui@gmail.com',
+            	'password'=>'tugasakhir2014',
             	'port' => '465',
         		'encryption'=>'ssl' 
         	),

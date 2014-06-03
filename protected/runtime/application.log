@@ -38251,3 +38251,511 @@ Stack trace:
 REQUEST_URI=/newherbaldb/index.php/contents/verify/2125
 HTTP_REFERER=http://localhost/newherbaldb/index.php/contents/search
 ---
+2014/06/03 12:03:37 [error] [php] Use of undefined constant link - assumed 'link' (C:\wamp\www\newherbaldb\protected\views\user\admin.php:22)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): UserController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/admin
+in C:\wamp\www\newherbaldb\protected\views\user\admin.php (22)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (178)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 12:03:47 [error] [php] Use of undefined constant s - assumed 's' (C:\wamp\www\newherbaldb\protected\views\user\admin.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): UserController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/admin
+in C:\wamp\www\newherbaldb\protected\views\user\admin.php (10)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (178)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 12:03:55 [error] [php] Undefined variable: dataProvider (C:\wamp\www\newherbaldb\protected\views\user\admin.php:25)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#1 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#2 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): UserController->render()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#4 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#6 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/admin
+in C:\wamp\www\newherbaldb\protected\views\user\admin.php (25)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (178)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 12:04:06 [error] [exception.CException] exception 'CException' with message 'User and its behaviors do not have a method or closure named "searh".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('searh', Array)
+#1 [internal function]: CActiveRecord->__call('searh', Array)
+#2 C:\wamp\www\newherbaldb\protected\views\user\admin.php(25): User->searh()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): CController->render('admin', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/newherbaldb/index.php/user/admin
+HTTP_REFERER=http://localhost/newherbaldb/index.php
+---
+2014/06/03 12:04:11 [error] [exception.CException] exception 'CException' with message 'Property "User.use_occupation" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('use_occupation')
+#1 C:\wamp\www\newherbaldb\protected\models\User.php(140): CActiveRecord->__get('use_occupation')
+#2 C:\wamp\www\newherbaldb\protected\views\user\admin.php(25): User->search()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): CController->render('admin', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/newherbaldb/index.php/user/admin
+HTTP_REFERER=http://localhost/newherbaldb/index.php
+---
+2014/06/03 12:04:30 [error] [exception.CException] exception 'CException' with message 'Property "User.use_country" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('use_country')
+#1 C:\wamp\www\newherbaldb\protected\models\User.php(140): CActiveRecord->__get('use_country')
+#2 C:\wamp\www\newherbaldb\protected\views\user\admin.php(25): User->search()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): CController->render('admin', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/newherbaldb/index.php/user/admin
+HTTP_REFERER=http://localhost/newherbaldb/index.php
+---
+2014/06/03 12:04:36 [error] [exception.CException] exception 'CException' with message 'Property "User.use_city" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('use_city')
+#1 C:\wamp\www\newherbaldb\protected\models\User.php(140): CActiveRecord->__get('use_city')
+#2 C:\wamp\www\newherbaldb\protected\views\user\admin.php(25): User->search()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): CController->render('admin', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/newherbaldb/index.php/user/admin
+HTTP_REFERER=http://localhost/newherbaldb/index.php
+---
+2014/06/03 12:04:40 [error] [exception.CException] exception 'CException' with message 'Property "User.use_pass_ori" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('use_pass_ori')
+#1 C:\wamp\www\newherbaldb\protected\models\User.php(146): CActiveRecord->__get('use_pass_ori')
+#2 C:\wamp\www\newherbaldb\protected\views\user\admin.php(25): User->search()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('admin', Array, true)
+#7 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): CController->render('admin', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/newherbaldb/index.php/user/admin
+HTTP_REFERER=http://localhost/newherbaldb/index.php
+---
+2014/06/03 12:04:46 [error] [php] Use of undefined constant link - assumed 'link' (C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php:11)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): UserController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\newherbaldb\protected\views\user\admin.php(27): UserController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#10 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#11 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): UserController->render()
+#12 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#13 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#15 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#17 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#18 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#19 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/admin
+in C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php (11)
+in C:\wamp\www\newherbaldb\protected\views\user\admin.php (27)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (178)
+2014/06/03 12:35:12 [error] [php] A non well formed numeric value encountered (C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php:13)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): UserController->renderFile()
+#2 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#3 unknown(0): CListView->renderSection()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#5 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#7 C:\wamp\www\newherbaldb\protected\views\user\admin.php(27): UserController->widget()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#12 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): UserController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/admin
+in C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php (13)
+in C:\wamp\www\newherbaldb\protected\views\user\admin.php (27)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (178)
+2014/06/03 12:35:42 [error] [php] A non well formed numeric value encountered (C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php:13)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): UserController->renderFile()
+#2 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#3 unknown(0): CListView->renderSection()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#5 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#7 C:\wamp\www\newherbaldb\protected\views\user\admin.php(27): UserController->widget()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#12 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): UserController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/admin
+in C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php (13)
+in C:\wamp\www\newherbaldb\protected\views\user\admin.php (27)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (178)
+2014/06/03 12:36:01 [error] [php] A non well formed numeric value encountered (C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php:13)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): UserController->renderFile()
+#2 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#3 unknown(0): CListView->renderSection()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#5 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#7 C:\wamp\www\newherbaldb\protected\views\user\admin.php(27): UserController->widget()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#12 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(178): UserController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdmin()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/admin
+in C:\wamp\www\newherbaldb\protected\views\user\_allUserList.php (13)
+in C:\wamp\www\newherbaldb\protected\views\user\admin.php (27)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (178)
+2014/06/03 12:36:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('add')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/add')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/newherbaldb/index.php/user/add
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/admin
+---
+2014/06/03 12:36:31 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "register".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(202): CController->render('register', Array)
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdd()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('add')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/add')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/newherbaldb/index.php/user/add
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/admin
+---
+2014/06/03 12:37:01 [error] [exception.CException] exception 'CException' with message 'UserController cannot find the requested view "site/register".' in C:\wamp\www\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('site/register', Array, true)
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(202): CController->render('site/register', Array)
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionAdd()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('add')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/add')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/newherbaldb/index.php/user/add
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/admin
+---
+2014/06/03 16:39:56 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:39:56 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:39:56 [error] [php] Undefined variable: fileName (C:\wamp\www\newherbaldb\protected\controllers\UserController.php:197)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/add
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (197)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:42:20 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:42:20 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:52:31 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:52:31 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:54:31 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:54:31 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:57:06 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (96)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:57:06 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (96)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:57:06 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (96)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 16:57:06 [warning] [application] Failed to set unsafe attribute "cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (96)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:03:31 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:03:31 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:08:47 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:08:47 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:08:53 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:08:53 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (192)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:14:03 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:14:12 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:14:24 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:15:41 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:16:51 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:17:00 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:20:41 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:31:56 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:31:56 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:32:53 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:32:53 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:52:47 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:52:47 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:53:53 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:53:53 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:54:19 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/03 17:54:19 [warning] [application] Failed to set unsafe attribute "photo" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (194)
+in C:\wamp\www\newherbaldb\index.php (13)

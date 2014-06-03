@@ -48,7 +48,7 @@ class UserController extends Controller
 			 	'users'=>array('@'),		
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','verify'),
+				'actions'=>array('admin','delete','verify', 'add'),
 			 	'expression'=>
 				 	'Yii::app()->user->getState("role")==1',				
 			),
@@ -93,8 +93,10 @@ class UserController extends Controller
 
 			$_POST['User']['photo'] = $model->use_foto;
 			$_POST['User']['cv'] = $model->use_cv;
+
 			$model->attributes=$_POST['User'];
-			$uploadedFile=CUploadedFile::getInstance($model,'use_foto');
+
+			$uploadedImage=CUploadedFile::getInstance($model,'use_foto');
 			$uploadedCV=CUploadedFile::getInstance($model,'use_cv');
             
             $fileName = $model->use_username;  
@@ -104,9 +106,9 @@ class UserController extends Controller
             $model->use_cv = $cvName;
  
 			if($model->save()){
-				if(!empty($uploadedFile))
+				if(!empty($uploadedImage))
 				{  // check if uploaded file is set or not
-					$uploadedFile->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
+					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
 				}
 
 				if(!empty($uploadedCV))
@@ -175,6 +177,41 @@ class UserController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 			'userModel'=>$userModel,
+		));
+	}
+
+	/**
+	 * Add user.
+	 */
+	public function actionAdd()
+	{
+		$model=new User;
+
+		$model->scenario = "register";	
+		if(isset($_POST['User']))
+		{	
+			$_POST['User']['photo'] = $model->use_foto;
+			$model->attributes=$_POST['User'];
+
+			$uploadedImage=CUploadedFile::getInstance($model,'use_foto');
+			
+			$imageName = $model->use_username;  
+
+			if($model->validate()){
+
+				if(!empty($uploadedImage))
+				{  // check if uploaded file is set or not
+            		$model->use_foto = $imageName;
+					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$imageName.'.jpg');  // image will uplode to rootDirectory/photo/
+				}
+
+				$model->save();
+				$this->redirect(array('admin'));
+			}
+		}
+
+		$this->render('/site/register',array(
+			'model'=>$model,
 		));
 	}
 

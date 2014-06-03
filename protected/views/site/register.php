@@ -1,5 +1,11 @@
-<h2><?php echo Yii::t('user','Registration Form');?></h2>
+<?php 
+if (Yii::app()->user->getState('role')==1) {
+    echo CHtml::link(Yii::t('user','Back to User List'), array('user/admin'));
+}
+?>
 
+
+<h2><?php echo Yii::t('user','Registration Form');?></h2>
 
 
 <div class="form">
@@ -10,6 +16,7 @@
     'clientOptions'=>array(
         'validateOnSubmit'=>true,
     ),
+    'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 )); ?>
     <?php //echo $form->errorSummary($model); ?>
 
@@ -57,13 +64,13 @@
 
     <div class="row">
         <?php echo $form->labelEx($model,Yii::t('user','use_password')); ?>
-        <?php echo $form->textField($model,'use_password'); ?>
+        <?php echo $form->passwordField($model,'use_password'); ?>
         <?php echo $form->error($model,'use_password'); ?>
     </div>
 
     <div class="row">
         <?php echo $form->labelEx($model,Yii::t('user','repeat_password')); ?>
-        <?php echo $form->textField($model,'repeat_password'); ?>
+        <?php echo $form->passwordField($model,'repeat_password'); ?>
         <?php echo $form->error($model,'repeat_password'); ?>
     </div>
 
@@ -83,6 +90,12 @@
                     3 => 'Contributor'), array('empty'=>'Choose Role')); 
             ?>
         <?php echo $form->error($model,'rol_id'); ?>
+    </div>
+
+    <div class="row">
+        <?php echo $form->labelEx($model,'use_foto'); ?>
+        <?php echo CHtml::activeFileField($model, 'use_foto'); ?> 
+        <?php echo $form->error($model,'use_foto'); ?>
     </div>
     
     <?php if(CCaptcha::checkRequirements()): ?>
