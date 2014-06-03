@@ -18,7 +18,7 @@ $this->menu=array(
 
 <h1>View News #<?php echo $model->news_id; ?></h1>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
+<?php $this->widget('bootstrap.widgets.TbDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'news_id',

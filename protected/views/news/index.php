@@ -6,10 +6,13 @@ $this->breadcrumbs=array(
 	'News',
 );
 
-$this->menu=array(
-	array('label'=>'Create News', 'url'=>array('create')),
-	array('label'=>'Manage News', 'url'=>array('admin')),
-);
+$this->widget('bootstrap.widgets.TbMenu', array(
+    'type'=>'list',
+    'items'=>array(
+        array('label'=>'Create News','url'=>array('create')),
+        array('label'=>'Manage News', 'url'=>array('admin')),
+    ),
+));
 ?>
 
 <h1>News</h1>

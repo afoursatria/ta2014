@@ -7742,3 +7742,23 @@ div.row.submit {
     text-align: center;
 
 }
+div.news-operation {
+    float: right;
+
+}
+
+.green-text{
+  color : #00791e;
+}
+
+.blue-text{
+  color: #31368e;
+}
+
+.news-operation a {
+  margin-left: 4%;
+}
+div.news-view {
+    border-bottom: 2px solid #00791e;
+
+}
