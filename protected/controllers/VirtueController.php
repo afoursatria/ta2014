@@ -145,22 +145,34 @@ class VirtueController extends Controller
 		));
 	}
 
-	public function actionSearch()
+	public function actionSearch($virtueKey= '')
 	{		
-		$model = new Virtue('search');
-		$model->unsetAttributes();
-		// $criteria = new CDbCriteria;
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
-		// $dataProvider = new ApPagination('spe_speciesname');
+		$virtueCriteria = new CDbCriteria;
+
+		if( strlen( $virtueKey ) > 0 )
+        $virtueCriteria->addSearchCondition( 'vir_value', $virtueKey, true);
 		
-		// if( strlen( $speciesKey ) > 0 )
-  //       $criteria->addSearchCondition( 'spe_speciesname', $speciesKey, true);
-
-    	// $dataProvider->applyCondition($criteria);
-
-		$this->render('search', array(
-			'model'=>$model,
+		$listVirtue=new ApActiveDataProvider('Virtue',array(
+			'criteria'=>$virtueCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'vir_value'),
 		));
+    	
+		$this->render('search', array(
+			'dataProvider'=>$listVirtue,
+		));
+	}
+
+	public function actionVerify($id)
+	{
+		$model=Virtue::model()->findByPk($id);
+    	$model->verify();
+    	if ($model->save()) {
+			$this->redirect(array('search'));		
+    	}
+		
 	}
 
 	/**

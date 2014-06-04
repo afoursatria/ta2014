@@ -28,7 +28,23 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{	
-		$this->render('index');
+
+		//load top 5 species
+		$criteria = new CDbCriteria;
+	 	$criteria->order = "spe_viewed_count DESC";
+		$criteria->limit = 5;
+		$topSpecies = Species::model()->findAll($criteria);
+
+		//load top 5 compound
+		$criteria = new CDbCriteria();
+	 	$criteria->order = "con_viewed_count DESC";
+		$criteria->limit = 5;
+		$topCompound = Contents::model()->findAll($criteria);
+
+		$this->render('index', array(
+			'topSpecies'=>$topSpecies,
+			'topCompound'=>$topCompound,
+		));
 	}
 
 	/**

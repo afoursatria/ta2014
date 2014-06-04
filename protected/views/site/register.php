@@ -17,7 +17,7 @@ if (Yii::app()->user->getState('role')==1) {
         'validateOnSubmit'=>true,
     ),
     'htmlOptions'=>array('enctype'=>'multipart/form-data'),
-)); ?>
+ )); ?>
     <?php //echo $form->errorSummary($model); ?>
 
 <p class="note">Fields with <span class="required">*</span> are required.</p>

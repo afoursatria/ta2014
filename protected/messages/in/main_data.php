@@ -3,6 +3,9 @@
 		'You are logged in as '=>'Anda masuk sebagai ',
 		'Choose Category'=>'Pilih kategori',
 
+		'verified' => 'Terverifikasi',
+		'not verified'=> 'Belum Terverifikasi',
+
 		'{attribute} cannot be blank'=>'{attribute} harus diisi',
 		'Displaying {end} result'=>'Menampilkan {end} hasil',
 		'This Species has no local name'=>'Spesies ini tidak mempunyai nama lokal',

@@ -34,7 +34,7 @@ $this->widget('zii.widgets.jui.CJuiTabs',array(
                                         '//contentgroup/_form',
                                         array('model'=>$contentGroupModel),TRUE
                                         )),
-        'Reference'=>array('id'=>'newReference','content'=>$this->renderPartial(
+        Yii::t('main_data','Reference')=>array('id'=>'newReference','content'=>$this->renderPartial(
                                         '//ref/_form',
                                         array('model'=>$referenceModel),TRUE
                                         )),
@@ -46,6 +46,5 @@ $this->widget('zii.widgets.jui.CJuiTabs',array(
     'options'=>array(
         'collapsible'=>true,
     ),
-    'id'=>'MyTab-Menu',
 ));
 ?>

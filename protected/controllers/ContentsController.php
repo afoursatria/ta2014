@@ -173,10 +173,10 @@ class ContentsController extends Controller
 	{		
 		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 		
-		$criteria = new CDbCriteria();
-	 	$criteria->order = "con_viewed_count DESC";
-		$criteria->limit = 5;
-		$topCompound = Contents::model()->findAll($criteria);
+		// $criteria = new CDbCriteria();
+	 // 	$criteria->order = "con_viewed_count DESC";
+		// $criteria->limit = 5;
+		// $topCompound = Contents::model()->findAll($criteria);
 
 		$searchCriteria = new CDbCriteria();
 		$searchCriteria->with= array('Contents');
@@ -195,7 +195,7 @@ class ContentsController extends Controller
 		
 		$this->render('search', array(
 			'dataProvider'=>$listCompound,
-			'topCompound'=>$topCompound,
+			// 'topCompound'=>$topCompound,
 		));
 	}
 

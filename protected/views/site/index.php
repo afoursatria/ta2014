@@ -4,6 +4,21 @@
 $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
 ?>
 
+<h3> Top 5 Species </h3>
+<?php 
+    foreach ($topSpecies as $species ) {
+        echo($species->spe_speciesname)."<br />";
+        // echo($species->spe_viewed_count."<br />");
+    }
+?>
+
+<h3> <?php echo Yii::t('main_data','Top 5 Compound'); ?></h3>
+<?php 
+    foreach ($topCompound as $compound ) {
+        echo($compound->con_contentname)."<br />";
+    }
+?>
+
 <?php echo Yii::t('main_data', 'Browse Search Category')?>
 <br />
 
@@ -12,6 +27,8 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
 <?php echo CHtml::link(Yii::t('main_data','Compound'), array('contents/search'))?>
 <br />
 <?php echo CHtml::link(Yii::t('main_data','Local Name'), array('localname/search'))?>
+<br />
+<?php echo CHtml::link(Yii::t('main_data','Alias Name'), array('aliases/search'))?>
 <br />
 <?php echo CHtml::link(Yii::t('main_data','Virtue'), array('Virtue/search'))?>
 <br />

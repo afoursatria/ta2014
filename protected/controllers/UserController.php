@@ -100,19 +100,19 @@ class UserController extends Controller
 			$uploadedCV=CUploadedFile::getInstance($model,'use_cv');
             
             $fileName = $model->use_username;  
-            $model->use_foto = $fileName;
 
             $cvName = 'CV-'.$model->use_username;  
-            $model->use_cv = $cvName;
  
 			if($model->save()){
 				if(!empty($uploadedImage))
 				{  // check if uploaded file is set or not
+            		$model->use_foto = $fileName;
 					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
 				}
 
 				if(!empty($uploadedCV))
 				{  // check if uploaded file is set or not
+		            $model->use_cv = $cvName;
 					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
 				}
 				
@@ -249,12 +249,27 @@ class UserController extends Controller
 	public function actionInsertData()
 	{
 		$speciesModel = new Species;
+		$speciesModel->setScenario('insert');
+		
 		$localnameModel = new Localname;
+		$localnameModel->setScenario('insert');
+		
 		$aliasesModel = new ALiases;
+		$aliasesModel->setScenario('insert');
+		
 		$virtueModel = new virtue;
+		$virtueModel->setScenario('insert');
+		
 		$referenceModel = new Ref;
+		$referenceModel->setScenario('insert');
+		
 		$compoundModel = new Contents;
+		$compoundModel->setScenario('insert');
+		
 		$contentGroupModel = new Contentgroup;
+		$contentGroupModel->setScenario('insert');
+
+
 
 		if(isset($_POST['Species']))
 		{

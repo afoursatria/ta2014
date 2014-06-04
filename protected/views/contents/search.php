@@ -18,13 +18,6 @@
 );
 ?>
 
-<h3> <?php echo Yii::t('main_data','Top 5 Compound'); ?></h3>
-<?php 
-    foreach ($topCompound as $compound ) {
-        echo($compound->con_contentname)."<br />";
-    }
-?>
-
 <?php 
 	CHtml::beginForm(CHtml::normalizeUrl(array('species/search')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('compoundKey', (isset($_GET['compoundKey'])) ? $_GET['compoundKey'] : '', 

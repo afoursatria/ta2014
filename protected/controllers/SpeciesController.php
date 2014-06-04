@@ -222,10 +222,10 @@ class SpeciesController extends Controller
 	{		
 		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
-		$criteria = new CDbCriteria;
-	 	$criteria->order = "spe_viewed_count DESC";
-		$criteria->limit = 5;
-		$topSpecies = Species::model()->findAll($criteria);
+		// $criteria = new CDbCriteria;
+	 // 	$criteria->order = "spe_viewed_count DESC";
+		// $criteria->limit = 5;
+		// $topSpecies = Species::model()->findAll($criteria);
 
 		$speciesCriteria = new CDbCriteria;
 
@@ -241,7 +241,7 @@ class SpeciesController extends Controller
 
 		$this->render('search', array(
 			'dataProvider'=>$listSpecies,
-			'topSpecies'=>$topSpecies,
+			// 'topSpecies'=>$topSpecies,
 		));
 	}
 
