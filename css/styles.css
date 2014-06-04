@@ -7770,3 +7770,11 @@ div.news-view {
 .news-manage li {
     float: none;
 }
+
+img.img-dev {
+  border-radius: 120px;
+  -moz-border-radius: 120px;
+  -webkit-border-radius: 120px;
+  width: 135px;
+  height: 135px;
+}
