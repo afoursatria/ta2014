@@ -19,15 +19,14 @@
 	<!-- Register CSS-->
 	<!-- <link rel="stylesheet" href="css/standardize.css"> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
+	
 	<!-- <link rel="stylesheet" href="css/beranda-grid.css"> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.carousel.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.theme.css" />
 	
 	<!-- Register JS -->
 	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/owl.carousel.js"></script>
+	
 	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
@@ -96,6 +95,7 @@
 			)); ?><!-- breadcrumbs -->
 		<?php endif?>
 			<?php echo $content; ?>
+			<p id ="scrollup"><a>To top</a></p>
 		</div>
 		<div class="clear"></div>
 		<div id="footer">

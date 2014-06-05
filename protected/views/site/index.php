@@ -112,13 +112,6 @@ $('.search-form form').submit(function(){
     CHtml::endForm();
 ?>
 </div>
-<!-- <div id="owl-example" class="owl-carousel">
-    <div> <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/1.jpg"></div>
-    <div> <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/2.jpg"></div>
-    <div> <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/3.jpg"></div>
-
-    </div> -->
-    <!--owl-->
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
