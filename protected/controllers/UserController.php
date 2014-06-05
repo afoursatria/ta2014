@@ -105,6 +105,7 @@ class UserController extends Controller
             $model->use_cv = $cvName;
  
 			if($model->save()){
+
 				if(!empty($uploadedFile))
 				{  // check if uploaded file is set or not
 					$uploadedFile->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
@@ -114,7 +115,7 @@ class UserController extends Controller
 				{  // check if uploaded file is set or not
 					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
 				}
-				
+				Yii::app()->user->setFlash('success','Profile has been changed');
 				$this->redirect(array('profile','id'=>$model->use_id));
 
 			}
@@ -151,8 +152,10 @@ class UserController extends Controller
 			$model->attributes=$_POST['ChangePasswordForm'];
 			if($model->validate() && $model->changePassword())
 				{
+					
 					Yii::app()->user->setFlash('success','Password has been changed');
-					$this->redirect(array('profile','id'=>Yii::app()->user->id));
+					$this->redirect(array('profile','id'=>Yii::app()->user->no));
+
 				}
 		}
 
