@@ -94,8 +94,11 @@ class NewsController extends Controller
 		if(isset($_POST['News']))
 		{
 			$model->attributes=$_POST['News'];
-			if($model->save())
+			if($model->save()){
+									Yii::app()->user->setFlash('success','News has been changed');
+
 				$this->redirect(array('view','id'=>$model->news_id));
+			}
 		}
 
 		$this->render('update',array(
