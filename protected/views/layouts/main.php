@@ -21,9 +21,14 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap.min.css" />
 	<!-- <link rel="stylesheet" href="css/beranda-grid.css"> -->
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.carousel.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.theme.css" />
+	
 	<!-- Register JS -->
 	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/owl.carousel.js"></script>
+	<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/script.js"></script>
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -50,7 +55,7 @@
 					array('label'=>Yii::t('main_layout', 'About'), 'url'=>array('/site/page','view'=>'about')),	
 
 				// array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-					// array('label'=>Yii::t('main_layout', 'Logout').' ('.Yii::app()->user->id.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					array('label'=>Yii::t('main_layout', 'Logout').' ('.Yii::app()->user->id.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 					)
 				); 

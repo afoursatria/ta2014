@@ -1901,7 +1901,7 @@ input.button:focus{
 #speNameKey {
   width: 72.518474%;
   height: 35px;
-  margin: 0 6% 0 2.6221692491%;
+  margin: 0 6% 0 0.622169%;
   border: 1px solid rgb(49, 54, 142);
   border-radius: 6px;
   background-color: rgb(242, 242, 242);
@@ -7796,5 +7796,9 @@ ul.dev-detail {
 }
 .dev-list .row {
     margin: 10% 0;
+
+}
+div#search-field {
+    margin-bottom: 4%;
 
 }
