@@ -7576,7 +7576,7 @@ body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
   margin: 0;
 }
 ul, ol {
-  margin: 0 1.5em 1.5em 0;
+    margin: 0 1.5em 1.5em 0;
 }
 div#topside-nav {
   top: 5%;
@@ -7771,10 +7771,30 @@ div.news-view {
     float: none;
 }
 
-img.img-dev {
+img.img-dev{ 
   border-radius: 120px;
   -moz-border-radius: 120px;
   -webkit-border-radius: 120px;
   width: 135px;
   height: 135px;
+  margin-left: 5%;
+}
+
+.dev-list{
+  box-shadow: 0 1px 7px rgba(0, 0, 0, .5);
+  margin: 1% 1%;
+   border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+ul.dev-content {
+  margin-left: 13%;
+}
+ul.dev-detail {
+    margin-left: -11%;
+}
+.dev-list .row {
+    margin: 10% 0;
+
 }
