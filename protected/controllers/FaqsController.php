@@ -85,22 +85,27 @@ class FaqsController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionUpdate($lang ='')
 	{
-		$model=$this->loadModel($id);
-
+		$model=$this->loadModel($lang);
+		if (strlen($lang) > 0) {
+			$this->render('update',array(
+			// 'model'=>$model,
+			));
+			
+		}
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Faqs']))
-		{
-			$model->attributes=$_POST['Faqs'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->faqs_id));
-		}
+		// if(isset($_POST['Faqs']))
+		// {
+		// 	$model->attributes=$_POST['Faqs'];
+		// 	if($model->save())
+		// 		$this->redirect(array('view','id'=>$model->faqs_id));
+		// }
 
 		$this->render('update',array(
-			'model'=>$model,
+			// 'model'=>$model,
 		));
 	}
 

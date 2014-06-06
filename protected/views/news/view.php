@@ -2,30 +2,20 @@
 /* @var $this NewsController */
 /* @var $model News */
 
-$this->breadcrumbs=array(
-	'News'=>array('index'),
-	$model->news_id,
-);
-
-$this->menu=array(
-	array('label'=>'List News', 'url'=>array('index')),
-	array('label'=>'Create News', 'url'=>array('create')),
-	array('label'=>'Update News', 'url'=>array('update', 'id'=>$model->news_id)),
-	array('label'=>'Delete News', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->news_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage News', 'url'=>array('admin')),
-);
+// $this->breadcrumbs=array(
+// 	'News'=>array('index'),
+// 	$model->news_id,
+// );
 ?>
 
-<h1>View News #<?php echo $model->news_id; ?></h1>
-
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'news_id',
-		'news_title',
-		'news_content',
-		'news_insert_date',
-		'news_insert_by',
-		'newscat_id',
-	),
-)); ?>
+<?php if (Yii::app()->user->getState('role')==1) {
+	?>
+<?php echo CHtml::link(Yii::t('main_layout','Update'),  array('news/update', 'id'=>$model->news_id)); ?>
+<?php
+	echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
+          array('submit'=>array('localname/delete', 'id'=>$model->news_id), 
+                'confirm' => Yii::t('main_data','Are you sure?'))); }?>
+<h1><?php echo $model->news_title; ?></h1>
+<div>
+<?php echo $model->news_content;?>
+</div>

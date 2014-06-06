@@ -276,6 +276,7 @@ class UserController extends Controller
 			$speciesModel->attributes=$_POST['Species'];
 			if($speciesModel->save())
 			{
+				echo "string";
 				Yii::app()->user->setFlash('success', "Species saved!");
 				$this->redirect(array('insertData')); //bisa success alert
 			}

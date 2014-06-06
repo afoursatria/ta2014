@@ -58,6 +58,12 @@
 		''=>'',
 
 		//translation for news
+		'Recent News'=>'Berita Terkini',
+		'Recent Event'=>'Acara Terkini',
+		'Recent Announcement'=>'Pengumuman Terkini',
+		'Recent Publication'=>'Publikasi Terkini',
+		'Read More'=>'Selengkapnya',
+		
 
 		//translation for contact
 		'Contact Us'=>'Kontak Kami',
