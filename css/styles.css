@@ -7814,3 +7814,7 @@ div#search-field {
     text-indent:-9999px;
     cursor: pointer;
 }
+
+.form .col-md-9 {
+  padding: 0;
+}

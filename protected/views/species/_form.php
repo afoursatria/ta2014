@@ -11,7 +11,7 @@
 <div class="form">
 
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	'id'=>'species-form',
+	'id'=>'custom-form',
 	'type'=>'inline',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
