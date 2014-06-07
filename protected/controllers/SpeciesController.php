@@ -28,7 +28,7 @@ class SpeciesController extends Controller
 	{	
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -37,13 +37,13 @@ class SpeciesController extends Controller
 				// 'expression'=>'allowContributor,allowExpert',
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'expression'=>'!Yii::app()->user->role==2 OR Yii::app()->user->role==3',
+				'actions'=>array('admin','delete','verify'),
+				'expression'=>'!Yii::app()->user->getState("role")==1',
 			
 			),
-			// array('deny',  // deny all users
-			// 	'users'=>array('*'),
-			// ),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
 		);
 	}
 

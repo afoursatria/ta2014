@@ -28,18 +28,23 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{	
-		// $criteria = new cDbCriteria();
-			
-		$model = new Species('search');
-		$model->unsetAttributes();
 
-		if(isset($_GET['Species']))
-			$model->attributes=$_GET['Species'];
+		//load top 5 species
+		$criteria = new CDbCriteria;
+	 	$criteria->order = "spe_viewed_count DESC";
+		$criteria->limit = 5;
+		$topSpecies = Species::model()->findAll($criteria);
+
+		//load top 5 compound
+		$criteria = new CDbCriteria();
+	 	$criteria->order = "con_viewed_count DESC";
+		$criteria->limit = 5;
+		$topCompound = Contents::model()->findAll($criteria);
 
 		$this->render('index', array(
-			'model'=>$model,
-			'dataProvider'=>$model->search(),
-			));
+			'topSpecies'=>$topSpecies,
+			'topCompound'=>$topCompound,
+		));
 	}
 
 	/**
@@ -94,14 +99,12 @@ class SiteController extends Controller
 	{
 		//inisiasi model
 		$model=new LoginForm;
-		$model->setScenario("login");
-
-		// if it is ajax validation request
-		if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
-		{
-			echo CActiveForm::validate($model);
-			Yii::app()->end();
-		}
+		// // if it is ajax validation request
+		// if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+		// {
+		// 	echo CActiveForm::validate($model);
+		// 	Yii::app()->end();
+		// }
 
 		// collect user input data
 		if(isset($_POST['LoginForm']))
@@ -121,7 +124,6 @@ class SiteController extends Controller
 	 */
 	public function actionLogout()
 	{
-		Yii::app()->user->setFlash('success', "You have logged out from system");
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
@@ -142,7 +144,7 @@ class SiteController extends Controller
 			
 			if($model->validate()){
 				$model->save();
-				$this->sendMail();
+				$this->sendRegistrationMail();
 				$this->redirect(array('site/index'));
 			}
 		}
@@ -152,27 +154,68 @@ class SiteController extends Controller
 		));
 	}
 
-	public function actionCategory(){
-		
-		$category = $_POST['Cat'];
-		if ($category === 'Localname') {
-			echo $form->textField($model,'spe_familyname',array('size'=>60,'maxlength'=>100));
-		// echo $category;
-		
+	public function actionResetPassword()
+	{
+		$model = new ResetPasswordForm;
+
+		if (isset($_POST['ResetPasswordForm'])) {
+			$model->attributes=$_POST['ResetPasswordForm'];
+			
+			echo $model->email;
+			if ($model->getEmail() == Null) {
+				echo "kosong";
+			}
+			
+			if ($model->validate() && $model->resetPass()) {
+				$this->sendResetPasswordMail($model->email, $model->getNewPassword());
+				Yii::app()->user->setFlash('success','Reset password has been sent to your email');
+				$this->refresh();
+			}
 		}
-		// echo $category;
-		// if (condition) {
-		// 	# code...
-		// }
+		$this->render('resetPassword', array(
+			'model'=>$model,
+			)
+		);
 	}
 
-    public function actionUpdateTextField() {
-        $param_category = $_POST['category_name'];
-        if ($param_category === 'Localname') {
-        	echo CHtml::tag('input', array( 'type'=>'text' , 'value' => $param_category));	
-        }
+	public function sendRegistrationMail()
+    {   
+        $message            = new YiiMailMessage;
+          
+        //this points to the file verificationRequest.php inside the view path
+        $message->view = "user\\verificationRequest";
+        
+        $criteria=new CDbCriteria;
+		$criteria->select='use_email';  // only select the 'use_email' column
+		$criteria->condition='rol_id=1';
+		$adminModel1=User::model()->findAll($criteria);
+        $params              = array('myMail'=>$adminModel1);
+        $message->subject    = 'Verifikasi Akun Baru';
+      	 $message->setBody($params, 'text/html');               
+
+        foreach($adminModel1 as $email) {
+			$message->addTo($email->use_email);        	
+		}
+		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB UI'));   
+      	Yii::app()->mail->send($message); 
+		$this->redirect(array('site/index'));
     }
-    public function actionAbout() {
-    	$this->render('about');
-	}
+
+    public function sendResetPasswordMail($email, $newPass)
+    {   
+        $message            = new YiiMailMessage;
+          
+        //this points to the file resetPasswordMail.php inside the view path
+        $message->view = "user\\resetPasswordMail";
+        
+		$userModel=User::model()->find('use_email=:use_email', array('use_email'=>$email));
+        $params              = array('myMail'=>$userModel, 'newPass'=>$newPass);
+        $message->subject    = 'Password Reset';
+      	$message->setBody($params, 'text/html');               
+		
+		$message->addTo($userModel->use_email);        	
+
+		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB'));   
+      	Yii::app()->mail->send($message); 
+    }
 }

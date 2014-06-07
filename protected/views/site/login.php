@@ -35,6 +35,11 @@ $this->pageTitle=Yii::app()->name;
 	<div>
 		<?php echo $form->error($model, 'use_is_active'); ?>
 	</div>
+	<?php 
+  		if(Yii::app()->user->getState("role") == null)
+  		echo CHtml::link(Yii::t('user','Forget Password'), array('resetPassword')); 
+  	?>
+
 	<div class="row submit text-center">
         <?php echo CHtml::submitButton('Login',array('name'=>'','id'=>'green','class'=>'button')); ?>
     </div>

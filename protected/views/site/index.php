@@ -81,6 +81,15 @@ $('.search-form form').submit(function(){
             <div class="element element-10"></div>
             <p class="text _text text-72">5 Spesies Paling Sering Dicari&nbsp;</p>
             <div class="element element-12"></div>
+            <ul class="top-search">
+                <?php 
+                    foreach ($topSpecies as $species ) {
+                        echo "<li class='top-list'>".($species->spe_speciesname)."<br /></li>";
+                       // echo($species->spe_viewed_count."<br />");
+                    }
+                ?>
+            </ul>
+            <!-- <div class="element element-12"></div>
             <p class="text _text text-79">Zephyranthes Tubispatha</p>
             <div class="element element-13"></div>
             <p class="text _text text-85">Cloxinia Maculata</p>
@@ -90,14 +99,21 @@ $('.search-form form').submit(function(){
             <p class="text _text text-96">Cloxinia Maculata</p>
             <div class="element element-17"></div>
             <p class="text _text text-99">Cloxinia Maculata</p>
-            <div class="element element-18"></div>
+            <div class="element element-18"></div> -->
         </div> <!--spesies-->
         <!--senyawa paling dicari-->
         <div class="senyawa clearfix">
                 <div class="element element-19"></div>
                 <p class="text _text text-112">5 Senyawa Paling Sering Dicari&nbsp;</p>
                 <div class="element element-20"></div>
-                <p class="text _text text-118">Zephyranthes Tubispatha</p>
+                 <ul class="top-search">
+                      <?php 
+                          foreach ($topCompound as $compound ) {
+                              echo "<li class='top-list'>".($compound->con_contentname)."<br /></li>";
+                          }
+                      ?>
+                </ul>
+                <!-- <p class="text _text text-118">Zephyranthes Tubispatha</p>
                 <div class="element element-23"></div>
                 <p class="text _text text-121">Cloxinia Maculata</p>
                 <div class="element element-25"></div>
@@ -106,15 +122,16 @@ $('.search-form form').submit(function(){
                 <p class="text _text text-130">Cloxinia Maculata</p>
                 <div class="element element-30"></div>
                 <p class="text _text text-133">Cloxinia Maculata</p>
-                <div class="element element-33"></div>
-        </div>
+                <div class="element element-33"></div> -->
+        </div><!--senyawa-->
     </div><!--col-xs-4-->
     <div class = "col-xs-9">
         <div id = "search-field">
        <?php 
     CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
     echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
-    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
+    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button','url'=>('species/search')));
+    echo CHtml::link(Yii::t('main_data','Species'), array('species/search'));
     CHtml::endForm();
 ?>
 </div>

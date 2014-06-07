@@ -7855,3 +7855,12 @@ ul.update-control {
     margin-left: 20px;;
 
 }
+
+.top-list{
+   border-top: solid 2px rgb(0, 121, 30);
+}
+
+ul.top-search {
+  margin: 0;
+  padding: 0;
+}
