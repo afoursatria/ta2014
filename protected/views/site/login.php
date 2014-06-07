@@ -35,8 +35,8 @@ $this->pageTitle=Yii::app()->name;
 	<div>
 		<?php echo $form->error($model, 'use_is_active'); ?>
 	</div>
-	<div class="row submit">
-        <?php echo CHtml::submitButton('Login',array('name'=>'','id'=>'green','class'=>'text-center button')); ?>
+	<div class="row submit text-center">
+        <?php echo CHtml::submitButton('Login',array('name'=>'','id'=>'green','class'=>'button')); ?>
     </div>
 </div>
 <?php $this->endWidget(); ?>
