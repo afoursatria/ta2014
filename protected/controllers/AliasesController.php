@@ -28,7 +28,7 @@ class AliasesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -36,7 +36,7 @@ class AliasesController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','verify'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getState("role")==1',
 			),
@@ -143,7 +143,36 @@ class AliasesController extends Controller
 			'model'=>$model,
 		));
 	}
+	
+	public function actionSearch($aliasKey= '')
+	{		
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
+		$aliasCriteria = new CDbCriteria;
+
+		if( strlen( $aliasKey ) > 0 )
+        $aliasCriteria->addSearchCondition( 'ali_speciesname', $aliasKey, true);
+		
+		$listAlias=new ApActiveDataProvider('Aliases',array(
+			'criteria'=>$aliasCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'ali_speciesname'),
+		));
+    	
+		$this->render('search', array(
+			'dataProvider'=>$listAlias,
+		));
+	}
+
+	public function actionVerify($id)
+	{
+		$model=Aliases::model()->findByPk($id);
+    	$model->verify();
+    	if ($model->save()) {
+			$this->redirect(array('search'));		
+    	}
+		
+	}
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

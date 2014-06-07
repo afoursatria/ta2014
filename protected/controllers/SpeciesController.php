@@ -38,30 +38,13 @@ class SpeciesController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete','verify'),
-				'expression'=>'!Yii::app()->user->getState("role")==1',
+				'expression'=>'Yii::app()->user->getState("role")==1',
 			
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
 		);
-	}
-
-	public function allowContributor()
-	{
-		if(Yii::app()->user->role == 3)
-			return true;
-		else
-			return false;
-	}
-
-
-	public function allowExpert()
-	{
-		if(Yii::app()->user->role == 2)
-			return true;
-		else
-			return false;
 	}
 
 	/**
@@ -79,7 +62,12 @@ class SpeciesController extends Controller
 		$acriteria->condition='spe_id='.$id;
 		$vcriteria->condition='spe_id='.$id;
 		$scriteria->condition='spe_id='.$id;
-	
+		
+		//count total view species for top species
+		$species = $this->loadModel($id);
+		$species->countView();
+		$species->save();
+
 	 	if( strlen( $lnameKey ) > 0 )
         $lcriteria->addSearchCondition( 'loc_localname', $lnameKey, true);
 
@@ -230,6 +218,43 @@ class SpeciesController extends Controller
 		));
 	}
 
+	public function actionSearch($speciesKey ='')
+	{		
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
+
+		// $criteria = new CDbCriteria;
+	 // 	$criteria->order = "spe_viewed_count DESC";
+		// $criteria->limit = 5;
+		// $topSpecies = Species::model()->findAll($criteria);
+
+		$speciesCriteria = new CDbCriteria;
+
+		if( strlen( $speciesKey ) > 0 ){
+        	$speciesCriteria->addSearchCondition( 'spe_speciesname', $speciesKey, true);
+        }
+
+        $listSpecies=new ApActiveDataProvider('Species',array(
+			'criteria'=>$speciesCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'spe_speciesname'),
+		));
+
+		$this->render('search', array(
+			'dataProvider'=>$listSpecies,
+			// 'topSpecies'=>$topSpecies,
+		));
+	}
+
+
+	public function actionVerify($id)
+	{
+		$model=Species::model()->findByPk($id);
+    	$model->verify();
+    	if ($model->save()) {
+			$this->redirect(array('search'));		
+    	}
+		
+	}
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
