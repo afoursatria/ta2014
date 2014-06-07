@@ -69,7 +69,7 @@
 			<?php echo CHtml::encode($model->getAttributeLabel('use_cv')); ?>
 		</span>
 		<span class="col-md-9">:
-			<?php echo CHtml::encode($model->use_cv);?>
+		     <?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf'); ?>
 		</span>
 	</div>
 	<div class="row">
