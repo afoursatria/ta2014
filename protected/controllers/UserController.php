@@ -44,7 +44,7 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha'),
+			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha', 'findRefName'),
 			 	'users'=>array('@'),		
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -273,10 +273,10 @@ class UserController extends Controller
 
 		if(isset($_POST['Species']))
 		{
+
 			$speciesModel->attributes=$_POST['Species'];
 			if($speciesModel->save())
 			{
-				echo "string";
 				Yii::app()->user->setFlash('success', "Species saved!");
 				$this->redirect(array('insertData')); //bisa success alert
 			}
@@ -353,6 +353,41 @@ class UserController extends Controller
 			'contentGroupModel'=>$contentGroupModel,
 		));
 	}
+
+	public function actionFindRefName() 
+	{
+	    $q = $_GET['term'];
+       	if (isset($q)) {
+           $criteria = new CDbCriteria;
+           //condition to find your data, using q as the parameter field
+           $criteria->condition = "ref_name LIKE':q'", 
+           // $criteria->order = '...'; // correct order-by field
+            $criteria->limit = 5; // probably a good idea to limit the results
+           // with trailing wildcard only; probably a good idea for large volumes of data
+           $criteria->params = array(':q' => trim($q) . '%'); 
+           $RefName = Ref::model()->findAll($criteria);
+ 
+           if (!empty($RefName)) {
+               $out = array();
+               foreach ($RefName as $p) {
+                   $out[] = array(
+                       // expression to give the string for the autoComplete drop-down
+                       'label' => $p->ref_name,  
+                       'value' => $p->ref_name,
+                       'id' => $p->ref_id, // return value from autocomplete
+                   );
+               }
+               echo CJSON::encode($out);
+               Yii::app()->end();
+           }
+       }
+   }
+
+ //   public function loadModel() {
+ //      if (isset($_GET['id']))
+ //               // NOTE 'with()'
+ //               $this->_model=Ref::model()->with('ref')->findbyPk($_GET['id']); 
+ // }
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

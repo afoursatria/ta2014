@@ -15,6 +15,7 @@ return array(
 
 	// autoloading model and component classes
 	'import'=>array(
+		'application.extensions.*',
 		'application.models.*',
 		'application.components.*',
 		'ext.yii-mail.YiiMailMessage',

@@ -113,4 +113,9 @@ class Ref extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function getRefName() {
+      // presuming PostCode, City and Province are fields
+      return $this->ref_name; 
+ }
 }

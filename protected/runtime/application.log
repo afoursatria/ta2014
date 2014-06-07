@@ -39431,3 +39431,306 @@ in C:\wamp\www\newherbaldb\index.php (13)
 2014/06/06 15:38:10 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
 in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (276)
 in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/06 15:54:06 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (276)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/06 15:55:12 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (276)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/06 15:55:29 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (276)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/06 16:18:31 [error] [php] include(EJuiAutoCompleteFkField.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): import()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): UserController->createWidget()
+#3 C:\wamp\www\newherbaldb\protected\views\species\_form.php(81): UserController->widget()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#7 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(16): UserController->renderPartial()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#12 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(354): UserController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+in C:\wamp\www\newherbaldb\protected\views\species\_form.php (81)
+in C:\wamp\www\newherbaldb\protected\views\user\insert_data.php (16)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (354)
+2014/06/06 16:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=dsa
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:11:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=ssa
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:11:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=ssaaf
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=asd
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:12:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:12:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=r
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:12:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:16:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=afasfasfa
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:17:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=sasdada
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:17:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=sadsasasad
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:17:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=sadsasasadassdasadsasdsasad
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:21:18 [error] [php] include(EJuiAutoCompleteFkField.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): import()
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): UserController->createWidget()
+#3 C:\wamp\www\newherbaldb\protected\views\species\_form.php(81): UserController->widget()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#7 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(16): UserController->renderPartial()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): UserController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): UserController->renderPartial()
+#12 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(355): UserController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): UserController->run()
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+in C:\wamp\www\newherbaldb\protected\views\species\_form.php (81)
+in C:\wamp\www\newherbaldb\protected\views\user\insert_data.php (16)
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (355)
+2014/06/07 11:21:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:22:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=s
+---
+2014/06/07 11:22:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:23:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "FindRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('FindRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('FindRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/FindRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/FindRefName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:25:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findRefName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findRefName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findRef...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findRefName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:25:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findRefNam...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findRefName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:26:19 [error] [exception.CException] exception 'CException' with message 'Property "Ref.ref_ame" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('ref_ame')
+#1 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(377): CActiveRecord->__get('ref_ame')
+#2 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionFindRefName()
+#3 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findRefName')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findRefNam...')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findRefName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/07 11:27:55 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (277)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/07 11:32:29 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (277)
+in C:\wamp\www\newherbaldb\index.php (13)

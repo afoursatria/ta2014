@@ -145,12 +145,14 @@ class Species extends CActiveRecord
     	if ($this->isNewRecord) {
 			$this->spe_insert_by = Yii::app()->user->role;
     		$this->spe_insert_date = new CDbExpression('NOW()');
+    		return true;
     	}
 
     	else{
     		if (Yii::app()->user->hasState('role')) {
 	    		$this->spe_update_by = Yii::app()->user->role;
     			$this->spe_update_date = new CDbExpression('NOW()');
+    			return true;
     		}    		
     	}
 
