@@ -28,7 +28,7 @@ class VirtueController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -36,7 +36,7 @@ class VirtueController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'verify'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getState("role")==1',
 			),
@@ -143,6 +143,36 @@ class VirtueController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionSearch($virtueKey= '')
+	{		
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
+
+		$virtueCriteria = new CDbCriteria;
+
+		if( strlen( $virtueKey ) > 0 )
+        $virtueCriteria->addSearchCondition( 'vir_value', $virtueKey, true);
+		
+		$listVirtue=new ApActiveDataProvider('Virtue',array(
+			'criteria'=>$virtueCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'vir_value'),
+		));
+    	
+		$this->render('search', array(
+			'dataProvider'=>$listVirtue,
+		));
+	}
+
+	public function actionVerify($id)
+	{
+		$model=Virtue::model()->findByPk($id);
+    	$model->verify();
+    	if ($model->save()) {
+			$this->redirect(array('search'));		
+    	}
+		
 	}
 
 	/**

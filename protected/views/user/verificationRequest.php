@@ -7,7 +7,9 @@
             Dear Admin,
                 <br />There is new registered user. Please check the verification page by following the link below:
                 <br />
-               	<a href="http://localhost/blabla ">Verification Page</a>;
+                <?php
+                    echo CHtml::link('Verification Page', array(Yii::app()->baseUrl.'user/admin'))
+                ?>
                 <br />
         </body>
 </html>

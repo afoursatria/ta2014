@@ -27,7 +27,6 @@
  * @property string $use_last_login_date
  */
 
-//ini icha nambah komen buat tes push
 class User extends CActiveRecord
 {	
 	public $repeat_password;
@@ -51,19 +50,19 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('use_username', 'length', 'min'=>6, 'max'=>10, 'tooShort'=>Yii::t('user','Username doesn\'t meet criteria'),'tooLong'=>Yii::t('user','Username doesn\'t meet criteria'), 'on'=>'register'),
+			array('use_username', 'length', 'min'=>6, 'max'=>12, 'tooShort'=>Yii::t('user','Username doesn\'t meet criteria'),'tooLong'=>Yii::t('user','Username doesn\'t meet criteria'), 'on'=>'register'),
 			array('use_password', 'match', 'pattern'=>'/^[\*a-zA-Z0-9]{6,12}$/', 'message' =>Yii::t('user','Password doesn\'t meet criteria'), 'on'=>'register'),
 			array('use_username, use_password', 'required', 'on'=>'register, login', 'message'=>Yii::t('user','{attribute} is required')),
 			array('use_username, use_email', 'unique', 'message'=>Yii::t('user','This {attribute} is already registered')),	
 			array('use_fullname, use_email, rol_id, use_birthdate, use_gender' , 'required', 'on'=>'register, update', 'message'=>Yii::t('user','{attribute} is required')),
 			array('use_email', 'email', 'message'=>Yii::t('user','Email is not valid')),
-			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'on'=>'register', 'message'=>Yii::t('user','Verification code is invalid')),
+			array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(),'on'=>'register', 'message'=>Yii::t('user','Verification code is invalid')),
 			array('repeat_password', 'required', 'on'=>'register', 'message'=>'Please repeat your password'),
 			// array('use_gender, use_occupation, use_country, use_city, rol_id, use_is_active, use_update_by', 'numerical', 'integerOnly'=>true),
 			array('use_fullname, use_email', 'length', 'max'=>25),
 			array('use_birthdate', 'length', 'max'=>10),
 			array('use_username, use_update_date', 'length', 'max'=>15),
-			array('use_foto', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update'), // this will allow empty field when page is update (remember here i create scenario update)
+			array('use_foto', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update, register'), // this will allow empty field when page is update
             array('use_cv', 'file', 'types'=>'pdf', 'allowEmpty'=>true, 'on'=>'update'),
 			array('use_password','compare', 'compareAttribute'=>'repeat_password', 'on'=>'users'),
 			array('use_last_login_ip', 'length', 'max'=>15),
@@ -97,20 +96,17 @@ class User extends CActiveRecord
 			'use_email' => Yii::t('user','Email'),
 			'use_gender' => Yii::t('user','Gender'),
 			'use_birthdate' => Yii::t('user','Birthdate'),
-			'use_occupation' => 'Occupation',
-			'use_country' => 'Country',
-			'use_city' => 'City',
 			'use_address' => 'Address',
 			'use_foto' => Yii::t('user','Photo'),
 			'use_cv' => 'Curriculum Vitae',
 			'rol_id' => Yii::t('user','Role'),
 			'use_username' => 'Username',
 			'use_password' => 'Password',
-			'use_pass_ori' => 'Pass Ori',
-			'use_is_active' => 'Is Active',
+			'verifyCode' => Yii::t('user','Verification Code'),
+			'use_is_active' => Yii::t('user','Status'),
 			'use_update_date' => 'Use Update Date',
 			'use_update_by' => 'Use Update By',
-			'use_reg_date' => 'Use Reg Date',
+			'use_reg_date' => Yii::t('user','Registration Date'),
 			'use_last_login_ip' => 'Use Last Login Ip',
 			'use_last_login_date' => 'Use Last Login Date',
 		);
@@ -139,16 +135,12 @@ class User extends CActiveRecord
 		$criteria->compare('use_email',$this->use_email,true);
 		$criteria->compare('use_gender',$this->use_gender);
 		$criteria->compare('use_birthdate',$this->use_birthdate,true);
-		// $criteria->compare('use_occupation',$this->use_occupation);
-		// $criteria->compare('use_country',$this->use_country);
-		// $criteria->compare('use_city',$this->use_city);
 		$criteria->compare('use_address',$this->use_address,true);
 		$criteria->compare('use_foto',$this->use_foto,true);
 		$criteria->compare('use_cv',$this->use_cv,true);
 		$criteria->compare('rol_id',$this->rol_id);
 		$criteria->compare('use_username',$this->use_username,true);
 		$criteria->compare('use_password',$this->use_password,true);
-		// $criteria->compare('use_pass_ori',$this->use_pass_ori,true);
 		$criteria->compare('use_is_active',$this->use_is_active);
 		$criteria->compare('use_update_date',$this->use_update_date,true);
 		$criteria->compare('use_update_by',$this->use_update_by);
@@ -184,32 +176,41 @@ class User extends CActiveRecord
 		return true;
     }
 
+    public function beforeValidate()
+    {
+    	if (!$this->isNewRecord) {
+    		$this->use_update_date=new CDbExpression('NOW()');
+			$this->use_update_by=Yii::app()->user->getState('no');
+    	}
+
+    	return parent::beforeValidate();
+    }
+
     public function verifyUser()
     {
     	$this->use_is_active = 1;
     	return true;
-
     }
 
-    public function notVerifiedUser() 
-    {
+ //    public function notVerifiedUser() 
+ //    {
 
-		$criteria=new CDbCriteria;
-		$criteria->condition = "use_is_active = 0";
+	// 	$criteria=new CDbCriteria;
+	// 	$criteria->condition = "use_is_active = 0";
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+	// 	return new CActiveDataProvider($this, array(
+	// 		'criteria'=>$criteria,
+	// 	));
+	// }
 
-	public function verifiedUser() 
-    {
+	// public function verifiedUser() 
+ //    {
 
-		$criteria=new CDbCriteria;
-		$criteria->condition = "use_is_active = 1";
+	// 	$criteria=new CDbCriteria;
+	// 	$criteria->condition = "use_is_active = 1";
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+	// 	return new CActiveDataProvider($this, array(
+	// 		'criteria'=>$criteria,
+	// 	));
+	// }
 }

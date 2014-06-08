@@ -94,11 +94,8 @@ class NewsController extends Controller
 		if(isset($_POST['News']))
 		{
 			$model->attributes=$_POST['News'];
-			if($model->save()){
-									Yii::app()->user->setFlash('success','News has been changed');
-
+			if($model->save())
 				$this->redirect(array('view','id'=>$model->news_id));
-			}
 		}
 
 		$this->render('update',array(
@@ -117,7 +114,7 @@ class NewsController extends Controller
 		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
 	}
 
 	/**
@@ -125,8 +122,47 @@ class NewsController extends Controller
 	 */
 	public function actionIndex()
 	{
+		//load 5 berita terbaru
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'newscat_id = 1';
+	 	$criteria->order = "news_insert_date DESC";
+		$criteria->limit = 5;
+
+		$beritaTerbaru = News::model()->findAll($criteria);
+
+		//load 5 acara terbaru
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'newscat_id = 2';
+	 	$criteria->order = "news_insert_date DESC";
+		$criteria->limit = 5;
+
+		$acaraTerbaru = News::model()->findAll($criteria);
+
+		//load 5 pengumuman terbaru
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'newscat_id = 4';
+	 	$criteria->order = "news_insert_date DESC";
+		$criteria->limit = 5;
+
+		$pengumumanTerbaru = News::model()->findAll($criteria);
+
+		//load 5 publikasi terbaru
+		$criteria = new CDbCriteria;
+		$criteria->condition = 'newscat_id = 3';
+	 	$criteria->order = "news_insert_date DESC";
+		$criteria->limit = 5;
+
+		$publikasiTerbaru = News::model()->findAll($criteria);
+
+
 		$dataProvider=new CActiveDataProvider('News');
+		$dataProvider->sort->defaultOrder='news_insert_date DESC';
+
 		$this->render('index',array(
+			'beritaTerbaru'=>$beritaTerbaru,
+			'acaraTerbaru'=>$acaraTerbaru,
+			'pengumumanTerbaru'=>$pengumumanTerbaru,
+			'publikasiTerbaru'=>$publikasiTerbaru,
 			'dataProvider'=>$dataProvider,
 		));
 	}

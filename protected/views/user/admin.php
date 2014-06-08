@@ -6,19 +6,6 @@ $this->breadcrumbs=array(
 	// 'Species'=>array('index'),
 	'Manage',
 );
-
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#species-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
 
 <h1><?php echo Yii::t('user','List of User') ;?></h1>

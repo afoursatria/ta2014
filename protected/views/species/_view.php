@@ -28,7 +28,21 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_foundername')); ?>:</b>
 	<?php echo CHtml::encode($data->spe_foundername); ?>
 	<br />
-	 
+	 <b><?php echo "Status"; ?>:</b>
+	<?php 
+		if ($data->spe_is_verified == 0) {
+		echo Yii::t('main_data', 'not verified');
+		}
+		else echo Yii::t('main_data', 'verified');
+	?>
+	<br />
+
+
+	<?php
+	if (Yii::app()->user->getState('role') == 1 && $data->spe_is_verified == 0) {
+		echo CHtml::link("Verify", array('species/verify', 'id'=>$data->spe_id), array('submit'=>array('species/verify', "id"=>$data->spe_id), 'confirm' => 'Are you sure you want to verify?'));
+	 } 
+    ?>
 	 	<div class = "element"></div>
 	 </div>
 </div>

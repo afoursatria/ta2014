@@ -19,7 +19,7 @@
     'clientOptions' => array(
         'validateOnSubmit' => true,
     ),
-    'htmlOptions'=>array('class'=>'well'),
+    'htmlOptions'=>array('class'=>'well','enctype'=>'multipart/form-data'),
 
 )); ?>
 
@@ -76,6 +76,10 @@
 			<?php echo $form->fileField($model,'con_file_mol1'); ?>
 			<?php echo $form->error($model,'con_file_mol1'); ?>
 		</span>
+	</div>
+	<?php if($model->isNewRecord!='1'){ ?>
+	<div class="row">
+     	<?php echo CHtml::link(CHtml::encode($model->con_contentname.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_contentname.'.mol');} ?>
 	</div>
 
 	<div class="row">

@@ -89,6 +89,7 @@ class Species_content extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('specon_id',$this->specon_id);
@@ -101,10 +102,18 @@ class Species_content extends CActiveRecord
 		$criteria->compare('specon_update_date',$this->specon_update_date,true);
 		$criteria->compare('specon_verified_by',$this->specon_verified_by);
 		$criteria->compare('specon_verified_date',$this->specon_verified_date,true);
+		$criteria->with = array('contents');
 
-		return new CActiveDataProvider($this, array(
+		// return new CActiveDataProvider($this, array(
+		// 	'criteria'=>$criteria,
+		// ));
+		return new ApActiveDataProvider(get_class($this), array(
+            /* ... */
 			'criteria'=>$criteria,
-		));
+            'alphapagination'=>array(
+                'attribute'=>'con_contentname',
+            ),
+        ));
 	}
 
 	/**

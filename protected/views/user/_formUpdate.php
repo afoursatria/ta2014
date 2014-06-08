@@ -54,8 +54,10 @@
 	        	<?php echo $form->error($model,'use_foto'); ?>	
 	        </div>
 			<div class ="row">
-				<?php if($model->isNewRecord!='1'){ ?>
-		     	<?php echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
+				  	<?php
+     	if($model->use_foto == null){
+	     	echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/default.jpg',"image",array("width"=>200));} 
+     		else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
 			</div>
 		</span>
 	</div>

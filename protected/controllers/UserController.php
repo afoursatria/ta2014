@@ -44,14 +44,13 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha'),
-			 	'users'=>array('@'),
-				 'expression'=>
-				 	'Yii::app()->user->getState("role")==1',		
+			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha', 'findRefName'),
+			 	'users'=>array('@'),		
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','verify'),
-			 	'users'=>array('@'),				
+				'actions'=>array('admin','delete','verify', 'add'),
+			 	'expression'=>
+				 	'Yii::app()->user->getState("role")==1',				
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -94,28 +93,29 @@ class UserController extends Controller
 
 			$_POST['User']['photo'] = $model->use_foto;
 			$_POST['User']['cv'] = $model->use_cv;
+
 			$model->attributes=$_POST['User'];
-			$uploadedFile=CUploadedFile::getInstance($model,'use_foto');
+
+			$uploadedImage=CUploadedFile::getInstance($model,'use_foto');
 			$uploadedCV=CUploadedFile::getInstance($model,'use_cv');
             
             $fileName = $model->use_username;  
-            $model->use_foto = $fileName;
 
             $cvName = 'CV-'.$model->use_username;  
-            $model->use_cv = $cvName;
  
 			if($model->save()){
-
-				if(!empty($uploadedFile))
+				if(!empty($uploadedImage))
 				{  // check if uploaded file is set or not
-					$uploadedFile->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
+            		$model->use_foto = $fileName;
+					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
 				}
 
 				if(!empty($uploadedCV))
 				{  // check if uploaded file is set or not
+		            $model->use_cv = $cvName;
 					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
 				}
-				Yii::app()->user->setFlash('success','Profile has been changed');
+				
 				$this->redirect(array('profile','id'=>$model->use_id));
 
 			}
@@ -140,28 +140,26 @@ class UserController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	public function actionChangePassword()
+	public function actionChangePassword($id)
 	{
 		$model=new ChangePasswordForm;
 		$model->setScenario('changePassword');
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
+		
+		// if it is ajax validation request
+		
+			// echo CActiveForm::validate($model);
+			// Yii::app()->end();
+		
 		if(isset($_POST['ChangePasswordForm']))
 		{
 			$model->attributes=$_POST['ChangePasswordForm'];
 			if($model->validate() && $model->changePassword())
 				{
-					
 					Yii::app()->user->setFlash('success','Password has been changed');
-					$this->redirect(array('profile','id'=>Yii::app()->user->no));
-
+					$this->refresh();
 				}
 		}
-
-		$this->render('changePassword',array(
-			'model'=>$model,
-		));
+		$athis->render('changePassword',array('model'=>$model));
 	}
 
 	/**
@@ -169,7 +167,7 @@ class UserController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new User;
+		$model=new User('search');
 		$userModel= new User;
 		$model->unsetAttributes();  // clear any default values
 		
@@ -182,48 +180,61 @@ class UserController extends Controller
 		));
 	}
 
-	public function sendMail()
-    {   
-        $message            = new YiiMailMessage;
-          
-        //this points to the file verificationRequest.php inside the view path
-        $message->view = "user\\verificationRequest";
-        $criteria=new CDbCriteria;
-		$criteria->select='use_email';  // only select the 'use_email' column
-		$criteria->condition='rol_id=1';
-		$adminModel1=User::model()->findAll($criteria);
-        $params              = array('myMail'=>$adminModel1);
-        $message->subject    = 'Verifikasi Akun Baru';
-      	 $message->setBody($params, 'text/html');               
+	/**
+	 * Add user.
+	 */
+	public function actionAdd()
+	{
+		$model=new User;
 
-        foreach($adminModel1 as $email) {
-			$message->addTo($email->use_email);        	
+		$model->scenario = "register";	
+		if(isset($_POST['User']))
+		{	
+			$_POST['User']['photo'] = $model->use_foto;
+			$model->attributes=$_POST['User'];
+
+			$uploadedImage=CUploadedFile::getInstance($model,'use_foto');
+			
+			$imageName = $model->use_username;  
+
+			if($model->validate()){
+
+				if(!empty($uploadedImage))
+				{  // check if uploaded file is set or not
+            		$model->use_foto = $imageName;
+					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$imageName.'.jpg');  // image will uplode to rootDirectory/photo/
+				}
+
+				$model->save();
+				$this->redirect(array('admin'));
+			}
 		}
-		$message->setFrom(array('afour.satria@gmail.com' => 'Herbal DB'));   
-      	Yii::app()->mail->send($message); 
-		$this->redirect(array('site/index'));
-    }
+
+		$this->render('/site/register',array(
+			'model'=>$model,
+		));
+	}
 
     public function actionVerify($id)
 	{
 		$model=User::model()->findByPk($id);
     	$model->verifyUser();
     	if ($model->save()) {
-    		$this->sendMailVerivication($id);
+    		$this->sendVerificationMail($id);
 			$this->redirect(array('user/admin'));		
     	}
 		
 	}
 
-	public function sendMailVerivication($id)
+	public function sendVerificationMail($id)
     {   
         $message            = new YiiMailMessage;
           
         //this points to the file verificationRequest.php inside the view path
         $message->view = "user\\verificationApproval";
         $criteria=new CDbCriteria;
-		$criteria->select='use_email';  // only select the 'use_email' column
-		$criteria->condition='rol_id='.$id;
+		// $criteria->select='use_email';  // only select the 'use_email' column
+		// $criteria->condition='rol_id='.$id;
 		$userModel=User::model()->findByPk($id);
         $params              = array('myMail'=>$userModel);
         $message->subject    = 'Your Account is Active Now';
@@ -231,22 +242,38 @@ class UserController extends Controller
 		
 		$message->addTo($userModel->use_email);        	
 
-		$message->setFrom(array('afour.satria@gmail.com' => 'Herbal DB'));   
+		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB'));   
       	Yii::app()->mail->send($message); 
     }
 
 	public function actionInsertData()
 	{
 		$speciesModel = new Species;
+		$speciesModel->setScenario('insert');
+		
 		$localnameModel = new Localname;
+		$localnameModel->setScenario('insert');
+		
 		$aliasesModel = new ALiases;
+		$aliasesModel->setScenario('insert');
+		
 		$virtueModel = new virtue;
+		$virtueModel->setScenario('insert');
+		
 		$referenceModel = new Ref;
+		$referenceModel->setScenario('insert');
+		
 		$compoundModel = new Contents;
+		$compoundModel->setScenario('insert');
+		
 		$contentGroupModel = new Contentgroup;
+		$contentGroupModel->setScenario('insert');
+
+
 
 		if(isset($_POST['Species']))
 		{
+
 			$speciesModel->attributes=$_POST['Species'];
 			if($speciesModel->save())
 			{
@@ -326,6 +353,41 @@ class UserController extends Controller
 			'contentGroupModel'=>$contentGroupModel,
 		));
 	}
+
+	public function actionFindRefName() 
+	{
+	    $q = $_GET['term'];
+       	if (isset($q)) {
+           $criteria = new CDbCriteria;
+           //condition to find your data, using q as the parameter field
+           // $criteria->condition = 'ref_name LIKE'%q%'', 
+           // $criteria->order = '...'; // correct order-by field
+            $criteria->limit = 5; // probably a good idea to limit the results
+           // with trailing wildcard only; probably a good idea for large volumes of data
+           $criteria->params = array(':q' => trim($q) . '%'); 
+           $RefName = Ref::model()->findAll($criteria);
+ 
+           if (!empty($RefName)) {
+               $out = array();
+               foreach ($RefName as $p) {
+                   $out[] = array(
+                       // expression to give the string for the autoComplete drop-down
+                       'label' => $p->ref_name,  
+                       'value' => $p->ref_name,
+                       'id' => $p->ref_id, // return value from autocomplete
+                   );
+               }
+               echo CJSON::encode($out);
+               Yii::app()->end();
+           }
+       }
+   }
+
+ //   public function loadModel() {
+ //      if (isset($_GET['id']))
+ //               // NOTE 'with()'
+ //               $this->_model=Ref::model()->with('ref')->findbyPk($_GET['id']); 
+ // }
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

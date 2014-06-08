@@ -105,4 +105,25 @@ class News extends CActiveRecord
 		return parent::model($className);
 	}
 
+	public function beforeSave()
+    {
+    	if ($this->isNewRecord) {
+			$this->news_insert_by = Yii::app()->user->getState('no');
+    		$this->news_insert_date = new CDbExpression('NOW()');
+    	}
+
+    	else{
+	    		$this->news_update_by = Yii::app()->user->getState('no');
+    			$this->news_update_date = new CDbExpression('NOW()');    		
+    	}
+
+    	/*for status terverifikasi
+    	if (Yii::app()->user->role == '2' OR Yii::app()->user->role == '3') {
+    		$this->spe_insert_by = Yii::app()->user->role;
+    	}
+    	*/
+
+		return true;
+    }
+
 }

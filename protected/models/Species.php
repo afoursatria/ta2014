@@ -37,10 +37,10 @@ class Species extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_species_id, spe_speciesname, spe_familyname, spe_foundername, ref_id', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
-			array('ref_id, spe_insert_by, spe_update_by, spe_verified_by', 'numerical', 'integerOnly'=>true),
-			array('spe_species_id, spe_insert_date, spe_update_date, spe_verified_date', 'length', 'max'=>20),
-			array('spe_speciesname, spe_varietyname, spe_familyname, spe_foundername, spe_foto', 'length', 'max'=>100),
+			array('spe_species_id, spe_speciesname, spe_familyname, spe_foundername, ref_id', 'required', 'on'=>'insert','message'=>Yii::t('main_data','{attribute} cannot be blank')),
+			// array('ref_id, spe_insert_by, spe_update_by, spe_verified_by', 'numerical', 'integerOnly'=>true),
+			// array('spe_species_id, spe_insert_date, spe_update_date, spe_verified_date', 'length', 'max'=>20),
+			// array('spe_speciesname, spe_varietyname, spe_familyname, spe_foundername, spe_foto', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('spe_id, spe_species_id, spe_speciesname, spe_varietyname, spe_familyname, spe_foundername, spe_foto, ref_id, spe_insert_by, spe_insert_date, spe_update_by, spe_update_date, spe_verified_by, spe_verified_date', 'safe', 'on'=>'search'),
@@ -97,6 +97,7 @@ class Species extends CActiveRecord
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
 
 		$criteria=new CDbCriteria;
 
@@ -115,9 +116,17 @@ class Species extends CActiveRecord
 		$criteria->compare('spe_verified_by',$this->spe_verified_by);
 		$criteria->compare('spe_verified_date',$this->spe_verified_date,true);
 
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
+		// return new CActiveDataProvider($this, array(
+		// 	'criteria'=>$criteria,
+		// ));
+
+		return new ApActiveDataProvider(get_class($this), array(
+            /* ... */
+            'alphapagination'=>array(
+				// 	'criteria'=>$criteria,
+                'attribute'=>'spe_speciesname',
+            ),
+        ));
 	}
 
 	/**
@@ -131,16 +140,20 @@ class Species extends CActiveRecord
 		return parent::model($className);
 	}
 
-		public function beforeSave()
+	public function beforeSave()
     {
     	if ($this->isNewRecord) {
 			$this->spe_insert_by = Yii::app()->user->role;
     		$this->spe_insert_date = new CDbExpression('NOW()');
+    		return true;
     	}
 
     	else{
-    		$this->spe_update_by = Yii::app()->user->role;
-    		$this->spe_update_date = new CDbExpression('NOW()');
+    		if (Yii::app()->user->hasState('role')) {
+	    		$this->spe_update_by = Yii::app()->user->role;
+    			$this->spe_update_date = new CDbExpression('NOW()');
+    			return true;
+    		}    		
     	}
 
     	/*for status terverifikasi
@@ -150,5 +163,21 @@ class Species extends CActiveRecord
     	*/
 
 		return true;
+    }
+
+    public function countView()
+    {
+    	$this->spe_viewed_count += 1;
+
+    	return true;
+    }
+
+    public function verify()
+    {
+    	$this->spe_is_verified = 1;
+    	$this->spe_verified_by = Yii::app()->user->getState('no');
+    	$this->spe_verified_date = new CDbExpression('NOW()');
+    	return true;
+
     }
 }

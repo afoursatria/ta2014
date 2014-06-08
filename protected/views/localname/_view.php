@@ -24,16 +24,24 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
-	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref_local->ref_name); ?>
+	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref_local->ref_name);
+	else echo "-";?>
 	<br />
 
-<!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_insert_by')); ?>:</b>
-	<?php echo CHtml::encode($data->loc_insert_by); ?>
+	<b><?php echo "Status"; ?>:</b>
+	<?php 
+		if ($data->loc_is_verified == 0) {
+		echo Yii::t('main_data', 'not verified');
+		}
+		else echo Yii::t('main_data', 'verified');
+	?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_insert_date')); ?>:</b>
-	<?php echo CHtml::encode($data->loc_insert_date); ?>
-	<br /> -->
+	<?php
+	if (Yii::app()->user->getState('role') == 1 && $data->loc_is_verified == 0) {
+		echo CHtml::link("Verify", array('localname/verify', 'id'=>$data->loc_id), array('submit'=>array('localname/verify', "id"=>$data->loc_id), 'confirm' => 'Are you sure you want to verify?'));
+	 } 
+    ?>
 
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_update_by')); ?>:</b>

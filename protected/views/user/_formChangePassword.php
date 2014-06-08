@@ -1,23 +1,35 @@
-
+<h1><?php echo Yii::t('user','Change Password');?></h1>
+<?php if(Yii::app()->user->hasFlash('success')):?>
+    <div class="info">
+        <?php echo Yii::app()->user->getFlash('success'); ?>
+    </div>
+<?php endif; ?>
 <div class="form">
-    <div id="custom-form" class="well">
-        <?php echo CHtml::beginForm(); ?>
-
-        <?php echo CHtml::errorSummary($model); ?>
-
+    <?php $form=$this->beginWidget('CActiveForm', array(
+    'id'=>'custom-form',
+    'enableClientValidation'=>true,
+       'clientOptions'=>array(
+        'validateOnSubmit'=>true,
+    ),
+    'htmlOptions'=>array('class'=>'well'),
+)); ?>
         <div class="row">
             <span class="col-md-3"><?php echo CHtml::activeLabel($model,'currentPassword'); ?></span>
-            <?php echo CHtml::activePasswordField($model,'currentPassword') ?>
+            <?php echo CHtml::PasswordField($model,'currentPassword') ?>
+        <?php echo $form->error($model,'currentPassword'); ?>
+
         </div>
 
         <div class="row">
             <span class="col-md-3"><?php echo CHtml::activeLabel($model,'newPassword'); ?></span>
-            <?php echo CHtml::activePasswordField($model,'newPassword') ?>
+            <?php echo CHtml::PasswordField($model,'newPassword') ?>
+            <?php echo $form->error($model,'newPassword'); ?>
         </div>
 
         <div class="row">
             <span class="col-md-3"><?php echo CHtml::activeLabel($model,'newPasswordRepeat'); ?></span>
-            <?php echo CHtml::activePasswordField($model,'newPasswordRepeat') ?>
+            <?php echo CHtml::PasswordField($model,'newPasswordRepeat') ?>
+            <?php echo $form->error($model,'newPasswordRepeat'); ?>
         </div>
 
         <div class="row submit buttons">
@@ -27,6 +39,5 @@
             </div>
         </div>
 
-        <?php echo CHtml::endForm(); ?>
-    </div>
-</div><!-- form -->
+ <?php $this->endWidget(); ?>
+    </div><!-- form -->

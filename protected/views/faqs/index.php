@@ -15,6 +15,17 @@ $this->menu=array(
 
 ?>
 
+<b><?php
+	if (Yii::app()->user->getState('role')==1) {
+
+		echo Yii::t('main_data', 'Update');
+?></b>
+<br />
+<?php echo Yii::t('main_data','Choose Language'); ?>
+<br />
+<?php echo CHtml::link('English', array('faqs/update/en'));?>
+<br />
+<?php echo CHtml::link('Bahasa', array('update/id'));}?>
 <h1>Faqs</h1>
 
 

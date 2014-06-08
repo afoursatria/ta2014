@@ -14,7 +14,9 @@
  	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('hp_code')); ?>:</b>
-	<?php echo CHtml::encode($data->herbal_part->hp_part_name); ?>
+	<?php if ($data->herbal_part!==null) {echo CHtml::encode($data->herbal_part->hp_part_name);}
+	else echo "-"; 
+	?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_type')); ?>:</b>
@@ -32,7 +34,21 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_value_latin')); ?>:</b>
 	<?php echo CHtml::encode($data->vir_value_latin); ?>
 	<br />
+	
+	<b><?php echo "Status"; ?>:</b>
+	<?php 
+		if ($data->vir_is_verified == 0) {
+		echo Yii::t('main_data', 'not verified');
+		}
+		else echo Yii::t('main_data', 'verified');
+	?>
+	<br />
 
+	<?php
+	if (Yii::app()->user->getState('role') == 1 && $data->vir_is_verified == 0) {
+		echo CHtml::link("Verify", array('virtue/verify', 'id'=>$data->vir_id), array('submit'=>array('virtue/verify', "id"=>$data->vir_id), 'confirm' => 'Are you sure you want to verify?'));
+	 } 
+    ?>
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
 	<?php echo CHtml::encode($data->ref_id); ?>

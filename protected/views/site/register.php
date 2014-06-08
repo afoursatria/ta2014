@@ -1,3 +1,8 @@
+<?php 
+if (Yii::app()->user->getState('role')==1) {
+    echo CHtml::link(Yii::t('user','Back to User List'), array('user/admin'));
+}
+?>
 <h2><?php echo Yii::t('user','Registration Form');?></h2>
 
 
@@ -11,7 +16,7 @@
     'clientOptions'=>array(
         'validateOnSubmit'=>true,
     ),
-    'htmlOptions'=>array('class'=>'well'),
+    'htmlOptions'=>array('class'=>'well','enctype'=>'multipart/form-data'),
 )); ?>
 
 <p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -87,6 +92,12 @@
         <?php echo $form->error($model,'rol_id'); ?>
     </div>
     
+     <div class="row">
+        <span class ="col-xs-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
+        <?php echo CHtml::activeFileField($model, 'use_foto'); ?> 
+        <?php echo $form->error($model,'use_foto'); ?>
+    </div>
+
     <?php if(CCaptcha::checkRequirements()): ?>
     <div class= "row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Verification Code')); ?><span class="red">*</span></span>

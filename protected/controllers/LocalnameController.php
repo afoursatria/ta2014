@@ -28,7 +28,7 @@ class LocalnameController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','search'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -36,7 +36,7 @@ class LocalnameController extends Controller
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'verify'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getState("role")==1',
 			),
@@ -72,7 +72,7 @@ class LocalnameController extends Controller
 		{
 			$model->attributes=$_POST['Localname'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->loc_id));
+				$this->redirect(array('/species/view/','id'=>$speId->spe_id));
 		}
 
 		$this->render('create',array(
@@ -144,6 +144,35 @@ class LocalnameController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionSearch($lnameKey='')
+	{		
+		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
+
+		$lnameCriteria = new CDbCriteria;
+
+		if( strlen( $lnameKey ) > 0 )
+        $lnameCriteria->addSearchCondition( 'loc_localname', $lnameKey, true);
+		
+		$listLocalname=new ApActiveDataProvider('Localname',array(
+			'criteria'=>$lnameCriteria,
+			'alphapagination'=>array(
+				'attribute'=>'loc_localname'),
+		));
+    	
+		$this->render('search', array(
+			'dataProvider'=>$listLocalname,
+		));
+	}
+
+	public function actionVerify($id)
+	{
+		$model=Localname::model()->findByPk($id);
+    	$model->verify();
+    	if ($model->save()) {
+			$this->redirect(array('search'));		
+    	}
 	}
 
 	/**
