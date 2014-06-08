@@ -31,9 +31,10 @@
 	 <b><?php echo "Status"; ?>:</b>
 	<?php 
 		if ($data->spe_is_verified == 0) {
-		echo Yii::t('main_data', 'not verified');
+		echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20))
+		.Yii::t('main_data', 'not verified');
 		}
-		else echo Yii::t('main_data', 'verified');
+		else echo CHtml::image(Yii::app()->request->baseUrl."/images/check.png","image",array('width'=>20)).Yii::t('main_data', 'verified');
 	?>
 	<br />
 

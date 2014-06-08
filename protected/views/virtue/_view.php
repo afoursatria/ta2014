@@ -4,6 +4,7 @@
 ?>
 
 <div class="view">
+	<div class="entry">
 	<?php echo CHtml::link('update', array('virtue/update', 'id'=>$data->vir_id));?>
  	<br />
 
@@ -79,5 +80,6 @@
 	<br />
 
 	*/ ?>
-
+	</div>
+	<div class="element"></div>
 </div>

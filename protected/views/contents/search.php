@@ -17,7 +17,23 @@
     });"
 );
 ?>
-
+<ul>
+    <li class="col-md-2">
+<?php echo CHtml::link(Yii::t('main_data','Species'), array('species/search'))?>
+</li>
+<li class="col-md-2">
+<?php echo CHtml::link(Yii::t('main_data','Compound'), array('contents/search'))?>
+</li>
+<li class="col-md-2">
+<?php echo CHtml::link(Yii::t('main_data','Local Name'), array('localname/search'))?>
+</li>
+<li class="col-md-2">
+<?php echo CHtml::link(Yii::t('main_data','Alias Name'), array('aliases/search'))?>
+</li>
+<li class="col-md-2">
+<?php echo CHtml::link(Yii::t('main_data','Virtue'), array('Virtue/search'))?>
+</li>
+</ul>
 <?php 
 	CHtml::beginForm(CHtml::normalizeUrl(array('species/search')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('compoundKey', (isset($_GET['compoundKey'])) ? $_GET['compoundKey'] : '', 
