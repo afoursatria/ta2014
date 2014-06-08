@@ -12,12 +12,7 @@ $this->breadcrumbs=array(
 
 <div class="error">
 	<div class="text-center">
-		<h1>wooops</h1>
-		<div class="row">
-			<?php echo CHtml::image(Yii::app()->request->baseUrl.'/images/binoculars.png',"image",array('width'=>'150px')); ?>
-		</div>
-		<div class="row">
-			<?php echo CHtml::encode($message); ?>
-		</div>
+		<h1>woops</h1>
+		<?php echo CHtml::encode($message); ?>
 	</div>
 </div>
