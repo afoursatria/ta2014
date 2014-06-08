@@ -27,8 +27,8 @@
 
 <?php
    $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'/contents/_view',
+    'dataProvider'=>$dataProvider,
+    'itemView'=>'/contents/_view',
 	'emptyText'=>Yii::t('main_data','This Species has no compound'),
 	'summaryText'=>Yii::t('main_data','Displaying {end} result'),
 	'id'=>'compound-list',

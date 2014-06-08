@@ -26,7 +26,8 @@
 
 <?php
 	$this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
+	//'type'=>'striped',
+    'dataProvider'=>$dataProvider,
 	'itemView'=>'/localname/_view',
 	'emptyText'=>Yii::t('main_data','This Species has no local name'),
 	'summaryText'=>Yii::t('main_data','Displaying {end} result'),
