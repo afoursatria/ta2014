@@ -77,8 +77,10 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
        <?php 
     CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
     echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
-    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button','url'=>('species/search')));
-    echo CHtml::link(Yii::t('main_data','Species'), array('species/search'));
+    // echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button','url'=>('species/search')));
+    ?>
+      <?php echo CHtml::link(Yii::t('main_data','Search'), array('species/search')); ?>
+    <?php
     CHtml::endForm();
 ?>
 </div>
