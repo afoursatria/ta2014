@@ -37,12 +37,12 @@ class SpeciesController extends Controller
 				// 'expression'=>'allowContributor,allowExpert',
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete', 'verify'),
+				'actions'=>array('admin','delete','verify'),
 				'expression'=>'Yii::app()->user->getState("role")==1',
 			
 			),
 			array('deny',  // deny all users
-			 	'users'=>array('*'),
+				'users'=>array('*'),
 			),
 		);
 	}
@@ -255,7 +255,6 @@ class SpeciesController extends Controller
     	}
 		
 	}
-
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

@@ -16,12 +16,12 @@ $this->menu=array(
 );
 ?>
 
-<h1><?php echo $model->con_contentname; ?></h1>
+<h1>View Contents #<?php echo $model->con_id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		// 'con_id',
+		'con_id',
 		'con_contentname',
 		'con_knapsack_id',
 		'con_metabolite_id',
@@ -42,6 +42,7 @@ $this->menu=array(
 	),
 	'nullDisplay'=>'-',
 )); ?>
+
 <?php
 
 $this->widget('zii.widgets.jui.CJuiTabs',array(

@@ -143,7 +143,7 @@ class AliasesController extends Controller
 			'model'=>$model,
 		));
 	}
-
+	
 	public function actionSearch($aliasKey= '')
 	{		
 		Yii::import('application.extensions.alphapager.ApActiveDataProvider');
@@ -173,7 +173,6 @@ class AliasesController extends Controller
     	}
 		
 	}
-
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.

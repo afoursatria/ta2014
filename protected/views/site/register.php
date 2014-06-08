@@ -1,3 +1,8 @@
+<?php 
+if (Yii::app()->user->getState('role')==1) {
+    echo CHtml::link(Yii::t('user','Back to User List'), array('user/admin'));
+}
+?>
 <h2><?php echo Yii::t('user','Registration Form');?></h2>
 
 
@@ -86,18 +91,13 @@
             ?><span class="form-hint">(Choose one)</span>
         <?php echo $form->error($model,'rol_id'); ?>
     </div>
-    <div class="row">
-        <span class ="col-xs-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
-        <span class="col-xs-9">
-            <div class="row">
-            <?php echo CHtml::activeFileField($model, 'use_foto'); ?> 
-            </div>
-            <div class="row">
-            <?php echo $form->error($model,'use_foto'); ?>
-            </div>
-        </span>
-    </div>
     
+     <div class="row">
+        <span class ="col-xs-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
+        <?php echo CHtml::activeFileField($model, 'use_foto'); ?> 
+        <?php echo $form->error($model,'use_foto'); ?>
+    </div>
+
     <?php if(CCaptcha::checkRequirements()): ?>
     <div class= "row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Verification Code')); ?><span class="red">*</span></span>

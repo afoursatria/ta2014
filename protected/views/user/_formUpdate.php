@@ -6,14 +6,14 @@
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'user-form',
+<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+	'id'=>'custom-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
-	'htmlOptions'=>array('enctype'=>'multipart/form-data'),
+	'htmlOptions'=>array('enctype'=>'multipart/form-data','class'=>'well'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -21,19 +21,20 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'use_fullname'); ?>
+		<span class ="col-xs-3"><?php echo $form->labelEx($model,'use_fullname'); ?></span>
 		<?php echo $form->textField($model,'use_fullname',array('size'=>25,'maxlength'=>25)); ?>
+		 <span class="form-hint">(Max.Length 25 characters)</span>
 		<?php echo $form->error($model,'use_fullname'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'use_email'); ?>
-		<?php echo $form->textField($model,'use_email',array('size'=>25,'maxlength'=>25)); ?>
+		<span class="col-xs-3"><?php echo $form->labelEx($model,'use_email'); ?></span>
+		<?php echo $form->textField($model,'use_email',array('size'=>25,'maxlength'=>25)); ?><span class="form-hint">(Max.Length 25 characters)</span>
 		<?php echo $form->error($model,'use_email'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'use_birthdate'); ?>
+		<span class="col-xs-3"><?php echo $form->labelEx($model,'use_birthdate'); ?></span>
         <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
         	'model'=>$model, 'attribute'=>'use_birthdate',
         	'options'=>array(
@@ -43,36 +44,39 @@
         	'changeMonth'=>'true',
             ),
 		)); 
-        ?>
+        ?><span class="form-hint">(Click text field to pick from calendar)</span>
     </div>
 
 	<div class="row">
-        <?php echo $form->labelEx($model,'use_foto'); ?>
-        <?php echo CHtml::activeFileField($model, 'use_foto'); ?> 
-        <?php echo $form->error($model,'use_foto'); ?>
-	</div>
-	
-	<?php if(!$model->isNewRecord){ ?>
-	<div class="row">
-     	<?php
+        <span class="col-xs-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
+        <span class="col-xs-9"><?php echo CHtml::activeFileField($model, 'use_foto'); ?>
+	        <div class="row">
+	        	<?php echo $form->error($model,'use_foto'); ?>	
+	        </div>
+			<div class ="row">
+				  	<?php
      	if($model->use_foto == null){
 	     	echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/default.jpg',"image",array("width"=>200));} 
-     	else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'use_cv'); ?>
-		<?php echo $form->fileField($model,'use_cv'); ?>
-		<?php echo $form->error($model,'use_cv'); ?>
+     		else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
+			</div>
+		</span>
 	</div>
-
-	<?php if($model->isNewRecord!='1'){ ?>
-	
 	<div class="row">
-     	<?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
+		<span class="col-xs-3"><?php echo $form->labelEx($model,'use_cv'); ?></span>
+		<span class="col-xs-9"><?php echo $form->fileField($model,'use_cv'); ?>
+			<div class="row">
+				<?php echo $form->error($model,'use_cv'); ?>
+			</div>
+			<div class="row">
+				<?php if($model->isNewRecord!='1'){ ?>
+		     	<?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
+			</div>
+		</span>
 	</div>
-
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update')); ?>
+		<div class="col-xs-3"></div>
+		<div class="col-xs-9">
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'), array('id'=>'blue','class'=>'button')); ?></div>
 	</div>
 
 <?php $this->endWidget(); ?>

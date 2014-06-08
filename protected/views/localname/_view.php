@@ -5,14 +5,7 @@
 
 <div class="view">
 
-<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('loc_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->loc_id), array('view', 'id'=>$data->loc_id)); ?>
-	<br />
- -->
-<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('spe_id')); ?>:</b>
-	<?php echo CHtml::encode($data->spe_id); ?>
-	<br />
- -->
+		<div class="entry">
  	<?php echo CHtml::link('update', array('localname/update', 'id'=>$data->loc_id));?>
  	<br />
 
@@ -31,8 +24,8 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
-	<?php if (!is_null($data->ref_local)) echo CHtml::encode($data->ref_local->ref_name); 
-		else echo "-";?>
+	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref_local->ref_name);
+	else echo "-";?>
 	<br />
 
 	<b><?php echo "Status"; ?>:</b>
@@ -50,16 +43,9 @@
 	 } 
     ?>
 
-<!-- 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_insert_by')); ?>:</b>
-	<?php echo CHtml::encode($data->loc_insert_by); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_insert_date')); ?>:</b>
-	<?php echo CHtml::encode($data->loc_insert_date); ?>
-	<br /> -->
-
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_update_by')); ?>:</b>
+	<?php echo CHtml::encode($data->loc_update_by); ?>
 	<?php echo CHtml::encode($data->loc_update_by); ?>
 	<br />
 
@@ -76,5 +62,6 @@
 	<br />
 
 	*/ ?>
-
+<div class = "element"></div>
+	 </div>
 </div>

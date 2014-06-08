@@ -46,8 +46,6 @@ public function authenticate()
 			// $this->setState('password', $user->use_password);
 			$this->setState('role', $user->rol_id);		
 			$this->errorCode=self::ERROR_NONE;
-			User::model()->updateByPk($user->use_id, array('use_last_login_date'=>new CDbExpression('NOW()')));
-			User::model()->updateByPk($user->use_id, array('use_last_login_ip'=>Yii::app()->request->getUserHostAddress()));
 		}
 		return !$this->errorCode;
 	}

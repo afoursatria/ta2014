@@ -18,16 +18,12 @@ $this->breadcrumbs=array(
 //)); ?>
 </div><!-- search-form -->
 
-
-<?php echo CHtml::link(Yii::t('user','Add User'), array('add'));?>
-
-<?php $this->widget('zii.widgets.CListView', array(
-    'dataProvider'=>$model->search(),
-    'itemView'=>'_allUserList',
-)); ?>
-
 <?php
-
+    $this->widget('zii.widgets.CListView', array(
+        'dataProvider'=>$model->search(),
+        'itemView'=>'//user/_allUserList',
+        // 'id'=> 'specieslistview',
+        )); 
 // $this->widget('zii.widgets.jui.CJuiTabs',array(
 //     'tabs'=>array(
 //         Yii::t('user','New User')=>array('id'=>'newUser-id','content'=>$this->renderPartial(
