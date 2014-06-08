@@ -56,8 +56,8 @@
 			<div class ="row">
 				  	<?php
      	if($model->use_foto == null){
-	     	echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/default.jpg',"image",array("width"=>200));} 
-     		else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200));} ?>
+	     	echo CHtml::image(Yii::app()->request->baseUrl.'/images/user.png',"image",array("width"=>200));} 
+     		else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200)); ?>
 			</div>
 		</span>
 	</div>

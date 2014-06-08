@@ -77,11 +77,14 @@
 			<?php echo $form->error($model,'con_file_mol1'); ?>
 		</span>
 	</div>
-	<?php if($model->isNewRecord!='1'){ ?>
+	<?php 
+	// if($model->isNewRecord!='1'){ 
+		?>
 	<div class="row">
-     	<?php echo CHtml::link(CHtml::encode($model->con_contentname.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_contentname.'.mol');} ?>
+     	<?php echo CHtml::link(CHtml::encode($model->con_contentname.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_contentname.'.mol');
+     // } 
+     ?>
 	</div>
-
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'con_file_mol2'); ?></span>
 		<span class="col-md-9"><?php echo $form->fileField($model,'con_file_mol2'); ?>

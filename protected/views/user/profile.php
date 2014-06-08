@@ -37,9 +37,9 @@
 <div class="text-center">
 	<div class="row">
 		<?php if ($model->use_foto == null){
-			echo CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/default.jpg",'image',array("class"=>'user-image'))
+			echo CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/default.jpg",'image',array("class"=>'user-image'));
 		} 
-		else echo CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/".$model->use_foto.'.jpg','image',array("class"=>'user-image'))?>
+		else echo CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/".$model->use_foto.'.jpg','image',array("class"=>'user-image'));?>
 	</div>
 </div>
 <div class="user-detail">
@@ -73,7 +73,7 @@
 		</span>
 		<span class="col-md-9">:
 		     <?php 
-		     if ($model->$use_cv==null){
+		     if ($model->use_cv==null){
 		     	echo "-";
 		     }
 		     else echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf'); ?>
