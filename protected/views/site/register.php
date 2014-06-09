@@ -64,13 +64,13 @@ if (Yii::app()->user->getState('role')==1) {
 
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Password')); ?><span class="red">*</span></span>
-        <?php echo $form->textField($model,'use_password'); ?><span class="form-hint">(Must be around 6 to 12 characters)</span>
+        <?php echo $form->PasswordField($model,'use_password'); ?><span class="form-hint">(Must be around 6 to 12 characters, contents of alphabet and number)</span>
         <?php echo $form->error($model,'use_password'); ?>
     </div>
 
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Repeat Password')); ?><span class="red">*</span></span>
-        <?php echo $form->textField($model,'repeat_password'); ?><span class="form-hint">(Must be match with 'Password' field)</span>
+        <?php echo $form->PasswordField($model,'repeat_password'); ?><span class="form-hint">(Must be match with 'Password' field)</span>
         <?php echo $form->error($model,'repeat_password'); ?>
     </div>
 
@@ -94,7 +94,7 @@ if (Yii::app()->user->getState('role')==1) {
     
      <div class="row">
         <span class ="col-xs-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
-        <?php echo CHtml::activeFileField($model, 'use_foto'); ?> 
+        <span class="col-md-9"><?php echo CHtml::activeFileField($model, 'use_foto'); ?> </span>
         <?php echo $form->error($model,'use_foto'); ?>
     </div>
 

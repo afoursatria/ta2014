@@ -441,7 +441,8 @@ select#_lang {
 }
 
 .senyawa .element,
-.spesies .element {
+.spesies .element,
+.recent-news .element {
   width: 100%;
   border-width: 1px;
   border-style: solid;
@@ -7863,4 +7864,12 @@ ul.update-control {
 ul.top-search {
   margin: 0;
   padding: 0;
+}
+
+div.recent-news {
+margin-bottom: 12%;
+}
+.title-news {
+    color: #00791e;
+
 }

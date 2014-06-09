@@ -8,6 +8,11 @@
 <?php endif; ?>
 
 <?php
+    $this->breadcrumbs=array(
+    'Insert data',
+    );
+?>
+<?php
 
 $this->widget('bootstrap.widgets.TbTabs',array(
     'tabs'=>array(

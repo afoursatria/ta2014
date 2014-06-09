@@ -19,6 +19,9 @@
           array('submit'=>array('localname/delete', 'id'=>$data->news_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); }?>
 	</div>
+	<!--Kategori-->
+	<b class="news-category"><?php echo CHtml::encode($data->getAttributeLabel('newscat_id')); ?>:</b>
+	<?php echo CHtml::encode($data->newscat->newscat_name); ?>
 	<!--Judul-->
 	<div class = "title-news">
 	<h3><?php echo CHtml::encode($data->news_title); ?></h3>
@@ -30,7 +33,5 @@
 	}
 	else echo $data->news_content;?>
 	<br />
-	<!--Kategori-->
-	<b class="news-category"><?php echo CHtml::encode($data->getAttributeLabel('newscat_id')); ?>:</b>
-	<?php echo CHtml::encode($data->newscat->newscat_name); ?>
+	
 </div>

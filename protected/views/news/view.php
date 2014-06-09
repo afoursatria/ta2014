@@ -13,7 +13,7 @@ $this->breadcrumbs=array(
 	$model->news_id,
 );
 
-<?php if (Yii::app()->user->getState('role')==1) {
+if (Yii::app()->user->getState('role')==1) {
 	?>
 <?php echo CHtml::link(Yii::t('main_layout','Update'),  array('news/update', 'id'=>$model->news_id)); ?>
 <?php
