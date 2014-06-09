@@ -80,6 +80,7 @@
 	<br />
 
 	*/ ?>
-	</div>
 	<div class="element"></div>
+	</div>
+	
 </div>

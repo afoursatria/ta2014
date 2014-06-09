@@ -74,14 +74,14 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
 <?php echo CHtml::link(Yii::t('main_data','Virtue'), array('Virtue/search'))?>
 <br />
 <br /> -->
-       <?php 
+    <!--    <?php 
     CHtml::beginForm(CHtml::normalizeUrl(array('site/index')), 'get', array('id'=>'filter-form'));
     echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
     // echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button','url'=>('species/search')));
-    ?>
+    ?> -->
       <?php echo CHtml::link(Yii::t('main_data','Search'), array('species/search')); ?>
     <?php
-    CHtml::endForm();
+    // CHtml::endForm();
 ?>
 </div>
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

@@ -1,3 +1,8 @@
+<script>
+$(function(){
+    $('#searchbar').addClass('active')}); 
+</script>
+
 <?php
 	Yii::app()->clientScript->registerScript('speciesSearch',
     "var ajaxUpdateTimeout;
@@ -17,34 +22,27 @@
     });"
 );
 ?>
-<ul>
-    <li class="col-md-2">
-<?php echo CHtml::link(Yii::t('main_data','Species'), array('species/search'))?>
-</li>
-<li class="col-md-2">
-<?php echo CHtml::link(Yii::t('main_data','Compound'), array('contents/search'))?>
-</li>
-<li class="col-md-2">
-<?php echo CHtml::link(Yii::t('main_data','Local Name'), array('localname/search'))?>
-</li>
-<li class="col-md-2">
-<?php echo CHtml::link(Yii::t('main_data','Alias Name'), array('aliases/search'))?>
-</li>
-<li class="col-md-2">
-<?php echo CHtml::link(Yii::t('main_data','Virtue'), array('Virtue/search'))?>
-</li>
-</ul>
+<?php $this->widget('zii.widgets.CMenu',array(
+    'htmlOptions'=>array('id'=>'search-menu'),
+    'items'=>array(
+            array('label'=>Yii::t('main_data','Species'),'url'=>array('species/search')),
+            array('label'=>Yii::t('main_data','Compound'), 'url'=>array('contents/search')),
+            array('label'=>Yii::t('main_data','Local Name'), 'url'=>array('localname/search')),
+            array('label'=>Yii::t('main_data','Alias Name'), 'url'=>array('aliases/search')),
+            array('label'=>Yii::t('main_data','Virtue'), 'url'=>array('Virtue/search')),
+        ),
+));?>
 <?php 
 	CHtml::beginForm(CHtml::normalizeUrl(array('species/search')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('compoundKey', (isset($_GET['compoundKey'])) ? $_GET['compoundKey'] : '', 
-        array('placeholder'=>Yii::t('main_data','Compound Name'),'id'=>'compoundKey'));
-    echo CHtml::submitButton('Search', array('name'=>''));
+        array('placeholder'=>Yii::t('main_data','Compound Name'),'id'=>'compoundKey','class'=>'search-form'));
+    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
     CHtml::endForm();
 ?>
 
 <?php 
     $this->widget('application.extensions.alphapager.ApListView', array(
-    'template'=>"{alphapager}\n{pager}\n{items}",
+    'template'=>"<div class='row text-center'>.{alphapager}</div><div class='row'>{items}</div><div class='row'>{pager}</div>",
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'//contents/_view',
 	'id'=> 'content_list',

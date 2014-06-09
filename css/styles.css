@@ -94,7 +94,7 @@ li{
   width: 100%;
   height: 6px;
   margin-top: 1%;
-  background-color: rgb(78, 187, 201);
+  background-color: #4B7BAF;
 }
 
 #footer {
@@ -382,6 +382,10 @@ select#_lang {
   filter: none;
 }
 
+ul.yiiPager .page a {
+  color:#fff !important;
+}
+
 .yiiPager {
   list-style: none;
   padding: 0 12px; margin: 0;
@@ -407,13 +411,13 @@ select#_lang {
 
 /* The real fun begins here :D */
 .yiiPager li a {
-  background: #a1d0dd;
+  background: #00791e;
   display: block;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   padding: 0 12px;
-  color: white;
+  color: #fff;
   position: relative;
   text-decoration: none;
   height: 27px;
@@ -426,7 +430,7 @@ select#_lang {
 /* Basic design is ready, now let's make it animate when hovered or clicked */
 /* For this, we'll use transition property */
 
-.yiiPager li a:hover {background: #bae0ea}
+.yiiPager li a:hover {background: #67D0C6}
 .yiiPager li a:active {
   background: #bae0ea;
   /* Now, let's make it look like its pressed down when clicked */
@@ -1912,10 +1916,10 @@ input.button:focus{
   filter: none;
 }
 
-#speNameKey {
+.search-form {
   width: 72.518474%;
   height: 35px;
-  margin: 0 6% 0 0.622169%;
+  margin: 0 6% 2% 0.622169%;
   border: 1px solid rgb(49, 54, 142);
   border-radius: 6px;
   -moz-border-radius: 6px;
@@ -3015,7 +3019,7 @@ input.button:focus{
     font-size: 14px;
   }
 
-  #speNameKey {
+  .search-form {
     width: 59.8314606741%;
     margin-left: 2.2471910112%;
     box-shadow: 0 2px 5px rgb(0, 121, 46);
@@ -3963,7 +3967,7 @@ input.button:focus{
     margin-left: 87.8787878787%;
   }
 
-  #speNameKey {
+  .search-form {
     clear: both;
     width: 49.4417862838%;
     margin-top: -322px;
@@ -4766,7 +4770,7 @@ input.button:focus{
     margin-left: 88.202247191%;
   }
 
-  #speNameKey {
+  .search-form {
     width: 45.1310861423%;
     margin-top: -289px;
     margin-left: 2.2471910112%;
@@ -5611,7 +5615,7 @@ input.button:focus{
     margin-top: -291px;
   }
 
-  #speNameKey {
+  .search-form {
     width: 44.3564356435%;
     margin-top: -291px;
     margin-left: 2.5742574257%;
@@ -6551,7 +6555,7 @@ input.button:focus{
     margin-left: 78.869047619%;
   }
 
-  #speNameKey {
+  .search-form {
     width: 88.3928571428%;
     margin-top: -310px;
     margin-left: 5.0595238095%;
@@ -7551,7 +7555,7 @@ input.button:focus{
     margin-top: -261px;
   }
 
-  #speNameKey {
+  .search-form {
     width: 79.0178571428%;
     margin-top: -341px;
     margin-left: 10.2678571428%;
@@ -7728,7 +7732,6 @@ span.form-hint.vertical {
 
 ul#yw1 {
 margin-right: 8%;
-float: left;
 }
 .dropdown-menu {
     width: auto;
@@ -7915,4 +7918,36 @@ img.user-image{
   background: url('../images/vertical5.png')repeat-y;
   z-index: 1;
   min-height: 189px;
+}
+ul.yiiPager .first, ul.yiiPager .last {
+  display: block !important;
+}
+
+ul.yiiPager a:link, ul.yiiPager a:visited{
+  color:#fff !important;
+}
+ul.alphaPager {
+    font-size: 14px;
+}
+.list-view .pager {
+    text-align: right;
+    margin: 5px 0 0 0;
+
+}
+
+#search-menu li.active a{
+  border-bottom: solid 4px #00791e;
+  color:inherit;
+}
+
+#search-menu li {
+float: left;
+margin-right: 8%;
+}
+
+#searchbar.active {
+border-top: solid 4px;
+border-color: #3266EB;
+color: #D1E2F8;
+padding-top: 5px;
 }
