@@ -5,15 +5,31 @@
 
 <div class="view">
 	<div class="entry">
-	<?php echo CHtml::link('update', array('contents/update', 'id'=>$data->contents->con_id));?>
- 	<br />
-
+		<?php
+	if (Yii::app()->user->getState('role') == 1 && $data->contents->con_is_verified == 0) {
+		echo CHtml::link("Verify", array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => 'Are you sure you want to verify?'));
+	 } 
+    ?>
+	<b><?php echo "Status"; ?>:</b>
+	<?php 
+		if ($data->contents->con_is_verified == 0) {
+			echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20)).
+		Yii::t('main_data', 'not verified');
+		}
+		else echo CHtml::image(Yii::app()->request->baseUrl."/images/check.png","image",array('width'=>20)).Yii::t('main_data', 'verified');
+	?>
+	<ul class="news-operation">
+		<li>
+		<?php echo CHtml::link('update', array('contents/update', 'id'=>$data->contents->con_id));?>
+ 		</li>
+ 		<li>
 	<?php
 	echo CHtml::link('delete',"#", 
           array('submit'=>array('contents/delete', 'id'=>$data->contents->con_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
- 	<br />
-
+ 		</li>
+ 	</ul>
+ 	<br/>
 	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_contentname')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->contents->con_contentname), array('contents/view', 'id'=>$data->contents->con_id)); ?>
 	<br />
@@ -46,20 +62,7 @@
 	<?php echo CHtml::encode($data->contents->con_file_mol2); ?>
 	<br />
 
-	<b><?php echo "Status"; ?>:</b>
-	<?php 
-		if ($data->contents->con_is_verified == 0) {
-		echo Yii::t('main_data', 'not verified');
-		}
-		else echo Yii::t('main_data', 'verified');
-	?>
-	<br />
-
-	<?php
-	if (Yii::app()->user->getState('role') == 1 && $data->contents->con_is_verified == 0) {
-		echo CHtml::link("Verify", array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => 'Are you sure you want to verify?'));
-	 } 
-    ?>
+	
 	 	<div class = "element"></div>
 	 </div>
 </div>

@@ -5,13 +5,28 @@
 
 <div class="view">
 	<div class="entry">
-	<?php echo CHtml::link('update', array('virtue/update', 'id'=>$data->vir_id));?>
- 	<br />
-
+		<?php
+	if (Yii::app()->user->getState('role') == 1 && $data->vir_is_verified == 0) {
+		echo CHtml::link("Verify", array('virtue/verify', 'id'=>$data->vir_id), array('submit'=>array('virtue/verify', "id"=>$data->vir_id), 'confirm' => 'Are you sure you want to verify?'));
+	 } 
+    ?>
+			<b><?php echo "Status"; ?>:</b>
+	<?php 
+		if ($data->vir_is_verified == 0) {
+		echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20)).Yii::t('main_data', 'not verified');
+		}
+		else echo CHtml::image(Yii::app()->request->baseUrl."/images/check.png","image",array('width'=>20)).Yii::t('main_data', 'verified');
+	?>
+	<ul class="news-operation">
+	
+	<li><?php echo CHtml::link('update', array('virtue/update', 'id'=>$data->vir_id));?></li>
+	<li>
 	<?php
 	echo CHtml::link('delete',"#", 
           array('submit'=>array('virtue/delete', 'id'=>$data->vir_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
+ 	</li>
+ </ul>
  	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('hp_code')); ?>:</b>
@@ -36,20 +51,7 @@
 	<?php echo CHtml::encode($data->vir_value_latin); ?>
 	<br />
 	
-	<b><?php echo "Status"; ?>:</b>
-	<?php 
-		if ($data->vir_is_verified == 0) {
-		echo Yii::t('main_data', 'not verified');
-		}
-		else echo Yii::t('main_data', 'verified');
-	?>
-	<br />
 
-	<?php
-	if (Yii::app()->user->getState('role') == 1 && $data->vir_is_verified == 0) {
-		echo CHtml::link("Verify", array('virtue/verify', 'id'=>$data->vir_id), array('submit'=>array('virtue/verify', "id"=>$data->vir_id), 'confirm' => 'Are you sure you want to verify?'));
-	 } 
-    ?>
 	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
 	<?php echo CHtml::encode($data->ref_id); ?>
