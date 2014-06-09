@@ -37,7 +37,7 @@
 <div class="text-center">
 	<div class="row">
 		<?php if ($model->use_foto == null){
-			echo CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/default.jpg",'image',array("class"=>'user-image'));
+			echo CHtml::image(Yii::app()->request->baseUrl."/images/user.png",'image',array("class"=>'user-image'));
 		} 
 		else echo CHtml::image(Yii::app()->request->baseUrl."/assets/user/photo/".$model->use_foto.'.jpg','image',array("class"=>'user-image'));?>
 	</div>

@@ -58,13 +58,13 @@ if (Yii::app()->user->getState('role')==1) {
 
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Username')); ?><span class="red">*</span></span>
-        <?php echo $form->textField($model,'use_username'); ?><span class="form-hint">(Max.Length 15 characters)</span>
+        <?php echo $form->textField($model,'use_username'); ?><span class="form-hint">(Must be around 6 to 12 characters)</span>
         <?php echo $form->error($model,'use_username'); ?>
     </div>
 
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Password')); ?><span class="red">*</span></span>
-        <?php echo $form->PasswordField($model,'use_password'); ?><span class="form-hint">(Must be around 6 to 12 characters, contents of alphabet and number)</span>
+        <?php echo $form->PasswordField($model,'use_password'); ?><span class="form-hint">(Must contents of alphabet and number)</span>
         <?php echo $form->error($model,'use_password'); ?>
     </div>
 

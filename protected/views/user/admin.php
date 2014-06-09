@@ -17,34 +17,13 @@ $this->breadcrumbs=array(
 	//'model'=>$model,
 //)); ?>
 </div><!-- search-form -->
+<span id="add-user"></span>
+<?php echo CHtml::link(Yii::t('user','Add User'), array('add'));?>
 
-<?php
-    $this->widget('zii.widgets.CListView', array(
-        'dataProvider'=>$model->search(),
-        'itemView'=>'//user/_allUserList',
-        // 'id'=> 'specieslistview',
-        )); 
-// $this->widget('zii.widgets.jui.CJuiTabs',array(
-//     'tabs'=>array(
-//         Yii::t('user','New User')=>array('id'=>'newUser-id','content'=>$this->renderPartial(
-//                                         '_newUser',
-//                                         array('model'=>$model,'Values'=>'This Is My Renderpartial Page'),TRUE
-//                                         )),       
-//         Yii::t('user','All Registered User')=>array('id'=>'registeredUser-id','content'=>$this->renderPartial(
-//                                         '_allUserList',
-//                                         array('model'=>$model,'Values'=>'This Is My Renderpartial Page'),TRUE
-//                                         )),
-//         Yii::t('user','Add User')=>array('id'=>'addUser-id','content'=>$this->renderPartial(
-//                                         '/site/register',
-//                                         array('model'=>$userModel,'Values'=>'This Is My Renderpartial Page'),TRUE
-//                                         )),
-//       	// panel 3 contains the content rendered by a partial view
-//         // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
-//     ),
-//     // additional javascript options for the tabs plugin
-//     'options'=>array(
-//         'collapsible'=>true,
-//     ),
-//     'id'=>'MyTab-Menu',
-// ));
-?>
+	<?php
+	    $this->widget('zii.widgets.CListView', array(
+	        'dataProvider'=>$model->search(),
+	        'itemView'=>'//user/_allUserList',
+	        // 'id'=> 'specieslistview',
+	        )); 
+	?>
