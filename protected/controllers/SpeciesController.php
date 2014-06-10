@@ -154,8 +154,18 @@ class SpeciesController extends Controller
 		if(isset($_POST['Species']))
 		{
 			$model->attributes=$_POST['Species'];
-			if($model->save())
+			$uploadedImage=CUploadedFile::getInstance($model,'spe_foto');
+            $imageName = $model->spe_speciesname.'-pic';  
+
+			if(!empty($uploadedImage)) $model->spe_foto = $imageName;
+			
+			if($model->save()){
+				if(!empty($uploadedImage))
+				{  // check if uploaded file is set or not
+					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/species/pic/'.$imageName.'.jpg');  // image will uplode to rootDirectory/photo/
+				}
 				$this->redirect(array('view','id'=>$model->spe_id));
+			}
 		}
 
 		$this->render('update',array(

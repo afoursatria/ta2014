@@ -39734,3 +39734,418 @@ in C:\wamp\www\newherbaldb\index.php (13)
 2014/06/07 11:32:29 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
 in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (277)
 in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:33:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\wamp\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1469): CActiveRecord->getCommandBuilder()
+#7 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(36): CActiveRecord->findAll(Object(CDbCriteria))
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/newherbaldb/
+---
+2014/06/10 09:34:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1044] Access denied for user ''@'localhost' to database 'herbaldb'' in C:\wamp\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1469): CActiveRecord->getCommandBuilder()
+#7 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(36): CActiveRecord->findAll(Object(CDbCriteria))
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/newherbaldb/
+---
+2014/06/10 09:34:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1044] Access denied for user ''@'localhost' to database 'herbaldb'' in C:\wamp\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1469): CActiveRecord->getCommandBuilder()
+#7 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(36): CActiveRecord->findAll(Object(CDbCriteria))
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/newherbaldb/
+---
+2014/06/10 09:34:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1044] Access denied for user ''@'localhost' to database 'herbaldb'' in C:\wamp\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\wamp\www\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\wamp\www\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(667): CActiveRecord->getDbConnection()
+#6 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1469): CActiveRecord->getCommandBuilder()
+#7 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(36): CActiveRecord->findAll(Object(CDbCriteria))
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('')
+#13 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#14 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/newherbaldb/
+---
+2014/06/10 09:36:52 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:37:36 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:37:42 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:38:02 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:40:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "newherbaldbuser/admin".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('newherbaldbuser...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/newherbaldbuser/admin
+---
+2014/06/10 09:41:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "newherbaldbuser/admin".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('newherbaldbuser...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/newherbaldbuser/admin
+---
+2014/06/10 09:44:16 [warning] [application] Failed to set unsafe attribute "spe_species_id" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:44:16 [warning] [application] Failed to set unsafe attribute "spe_speciesname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:44:16 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:44:16 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:44:16 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 09:44:16 [warning] [application] Failed to set unsafe attribute "ref_id" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:02:56 [error] [php] include(if($model-&gt;use_foto == null){
+                CHtml.php) [<a href='function.include'>function.include</a>]: failed to open stream: Invalid argument (C:\wamp\www\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\wamp\www\yii\framework\zii\widgets\CDetailView.php(212): is_callable()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(173): CDetailView->run()
+#3 C:\wamp\www\newherbaldb\protected\views\species\view.php(47): SpeciesController->widget()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#7 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#8 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(116): SpeciesController->render()
+#9 unknown(0): SpeciesController->actionView()
+#10 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#11 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#14 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#16 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#17 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#18 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#20 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#21 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/1
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (47)
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (116)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:07:21 [error] [exception.CException] exception 'CException' with message 'Property "Species.use_foto" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('use_foto')
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(36): CActiveRecord->__get('use_foto')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(116): CController->render('view', Array)
+#7 [internal function]: SpeciesController->actionView('1', '', '', '', '')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/newherbaldb/index.php/species/1
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/search
+---
+2014/06/10 10:07:33 [error] [exception.CException] exception 'CException' with message 'Property "Species.use_foto" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('use_foto')
+#1 C:\wamp\www\newherbaldb\protected\views\species\view.php(36): CActiveRecord->__get('use_foto')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(116): CController->render('view', Array)
+#7 [internal function]: SpeciesController->actionView('1', '', '', '', '')
+#8 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(SpeciesController), Array)
+#9 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(SpeciesController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/view')
+#20 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/newherbaldb/index.php/species/1
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/search
+---
+2014/06/10 10:18:04 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:04 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:04 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:04 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:04 [error] [php] Undefined variable: fileName (C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php:163)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#3 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#6 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/update/1
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (163)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:35 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:35 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:35 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:18:35 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:19:37 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:19:37 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:19:37 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:19:37 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:21:43 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:21:43 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:21:43 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:21:43 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:23:52 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:23:52 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:23:52 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:23:52 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:56:11 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:56:11 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:56:11 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 10:56:11 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:01:57 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:01:57 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:01:57 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:01:57 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:03:57 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:03:57 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:03:57 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:03:57 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:10 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:10 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:10 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:10 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:15 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:15 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:15 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:15 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:48 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:48 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:48 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:04:48 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:08 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:08 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:08 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:08 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:14 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:14 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:14 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:14 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:42 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:42 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:42 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:05:42 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:08:30 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:08:30 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:08:30 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/10 11:08:30 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php (156)
+in C:\wamp\www\newherbaldb\index.php (13)

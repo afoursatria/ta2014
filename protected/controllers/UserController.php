@@ -102,17 +102,17 @@ class UserController extends Controller
             $fileName = $model->use_username;  
 
             $cvName = 'CV-'.$model->use_username;  
- 
+ 			
+            if(!empty($uploadedImage)) $model->use_foto = $fileName;
+            if(!empty($uploadedCV)) $model->use_cv = $cvName;
 			if($model->save()){
 				if(!empty($uploadedImage))
 				{  // check if uploaded file is set or not
-            		$model->use_foto = $fileName;
 					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
 				}
 
 				if(!empty($uploadedCV))
 				{  // check if uploaded file is set or not
-		            $model->use_cv = $cvName;
 					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
 				}
 				
