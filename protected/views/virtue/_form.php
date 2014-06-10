@@ -19,8 +19,8 @@
     ),
     'htmlOptions'=>array('class'=>'well'),
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
+	
 
 	<?php //echo $form->errorSummary($model); ?>
 
@@ -28,7 +28,7 @@
 		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_id'); ?></span>
 		<?php echo $form->dropDownList($model,'spe_id', CHtml::listData(Species::model()->findAll(array('order' => 'spe_speciesname ASC')),'spe_id','spe_speciesname'),
 		array('prompt'=>Yii::t('main_data','Choose Species'))); ?>
-        <span class="form-hint">Choose Species of the Virtue</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Choose Species of the virtue')?></span>
 		<?php echo $form->error($model,'spe_id'); ?>
 	</div>
 
@@ -36,35 +36,34 @@
 		<span class="col-md-3"><?php echo $form->labelEx($model,'hp_code'); ?></span>
 		<?php echo $form->dropDownList($model,'hp_code', CHtml::listData(HerbalPart::model()->findAll(array('order' => 'hp_part_name ASC')),'hp_code','hp_part_name'),
 		array('prompt'=>Yii::t('main_data','Choose Herbal Part'))); ?>
-        <span class="form-hint">Choose Herbal Part of the Virtue</span>
 		<?php echo $form->error($model,'hp_code'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'vir_type'); ?></span>
 		<?php echo $form->textField($model,'vir_type',array('size'=>12,'maxlength'=>12)); ?>
-        <span class="form-hint">Max. length 12 characters</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 12 Characters')?></span>
 		<?php echo $form->error($model,'vir_type'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'vir_value'); ?></span>
 		<?php echo $form->textArea($model,'vir_value',array('rows'=>6, 'cols'=>50)); ?>
-        <span class="form-hint">Virtue of the species</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Virtue of the species in Bahasa')?></span>
 		<?php echo $form->error($model,'vir_value'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'vir_value_en'); ?></span>
 		<?php echo $form->textArea($model,'vir_value_en',array('rows'=>6, 'cols'=>50)); ?>
-        <span class="form-hint">Virtue of the species in English</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Virtue of the species in English')?></span>
 		<?php echo $form->error($model,'vir_value_en'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'vir_value_latin'); ?></span>
 		<?php echo $form->textArea($model,'vir_value_latin',array('rows'=>6, 'cols'=>50)); ?>
-        <span class="form-hint">Virtue of the species in Latin</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Virtue of the species in Latin')?></span>
 		<?php echo $form->error($model,'vir_value_latin'); ?>
 	</div>
 

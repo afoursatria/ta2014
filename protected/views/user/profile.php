@@ -6,7 +6,7 @@
 <?php endif; ?>
 <?php
 	$this->breadcrumbs=array(
-	'Profile'=>$model->use_id,
+	Yii::t('main_layout','Profile')=>$model->use_id,
 	);
 ?>
 <ul class="update-control">

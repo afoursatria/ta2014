@@ -16,14 +16,14 @@
 	'htmlOptions'=>array('enctype'=>'multipart/form-data','class'=>'well'),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<span class ="col-xs-3"><?php echo $form->labelEx($model,'use_fullname'); ?></span>
 		<?php echo $form->textField($model,'use_fullname',array('size'=>25,'maxlength'=>25)); ?>
-		 <span class="form-hint">(Max.Length 25 characters)</span>
+		 <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 25 Characters') ?></span>
 		<?php echo $form->error($model,'use_fullname'); ?>
 	</div>
 
@@ -44,7 +44,7 @@
         	'changeMonth'=>'true',
             ),
 		)); 
-        ?><span class="form-hint">(Click text field to pick from calendar)</span>
+        ?><span class="form-hint"><?php echo Yii::t('main_data','Click text field to pick from calendar')?></span>
     </div>
 
 	<div class="row">

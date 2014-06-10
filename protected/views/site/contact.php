@@ -31,12 +31,12 @@ $this->breadcrumbs=array(
 					'validateOnSubmit'=>true,
 				),
 			)); ?>
-			<p class="note">Fields with <span class="required">*</span> are required.</p>
+			<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
 			<div class="row">
 				<?php echo $form->labelEx($model,'name'); ?>
 			</div>
 		    <div class="row">
-		    	<span class="form-hint vertical">(Max.Length 25 characters)</span>
+		    	<span class="form-hint vertical"><?php echo Yii::t('main_data','Max. Length 25 Characters')?></span>
 			</div>
 			<div class="row">
 				<?php echo $form->textField($model,'name'); ?>
@@ -48,7 +48,7 @@ $this->breadcrumbs=array(
 				<?php echo $form->labelEx($model,'email'); ?>
 			</div>
 			 <div class="row">
-		        <span class="form-hint vertical">(Email has to be a valid email address)</span>
+		        <span class="form-hint vertical"><?php echo Yii::t('Email has to be a valid email address')?></span>
 			</div>
 			<div class="row">
 				<?php echo $form->textField($model,'email'); ?>
@@ -60,7 +60,7 @@ $this->breadcrumbs=array(
 				<?php echo $form->labelEx($model,'subject'); ?>
 			</div>
 			 <div class="row">
-		    	<span class="form-hint vertical">(Max.Length 128 characters)</span>
+		    	<span class="form-hint vertical"><?php echo Yii::t('main_data','Max. Length 128 Characters')?></span>
 			</div>
 			<div class="row">
 				<?php echo $form->textField($model,'subject',array('size'=>50,'maxlength'=>128)); ?>
@@ -82,7 +82,7 @@ $this->breadcrumbs=array(
 				<?php echo $form->labelEx($model,'verifyCode'); ?>
 			</div>
 			<div class = "row">
-				<span class="form-hint vertical">(Verify Code needs to be entered correctly)</span>
+				<span class="form-hint vertical"><?php echo Yii::t('main_data','Verify Code needs to be entered correctly')?></span>
 			</div>
 			<div class = "row">
 				<?php $this->widget('CCaptcha', array('buttonLabel'=>Yii::t('main_data','Refresh code'))); ?>
@@ -97,7 +97,7 @@ $this->breadcrumbs=array(
 
 				<div class="row buttons">
 					<div class="col-xs-9">
-					<?php echo CHtml::submitButton('Submit', array('id'=>'blue','class'=>'button')); ?>
+					<?php echo CHtml::submitButton(Yii::t('Submit'), array('id'=>'blue','class'=>'button')); ?>
 				</div>
 			</div>
 			<?php $this->endWidget(); ?>
@@ -108,7 +108,7 @@ $this->breadcrumbs=array(
         <p class="text text-114">Email</p>
         <p class="text text-117">admin@herbaldbindo.com</p>
         <div class="element element-22"></div>
-        <p class="text text-120">Penanggung Jawab</p>
+        <p class="text text-120"><?php echo Yii::t('main_data','In charge person'?>Penanggung Jawab</p>
         <p class="text text-123">Heru Suhartanto</p>
         <p class="text text-124">Arry Yanuar</p>
         <p class="text text-128">M. Afour Satria</p>

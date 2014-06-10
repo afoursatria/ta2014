@@ -17,7 +17,8 @@ $this->pageTitle=Yii::app()->name;
 		'validateOnSubmit'=>true,
 	),
 )); ?>
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+    <p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
+	
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>

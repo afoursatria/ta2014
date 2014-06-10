@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Aliases', 'url'=>array('index')),
-	array('label'=>'Create Aliases', 'url'=>array('create')),
-	array('label'=>'Update Aliases', 'url'=>array('update', 'id'=>$model->ali_id)),
-	array('label'=>'Delete Aliases', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ali_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Aliases', 'url'=>array('admin')),
+	// array('label'=>'List Aliases', 'url'=>array('index')),
+	// array('label'=>'Create Aliases', 'url'=>array('create')),
+	// array('label'=>'Update Aliases', 'url'=>array('update', 'id'=>$model->ali_id)),
+	// array('label'=>'Delete Aliases', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ali_id),'confirm'=>'Are you sure you want to delete this item?')),
+	// array('label'=>'Manage Aliases', 'url'=>array('admin')),
 );
 ?>
 

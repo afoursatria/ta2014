@@ -7,7 +7,7 @@
 		<div class="entry">
 			<?php
 	if (Yii::app()->user->getState('role') == 1 && $data->loc_is_verified == 0) {
-		echo CHtml::link("Verify", array('localname/verify', 'id'=>$data->loc_id), array('submit'=>array('localname/verify', "id"=>$data->loc_id), 'confirm' => 'Are you sure you want to verify?'));
+		echo CHtml::link(Yii::t('main_layout','Verify'), array('localname/verify', 'id'=>$data->loc_id), array('submit'=>array('localname/verify', "id"=>$data->loc_id), 'confirm' => Yii::t('main data','Are you sure you want to verify?')));
 	 } 
     ?>
     <br/>
@@ -20,11 +20,11 @@
 	?>
 	<ul class="news-operation">
 	<li>
- 	<?php echo CHtml::link('update', array('localname/update', 'id'=>$data->loc_id));?>
+ 	<?php echo CHtml::link(Yii::t('main layout','Update'), array('localname/update', 'id'=>$data->loc_id));?>
  	</li>
  	<li>
 	<?php
-	echo CHtml::link('delete',"#", 
+	echo CHtml::link(Yii::t('main layout', 'Delete'),"#", 
           array('submit'=>array('localname/delete', 'id'=>$data->loc_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
  	</li>

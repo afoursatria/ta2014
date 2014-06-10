@@ -9,7 +9,7 @@
 
 <?php
     $this->breadcrumbs=array(
-    'Insert data',
+    Yii::t('main_layout','Insert data'),
     );
 ?>
 <?php

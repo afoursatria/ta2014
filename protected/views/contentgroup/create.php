@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Contentgroup</h1>
+<h1><?php echo Yii::t('main_layout','Create').' '.Yii::t('main_data','Compound Group')?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

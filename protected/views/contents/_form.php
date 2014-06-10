@@ -22,36 +22,36 @@
     'htmlOptions'=>array('class'=>'well','enctype'=>'multipart/form-data'),
 
 )); ?>
+	<p class="note"><?php echo Yii::t('main_data','Fields with').' ';?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.';?></p>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php //echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'con_contentname'); ?></span>
 		<?php echo $form->textField($model,'con_contentname',array('size'=>60,'maxlength'=>200)); ?>
-        <span class="form-hint">(Max.Length 200 characters)</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 200 Characters')?></span>
 		<?php echo $form->error($model,'con_contentname'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'con_knapsack_id'); ?></span>
 		<?php echo $form->textField($model,'con_knapsack_id',array('size'=>20,'maxlength'=>20)); ?>
-        <span class="form-hint">(Max.Length 20 characters)</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 20 Characters')?></span>
 		<?php echo $form->error($model,'con_knapsack_id'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'con_metabolite_id'); ?></span>
 		<?php echo $form->textField($model,'con_metabolite_id',array('size'=>40,'maxlength'=>100)); ?>
-        <span class="form-hint">(Max.Length 100 characters)</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 		<?php echo $form->error($model,'con_metabolite_id'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'con_pubchem_id'); ?></span>
 		<?php echo $form->textField($model,'con_pubchem_id',array('size'=>20,'maxlength'=>20)); ?>
-        <span class="form-hint">(Max.Length 20 characters)</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 20 Characters')?></span>
 		<?php echo $form->error($model,'con_pubchem_id'); ?>
 	</div>
 
@@ -66,7 +66,7 @@
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'con_source'); ?></span>
 		<?php echo $form->textField($model,'con_source',array('size'=>60,'maxlength'=>100)); ?>
-        <span class="form-hint">(Max.Length 20 characters)</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 		<?php echo $form->error($model,'con_source'); ?>
 	</div>
 	

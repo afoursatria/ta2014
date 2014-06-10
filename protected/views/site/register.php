@@ -22,13 +22,11 @@ if (Yii::app()->user->getState('role')==1) {
     ),
     'htmlOptions'=>array('class'=>'well','enctype'=>'multipart/form-data'),
 )); ?>
-
-<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+    <p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
     <div class="row">
         <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Fullname')); ?><span class="red">*</span></span>
         <?php echo $form->textField($model,'use_fullname');?>
-        <span class="form-hint">(Max.Length 25 characters)</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 25 Characters')?></span>
         <?php echo $form->error($model,'use_fullname'); ?>
     </div>
 
@@ -36,7 +34,7 @@ if (Yii::app()->user->getState('role')==1) {
         <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Gender')); ?><span class="red">*</span></span>
         <?php echo $form->radioButtonList($model,'use_gender', 
             array( 0 => Yii::t('user','Male'),
-                    1 => Yii::t('user','Female'))); ?><span class="form-hint">(Choose one)</span>
+                    1 => Yii::t('user','Female'))); ?><span class="form-hint"><?php echo Yii::t('main_data','Choose one')?></span>
         <?php echo $form->error($model,'use_gender'); ?>
     </div>
     
@@ -50,31 +48,31 @@ if (Yii::app()->user->getState('role')==1) {
         'changeYear'=>'true',
         'changeMonth'=>'true',
             ),
-        )); ?><span class="form-hint">(Click text field to pick from calendar)</span>
+        )); ?><span class="form-hint"><?php echo Yii::t('main_data','Click text field to pick from calendar')?></span>
         <?php echo $form->error($model,'use_birthdate'); ?>
     </div>
     
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Email')); ?><span class="red">*</span></span>
-        <?php echo $form->textField($model,'use_email'); ?><span class="form-hint">(Max.Length 25 characters)</span>
+        <?php echo $form->textField($model,'use_email'); ?><span class="form-hint"><?php echo Yii::t('main_data','Max. Length 25 Characters')?></span>
         <?php echo $form->error($model,'use_email'); ?>
     </div>
 
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Username')); ?><span class="red">*</span></span>
-        <?php echo $form->textField($model,'use_username'); ?><span class="form-hint">(Must be around 6 to 12 characters)</span>
+        <?php echo $form->textField($model,'use_username'); ?><span class="form-hint"><?php echo Yii::t('main_data','Must be around 6-12 characters')?></span>
         <?php echo $form->error($model,'use_username'); ?>
     </div>
 
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Password')); ?><span class="red">*</span></span>
-        <?php echo $form->PasswordField($model,'use_password'); ?><span class="form-hint">(Must contents of alphabet and number)</span>
+        <?php echo $form->PasswordField($model,'use_password'); ?><span class="form-hint"><?php echo Yii::t('main_data','Contains of alphabet and number, min.5 characters');?></span>
         <?php echo $form->error($model,'use_password'); ?>
     </div>
 
     <div class="row">
          <span class ="col-xs-3"><?php echo $form->labelEx($model,Yii::t('user','Repeat Password')); ?><span class="red">*</span></span>
-        <?php echo $form->PasswordField($model,'repeat_password'); ?><span class="form-hint">(Must be match with 'Password' field)</span>
+        <?php echo $form->PasswordField($model,'repeat_password'); ?><span class="form-hint"><?php echo Yii::t('main_data','Must be match with "Password" field')?></span>
         <?php echo $form->error($model,'repeat_password'); ?>
     </div>
 
@@ -92,7 +90,7 @@ if (Yii::app()->user->getState('role')==1) {
                 array(  
                     2 => 'Expert',
                     3 => 'Contributor'), array('empty'=>'Choose Role')); 
-            ?><span class="form-hint">(Choose one)</span>
+            ?><span class="form-hint"><?php echo Yii::t('main_data','Choose one')?></span>
         <?php echo $form->error($model,'rol_id'); ?>
     </div>
     
@@ -121,7 +119,7 @@ if (Yii::app()->user->getState('role')==1) {
 
     <div class="row buttons">
         <div class="col-xs-3"></div>
-        <div class="col-xs-9"><?php echo CHtml::submitButton('Submit', array('id'=>'blue','class'=>'button')); ?></div>
+        <div class="col-xs-9"><?php echo CHtml::submitButton(Yii::t('main_layout','Submit', array('id'=>'blue','class'=>'button')); ?></div>
     </div>
     
     <?php $this->endWidget(); ?>

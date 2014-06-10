@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Aliases',
+	Yii::t('main_data','Aliases'),
 );
 
 $this->menu=array(

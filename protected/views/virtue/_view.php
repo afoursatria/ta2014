@@ -7,7 +7,7 @@
 	<div class="entry">
 		<?php
 	if (Yii::app()->user->getState('role') == 1 && $data->vir_is_verified == 0) {
-		echo CHtml::link("Verify", array('virtue/verify', 'id'=>$data->vir_id), array('submit'=>array('virtue/verify', "id"=>$data->vir_id), 'confirm' => 'Are you sure you want to verify?'));
+		echo CHtml::link(Yii::t('main_layout','Verify'), array('virtue/verify', 'id'=>$data->vir_id), array('submit'=>array('virtue/verify', "id"=>$data->vir_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
 	 } 
     ?>
 			<b><?php echo "Status"; ?>:</b>
@@ -19,10 +19,10 @@
 	?>
 	<ul class="news-operation">
 	
-	<li><?php echo CHtml::link('update', array('virtue/update', 'id'=>$data->vir_id));?></li>
+	<li><?php echo CHtml::link(Yii::t('main_layout','Update'), array('virtue/update', 'id'=>$data->vir_id));?></li>
 	<li>
 	<?php
-	echo CHtml::link('delete',"#", 
+	echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
           array('submit'=>array('virtue/delete', 'id'=>$data->vir_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
  	</li>

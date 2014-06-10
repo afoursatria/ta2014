@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	$speId->spe_speciesname=>array('/species/view/id/'.$speId->spe_id),
-	'Create',
+	Yii::t('main layout','Create'),
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Localname</h1>
+<h1><?php echo Yii::t('main_layout','Create').' '.Yii::t('main_layout','Local Name')?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model,'speId'=>$speId)); ?>

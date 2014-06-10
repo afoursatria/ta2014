@@ -7,7 +7,7 @@ $this->breadcrumbs=array(
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1 class="text-center">Login</h1>
+<h1 class="text-center"><?php echo Yii::t('main_layout','Login');?></h1>
 
 <div class="login col-xs-5">
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -18,8 +18,8 @@ $this->pageTitle=Yii::app()->name;
 	),
 	  'htmlOptions'=>array('class'=>'col-xs-12 well'),
 )); ?>
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
+	
 	<div class="row">
 		<span class ="col-xs-5"><?php echo $form->labelEx($model,'username'); ?></span>
 		<?php echo $form->textField($model,'username'); ?>

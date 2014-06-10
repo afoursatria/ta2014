@@ -145,6 +145,7 @@ class SiteController extends Controller
 			if($model->validate()){
 				$model->save();
 				$this->sendRegistrationMail();
+				Yii::app()->user->setFlash('success','Register success, check your email inbox');
 				$this->redirect(array('site/index'));
 			}
 		}

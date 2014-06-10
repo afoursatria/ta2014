@@ -69,15 +69,15 @@
     'encodeLabel'=>false,
     'items'=>
      array(
-		array('label'=>'Register', 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),	
-		array('label'=>'Login', 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
+		array('label'=>Yii::t('main_layout','Register'), 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),	
+		array('label'=>Yii::t('main_layout','Login'), 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
 		array('label'=>'You are logged in as '.Yii::app()->user->id, 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
                 array(
-                    'label'=>'<span class="glyphicon glyphicon-user"></span> Profile',
+                    'label'=>'<span class="glyphicon glyphicon-user"></span>'Yii::t('main_layout','Profile'),
                     'url'=>array('user/profile/', 'id'=>Yii::app()->user->getState("no")),
                 ),
                 array(
-                	'label'=>'<span class="glyphicon glyphicon-off"></span> Logout',
+                	'label'=>'<span class="glyphicon glyphicon-off"></span>'Yii::t('main_layout','Logout'),
                 	'url'=>array('/site/logout')
                 )
             )

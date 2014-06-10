@@ -25,42 +25,41 @@
     'htmlOptions'=>array('enctype'=>'multipart/form-data', 'class'=>'well'),
 )); ?>
 	
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
 	<?php // echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_species_id'); ?></span>
-		<?php echo $form->textField($model,'spe_species_id',array('size'=>60,'maxlength'=>100)); ?>
-        <span class="form-hint">(Max.Length 20 characters)</span>
+		<?php echo $form->textField($model,'spe_species_id',array('size'=>60,'maxlength'=>20)); ?>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 20 Characters')?></span>
 		<?php echo $form->error($model,'spe_species_id'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_speciesname'); ?></span>
-		<?php echo $form->textField($model,'spe_speciesname',array('size'=>60,'maxlength'=>100)); ?>
-		<span class="form-hint">(Max.Length 100 characters)</span>
+		<?php echo $form->textField($model,'spe_speciesname',array('size'=>60,'maxlength'=>60)); ?>
+		<span class="form-hint"><?php echo Yii::t('main_data','Max. Length 60 Characters')?></span>
 		<?php echo $form->error($model,'spe_speciesname'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_varietyname'); ?></span>
 		<?php echo $form->textField($model,'spe_varietyname',array('size'=>60,'maxlength'=>100)); ?>
-		<span class="form-hint">(Max.Length 100 characters)</span>
+		<span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 		<?php echo $form->error($model,'spe_varietyname'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_familyname'); ?></span>
 		<?php echo $form->textField($model,'spe_familyname',array('size'=>60,'maxlength'=>100)); ?>
-		<span class="form-hint">(Max.Length 100 characters)</span>
+		<span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 		<?php echo $form->error($model,'spe_familyname'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_foundername'); ?></span>
 		<?php echo $form->textField($model,'spe_foundername',array('size'=>60,'maxlength'=>100)); ?>
-		<span class="form-hint">(Max.Length 100 characters)</span>
+		<span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 		<?php echo $form->error($model,'spe_foundername'); ?>
 	</div>
 
@@ -133,7 +132,7 @@
 					));
 				?>
 			<button id="b1" class="btn add-more" type="button">+</button>
-        	<span class="form-hint">(Max.Length 100 characters)</span>
+        	<span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 			</div>
 		</div>
 		<?php echo $form->error($model,'ref_id'); ?>

@@ -19,8 +19,9 @@
     ),
     'htmlOptions'=>array('class'=>'well'),
 )); ?>
+	
+	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php //echo $form->errorSummary($model); ?>
 
@@ -28,21 +29,20 @@
 		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_id'); ?></span>
 		<?php echo $form->dropDownList($model,'spe_id', CHtml::listData(Species::model()->findAll(array('order' => 'spe_speciesname ASC')),'spe_id','spe_speciesname'),
 			array('prompt'=>Yii::t('main_data','Choose Species'))); ?>
-        <span class="form-hint">Choose Species of the localname</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Choose Species of the local name')?></span>
 		<?php echo $form->error($model,'spe_id'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'loc_localname'); ?></span>
 		<?php echo $form->textField($model,'loc_localname',array('size'=>60,'maxlength'=>100)); ?>
-		 <span class="form-hint">(Max.Length 100 characters)</span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 		<?php echo $form->error($model,'loc_localname'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'loc_region'); ?></span>
 		<?php echo $form->textField($model,'loc_region',array('size'=>60,'maxlength'=>100)); ?>
-		 <span class="form-hint">(Max.Length 100 characters)</span>
 		<?php echo $form->error($model,'loc_region'); ?>
 	</div>
 

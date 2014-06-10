@@ -1,3 +1,4 @@
+
 <?php
 /* @var $this ContentsController */
 /* @var $model Contents */
@@ -8,11 +9,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Contents', 'url'=>array('index')),
-	array('label'=>'Create Contents', 'url'=>array('create')),
-	array('label'=>'Update Contents', 'url'=>array('update', 'id'=>$model->con_id)),
-	array('label'=>'Delete Contents', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->con_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
+	// array('label'=>'List Contents', 'url'=>array('index')),
+	// array('label'=>'Create Contents', 'url'=>array('create')),
+	// array('label'=>'Update Contents', 'url'=>array('update', 'id'=>$model->con_id)),
+	// array('label'=>'Delete Contents', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->con_id),'confirm'=>'Are you sure you want to delete this item?')),
+	// array('label'=>'Manage Contents', 'url'=>array('admin')),
 );
 ?>
 
@@ -58,6 +59,5 @@ $this->widget('bootstrap.widgets.TbTabs',array(
     // 'options'=>array(
     //     // 'collapsible'=>true,
     // ),
-    'id'=>'MyTab-Menu',
 ));
 ?>

@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	// 'Species'=>array('index'),
-	'User Management',
+	Yii::t('main_layout','User Management'),
 );
 ?>
 

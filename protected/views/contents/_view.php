@@ -7,7 +7,7 @@
 	<div class="entry">
 		<?php
 	if (Yii::app()->user->getState('role') == 1 && $data->contents->con_is_verified == 0) {
-		echo CHtml::link("Verify", array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => 'Are you sure you want to verify?'));
+		echo CHtml::link(Yii::t('main layout','Verify'), array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
 	 } 
     ?>
 	<b><?php echo "Status"; ?>:</b>
@@ -20,11 +20,11 @@
 	?>
 	<ul class="news-operation">
 		<li>
-		<?php echo CHtml::link('update', array('contents/update', 'id'=>$data->contents->con_id));?>
+		<?php echo CHtml::link(Yii::t('main layout','Update'), array('contents/update', 'id'=>$data->contents->con_id));?>
  		</li>
  		<li>
 	<?php
-	echo CHtml::link('delete',"#", 
+	echo CHtml::link(Yii::t('main layout','Delete'),"#", 
           array('submit'=>array('contents/delete', 'id'=>$data->contents->con_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
  		</li>

@@ -4,15 +4,15 @@
 
 $this->breadcrumbs=array(
 	'Faqs'=>array('index'),
-	'Create',
+	Yii::t('main_layout','Create'),
 );
 
 $this->menu=array(
-	array('label'=>'List Faqs', 'url'=>array('index')),
-	array('label'=>'Manage Faqs', 'url'=>array('admin')),
+	// array('label'=>'List Faqs', 'url'=>array('index')),
+	// array('label'=>'Manage Faqs', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Faqs</h1>
+<h1><?php echo Yii::t('main_layout','Create')?> Faqs</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

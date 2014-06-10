@@ -1,9 +1,11 @@
+<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap232.min.js"></script>
+
 <?php
 /* @var $this SpeciesController */
 /* @var $model Species */
 
 $this->breadcrumbs=array(
-	'Species'=>array('search'),
+	Yii::t('main_layout','Species')=>array('search'),
 	$model->spe_speciesname,
 );
 
@@ -68,20 +70,20 @@ $this->menu=array(
 
 $this->widget('bootstrap.widgets.TbTabs',array(
     'tabs'=>array(
-        Yii::t('main_data','Local Name')=>array('label'=>'Local Name','id'=>'localName-id','active'=>true,'content'=>$this->
+        Yii::t('main_data','Local Name')=>array('label'=>Yii::t('main_data','Local Name'),'id'=>'localName-id','active'=>true,'content'=>$this->
             renderPartial(
                             '_localname',
                             array('dataProvider'=>$localnameDataProvider),TRUE
                             )),       
-        Yii::t('main_data','Alias')=>array('label'=>'Alias','id'=>'aliases-id','content'=>$this->renderPartial(
+        Yii::t('main_data','Alias')=>array('label'=> Yii::t('main_data','Alias'),'id'=>'aliases-id','content'=>$this->renderPartial(
 	                        '_alias',
 	                        array('dataProvider'=>$aliasesDataProvider),TRUE
                             )),
-        Yii::t('main_data','Virtue')=>array('label'=>'Virtue','id'=>'virtue-id','content'=>$this->renderPartial(
+        Yii::t('main_data','Virtue')=>array('label'=>Yii::t('main_data','Virtue'),'id'=>'virtue-id','content'=>$this->renderPartial(
                             '_virtue',
                             array('dataProvider'=>$virtueDataProvider),TRUE
                             )),                                              
-      	Yii::t('main_data','Compound')=>array('label'=>'Compound','id'=>'contents-id','content'=>$this->renderPartial(
+      	Yii::t('main_data','Compound')=>array('label'=>Yii::t('main_data','Compound'),'id'=>'contents-id','content'=>$this->renderPartial(
 	                        '_contents',
 	                        array('dataProvider'=>$contentsDataProvider),TRUE
 	                        )),                                              

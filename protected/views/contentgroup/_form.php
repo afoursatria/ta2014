@@ -19,21 +19,20 @@
     ),
     'htmlOptions'=>array('class'=>'well'),
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
+	
 	<?php //echo $form->errorSummary($model); ?>
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'contgroup_code'); ?></span>
 		<?php echo $form->textField($model,'contgroup_code',array('size'=>20,'maxlength'=>20)); ?>
-		 <span class="form-hint">(Max.Length 20 characters)</span>
+		 <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 20 Characters')?></span>
 		<?php echo $form->error($model,'contgroup_code'); ?>
 	</div>
 
 	<div class="row">
 		<span class="col-md-3"><?php echo $form->labelEx($model,'contgroup_name'); ?></span>
 		<?php echo $form->textField($model,'contgroup_name',array('size'=>60,'maxlength'=>100)); ?>
-		 <span class="form-hint">(Max.Length 100 characters)</span>
+		 <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 20 Characters')?></span>
 		<?php echo $form->error($model,'contgroup_name'); ?>
 	</div>
 

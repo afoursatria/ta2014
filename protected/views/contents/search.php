@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
-    'Search',
-    'Contents'=>array('search'),
+    Yii::t('main layout','Search'),
+    Yii::t('main data','Compound')=>array('search'),
 );
 ?>
 
