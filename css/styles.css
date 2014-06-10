@@ -232,7 +232,7 @@ li{
   height: 35px;
   list-style:none;
   background-color:rgb(0, 121, 46);
-  padding-left: 0;
+  padding-left: 5%;
   text-decoration: none;
   margin-top: 16px;
   clear: both;
@@ -6618,5 +6618,14 @@ ul.news-operation {
 ul.news-operation li {
     float: left;
     margin-left: 18px;
+
+}
+@media screen and (min-width:768px) {
+    .carousel-caption {
+        left: 15%;
+        right: 15%;
+        padding-bottom: 8%;;
+    
+    }
 
 }

@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Contents #<?php echo $model->con_id; ?></h1>
+<h1>Contents #<?php echo $model->con_id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -45,9 +45,9 @@ $this->menu=array(
 
 <?php
 
-$this->widget('zii.widgets.jui.CJuiTabs',array(
+$this->widget('bootstrap.widgets.TbTabs',array(
     'tabs'=>array(
-        Yii::t('main_data','Species')=>array('id'=>'Species-id','content'=>$this->renderPartial(
+        Yii::t('main_data','Species')=>array('label'=>'Species','id'=>'Species-id','active'=>true,'content'=>$this->renderPartial(
                             '_species',
                             array('dataProvider'=>$speciesDataProvider),TRUE
                             )),       
@@ -55,9 +55,9 @@ $this->widget('zii.widgets.jui.CJuiTabs',array(
         // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
     ),
     // additional javascript options for the tabs plugin
-    'options'=>array(
-        // 'collapsible'=>true,
-    ),
+    // 'options'=>array(
+    //     // 'collapsible'=>true,
+    // ),
     'id'=>'MyTab-Menu',
 ));
 ?>
