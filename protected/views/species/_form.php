@@ -22,7 +22,7 @@
     'clientOptions' => array(
         'validateOnSubmit' => true,
     ),
-    'htmlOptions'=>array('class'=>'well'),
+    'htmlOptions'=>array('enctype'=>'multipart/form-data', 'class'=>'well'),
 )); ?>
 	
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -62,6 +62,21 @@
 		<?php echo $form->textField($model,'spe_foundername',array('size'=>60,'maxlength'=>100)); ?>
 		<span class="form-hint">(Max.Length 100 characters)</span>
 		<?php echo $form->error($model,'spe_foundername'); ?>
+	</div>
+
+	<div class="row">
+        <span class="col-xs-3"><?php echo $form->labelEx($model,'spe_foto'); ?></span>
+        <span class="col-xs-9"><?php echo CHtml::activeFileField($model, 'spe_foto'); ?>
+	        <div class="row">
+	        	<?php echo $form->error($model,'spe_foto'); ?>	
+	        </div>
+			<div class ="row">
+				  	<?php
+     	if($model->spe_foto == null){
+	     	echo CHtml::image(Yii::app()->request->baseUrl.'/images/species.png',"image",array("width"=>200));} 
+     		else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/species/pic/'.$model->spe_foto.'.jpg',"image",array("width"=>200)); ?>
+			</div>
+		</span>
 	</div>
 
 	<div class="row">

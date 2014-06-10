@@ -28,8 +28,15 @@ $this->menu=array(
 		'spe_varietyname',
 		'spe_familyname',
 		'spe_foundername',
-		'spe_foto',
+		// 'spe_foto',
 		array(
+            'name'=>'spe_foto',
+            'type'=>'raw',
+            'value'=>
+            $model->spe_foto == null ? CHtml::image(Yii::app()->request->baseUrl."/images/species.png",'image',array("class"=>'user-image')):
+                CHtml::image(Yii::app()->request->baseUrl."/assets/species/pic/".$model->spe_foto.'.jpg','image',array("class"=>'user-image')),
+        ),
+        array(
     		'name'=>'ref_id',
     		'value'=>$model->ref->ref_name,
 		)
