@@ -19,6 +19,7 @@
 		else echo CHtml::image(Yii::app()->request->baseUrl."/images/check.png","image",array('width'=>20)).Yii::t('main_data', 'verified');
 	?>
 	<ul class="news-operation">
+	<?php if (Yii::app()->user->getState('role')==2):?>
 	<li>
  	<?php echo CHtml::link('update', array('localname/update', 'id'=>$data->loc_id));?>
  	</li>
@@ -28,6 +29,7 @@
           array('submit'=>array('localname/delete', 'id'=>$data->loc_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
  	</li>
+	<?php endif?>	
  	</ul>
  	<br/>
 	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_localname')); ?>:</b>

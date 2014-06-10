@@ -12,5 +12,6 @@ return array(
 'Save'=>'Simpan',
 'Update'=>'Ubah',
 'Delete'=>'Hapus',
+'Search'=>'Pencarian',
 );
 ?>

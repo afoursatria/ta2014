@@ -18,6 +18,7 @@
 		}
 		else echo CHtml::image(Yii::app()->request->baseUrl."/images/check.png","image",array('width'=>20)).Yii::t('main_data', 'verified');
 	?>
+	<?php if (Yii::app()->user->getState('role')==2):?>
 	<ul class="news-operation">
 		<li>
 		<?php echo CHtml::link('update', array('contents/update', 'id'=>$data->contents->con_id));?>
@@ -29,6 +30,7 @@
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
  		</li>
  	</ul>
+	<?php endif?>	
  	<br/>
 	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_contentname')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->contents->con_contentname), array('contents/view', 'id'=>$data->contents->con_id)); ?>

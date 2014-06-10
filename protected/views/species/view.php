@@ -20,6 +20,15 @@ $this->menu=array(
 
 <h1><?php echo $model->spe_speciesname; ?></h1>
 
+
+<?php if (Yii::app()->user->getState('role')==2):?>
+<?php echo CHtml::link('update', array('localname/update', 'id'=>$model->spe_id));?>
+<?php
+    echo CHtml::link('delete',"#", 
+          array('submit'=>array('virtue/delete', 'id'=>$model->spe_id), 
+                'confirm' => Yii::t('main_data','Are you sure?'))); ?>
+<?php endif?>   
+
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(

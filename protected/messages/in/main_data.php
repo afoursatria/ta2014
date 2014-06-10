@@ -58,6 +58,9 @@
 		''=>'',
 
 		//translation for news
+		'Title'=>'Judul', 
+		'Content'=>'Konten',
+		'Category'=>'Kategori',
 		'Recent News'=>'Berita Terkini',
 		'Recent Event'=>'Acara Terkini',
 		'Recent Announcement'=>'Pengumuman Terkini',

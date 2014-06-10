@@ -7,21 +7,22 @@ $this->breadcrumbs=array(
 	$model->con_contentname,
 );
 
-$this->menu=array(
-	array('label'=>'List Contents', 'url'=>array('index')),
-	array('label'=>'Create Contents', 'url'=>array('create')),
-	array('label'=>'Update Contents', 'url'=>array('update', 'id'=>$model->con_id)),
-	array('label'=>'Delete Contents', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->con_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
-);
+// $this->menu=array(
+// 	array('label'=>'List Contents', 'url'=>array('index')),
+// 	array('label'=>'Create Contents', 'url'=>array('create')),
+// 	array('label'=>'Update Contents', 'url'=>array('update', 'id'=>$model->con_id)),
+// 	array('label'=>'Delete Contents', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->con_id),'confirm'=>'Are you sure you want to delete this item?')),
+// 	array('label'=>'Manage Contents', 'url'=>array('admin')),
+// );
 ?>
 
-<h1>View Contents #<?php echo $model->con_id; ?></h1>
+<h1><?php echo $model->con_contentname; ?></h1>
+
+<?php echo CHtml::link('update', array('localname/update', 'id'=>$data->loc_id));?>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'con_id',
 		'con_contentname',
 		'con_knapsack_id',
 		'con_metabolite_id',
@@ -43,21 +44,27 @@ $this->menu=array(
 	'nullDisplay'=>'-',
 )); ?>
 
+<h3>Species List</h3>
+
+<?php
+$this->renderPartial('_species',array('dataProvider'=>$speciesDataProvider));
+
+?>
 <?php
 
-$this->widget('zii.widgets.jui.CJuiTabs',array(
-    'tabs'=>array(
-        Yii::t('main_data','Species')=>array('id'=>'Species-id','content'=>$this->renderPartial(
-                            '_species',
-                            array('dataProvider'=>$speciesDataProvider),TRUE
-                            )),       
-          	// panel 3 contains the content rendered by a partial view
-        // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
-    ),
-    // additional javascript options for the tabs plugin
-    'options'=>array(
-        // 'collapsible'=>true,
-    ),
-    'id'=>'MyTab-Menu',
-));
+// $this->widget('zii.widgets.jui.CJuiTabs',array(
+//     'tabs'=>array(
+//         Yii::t('main_data','Species')=>array('id'=>'Species-id','content'=>$this->renderPartial(
+//                             '_species',
+//                             array('dataProvider'=>$speciesDataProvider),TRUE
+//                             )),       
+//           	// panel 3 contains the content rendered by a partial view
+//         // 'AjaxTab'=>array('ajax'=>$this->createUrl('ajax')),
+//     ),
+//     // additional javascript options for the tabs plugin
+//     'options'=>array(
+//         // 'collapsible'=>true,
+//     ),
+//     'id'=>'MyTab-Menu',
+// ));
 ?>
