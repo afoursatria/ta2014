@@ -232,15 +232,15 @@ li{
   height: 35px;
   list-style:none;
   background-color:rgb(0, 121, 46);
-  padding-left: 0;
+  padding-left: 5%;
   text-decoration: none;
   margin-top: 16px;
   clear: both;
 }
 
 #mainmenu li{
-  margin: 0.5% 4%;
-  float: left;;
+  margin: 0.5% 2%;
+  float: left;
 }
 
 #mainmenu li a{
@@ -528,6 +528,15 @@ input.button:focus{
 
 #blue.button:active{
     box-shadow: inset 0px 1px 0px #b2f17f, inset 0px -1px 0px #3d6f0d;
+}
+
+#grey.button{
+  background-color: #D7D2DC;
+  box-shadow: inset 0px 1px 0px #D7D2DC, 0px 6px 0px #8D989F;
+}
+
+#grey.button:active{
+    box-shadow: inset 0px 1px 0px #D7D2DC, inset 0px -1px 0px #3d6f0d;
 }
 
 ._input {
@@ -6609,5 +6618,14 @@ ul.news-operation {
 ul.news-operation li {
     float: left;
     margin-left: 18px;
+
+}
+@media screen and (min-width:768px) {
+    .carousel-caption {
+        left: 15%;
+        right: 15%;
+        padding-bottom: 8%;;
+    
+    }
 
 }

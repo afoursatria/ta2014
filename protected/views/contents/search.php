@@ -1,3 +1,10 @@
+<?php
+$this->breadcrumbs=array(
+    'Search',
+    'Contents'=>array('search'),
+);
+?>
+
 <script>
 $(function(){
     $('#searchbar').addClass('active')}); 

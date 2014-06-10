@@ -3,7 +3,7 @@
 /* @var $model Aliases */
 
 $this->breadcrumbs=array(
-	'Aliases'=>array('index'),
+	'Aliases'=>array('search'),
 	$model->ali_id,
 );
 

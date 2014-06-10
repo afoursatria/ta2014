@@ -1,3 +1,7 @@
+<?php $this->breadcrumbs=array(
+    'Register'
+);
+?>
 <?php 
 if (Yii::app()->user->getState('role')==1) {
     echo CHtml::link(Yii::t('user','Back to User List'), array('user/admin'));

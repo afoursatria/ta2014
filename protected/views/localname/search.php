@@ -1,3 +1,10 @@
+<?php
+$this->breadcrumbs=array(
+    'Search',
+    'Local Name'=>array('search'),
+);
+?>
+
 <script>
 $(function(){
     $('#searchbar').addClass('active')}); 

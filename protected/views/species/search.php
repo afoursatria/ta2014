@@ -1,3 +1,9 @@
+<?php
+$this->breadcrumbs=array(
+    'Search',
+    'Species'=>array('search'),
+);
+?>
 
 <?php
 	Yii::app()->clientScript->registerScript('speciesSearch',
