@@ -3,7 +3,7 @@
 /* @var $model Contents */
 
 $this->breadcrumbs=array(
-	'Contents'=>array('contents/search'),
+	'Contents'=>array('search'),
 	$model->con_contentname,
 );
 

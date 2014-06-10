@@ -20,7 +20,7 @@
 <?php 
 	CHtml::beginForm(CHtml::normalizeUrl(array('species/view')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('aliasKey', (isset($_GET['aliasKey'])) ? $_GET['aliasKey'] : '', array('id'=>'aliasKey'));
-    echo CHtml::submitButton('Search', array('name'=>''));
+    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
     CHtml::endForm();
 ?>
 

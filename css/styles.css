@@ -239,8 +239,8 @@ li{
 }
 
 #mainmenu li{
-  margin: 0.5% 4%;
-  float: left;;
+  margin: 0.5% 2%;
+  float: left;
 }
 
 #mainmenu li a{
@@ -528,6 +528,15 @@ input.button:focus{
 
 #blue.button:active{
     box-shadow: inset 0px 1px 0px #b2f17f, inset 0px -1px 0px #3d6f0d;
+}
+
+#grey.button{
+  background-color: #D7D2DC;
+  box-shadow: inset 0px 1px 0px #D7D2DC, 0px 6px 0px #8D989F;
+}
+
+#grey.button:active{
+    box-shadow: inset 0px 1px 0px #D7D2DC, inset 0px -1px 0px #3d6f0d;
 }
 
 ._input {

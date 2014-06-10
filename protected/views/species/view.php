@@ -3,7 +3,7 @@
 /* @var $model Species */
 
 $this->breadcrumbs=array(
-	'Species'=>array('index'),
+	'Species'=>array('search'),
 	$model->spe_speciesname,
 );
 

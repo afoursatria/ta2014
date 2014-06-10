@@ -183,7 +183,7 @@ class SiteController extends Controller
         $message            = new YiiMailMessage;
           
         //this points to the file verificationRequest.php inside the view path
-        $message->view = "user\\verificationRequest";
+        $message->view = "user/verificationRequest";
         
         $criteria=new CDbCriteria;
 		$criteria->select='use_email';  // only select the 'use_email' column

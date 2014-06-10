@@ -1,3 +1,4 @@
+
 <?php if(Yii::app()->user->hasFlash('success')):?>
     <div class="alert alert-danger alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -20,7 +21,7 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
             <ul class="top-search">
                 <?php 
                     foreach ($topSpecies as $species ) {
-                        echo "<li class='top-list'>".($species->spe_speciesname)."<br /></li>";
+                        echo "<li class='top-list'>".CHtml::link(($species->spe_speciesname),array('species/view','id'=>$species->spe_id))."<br /></li>";
                        // echo($species->spe_viewed_count."<br />");
                     }
                 ?>
@@ -39,13 +40,13 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
         </div> <!--spesies-->
         <!--senyawa paling dicari-->
         <div class="senyawa clearfix">
-                <div class="element element-19"></div>
+                <div class="element element-10"></div>
                 <p class="text _text text-112">5 Senyawa Paling Sering Dicari&nbsp;</p>
-                <div class="element element-20"></div>
+                <div class="element element-12"></div>
                  <ul class="top-search">
                       <?php 
                           foreach ($topCompound as $compound ) {
-                              echo "<li class='top-list'>".($compound->con_contentname)."<br /></li>";
+                              echo "<li class='top-list'>".CHtml::link(($compound->con_contentname),array('contents/view','id'=>$compound->con_id))."<br /></li>";
                           }
                       ?>
                 </ul>
@@ -79,7 +80,9 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
     echo CHtml::textField('speNameKey', (isset($_GET['speNameKey'])) ? $_GET['speNameKey'] : '', array('id'=>'speNameKey'));
     // echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button','url'=>('species/search')));
     ?> -->
-      <?php echo CHtml::link(Yii::t('main_data','Search'), array('species/search')); ?>
+    <?php 
+    // echo CHtml::link(Yii::t('main_data','Search'), array('species/search')); 
+    ?>
     <?php
     // CHtml::endForm();
 ?>
@@ -97,22 +100,27 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
     <div class="item active">
       <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/1.jpg">
       <div class="carousel-caption">
-        ...
+      Keistimewaan buah ini adalah nempunyai kandungan scopoletin, serotin, 
+      damnacantal, athraquinon,dll. Buah pace sangat efisien untuk mengobati 
+      diabetes, penyakit jantung, strooke, memperbaiiki tekanan darah bahkan 
+      dapat menyehatkan kelenjar throid, meningkatkan kekebalan tubuh. 
       </div>
     </div>
      <div class="item">
       <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/2.jpg">
       <div class="carousel-caption">
-        ...
+        Saat ini, sebagian besar budidaya temu lawak berada di Indonesia, 
+        Malaysia, Thailand, dan Filipina.
       </div>
     </div>
      <div class="item">
       <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/3.jpg">
       <div class="carousel-caption">
-        ...
+        Tumbuhan Avocado berasal dari Meksiko dan Amerika Tengah dan kini banyak dibudidayakan di Amerika 
+        Selatan dan Amerika Tengah sebagai tanaman perkebunan monokultur dan sebagai tanaman pekarangan di 
+        daerah-daerah tropika lainnya di dunia.     
       </div>
     </div>
-    ...
   </div>
 
   <!-- Controls -->
