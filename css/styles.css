@@ -139,6 +139,15 @@ li{
 
 }
 
+#footer-content .col-md-3 {
+  border-left: solid 1px #fff;
+}
+
+#footer-content .col-md-3.first {
+  border-left: none;
+}
+
+
 #header {
   float: left;
   width: 80.0833333333%;
@@ -6628,4 +6637,8 @@ ul.news-operation li {
     
     }
 
+}
+#footer-content .col-md-3 a {
+    color:#fff;
+    font-size: 12px;
 }
