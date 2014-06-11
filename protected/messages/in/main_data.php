@@ -21,7 +21,7 @@
 		'Reference'=>'Referensi',
 		'Species'=>'Spesies',
 		'Choose Reference'=>'Pilih Referensi',
-
+		'Species List'=>'Daftar Spesies'
 
 		// translation for compound
 		'Compound'=>'Senyawa',
@@ -36,11 +36,13 @@
 		'Choose Species'=>'Pilih Spesies',
 		'Local Name'=>'Nama Lokal',
 		'Region'=>'Daerah',
+		'Local Name List'=>'Daftar Nama Lokal'
 
 		//translation for aliases
 		'Alias Name'=>'Nama Alias',
 		'Aliases'=>'Alias',
-		
+		'Alias List'=>'Daftar Nama Alias'
+
 		//translation for virtue
 		'Virtue'=>'Khasiat',
 		'Herbal Part'=>'Bagian Tumbuhan',
@@ -51,10 +53,13 @@
 		'Virtue of the species in Bahasa'=>'Khasiat dari spesies dalam bahasa Indonesia',
 		'Virtue of the species in English'=>'Khasiat dari spesies dalam bahasa Inggris',
 		'Virtue of the species in Latin'=>'Khasiat dari spesies dalam bahasa Latin',
+		'Virtue list'=>'Daftar Khasiat'
+
 		//translation for compound group
 		'Compound Group'=>'Grup Senyawa',
 		'Code'=>'Kode',
 		'Group Name'=>'Nama Grup',
+
 
 		//translation for reference
 		'Reference Name'=>'Nama Referensi',

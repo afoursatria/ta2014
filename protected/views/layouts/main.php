@@ -99,17 +99,27 @@
 		<div class="clear"></div>
 		<div id="footer">
 		    <div id= "footer-content" class ="footer-content-5 clearfix">
-				<p class="text _text text-140">Beranda</p>
+		    	array('label'=>'<span class="glyphicon glyphicon-home"></span> '.Yii::t('main_layout', 'Home'), 'url'=>array('/site/index'),'itemCssClass'=>'text text-40'),
+					array('label'=>'<span class="glyphicon glyphicon-search"></span> '.Yii::t('main_data','Search'),'url'=>array('species/search'),'linkOptions'=>array('id'=>'searchbar')),
+					array('label'=>'<span class="glyphicon glyphicon-plus"></span> '.Yii::t('main_layout', 'Insert Data'), 'url'=>array('/user/insertData'), 'visible'=>!Yii::app()->user->isGuest), 
+					array('label'=>'<span class="glyphicon glyphicon-user"></span> '.Yii::t('main_layout', 'User Management'), 'url'=>array('/user/admin'), 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->getState("role")==1), 
+				// array('label'=>'List of Species', 'url'=>array('/species/index')),
+				// array('label'=>'List of Compound', 'url'=>array('/contents/index')),
+					array('label'=>'<span class="glyphicon glyphicon-exclamation-sign"></span> '.Yii::t('main_layout', 'News & Event'), 'url'=>array('/news/index')),
+					array('label'=>'<span class="glyphicon glyphicon-question-sign"></span> '.'FAQs', 'url'=>array('/faqs/')),
+					array('label'=>'<span class="glyphicon glyphicon-earphone"></span> '.Yii::t('main_layout', 'Contact'), 'url'=>array('/site/contact')),	
+					array('label'=>'<span class="glyphicon glyphicon-pencil"></span> '.Yii::t('main_layout', 'About'), 'url'=>array('/site/page','view'=>'about')),	
+				<p class="text _text text-140"><?php echo CHtml::link(Yii::t('main_layout','Home'),array('/site/index'));?></p>
 				<div class="separator1 separator1-5"></div>
-				<p class="text _text text-145">Daftar Spesies</p>
-				<p class="text _text text-150">Daftar Nama Lokal</p>
+				<p class="text _text text-145"><?php echo CHtml::link(Yii::t('main_data','Species List'),array('species/search'))?></p>
+				<p class="text _text text-150"><?php echo CHtml::link(Yii::t('main_data','Compound List'),array('contents/search'))?></p>
 				<p class="text _text text-155">Unggah</p>
 				<p class="text _text text-160">Tentang Kami</p>
 				<p class="text _text text-165">Acara dan Berita</p>
-				<p class="text _text text-170">Daftar Senyawa</p>
-				<p class="text _text text-175">Daftar Khasiat</p>
+				<p class="text _text text-170"><?php echo CHtml::link(Yii::t('main_data','Local Name List'),array('localname/search'))?></p>
+				<p class="text _text text-175"><?php echo CHtml::link(Yii::t('main_data','Aliases List'),array('aliases/search'))?></p>
 				<p class="text text-180">Kontak</p>
-				<p class="text _text text-185">Daftar Nama Alias</p>
+				<p class="text _text text-185"><?php echo CHtml::link(Yii::t('main_data','Virtue List'),array('virtue/search'))?></p>
 				<div class="separator2 separator2-5"></div>
 				<div class="separator3 separator3-5"></div>
 				<div class="separator4 separator4-5"></div>
