@@ -11,7 +11,7 @@
 	 } 
     ?>
     <br/>
-	<b><?php echo "Status"; ?>:</b>
+	<span class="col-md-3"><b><?php echo "Status"; ?>:</b></span>
 	<?php 
 		if ($data->loc_is_verified == 0) {
 		echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20)).Yii::t('main_data', 'not verified');
@@ -32,15 +32,15 @@
 	<?php endif?>	
  	</ul>
  	<br/>
-	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_localname')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('loc_localname')); ?>:</b></span>
 	<?php echo CHtml::encode($data->loc_localname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('loc_region')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('loc_region')); ?>:</b></span>
 	<?php echo CHtml::encode($data->loc_region); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b></span>
 	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref_local->ref_name);
 	else echo "-";?>
 	<br />

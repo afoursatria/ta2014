@@ -10,7 +10,8 @@
 		echo CHtml::link(Yii::t('main_layout','Verify'), array('virtue/verify', 'id'=>$data->vir_id), array('submit'=>array('virtue/verify', "id"=>$data->vir_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
 	 } 
     ?>
-			<b><?php echo "Status"; ?>:</b>
+    <br/>
+	<span class="col-md-3"><b><?php echo "Status"; ?>:</b></span>
 	<?php 
 		if ($data->vir_is_verified == 0) {
 		echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20)).Yii::t('main_data', 'not verified');
@@ -31,25 +32,25 @@
 	<?php endif?>	
  	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('hp_code')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('hp_code')); ?>:</b></span>
 	<?php if ($data->herbal_part!==null) {echo CHtml::encode($data->herbal_part->hp_part_name);}
 	else echo "-"; 
 	?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_type')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('vir_type')); ?>:</b></span>
 	<?php echo CHtml::encode($data->vir_type); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_value')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('vir_value')); ?>:</b></span>
 	<?php echo CHtml::encode($data->vir_value); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_value_en')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('vir_value_en')); ?>:</b></span>
 	<?php echo CHtml::encode($data->vir_value_en); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('vir_value_latin')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('vir_value_latin')); ?>:</b></span>
 	<?php echo CHtml::encode($data->vir_value_latin); ?>
 	<br />
 	

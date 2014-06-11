@@ -32,7 +32,7 @@
 		'Choose Compound Group'=>'Pilih Grup Senyawa',
 		'File Mol1'=>'Berkas Mol1',
 		'File Mol2'=>'Berkas Mol2',
-
+		'Compound List'=>'Daftar Senyawa',
 		//translation for local name
 		'Choose Species'=>'Pilih Spesies',
 		'Local Name'=>'Nama Lokal',
@@ -55,7 +55,7 @@
 		'Virtue of the species in Bahasa'=>'Khasiat dari spesies dalam bahasa Indonesia',
 		'Virtue of the species in English'=>'Khasiat dari spesies dalam bahasa Inggris',
 		'Virtue of the species in Latin'=>'Khasiat dari spesies dalam bahasa Latin',
-		'Virtue list'=>'Daftar Khasiat',
+		'Virtue List'=>'Daftar Khasiat',
 
 		//translation for compound group
 		'Compound Group'=>'Grup Senyawa',
@@ -99,6 +99,7 @@
 		'Max. Length 60 Characters'=>'Maksimum 60 Karakter',
 		'Max. Length 25 Characters'=>'Maksimum 25 Karakter',
 		'Max. Length 200 Characters'=>'Maksimum 200 Karakter',
+		'Are you sure?'=>'Anda yakin?',
 		'Are you sure you want to verify?'=>'Anda yakin ingin memverifikasi?',
 		'Fields with'=>'Isian dengan',
 		'are required'=>'harus diisi',

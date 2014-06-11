@@ -138,7 +138,7 @@
 				    			<?php echo CHtml::link(Yii::t('main_data','Local Name List'),array('localname/search'))?>
 				    		</li>
 				    		<li>
-								<?php echo CHtml::link(Yii::t('main_data','Aliases List'),array('aliases/search'))?>
+								<?php echo CHtml::link(Yii::t('main_data','Alias List'),array('aliases/search'))?>
 				    		</li>
 				    	</ul>
 				    </div>

@@ -5,10 +5,10 @@
 
 $this->pageTitle=Yii::app()->name . ' - About';
 $this->breadcrumbs=array(
-	'About',
+	Yii::t('main_layout','About'),
 );
 ?>
-<h1>About</h1>
+<h1><?php echo Yii::t('main_layout','About')?></h1>
 <?php 
 	// $this->widget('bootstrap.widgets.TbThumbnails', array(
  //    'dataProvider'=>$listDataProvider,

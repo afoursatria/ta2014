@@ -11,7 +11,7 @@
 	 } 
     ?>
     <br/>
-     <b><?php echo "Status"; ?>:</b>
+     <span class="col-md-3"><b><?php echo "Status"; ?>:</b></span>
 	<?php 
 		if ($data->spe_is_verified == 0) {
 		echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20))
@@ -32,27 +32,25 @@
 	</ul>
 	<?php endif?>	
 	<br />
-	<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('spe_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->spe_id), array('view', 'id'=>$data->spe_id)); ?>
-	<br /> -->
+	
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_species_id')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('spe_species_id')); ?>:</b></span>
 	<?php echo CHtml::link(CHtml::encode($data->spe_species_id), array('species/view', 'id'=>$data->spe_id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_speciesname')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('spe_speciesname')); ?>:</b></span>
 	<?php echo CHtml::encode($data->spe_speciesname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_varietyname')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('spe_varietyname')); ?>:</b></span>
 	<?php echo CHtml::encode($data->spe_varietyname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_familyname')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('spe_familyname')); ?>:</b></span>
 	<?php echo CHtml::encode($data->spe_familyname); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('spe_foundername')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('spe_foundername')); ?>:</b></span>
 	<?php echo CHtml::encode($data->spe_foundername); ?>
 	<br />
 	

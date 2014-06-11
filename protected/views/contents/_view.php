@@ -11,7 +11,7 @@
 	 } 
     ?>
     <br/>
-	<b><?php echo "Status"; ?>:</b>
+	<span class="col-md-3"><b><?php echo "Status"; ?>:</b></span>
 	<?php 
 		if ($data->contents->con_is_verified == 0) {
 			echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20)).
@@ -33,35 +33,35 @@
  	</ul>
 	<?php endif?>	
  	<br/>
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_contentname')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_contentname')); ?>:</b></span>
 	<?php echo CHtml::link(CHtml::encode($data->contents->con_contentname), array('contents/view', 'id'=>$data->contents->con_id)); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_knapsack_id')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_knapsack_id')); ?>:</b></span>
 	<?php echo CHtml::encode($data->contents->con_knapsack_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_metabolite_id')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_metabolite_id')); ?>:</b></span>
 	<?php echo CHtml::encode($data->contents->con_metabolite_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_pubchem_id')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_pubchem_id')); ?>:</b></span>
 	<?php echo CHtml::encode($data->contents->con_pubchem_id); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('contgroup_id')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('contgroup_id')); ?>:</b></span>
 	<?php echo CHtml::encode($data->contents->contgroup->contgroup_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_source')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_source')); ?>:</b></span>
 	<?php echo CHtml::encode($data->contents->con_source); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_file_mol1')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_file_mol1')); ?>:</b></span>
 	<?php echo CHtml::encode($data->contents->con_file_mol1); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_file_mol2')); ?>:</b>
+	<span class="col-md-3"><b><?php echo CHtml::encode($data->contents->getAttributeLabel('con_file_mol2')); ?>:</b></span>
 	<?php echo CHtml::encode($data->contents->con_file_mol2); ?>
 	<br />
 

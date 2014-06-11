@@ -11,7 +11,7 @@
 			} 
 		?>
 		<br/>
-		<b><?php echo "Status"; ?>:</b>
+		<span class="col-md-3"><b><?php echo "Status"; ?>:</b></span>
 		<?php 
 			if ($data->ali_is_verified == 0) {
 			echo CHtml::image(Yii::app()->request->baseUrl."/images/cross.png","image",array('width'=>20))
@@ -31,19 +31,19 @@
 	 	</ul>
 		<?php endif?>	
 	 	<br/>
-		<b><?php echo CHtml::encode($data->getAttributeLabel('ali_speciesname')); ?>:</b>
+		<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('ali_speciesname')); ?>:</b></span>
 		<?php echo CHtml::encode($data->ali_speciesname); ?>
 		<br />
 
-		<b><?php echo CHtml::encode($data->getAttributeLabel('ali_foundername')); ?>:</b>
+		<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('ali_foundername')); ?>:</b></span>
 		<?php echo CHtml::encode($data->ali_foundername); ?>
 		<br />
 
-		<b><?php echo CHtml::encode($data->getAttributeLabel('ali_varietyname')); ?>:</b>
+		<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('ali_varietyname')); ?>:</b></span>
 		<?php echo CHtml::encode($data->ali_varietyname); ?>
 		<br />
 
-		<b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b>
+		<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b></span>
 		<?php if (!is_null($data->ref)) echo CHtml::encode($data->ref->ref_name);
 		else echo "-"; ?>
 		<br />

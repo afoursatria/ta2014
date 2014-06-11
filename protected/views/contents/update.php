@@ -4,7 +4,6 @@
 
 $this->breadcrumbs=array(
 	Yii::t('main_data','Compounds')=>array('index'),
-	$model->con_id=>array('view','id'=>$model->con_id),
 	Yii::t('main_layout','Update'),
 );
 

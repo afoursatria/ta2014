@@ -98,6 +98,7 @@ $this->breadcrumbs=array(
 				<div class="row buttons">
 					<div class="col-xs-9">
 					<?php echo CHtml::submitButton(Yii::t('main_layout','Submit'), array('id'=>'blue','class'=>'button')); ?>
+					<?php echo CHtml::link(Yii::t('main_data','Cancel'),array('/site/index'));?>
 				</div>
 			</div>
 			<?php $this->endWidget(); ?>
