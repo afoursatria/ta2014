@@ -44,7 +44,7 @@ class UserController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha', 'findRefName'),
+			 	'actions'=>array('create','profile', 'update', 'changePassword', 'insertData', 'captcha', 'findRefName', 'findSpeciesName'),
 			 	'users'=>array('@'),		
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -266,6 +266,8 @@ class UserController extends Controller
 		
 		$compoundModel = new Contents;
 		$compoundModel->setScenario('insert');
+
+		$speciesContentModel = new Species_content;
 		
 		$contentGroupModel = new Contentgroup;
 		$contentGroupModel->setScenario('insert');
@@ -352,6 +354,7 @@ class UserController extends Controller
 			'referenceModel'=>$referenceModel,
 			'compoundModel'=>$compoundModel,
 			'contentGroupModel'=>$contentGroupModel,
+			'speciesContentModel'=>$speciesContentModel,
 		));
 	}
 
@@ -376,6 +379,35 @@ class UserController extends Controller
                        'label' => $p->ref_name,  
                        'value' => $p->ref_name,
                        'id' => $p->ref_id, // return value from autocomplete
+                   );
+               }
+               echo CJSON::encode($out);
+               Yii::app()->end();
+           }
+       }
+   }
+
+
+	public function actionFindSpeciesName() {
+       $q = $_GET['term'];
+       if (isset($q)) {
+           $criteria = new CDbCriteria;
+           //condition to find your data, using q as the parameter field
+           $criteria->condition = 'spe_speciesname LIKE :q'; 
+           // $criteria->order = '...'; // correct order-by field
+           $criteria->limit = 5; // probably a good idea to limit the results
+           // with trailing wildcard only; probably a good idea for large volumes of data
+           $criteria->params = array(':q' => trim($q) . '%'); 
+           $SpeciesName = Species::model()->findAll($criteria);
+ 
+           if (!empty($SpeciesName)) {
+               $out = array();
+               foreach ($SpeciesName as $p) {
+                   $out[] = array(
+                       // expression to give the string for the autoComplete drop-down
+                       'label' => $p->spe_speciesname,  
+                       'value' => $p->spe_speciesname,
+                       'id' => $p->spe_id, // return value from autocomplete
                    );
                }
                echo CJSON::encode($out);
