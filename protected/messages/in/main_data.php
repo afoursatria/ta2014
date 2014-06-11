@@ -5,7 +5,7 @@
 
 		'verified' => 'Terverifikasi',
 		'not verified'=> 'Belum Terverifikasi',
-
+		'You are logged in as'=>'Anda masuk sebagai',
 		'{attribute} cannot be blank'=>'{attribute} harus diisi',
 		'Displaying {end} result'=>'Menampilkan {end} hasil',
 		'This Species has no local name'=>'Spesies ini tidak mempunyai nama lokal',
@@ -22,6 +22,7 @@
 		'Species'=>'Spesies',
 		'Choose Reference'=>'Pilih Referensi',
 		'Species List'=>'Daftar Spesies',
+		'Cancel'=>'Batal',
 
 		// translation for compound
 		'Compound'=>'Senyawa',
@@ -41,6 +42,7 @@
 		//translation for aliases
 		'Alias Name'=>'Nama Alias',
 		'Aliases'=>'Alias',
+		'Alias'=>'Alias',
 		'Alias List'=>'Daftar Nama Alias',
 
 		//translation for virtue
