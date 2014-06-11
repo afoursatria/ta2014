@@ -15,15 +15,14 @@
 	'enableAjaxValidation'=>false,
 	'htmlOptions'=>array('class'=>'well'),
 )); ?>
-
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
 	<div class = "row">
 		<?php echo $form->errorSummary($model); ?>
 	</div>
 	<div class = "row">
 		<span class = "col-md-3"><?php echo $form->labelEx($model,'news_title'); ?></span>
 		<?php echo $form->textField($model,'news_title',array('length'=>20)); ?>
-		<span class="form-hint vertical">(Max.Length 20 characters)</span>
+		<span class="form-hint vertical"><?php echo Yii::t('main_data','Max. Length 20 Characters')?></span>
 		<?php echo $form->error($model,'news_title'); ?>
 	</div>
 	<div class="row">

@@ -3,19 +3,19 @@
 /* @var $model Localname */
 
 $this->breadcrumbs=array(
-	'Localnames'=>array('index'),
+	Yii::t('main_data','Local Name')=>array('index'),
 	$model->loc_id=>array('view','id'=>$model->loc_id),
-	'Update',
+	Yii::t('main_layout','Update'),
 );
 
 $this->menu=array(
-	array('label'=>'List Localname', 'url'=>array('index')),
-	array('label'=>'Create Localname', 'url'=>array('create')),
-	array('label'=>'View Localname', 'url'=>array('view', 'id'=>$model->loc_id)),
-	array('label'=>'Manage Localname', 'url'=>array('admin')),
+	// array('label'=>'List Localname', 'url'=>array('index')),
+	// array('label'=>'Create Localname', 'url'=>array('create')),
+	// array('label'=>'View Localname', 'url'=>array('view', 'id'=>$model->loc_id)),
+	// array('label'=>'Manage Localname', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Localname <?php echo $model->loc_id; ?></h1>
+<h1><?php echo Yii::t('main_layout','Update')." ".Yii::t('main_data','Local Name'). $model->loc_id; ?></h1>
 
 <?php $this->renderPartial('_formUpdate', array('model'=>$model)); ?>

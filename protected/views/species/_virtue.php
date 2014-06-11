@@ -21,7 +21,7 @@
 <?php 
 	CHtml::beginForm(CHtml::normalizeUrl(array('species/view')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('virtueKey', (isset($_GET['virtueKey'])) ? $_GET['virtueKey'] : '', array('id'=>'virtueKey'));
-    echo CHtml::submitButton('Search', array('name'=>''));
+    echo CHtml::submitButton(Yii::t('main_layout','Search'), array('name'=>''));
     CHtml::endForm();
 ?>
 

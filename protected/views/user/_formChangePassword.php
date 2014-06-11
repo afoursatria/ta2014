@@ -35,7 +35,7 @@
         <div class="row submit buttons">
             <div class="col-md-3"></div>
             <div class="col-md-9">
-                <?php echo CHtml::submitButton('Change password',array('id'=>'blue','class'=>'button')); ?>
+                <?php echo CHtml::submitButton(Yii::t('main_data','Change password'),array('id'=>'blue','class'=>'button')); ?>
             </div>
         </div>
 

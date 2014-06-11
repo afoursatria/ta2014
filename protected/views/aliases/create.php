@@ -3,8 +3,8 @@
 /* @var $model Aliases */
 
 $this->breadcrumbs=array(
-	'Aliases'=>array('index'),
-	'Create',
+	Yii::t('main_data','Aliases')=>array('index'),
+	Yii::t('main_layout'.'Create'),
 );
 
 $this->menu=array(
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Aliases</h1>
+<h1><?php Yii::t('main_layout','Create').' '.Yii::t('main_data','Aliases')?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

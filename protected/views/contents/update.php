@@ -9,13 +9,13 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Contents', 'url'=>array('index')),
-	array('label'=>'Create Contents', 'url'=>array('create')),
-	array('label'=>'View Contents', 'url'=>array('view', 'id'=>$model->con_id)),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
+	// array('label'=>'List Contents', 'url'=>array('index')),
+	// array('label'=>'Create Contents', 'url'=>array('create')),
+	// array('label'=>'View Contents', 'url'=>array('view', 'id'=>$model->con_id)),
+	// array('label'=>'Manage Contents', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Contents <?php echo $model->con_id; ?></h1>
+<h1><?php echo Yii::t('main_layout','Update').' '. Yii::t('main_data','Compound').' '.$model->con_id; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

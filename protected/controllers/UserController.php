@@ -206,6 +206,7 @@ class UserController extends Controller
 				}
 
 				$model->save();
+
 				$this->redirect(array('admin'));
 			}
 		}

@@ -40,18 +40,19 @@
 			<p class="web-title"><?php echo Yii::t('main_layout',Yii::app()->name); ?></p>
 				<?php $this->widget('zii.widgets.CMenu',array(
 				'htmlOptions'=>array('id'=>'mainmenu'),
+				'encodeLabel'=>false,
 				'submenuHtmlOptions'=>array('class'=>'p'),
 				'items'=>array(
-					array('label'=>Yii::t('main_layout', 'Home'), 'url'=>array('/site/index'),'itemCssClass'=>'text text-40'),
-					array('label'=>Yii::t('main_layout','Search'),'url'=>array('species/search'),'linkOptions'=>array('id'=>'searchbar')),
-					array('label'=>Yii::t('main_layout', 'Insert Data'), 'url'=>array('/user/insertData'), 'visible'=>!Yii::app()->user->isGuest), 
-					array('label'=>Yii::t('main_layout', 'User Management'), 'url'=>array('/user/admin'), 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->getState("role")==1), 
+					array('label'=>'<span class="glyphicon glyphicon-home"></span> '.Yii::t('main_layout', 'Home'), 'url'=>array('/site/index'),'itemCssClass'=>'text text-40'),
+					array('label'=>'<span class="glyphicon glyphicon-search"></span> '.Yii::t('main_data','Search'),'url'=>array('species/search'),'linkOptions'=>array('id'=>'searchbar')),
+					array('label'=>'<span class="glyphicon glyphicon-plus"></span> '.Yii::t('main_layout', 'Insert Data'), 'url'=>array('/user/insertData'), 'visible'=>!Yii::app()->user->isGuest), 
+					array('label'=>'<span class="glyphicon glyphicon-user"></span> '.Yii::t('main_layout', 'User Management'), 'url'=>array('/user/admin'), 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->getState("role")==1), 
 				// array('label'=>'List of Species', 'url'=>array('/species/index')),
 				// array('label'=>'List of Compound', 'url'=>array('/contents/index')),
-					array('label'=>Yii::t('main_layout', 'News & Event'), 'url'=>array('/news/index')),
-					array('label'=>'FAQs', 'url'=>array('/faqs/')),
-					array('label'=>Yii::t('main_layout', 'Contact'), 'url'=>array('/site/contact')),	
-					array('label'=>Yii::t('main_layout', 'About'), 'url'=>array('/site/page','view'=>'about')),	
+					array('label'=>'<span class="glyphicon glyphicon-exclamation-sign"></span> '.Yii::t('main_layout', 'News & Event'), 'url'=>array('/news/index')),
+					array('label'=>'<span class="glyphicon glyphicon-question-sign"></span> '.'FAQs', 'url'=>array('/faqs/')),
+					array('label'=>'<span class="glyphicon glyphicon-earphone"></span> '.Yii::t('main_layout', 'Contact'), 'url'=>array('/site/contact')),	
+					array('label'=>'<span class="glyphicon glyphicon-pencil"></span> '.Yii::t('main_layout', 'About'), 'url'=>array('/site/page','view'=>'about')),	
 					),
 					)
 				); 
@@ -65,17 +66,18 @@
 				$this->widget('bootstrap.widgets.TbMenu', array(
     'type'=>'list', // '', 'tabs', 'pills' (or 'list')
     'stacked'=>false, // whether this is a stacked menu
+    'encodeLabel'=>false,
     'items'=>
      array(
-		array('label'=>'Register', 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),	
-		array('label'=>'Login', 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
+		array('label'=>Yii::t('main_layout','Register'), 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),	
+		array('label'=>Yii::t('main_layout','Login'), 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
 		array('label'=>'You are logged in as '.Yii::app()->user->id, 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
                 array(
-                    'label'=>'Profile',
+                    'label'=>'<span class="glyphicon glyphicon-user"></span>'Yii::t('main_layout','Profile'),
                     'url'=>array('user/profile/', 'id'=>Yii::app()->user->getState("no")),
                 ),
                 array(
-                	'label'=>'Logout',
+                	'label'=>'<span class="glyphicon glyphicon-off"></span>'Yii::t('main_layout','Logout'),
                 	'url'=>array('/site/logout')
                 )
             )

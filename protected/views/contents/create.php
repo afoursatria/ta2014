@@ -8,11 +8,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Contents', 'url'=>array('index')),
-	array('label'=>'Manage Contents', 'url'=>array('admin')),
+	// array('label'=>'List Contents', 'url'=>array('index')),
+	// array('label'=>'Manage Contents', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Contents</h1>
+<h1><?php echo Yii::t('main_layout','Create').' '. Yii::t('main_data','Compound')?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -12,6 +12,10 @@ return array(
 'Save'=>'Simpan',
 'Update'=>'Ubah',
 'Delete'=>'Hapus',
-'Search'=>'Pencarian',
+'About'=>'Tentang',
+'Search'=>'Cari',
+'Verify'=>'Verifikasi',
+'Submit'=>'Kirim',
+'Profile'=>'Profil'
 );
 ?>

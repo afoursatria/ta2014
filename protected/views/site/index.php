@@ -16,7 +16,7 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
     <div class="col-xs-3">
         <div class="spesies clearfix">
             <div class="element element-10"></div>
-            <p class="text _text text-72">5 Spesies Paling Sering Dicari&nbsp;</p>
+            <p class="text _text text-72"><?php echo Yii::t('main_data','Top 5 species search')?>&nbsp;</p>
             <div class="element element-12"></div>
             <ul class="top-search">
                 <?php 
@@ -26,22 +26,11 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
                     }
                 ?>
             </ul>
-            <!-- <div class="element element-12"></div>
-            <p class="text _text text-79">Zephyranthes Tubispatha</p>
-            <div class="element element-13"></div>
-            <p class="text _text text-85">Cloxinia Maculata</p>
-            <div class="element element-14"></div>
-            <p class="text _text text-91">Cloxinia Maculata</p>
-            <div class="element element-15"></div>
-            <p class="text _text text-96">Cloxinia Maculata</p>
-            <div class="element element-17"></div>
-            <p class="text _text text-99">Cloxinia Maculata</p>
-            <div class="element element-18"></div> -->
         </div> <!--spesies-->
         <!--senyawa paling dicari-->
         <div class="senyawa clearfix">
                 <div class="element element-10"></div>
-                <p class="text _text text-112">5 Senyawa Paling Sering Dicari&nbsp;</p>
+                <p class="text _text text-112"><?php echo Yii::t('main_data','Top 5 compound search')?>&nbsp;</p>
                 <div class="element element-12"></div>
                  <ul class="top-search">
                       <?php 
@@ -50,16 +39,6 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
                           }
                       ?>
                 </ul>
-                <!-- <p class="text _text text-118">Zephyranthes Tubispatha</p>
-                <div class="element element-23"></div>
-                <p class="text _text text-121">Cloxinia Maculata</p>
-                <div class="element element-25"></div>
-                <p class="text _text text-125">Cloxinia Maculata</p>
-                <div class="element element-27"></div>
-                <p class="text _text text-130">Cloxinia Maculata</p>
-                <div class="element element-30"></div>
-                <p class="text _text text-133">Cloxinia Maculata</p>
-                <div class="element element-33"></div> -->
         </div><!--senyawa-->
     </div><!--col-xs-4-->
     <div class = "col-xs-9">
@@ -100,25 +79,22 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
     <div class="item active">
       <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/1.jpg">
       <div class="carousel-caption">
-      Keistimewaan buah ini adalah nempunyai kandungan scopoletin, serotin, 
-      damnacantal, athraquinon,dll. Buah pace sangat efisien untuk mengobati 
-      diabetes, penyakit jantung, strooke, memperbaiiki tekanan darah bahkan 
-      dapat menyehatkan kelenjar throid, meningkatkan kekebalan tubuh. 
+      <?php echo Yii::t('main_data','The specialty of this fruit is to have the content of scopoletin, serotonin, damnachantal, 
+      anthraquinone, etc. Pace is very efficient for treating diabetes, heart disease, a stroke, 
+      can even improve blood pressure healthy throid gland, boost immunity.');?>
       </div>
     </div>
      <div class="item">
       <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/2.jpg">
       <div class="carousel-caption">
-        Saat ini, sebagian besar budidaya temu lawak berada di Indonesia, 
-        Malaysia, Thailand, dan Filipina.
+        <?php echo Yii::t('main_data','Currently, most of the cultivation of ginger are in Indonesia, Malaysia, Thailand, and the Philippines.');?>
       </div>
     </div>
      <div class="item">
       <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/3.jpg">
       <div class="carousel-caption">
-        Tumbuhan Avocado berasal dari Meksiko dan Amerika Tengah dan kini banyak dibudidayakan di Amerika 
-        Selatan dan Amerika Tengah sebagai tanaman perkebunan monokultur dan sebagai tanaman pekarangan di 
-        daerah-daerah tropika lainnya di dunia.     
+        <?php echo Yii::t('main_data','Avocado plants native to Mexico and Central America and is now widely cultivated in South America and Central 
+        America as plant monocultures and as garden plants in other tropical areas in the world.');?>
       </div>
     </div>
   </div>

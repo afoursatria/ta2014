@@ -9,7 +9,7 @@
 /* @var $model News */
 
 $this->breadcrumbs=array(
-	'News'=>array('index'),
+	Yii::t('main_data','News')=>array('index'),
 	$model->news_id,
 );
 

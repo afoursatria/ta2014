@@ -1,7 +1,7 @@
 <?php
 	$this->breadcrumbs=array(
-	'Profile'=>array('profile','id'=>$model->use_id),
-	'Update'
+	Yii::t('main_layout','Profile')=>array('profile','id'=>$model->use_id),
+	Yii::t('main_layout','Update')
 	);
 ?>
 

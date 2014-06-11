@@ -9,7 +9,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-    'News',
+    Yii::t('main_layout','News'),
 );
 ?>
 
