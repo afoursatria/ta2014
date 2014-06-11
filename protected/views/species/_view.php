@@ -19,6 +19,18 @@
 		}
 		else echo CHtml::image(Yii::app()->request->baseUrl."/images/check.png","image",array('width'=>20)).Yii::t('main_data', 'verified');
 	?>
+	<?php if (Yii::app()->user->getState('role')==2 OR Yii::app()->user->getState('role')==1):?>
+	<ul class="news-operation">
+	
+	<li><?php echo CHtml::link(Yii::t('main_layout','Update'), array('species/update', 'id'=>$data->spe_id));?></li>
+	<li>
+	<?php
+	echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
+          array('submit'=>array('virtue/delete', 'id'=>$data->spe_id), 
+                'confirm' => Yii::t('main_data','Are you sure?'))); ?>
+ 	</li>
+	</ul>
+	<?php endif?>	
 	<br />
 	<!-- <b><?php echo CHtml::encode($data->getAttributeLabel('spe_id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->spe_id), array('view', 'id'=>$data->spe_id)); ?>

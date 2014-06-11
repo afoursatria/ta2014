@@ -19,7 +19,7 @@
 		else echo CHtml::image(Yii::app()->request->baseUrl."/images/check.png","image",array('width'=>20)).Yii::t('main_data', 'verified');
 	?>
 	<ul class="news-operation">
-	<?php if (Yii::app()->user->getState('role')==2):?>
+	<?php if (Yii::app()->user->getState('role')==2 OR Yii::app()->user->getState('role')==1):?>
 	<li>
  	<?php echo CHtml::link(Yii::t('main layout','Update'), array('localname/update', 'id'=>$data->loc_id));?>
  	</li>
