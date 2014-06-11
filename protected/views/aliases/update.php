@@ -4,7 +4,6 @@
 
 $this->breadcrumbs=array(
 	Yii::t('main_data','Aliases')=>array('index'),
-	$model->ali_id=>array('view','id'=>$model->ali_id),
 	Yii::t('main_layout','Update'),
 );
 
@@ -16,6 +15,6 @@ $this->breadcrumbs=array(
 // );
 ?>
 
-<h1><?php echo Yii::t('main_layout','Update').' '.Yii::t('main_data','Aliases').' '.$model->ali_id; ?></h1>
+<h1><?php echo Yii::t('main_layout','Update').' '.Yii::t('main_data','Aliases').' '.$model->ali_speciesname; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

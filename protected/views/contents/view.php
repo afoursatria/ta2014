@@ -3,7 +3,7 @@
 /* @var $model Contents */
 
 $this->breadcrumbs=array(
-	'Contents'=>array('search'),
+	Yii::t('main_data','Compound')=>array('search'),
 	$model->con_contentname,
 );
 
@@ -15,16 +15,15 @@ $this->breadcrumbs=array(
 // 	array('label'=>'Manage Contents', 'url'=>array('admin')),
 // );
 ?>
-
-<h1><?php echo $model->con_contentname; ?></h1>
-
-<?php echo CHtml::link('Update', array('contents/update', 'id'=>$model->con_id));?>
-<?php
+<ul class="news-operation">
+<li><?php echo CHtml::link(Yii::t('main_layout','Update'), array('contents/update', 'id'=>$model->con_id));?></li>
+<li><?php
 	echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
           array('submit'=>array('contents/delete', 'id'=>$model->con_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
-
-<h1><?php echo $model->con_contentname; ?></h1>
+            </li>
+</ul>
+<h1 class="text-center"><?php echo $model->con_contentname; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -50,7 +49,7 @@ $this->breadcrumbs=array(
 	'nullDisplay'=>'-',
 )); ?>
 
-<h3>Species List</h3>
+<h3><?php echo Yii::t('main_data','Species List')?></h3>
 
 <?php
 $this->renderPartial('_species',array('dataProvider'=>$speciesDataProvider));

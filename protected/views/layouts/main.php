@@ -44,7 +44,7 @@
 				'submenuHtmlOptions'=>array('class'=>'p'),
 				'items'=>array(
 					array('label'=>'<span class="glyphicon glyphicon-home"></span> '.Yii::t('main_layout', 'Home'), 'url'=>array('/site/index'),'itemCssClass'=>'text text-40'),
-					array('label'=>'<span class="glyphicon glyphicon-search"></span> '.Yii::t('main_data','Search'),'url'=>array('species/search'),'linkOptions'=>array('id'=>'searchbar')),
+					array('label'=>'<span class="glyphicon glyphicon-search"></span> '.Yii::t('main_layout','Search'),'url'=>array('species/search'),'linkOptions'=>array('id'=>'searchbar')),
 					array('label'=>'<span class="glyphicon glyphicon-plus"></span> '.Yii::t('main_layout', 'Insert Data'), 'url'=>array('/user/insertData'), 'visible'=>!Yii::app()->user->isGuest), 
 					array('label'=>'<span class="glyphicon glyphicon-user"></span> '.Yii::t('main_layout', 'User Management'), 'url'=>array('/user/admin'), 'visible'=>!Yii::app()->user->isGuest && Yii::app()->user->getState("role")==1), 
 				// array('label'=>'List of Species', 'url'=>array('/species/index')),
@@ -71,7 +71,7 @@
      array(
 		array('label'=>Yii::t('main_layout','Register'), 'url' =>array('/site/register'), 'visible'=>Yii::app()->user->getState("role") == null),	
 		array('label'=>Yii::t('main_layout','Login'), 'url' =>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),	
-		array('label'=>'You are logged in as '.Yii::app()->user->id, 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
+		array('label'=>Yii::t('main_data','You are logged in as').' '.Yii::app()->user->id, 'url'=>'#', 'visible'=>!Yii::app()->user->isGuest, 'items'=>array(
                 array(
                     'label'=>'<span class="glyphicon glyphicon-user"></span>'.Yii::t('main_layout','Profile'),
                     'url'=>array('user/profile/', 'id'=>Yii::app()->user->getState("no")),

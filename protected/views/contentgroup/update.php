@@ -4,7 +4,6 @@
 
 $this->breadcrumbs=array(
 	'Contentgroups'=>array('index'),
-	$model->contgroup_id=>array('view','id'=>$model->contgroup_id),
 	'Update',
 );
 

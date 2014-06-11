@@ -77,6 +77,9 @@
 		<div class="col-xs-3"></div>
 		<div class="col-xs-9">
 		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'), array('id'=>'blue','class'=>'button')); ?></div>
+		<?php if (!$model->isNewRecord){
+			echo CHtml::link(Yii::t('main_data','Cancel'), array('user/view', 'id'=>$model->use_id));
+			}?>
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 	Yii::t('main_data','Update'),
 );
 ?>
-<h1><?php echo Yii::t('main_layout','Update').' '.Yii::t('main_data','News').' '.$model->news_id; ?></h1>
+<h1><?php echo Yii::t('main_layout','Update').' '.Yii::t('main_data','News').' '.$model->'news_title'; ?></h1>
 <div class="row">
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
 </div>

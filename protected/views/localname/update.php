@@ -4,7 +4,6 @@
 
 $this->breadcrumbs=array(
 	Yii::t('main_data','Local Name')=>array('index'),
-	$model->loc_id=>array('view','id'=>$model->loc_id),
 	Yii::t('main_layout','Update'),
 );
 
@@ -16,6 +15,6 @@ $this->menu=array(
 );
 ?>
 
-<h1><?php echo Yii::t('main_layout','Update')." ".Yii::t('main_data','Local Name'). $model->loc_id; ?></h1>
+<h1><?php echo Yii::t('main_layout','Update')." ".Yii::t('main_data','Local Name')." ".$model->loc_localname; ?></h1>
 
 <?php $this->renderPartial('_formUpdate', array('model'=>$model)); ?>

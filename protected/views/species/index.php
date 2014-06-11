@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Species',
+	Yii::t('main_data','Species'),
 );
 
 $this->menu=array(

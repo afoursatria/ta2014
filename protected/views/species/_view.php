@@ -7,7 +7,7 @@
 	<div class="entry">
 		<?php
 	if (Yii::app()->user->getState('role') == 1 && $data->spe_is_verified == 0) {
-		echo CHtml::link("Verify", array('species/verify', 'id'=>$data->spe_id), array('submit'=>array('species/verify', "id"=>$data->spe_id), 'confirm' => 'Are you sure you want to verify?'));
+		echo CHtml::link(Yii::t('main_layout','Verify'), array('species/verify', 'id'=>$data->spe_id), array('submit'=>array('species/verify', "id"=>$data->spe_id), 'confirm' => 'Are you sure you want to verify?'));
 	 } 
     ?>
     <br/>
@@ -26,7 +26,7 @@
 	<li>
 	<?php
 	echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
-          array('submit'=>array('virtue/delete', 'id'=>$data->spe_id), 
+          array('submit'=>array('species/delete', 'id'=>$data->spe_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
  	</li>
 	</ul>

@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
-    Yii::t('main layout','Search'),
-    Yii::t('main data','Aliases')=>array('search'),
+    Yii::t('main_layout','Search'),
+    Yii::t('main_data','Aliases')=>array('search'),
 );
 ?>
 
@@ -42,7 +42,10 @@ $(function(){
 	CHtml::beginForm(CHtml::normalizeUrl(array('aliases/search')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('aliasKey', (isset($_GET['aliasKey'])) ? $_GET['aliasKey'] : '', 
         array('placeholder'=>Yii::t('main_data','Alias Name'), 'id'=>'aliasKey','class'=>'search-form'));
-    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
+    ?>
+    <span class= "glyphicon glyphicon-search"></span>
+    <?php
+    // echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
     CHtml::endForm();
 ?>
 

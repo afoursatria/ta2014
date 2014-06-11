@@ -43,8 +43,11 @@ $(function(){
 	CHtml::beginForm(CHtml::normalizeUrl(array('virtue/search')), 'get', array('id'=>'filter-form'));
 	echo CHtml::textField('virtueKey', (isset($_GET['virtueKey'])) ? $_GET['virtueKey'] : '', 
         array('placeholder'=>Yii::t('main_data','Virtue'), 'id'=>'virtueKey','class'=>'search-form'));
+?>
+        <span class= "glyphicon glyphicon-search"></span>
 
-    echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
+<?php 
+    // echo CHtml::submitButton('Search', array('name'=>'','id'=>'green','class'=>'button'));
     CHtml::endForm();
 ?>
 

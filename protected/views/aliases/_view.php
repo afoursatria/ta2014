@@ -7,7 +7,7 @@
 	<div class ="entry">
 		<?php
 			if (Yii::app()->user->getState('role') == 1 && $data->ali_is_verified == 0) {
-			echo CHtml::link("Verify", array('aliases/verify', 'id'=>$data->ali_id), array('submit'=>array('aliases/verify', "id"=>$data->ali_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
+			echo CHtml::link(Yii::t('main_layout','Verify'), array('aliases/verify', 'id'=>$data->ali_id), array('submit'=>array('aliases/verify', "id"=>$data->ali_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
 			} 
 		?>
 		<br/>

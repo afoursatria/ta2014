@@ -7,9 +7,10 @@
 	<div class="entry">
 		<?php
 	if (Yii::app()->user->getState('role') == 1 && $data->contents->con_is_verified == 0) {
-		echo CHtml::link(Yii::t('main layout','Verify'), array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
+		echo CHtml::link(Yii::t('main_layout','Verify'), array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
 	 } 
     ?>
+    <br/>
 	<b><?php echo "Status"; ?>:</b>
 	<?php 
 		if ($data->contents->con_is_verified == 0) {

@@ -3,9 +3,9 @@
 /* @var $model Contents */
 
 $this->breadcrumbs=array(
-	'Contents'=>array('index'),
+	Yii::t('main_data','Compounds')=>array('index'),
 	$model->con_id=>array('view','id'=>$model->con_id),
-	'Update',
+	Yii::t('main_layout','Update'),
 );
 
 $this->menu=array(
@@ -16,6 +16,6 @@ $this->menu=array(
 );
 ?>
 
-<h1><?php echo Yii::t('main_layout','Update').' '. Yii::t('main_data','Compound').' '.$model->con_id; ?></h1>
+<h1><?php echo Yii::t('main_layout','Update').' '. Yii::t('main_data','Compound').' '.$model->con_contentname; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

@@ -71,10 +71,6 @@
 		<?php echo $form->textField($model,'ali_verified_date',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-	</div>
-
 <?php $this->endWidget(); ?>
 
 </div><!-- search-form -->

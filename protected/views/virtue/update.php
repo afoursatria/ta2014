@@ -4,7 +4,6 @@
 
 $this->breadcrumbs=array(
 	Yii::t('main_data','Virtue')=>array('index'),
-	$model->vir_id=>array('view','id'=>$model->vir_id),
 	Yii::t('main_layout','Update'),
 );
 
@@ -16,6 +15,6 @@ $this->menu=array(
 );
 ?>
 
-<h1><?php echo ('main_layout','Update').' '.Yii::t('main_data','Virtue')?><?php echo $model->vir_id; ?></h1>
+<h1><?php echo Yii::t('main_layout','Update').' '.Yii::t('main_data','Virtue').' '?><?php echo $model->vir_value; ?></h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

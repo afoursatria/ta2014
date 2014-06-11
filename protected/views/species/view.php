@@ -1,27 +1,37 @@
 <script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap232.min.js"></script>
+<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 
 <?php
 /* @var $this SpeciesController */
 /* @var $model Species */
 
 $this->breadcrumbs=array(
-	Yii::t('main_layout','Species')=>array('search'),
+	Yii::t('main_data','Species')=>array('search'),
 	$model->spe_speciesname,
 );
 
-$this->menu=array(
-	array('label'=>'List Species', 'url'=>array('index')),
-	array('label'=>'Add Species', 'url'=>array('create')),
-	array('label'=>'Update Species', 'url'=>array('update', 'id'=>$model->spe_id)),
-	array('label'=>'Delete Species', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->spe_id),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>!(Yii::app()->user->getState("role"))),
-	array('label'=>'Manage Species', 'url'=>array('admin'), 'visible'=>!(Yii::app()->user->getState("role"))),
-	array('label'=>'Add Local Name', 'url'=>array('/localname/create', 'id'=>$model->spe_id)),
-	// array('label'=>'Update Local Name', 'url'=>array('/localname/update', 'id'=>$localName->loc_id)),
-);
+// $this->menu=array(
+// 	array('label'=>'List Species', 'url'=>array('index')),
+// 	array('label'=>'Add Species', 'url'=>array('create')),
+// 	array('label'=>'Update Species', 'url'=>array('update', 'id'=>$model->spe_id)),
+// 	array('label'=>'Delete Species', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->spe_id),'confirm'=>'Are you sure you want to delete this item?'), 'visible'=>!(Yii::app()->user->getState("role"))),
+// 	array('label'=>'Manage Species', 'url'=>array('admin'), 'visible'=>!(Yii::app()->user->getState("role"))),
+// 	array('label'=>'Add Local Name', 'url'=>array('/localname/create', 'id'=>$model->spe_id)),
+// 	// array('label'=>'Update Local Name', 'url'=>array('/localname/update', 'id'=>$localName->loc_id)),
+// );
 ?>
 
-<h1><?php echo $model->spe_speciesname; ?></h1>
-
+<h1 class="text-center"><?php echo $model->spe_speciesname; ?></h1>
+<ul class="news-operation">
+<li><?php echo CHtml::link(Yii::t('main_layout','Update'), array('contents/update', 'id'=>$model->spe_id));?></li>
+<li><?php
+    echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
+          array('submit'=>array('contents/delete', 'id'=>$model->spe_id), 
+                'confirm' => Yii::t('main_data','Are you sure?'))); ?>
+            </li>
+</ul>
+<?php echo $model->spe_foto == null ? CHtml::image(Yii::app()->request->baseUrl."/images/species.png",'image',array("class"=>'image-thumb')):
+                CHtml::image(Yii::app()->request->baseUrl."/assets/species/pic/".$model->spe_foto.'.jpg','image',array("class"=>'image-thumb'));?>
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -31,13 +41,12 @@ $this->menu=array(
 		'spe_familyname',
 		'spe_foundername',
 		// 'spe_foto',
-		array(
-            'name'=>'spe_foto',
-            'type'=>'raw',
-            'value'=>
-            $model->spe_foto == null ? CHtml::image(Yii::app()->request->baseUrl."/images/species.png",'image',array("class"=>'user-image')):
-                CHtml::image(Yii::app()->request->baseUrl."/assets/species/pic/".$model->spe_foto.'.jpg','image',array("class"=>'user-image')),
-        ),
+		// array(
+  //           'name'=>'spe_foto',
+  //           'type'=>'raw',
+  //           'value'=>
+            
+  //       ),
         array(
     		'name'=>'ref_id',
     		'value'=>$model->ref->ref_name,

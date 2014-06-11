@@ -19,7 +19,7 @@ $this->breadcrumbs=array(
 <h1><?php echo Yii::t('main_data','Local Name')?></h1>
 
 <?php 
-if ($localName !== NULL)
+if ($localName !== NULL){}
 	// $this->widget('zii.widgets.CListView', array(
 	// 	'data'=>$localName,
 	// 	'attributes'=>array(
