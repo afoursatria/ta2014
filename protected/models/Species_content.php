@@ -50,6 +50,7 @@ class Species_content extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'species' => array(self::BELONGS_TO, 'Species', 'spe_id'),
 			'contents' => array(self::BELONGS_TO, 'Contents', 'con_id'),
 		);
 	}
@@ -61,8 +62,8 @@ class Species_content extends CActiveRecord
 	{
 		return array(
 			'specon_id' => 'Specon',
-			'spe_id' => 'Spe',
-			'con_id' => 'Con',
+			'spe_id' => Yii::t('main_data','Species Name'),
+			'con_id' => Yii::t('main_data','Content Name'),
 			'ref_id' => 'Ref',
 			'specon_insert_by' => 'Specon Insert By',
 			'specon_insert_date' => 'Specon Insert Date',

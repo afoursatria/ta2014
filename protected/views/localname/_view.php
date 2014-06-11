@@ -21,11 +21,11 @@
 	<ul class="news-operation">
 	<?php if (Yii::app()->user->getState('role')==2 OR Yii::app()->user->getState('role')==1):?>
 	<li>
- 	<?php echo CHtml::link(Yii::t('main layout','Update'), array('localname/update', 'id'=>$data->loc_id));?>
+ 	<?php echo CHtml::link(Yii::t('main_layout','Update'), array('localname/update', 'id'=>$data->loc_id));?>
  	</li>
  	<li>
 	<?php
-	echo CHtml::link(Yii::t('main layout', 'Delete'),"#", 
+	echo CHtml::link(Yii::t('main_layout', 'Delete'),"#", 
           array('submit'=>array('localname/delete', 'id'=>$data->loc_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); ?>
  	</li>

@@ -130,6 +130,12 @@ class Species extends CActiveRecord
         ));
 	}
 
+	public function geSpeciesName() 
+	{
+      // presuming PostCode, City and Province are fields
+      return $this->spe_speciesname; 
+ 	}
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
