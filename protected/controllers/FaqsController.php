@@ -31,12 +31,12 @@ class FaqsController extends Controller
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
+			// array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			// 	'actions'=>array(),
+			// 	'users'=>array('@'),
+			// ),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('create','admin','delete','update'),
 				'users'=>array('@'),
 				'expression'=>'Yii::app()->user->getState("role")==1',
 			),
@@ -85,27 +85,24 @@ class FaqsController extends Controller
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($lang ='')
-	{
-		$model=$this->loadModel($lang);
-		if (strlen($lang) > 0) {
-			$this->render('update',array(
-			// 'model'=>$model,
-			));
-			
+	public function actionUpdate($id)
+	{	
+		// echo"a";
+		$model=$this->loadModel($id);
+		// if (strlen($lang) > 0) {
+		// 	$this->render('update',array(
+		// 	// 'model'=>$model,
+		// 	));
+		
+		if(isset($_POST['Faqs']))
+		{
+			$model->attributes=$_POST['Faqs'];
+			if($model->save())
+				$this->redirect(array('index'));
 		}
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		// if(isset($_POST['Faqs']))
-		// {
-		// 	$model->attributes=$_POST['Faqs'];
-		// 	if($model->save())
-		// 		$this->redirect(array('view','id'=>$model->faqs_id));
-		// }
 
 		$this->render('update',array(
-			// 'model'=>$model,
+		 	'model'=>$model,
 		));
 	}
 
@@ -161,7 +158,7 @@ class FaqsController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Faqs::model()->findByPk($id);
+		$model=Faqs::model()->findByAttributes(array('faqs_lang'=>$id));
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;

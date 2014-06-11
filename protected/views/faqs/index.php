@@ -7,12 +7,6 @@ $this->breadcrumbs=array(
 );
 
 if (Yii::app()->user->getState("role") == 1) 
-
-$this->menu=array(
-	array('label'=>'Create Faqs', 'url'=>array('create')),
-	array('label'=>'Manage Faqs', 'url'=>array('admin')),
-);
-
 ?>
 
 <b><?php
@@ -23,9 +17,9 @@ $this->menu=array(
 <br />
 <?php echo Yii::t('main_data','Choose Language'); ?>
 <br />
-<?php echo CHtml::link('English', array('faqs/update/en'));?>
+<?php echo CHtml::link('English', array('faqs/update','id'=>'en'));?>
 <br />
-<?php echo CHtml::link('Bahasa', array('update/id'));}?>
+<?php echo CHtml::link('Bahasa', array('update', 'id'=>'in'));}?>
 <h1>Faqs</h1>
 
 

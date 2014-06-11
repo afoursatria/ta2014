@@ -25,15 +25,23 @@
 		<?php echo $form->error($model,'faqs_content'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'faqs_lang'); ?>
-		<?php echo $form->textField($model,'faqs_lang',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'faqs_lang'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
+
+	<?php $this->widget('application.extensions.tinymce.TinyMce'); ?>
+ 
+	<script>
+	    tinymce.init({
+	    selector: "textarea#Faqs_faqs_content",
+	    menubar: false,
+	    width: 600,
+	    height: 300,
+	   toolbar1: "undo redo | bold | italic underline | alignleft aligncenter alignright alignjustify ", 
+	   toolbar2: "outdent indent | hr | sub sup | bullist numlist | formatselect fontselect fontsizeselect | cut copy paste pastetext pasteword | search replace ", 
+	 
+	 }); 
+	</script>
 
 <?php $this->endWidget(); ?>
 

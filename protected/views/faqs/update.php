@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Faqs'=>array('index'),
-	$model->faqs_id=>array('view','id'=>$model->faqs_id),
+	// $model->faqs_id=>array('view','id'=>$model->faqs_id),
 	'Update',
 );
 
@@ -16,13 +16,8 @@ $this->breadcrumbs=array(
 // );
 ?>
 
-<h1>Update Faqs <?php echo $model->faqs_id; ?></h1>
-<?php echo Yii::t('main_data','Choose Language'); ?>
-<br />
-<?php echo CHtml::link('English', array('update/en'));?>
-<br />
-<?php echo CHtml::link('Bahasa', array());?>
+<h1>Update Faqs <?php //echo $model->faqs_id; ?></h1>
 
 <?php 
-// $this->renderPartial('_form', array('model'=>$model)); 
+$this->renderPartial('_form', array('model'=>$model)); 
 ?>
