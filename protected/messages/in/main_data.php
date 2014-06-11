@@ -21,7 +21,7 @@
 		'Reference'=>'Referensi',
 		'Species'=>'Spesies',
 		'Choose Reference'=>'Pilih Referensi',
-		'Species List'=>'Daftar Spesies'
+		'Species List'=>'Daftar Spesies',
 
 		// translation for compound
 		'Compound'=>'Senyawa',
@@ -36,12 +36,12 @@
 		'Choose Species'=>'Pilih Spesies',
 		'Local Name'=>'Nama Lokal',
 		'Region'=>'Daerah',
-		'Local Name List'=>'Daftar Nama Lokal'
+		'Local Name List'=>'Daftar Nama Lokal',
 
 		//translation for aliases
 		'Alias Name'=>'Nama Alias',
 		'Aliases'=>'Alias',
-		'Alias List'=>'Daftar Nama Alias'
+		'Alias List'=>'Daftar Nama Alias',
 
 		//translation for virtue
 		'Virtue'=>'Khasiat',
@@ -53,7 +53,7 @@
 		'Virtue of the species in Bahasa'=>'Khasiat dari spesies dalam bahasa Indonesia',
 		'Virtue of the species in English'=>'Khasiat dari spesies dalam bahasa Inggris',
 		'Virtue of the species in Latin'=>'Khasiat dari spesies dalam bahasa Latin',
-		'Virtue list'=>'Daftar Khasiat'
+		'Virtue list'=>'Daftar Khasiat',
 
 		//translation for compound group
 		'Compound Group'=>'Grup Senyawa',
@@ -67,7 +67,7 @@
 		'Refs'=>'Referensi',
 
 		//translation for news
-		'News'=>'Berita'
+		'News'=>'Berita',
 		'Recent News'=>'Berita Terkini',
 		'Recent Event'=>'Acara Terkini',
 		'Recent Announcement'=>'Pengumuman Terkini',
@@ -85,7 +85,7 @@
 		'Please enter the letters as they are shown in the image above. <br/>Letters are not case-sensitive'=>'Masukkan huruf diatas, tidak <i>case-sensitive</i>',
 
 		//translastion for hint
-		'Click text field to pick from calendar'=>'Klik untuk memiilih dari kalender'
+		'Click text field to pick from calendar'=>'Klik untuk memiilih dari kalender',
 		'Choose Species of the aliases'=>'Pilih Spesies yang Ingin Diberikan Nama Alias',
 		'Choose Species of the virtue'=>'Pilih Spesies yang Ingin Diberikan Khasiat',
 		'Choose Species of the local name'=>'Pilih Spesies yang Ingin Diberikan Nama Lokal',
@@ -106,10 +106,10 @@
 		'Must be around 6-12 Characters'=>'Harus sekitar 6-12 karakter',
 		'Contains of alphabet and number, min.5 characters'=>'Terdiri dari alfabet dan angka, min. 5 karakter',
 		'Must be match with "Password" field'=>'Harus sesuai dengan isian "Password"',
-		'Change password'=>'Ubah password'
+		'Change password'=>'Ubah password',
 
 		//home
-		'Top 5 species search'=>'5 Spesies paling dicari',
+		'Top 5 species search'=>'5 Spesies paling sering dicari',
 		'Top 5 compound search'=>'5 Senyawa paling sering dicari',
       'The specialty of this fruit is to have the content of scopoletin, serotonin, damnachantal, 
       anthraquinone, etc. Pace is very efficient for treating diabetes, heart disease, a stroke, 
