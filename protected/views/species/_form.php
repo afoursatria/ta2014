@@ -80,10 +80,34 @@
 
 	<div class="row">
 		<div class="control-group" id="fields">
-			<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
+		
 			<?php 
-			// $opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
-			// echo $form->dropDownList($model,'ref_id', $opts, array('prompt'=>Yii::t('main_data','Choose Reference')));
+				$opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
+				$tes = Ref::model()->findAll();
+				$ref_array = array();
+				foreach ($tes as $key) {
+					array_push($ref_array, $key->ref_id);
+				}
+				// echo $tes;
+			?>
+				<div class ="col-xs-9">
+						<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
+			<?php 
+				// $this->widget('bootstrap.widgets.TbTypeahead',array(
+				// 		'model'=>$model,
+				// 		'attribute'=>'ref_id',
+				// 		'id'=>'field1',
+				// 		'name'=>'ref_id1',
+				// 		'options'=>array(
+				// 			'source'=>$ref_array,
+				// 			'matcher'=>"js:function(item){return ~item.toLowerCase().indexOf(this.query.toLowerCase());}",
+				// 			'items'=>5,
+				// 			// 'class'=>'input-append',
+				// 			'autocomplete'=>'off'
+				// 		)
+				// 	));
+		// 	// $opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
+		// 	// echo $form->dropDownList($model,'ref_id', $opts, array('prompt'=>Yii::t('main_data','Choose Reference')));
 		 $this->widget('EJuiAutoCompleteFkField', array(
       'model'=>$model, 
       'attribute'=>'ref_id', //the FK field (from CJuiInputWidget)
@@ -97,6 +121,7 @@
       'displayAttr'=>'ref_name',  // attribute or pseudo-attribute to display
       // length of the AutoComplete/display field, defaults to 50
       'autoCompleteLength'=>60,
+      'idSuffix'=>'lala',
       // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may 
       // also be defined.  read the code and docs for all options
       'options'=>array(
@@ -106,32 +131,23 @@
       ),
  	));
  		?>
-			<?php 
-				$opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
-				$tes = Ref::model()->findAll();
-				$ref_array = array();
-				foreach ($tes as $key) {
-					array_push($ref_array, $key->ref_id);
-				}
-				// echo $tes;
-			?>
-				<div class ="col-xs-9">
+ 		<button id="b1" class="btn add-more" type="button">+</button>
 				<?php
-					$this->widget('bootstrap.widgets.TbTypeahead',array(
-						'model'=>$model,
-						'attribute'=>'ref_id',
-						'id'=>'field1',
-						'name'=>'ref_id1',
-						'options'=>array(
-							'source'=>$ref_array,
-							'matcher'=>"js:function(item){return ~item.toLowerCase().indexOf(this.query.toLowerCase());}",
-							'items'=>5,
-							// 'class'=>'input-append',
-							'autocomplete'=>'off'
-						)
-					));
+					// $this->widget('bootstrap.widgets.TbTypeahead',array(
+					// 	'model'=>$model,
+					// 	'attribute'=>'ref_id',
+					// 	'id'=>'field1',
+					// 	'name'=>'ref_id1',
+					// 	'options'=>array(
+					// 		'source'=>$ref_array,
+					// 		'matcher'=>"js:function(item){return ~item.toLowerCase().indexOf(this.query.toLowerCase());}",
+					// 		'items'=>5,
+					// 		// 'class'=>'input-append',
+					// 		'autocomplete'=>'off'
+					// 	)
+					// ));
 				?>
-			<button id="b1" class="btn add-more" type="button">+</button>
+			<!-- <button id="b1" class="btn add-more" type="button">+</button> -->
         	<span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
 			</div>
 		</div>

@@ -364,9 +364,9 @@ class UserController extends Controller
        	if (isset($q)) {
            $criteria = new CDbCriteria;
            //condition to find your data, using q as the parameter field
-           // $criteria->condition = 'ref_name LIKE'%q%'', 
+           $criteria->condition = 'ref_name LIKE :q';
            // $criteria->order = '...'; // correct order-by field
-            $criteria->limit = 5; // probably a good idea to limit the results
+            // $criteria->limit = 5; // probably a good idea to limit the results
            // with trailing wildcard only; probably a good idea for large volumes of data
            $criteria->params = array(':q' => trim($q) . '%'); 
            $RefName = Ref::model()->findAll($criteria);
@@ -395,7 +395,7 @@ class UserController extends Controller
            //condition to find your data, using q as the parameter field
            $criteria->condition = 'spe_speciesname LIKE :q'; 
            // $criteria->order = '...'; // correct order-by field
-           $criteria->limit = 5; // probably a good idea to limit the results
+           // $criteria->limit = 5; // probably a good idea to limit the results
            // with trailing wildcard only; probably a good idea for large volumes of data
            $criteria->params = array(':q' => trim($q) . '%'); 
            $SpeciesName = Species::model()->findAll($criteria);

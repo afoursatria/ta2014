@@ -137,6 +137,12 @@ class ContentsController extends Controller
 	public function actionDelete($id)
 	{
 		$this->loadModel($id)->delete();
+		Species_content::model()->deleteAll('con_id= :content_id', array(':content_id'=>$id));
+
+		// foreach ($speContent as $val ) {
+		// 	echo $val->con_id." ";
+		// 	echo $val->spe_id."<br />";
+		// }
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
