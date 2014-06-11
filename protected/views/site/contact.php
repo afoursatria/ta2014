@@ -48,7 +48,7 @@ $this->breadcrumbs=array(
 				<?php echo $form->labelEx($model,'email'); ?>
 			</div>
 			 <div class="row">
-		        <span class="form-hint vertical"><?php echo Yii::t('Email has to be a valid email address')?></span>
+		        <span class="form-hint vertical"><?php echo Yii::t('main_data','Email has to be a valid email address')?></span>
 			</div>
 			<div class="row">
 				<?php echo $form->textField($model,'email'); ?>
@@ -97,7 +97,7 @@ $this->breadcrumbs=array(
 
 				<div class="row buttons">
 					<div class="col-xs-9">
-					<?php echo CHtml::submitButton(Yii::t('Submit'), array('id'=>'blue','class'=>'button')); ?>
+					<?php echo CHtml::submitButton(Yii::t('main_layout','Submit'), array('id'=>'blue','class'=>'button')); ?>
 				</div>
 			</div>
 			<?php $this->endWidget(); ?>
@@ -108,7 +108,7 @@ $this->breadcrumbs=array(
         <p class="text text-114">Email</p>
         <p class="text text-117">admin@herbaldbindo.com</p>
         <div class="element element-22"></div>
-        <p class="text text-120"><?php echo Yii::t('main_data','In charge person'?>Penanggung Jawab</p>
+        <p class="text text-120"><?php echo Yii::t('main_data','In charge person')?></p>
         <p class="text text-123">Heru Suhartanto</p>
         <p class="text text-124">Arry Yanuar</p>
         <p class="text text-128">M. Afour Satria</p>

@@ -16,7 +16,7 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
     <div class="col-xs-3">
         <div class="spesies clearfix">
             <div class="element element-10"></div>
-            <p class="text _text text-72"><?php echo Yii::t('main_data','Top 5 species search')?>&nbsp;</p>
+            <p class="text _text text-72"><?php echo Yii::t('main_data','Top 5 species search')?>&nbsp;</p><br/>
             <div class="element element-12"></div>
             <ul class="top-search">
                 <?php 
@@ -30,7 +30,7 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
         <!--senyawa paling dicari-->
         <div class="senyawa clearfix">
                 <div class="element element-10"></div>
-                <p class="text _text text-112"><?php echo Yii::t('main_data','Top 5 compound search')?>&nbsp;</p>
+                <p class="text _text text-112"><?php echo Yii::t('main_data','Top 5 compound search')?>&nbsp;</p><br/>
                 <div class="element element-12"></div>
                  <ul class="top-search">
                       <?php 
