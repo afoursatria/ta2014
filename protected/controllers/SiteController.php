@@ -163,8 +163,8 @@ class SiteController extends Controller
 					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
 				}
 				$this->sendRegistrationMail();
-				Yii::app()->user->setFlash('success','Register success, check your email inbox');
 				$this->redirect(array('site/index'));
+				Yii::app()->user->setFlash('success','Register success, check your email inbox');
 			}
 		}
 
