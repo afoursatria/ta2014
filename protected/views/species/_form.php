@@ -64,8 +64,8 @@
 	</div>
 
 	<div class="row">
-        <span class="col-xs-3"><?php echo $form->labelEx($model,'spe_foto'); ?></span>
-        <span class="col-xs-9"><?php echo CHtml::activeFileField($model, 'spe_foto'); ?>
+        <span class="col-md-3"><?php echo $form->labelEx($model,'spe_foto'); ?></span>
+        <span class="col-md-9"><?php echo CHtml::activeFileField($model, 'spe_foto'); ?>
 	        <div class="row">
 	        	<?php echo $form->error($model,'spe_foto'); ?>	
 	        </div>
@@ -90,7 +90,7 @@
 				}
 				// echo $tes;
 			?>
-				<div class ="col-xs-9">
+				<div class ="col-md-9">
 						<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
 			<?php 
 				// $this->widget('bootstrap.widgets.TbTypeahead',array(

@@ -9,25 +9,25 @@ $this->pageTitle=Yii::app()->name;
 
 <h1 class="text-center"><?php echo Yii::t('main_layout','Login');?></h1>
 
-<div class="login col-xs-5">
+<div class="login col-md-5">
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'custom-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-	  'htmlOptions'=>array('class'=>'col-xs-12 well'),
+	  'htmlOptions'=>array('class'=>'col-md-12 well'),
 )); ?>
 	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
 	
 	<div class="row">
-		<span class ="col-xs-5"><?php echo $form->labelEx($model,'username'); ?></span>
+		<span class ="col-md-5"><?php echo $form->labelEx($model,'username'); ?></span>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<span class ="col-xs-5"><?php echo $form->labelEx($model,'password'); ?></span>
+		<span class ="col-md-5"><?php echo $form->labelEx($model,'password'); ?></span>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>

@@ -13,7 +13,7 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
 
 
 <div class = "row">
-    <div class="col-xs-3">
+    <div class="col-md-3">
         <div class="spesies clearfix">
             <div class="element element-10"></div>
             <p class="text _text text-72"><?php echo Yii::t('main_data','Top 5 species search')?>&nbsp;</p><br/>
@@ -40,8 +40,8 @@ $this->pageTitle=Yii::t('main_layout', 	Yii::app()->name);
                       ?>
                 </ul>
         </div><!--senyawa-->
-    </div><!--col-xs-4-->
-    <div class = "col-xs-9">
+    </div><!--col-md-4-->
+    <div class = "col-md-9">
         <div id = "search-field">
       <!--     <?php echo CHtml::link(Yii::t('main_data','Species'), array('species/search'))?>
 <br />

@@ -21,20 +21,20 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<span class ="col-xs-3"><?php echo $form->labelEx($model,'use_fullname'); ?></span>
+		<span class ="col-md-3"><?php echo $form->labelEx($model,'use_fullname'); ?></span>
 		<?php echo $form->textField($model,'use_fullname',array('size'=>25,'maxlength'=>25)); ?>
 		 <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 25 Characters') ?></span>
 		<?php echo $form->error($model,'use_fullname'); ?>
 	</div>
 
 	<div class="row">
-		<span class="col-xs-3"><?php echo $form->labelEx($model,'use_email'); ?></span>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'use_email'); ?></span>
 		<?php echo $form->textField($model,'use_email',array('size'=>25,'maxlength'=>25)); ?><span class="form-hint">(Max.Length 25 characters)</span>
 		<?php echo $form->error($model,'use_email'); ?>
 	</div>
 
 	<div class="row">
-		<span class="col-xs-3"><?php echo $form->labelEx($model,'use_birthdate'); ?></span>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'use_birthdate'); ?></span>
         <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
         	'model'=>$model, 'attribute'=>'use_birthdate',
         	'options'=>array(
@@ -48,8 +48,8 @@
     </div>
 
 	<div class="row">
-        <span class="col-xs-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
-        <span class="col-xs-9"><?php echo CHtml::activeFileField($model, 'use_foto'); ?>
+        <span class="col-md-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
+        <span class="col-md-9"><?php echo CHtml::activeFileField($model, 'use_foto'); ?>
 	        <div class="row">
 	        	<?php echo $form->error($model,'use_foto'); ?>	
 	        </div>
@@ -62,8 +62,8 @@
 		</span>
 	</div>
 	<div class="row">
-		<span class="col-xs-3"><?php echo $form->labelEx($model,'use_cv'); ?></span>
-		<span class="col-xs-9"><?php echo $form->fileField($model,'use_cv'); ?>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'use_cv'); ?></span>
+		<span class="col-md-9"><?php echo $form->fileField($model,'use_cv'); ?>
 			<div class="row">
 				<?php echo $form->error($model,'use_cv'); ?>
 			</div>
@@ -74,8 +74,8 @@
 		</span>
 	</div>
 	<div class="row buttons">
-		<div class="col-xs-3"></div>
-		<div class="col-xs-9">
+		<div class="col-md-3"></div>
+		<div class="col-md-9">
 		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'), array('id'=>'blue','class'=>'button')); ?></div>
 		<?php if (!$model->isNewRecord){
 			echo CHtml::link(Yii::t('main_data','Cancel'), array('user/view', 'id'=>$model->use_id));

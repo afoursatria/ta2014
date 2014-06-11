@@ -19,7 +19,7 @@ $this->breadcrumbs=array(
 
 <?php else: ?>
 <div class = "contact row">
-	<div class = "col-xs-9">
+	<div class = "col-md-9">
 		<p>
 		<? echo Yii::t('main_data','If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.');?>
 		</p>
@@ -96,15 +96,15 @@ $this->breadcrumbs=array(
 				<?php endif; ?>
 
 				<div class="row buttons">
-					<div class="col-xs-9">
+					<div class="col-md-9">
 					<?php echo CHtml::submitButton(Yii::t('main_layout','Submit'), array('id'=>'blue','class'=>'button')); ?>
 					<?php echo CHtml::link(Yii::t('main_data','Cancel'),array('/site/index'));?>
 				</div>
 			</div>
 			<?php $this->endWidget(); ?>
 		</div><!-- form -->
-	</div><!-- col-xs-9 -->
-	<div class="col-xs-3">
+	</div><!-- col-md-9 -->
+	<div class="col-md-3">
 		 <div class="sidebar-right clearfix">
         <p class="text text-114">Email</p>
         <p class="text text-117">admin@herbaldbindo.com</p>

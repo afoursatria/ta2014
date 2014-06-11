@@ -52,7 +52,7 @@
 		'Virtue Type'=>'Tipe Khasiat',
 		'Virtue (English)'=>'Khasiat (Inggris)',
 		'Virtue (Latin)'=>'Khasiat (Latin)',
-		'Virtue of the species in Bahasa'=>'Khasiat dari spesies dalam bahasa Indonesia',
+		'Virtue of the species in Bahasa'=>'Khasiat dari spesies dalam bahasa',
 		'Virtue of the species in English'=>'Khasiat dari spesies dalam bahasa Inggris',
 		'Virtue of the species in Latin'=>'Khasiat dari spesies dalam bahasa Latin',
 		'Virtue List'=>'Daftar Khasiat',

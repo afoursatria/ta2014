@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
 by updating the file <code><?php echo __FILE__; ?></code>.</p> -->
 <div class = "row">
 	<ul class="dev-content">
-		<li class="col-xs-3 dev-list">
+		<li class="col-md-3 dev-list">
 			<div class="row">
 		    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/annisa.jpeg" alt="" class="img-dev img-responsive text-center">
 			</div>
@@ -33,7 +33,7 @@ by updating the file <code><?php echo __FILE__; ?></code>.</p> -->
 				</ul>
 			</div>
 		</li>
-		<li class="col-xs-3 dev-list">
+		<li class="col-md-3 dev-list">
 			<div class="row">
 		    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/afour.jpeg" alt="" class="img-dev img-responsive text-center">
 			</div>
@@ -46,7 +46,7 @@ by updating the file <code><?php echo __FILE__; ?></code>.</p> -->
 				</ul>
 			</div>
 		</li>
-		<li class="col-xs-3 dev-list">
+		<li class="col-md-3 dev-list">
 			<div class="row">
 		    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/ari.jpeg" alt="" class="img-dev img-responsive text-center">
 			</div>
@@ -59,7 +59,7 @@ by updating the file <code><?php echo __FILE__; ?></code>.</p> -->
 				</ul>
 			</div>
 		</li>
-		<li class="col-xs-3 dev-list">
+		<li class="col-md-3 dev-list">
 			<div class="row">
 		    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/arry.jpg" alt="" class="img-dev img-responsive text-center">
 			</div>
@@ -72,7 +72,7 @@ by updating the file <code><?php echo __FILE__; ?></code>.</p> -->
 				</ul>
 			</div>
 		</li>
-		<li class="col-xs-3 dev-list">
+		<li class="col-md-3 dev-list">
 			<div class="row">
 		    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/heru.jpg" alt="" class="img-dev img-responsive text-center">
 			</div>
@@ -85,7 +85,7 @@ by updating the file <code><?php echo __FILE__; ?></code>.</p> -->
 				</ul>
 			</div>
 		</li>
-		<li class="col-xs-3 dev-list">
+		<li class="col-md-3 dev-list">
 			<div class="row">
 		    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/hilman.jpg" alt="" class="img-dev img-responsive text-center">
 			</div>
