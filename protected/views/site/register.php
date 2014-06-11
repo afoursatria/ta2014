@@ -119,7 +119,7 @@ if (Yii::app()->user->getState('role')==1) {
 
     <div class="row buttons">
         <div class="col-xs-3"></div>
-        <div class="col-xs-9"><?php echo CHtml::submitButton(Yii::t('main_layout','Submit', array('id'=>'blue','class'=>'button')); ?></div>
+        <div class="col-xs-9"><?php echo CHtml::submitButton(Yii::t('main_layout','Submit'), array('id'=>'blue','class'=>'button')); ?></div>
     </div>
     
     <?php $this->endWidget(); ?>

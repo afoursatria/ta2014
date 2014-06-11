@@ -56,11 +56,11 @@ class News extends CActiveRecord
 	{
 		return array(
 			'news_id' => 'News',
-			'news_title' => 'News Title',
-			'news_content' => 'News Content',
+			'news_title' => Yii::t('main_data','Title'),
+			'news_content' => Yii::t('main_data','Content'),
 			'news_insert_date' => 'News Insert Date',
 			'news_insert_by' => 'News Insert By',
-			'newscat_id' => 'Category',
+			'newscat_id' => Yii::t('main_data','Category'),
 		);
 	}
 

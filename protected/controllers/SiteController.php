@@ -142,11 +142,29 @@ class SiteController extends Controller
 
 			$model->attributes=$_POST['User'];
 			
-			if($model->validate()){
-				$model->save();
+			$uploadedImage=CUploadedFile::getInstance($model,'use_foto');
+			$uploadedCV=CUploadedFile::getInstance($model,'use_cv');
+            
+            $imageName = $model->use_username;  
+
+            $cvName = 'CV-'.$model->use_username;  
+ 		
+            if(!empty($uploadedImage)) $model->use_foto = $imageName;
+            if(!empty($uploadedCV)) $model->use_cv = $cvName;
+			
+			if($model->validate() && $model->save()){
+				if(!empty($uploadedImage))
+				{  // check if uploaded file is set or not
+					$uploadedImage->saveAs(Yii::app()->basePath.'/../assets/user/photo/'.$model->use_username.'.jpg');  // image will uplode to rootDirectory/photo/
+				}
+
+				if(!empty($uploadedCV))
+				{  // check if uploaded file is set or not
+					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
+				}
 				$this->sendRegistrationMail();
-				Yii::app()->user->setFlash('success','Register success, check your email inbox');
 				$this->redirect(array('site/index'));
+				Yii::app()->user->setFlash('success','Register success, check your email inbox');
 			}
 		}
 

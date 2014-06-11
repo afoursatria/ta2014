@@ -28,7 +28,7 @@
 	$this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'/species/_view',
-	'emptyText'=>Yii::t('main_data','This Species has no local name'),
+	'emptyText'=>Yii::t('main_data','This Species has no species'),
 	'summaryText'=>Yii::t('main_data','Displaying {end} result'),
 	'id'=>'species-list'
 	));
