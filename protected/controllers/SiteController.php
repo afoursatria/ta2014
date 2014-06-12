@@ -125,7 +125,9 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
+		Yii::app()->user->setFlash('success','You have been logged out from system');
 		$this->redirect(Yii::app()->homeUrl);
+
 	}
 
 	/**
@@ -163,8 +165,9 @@ class SiteController extends Controller
 					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
 				}
 				$this->sendRegistrationMail();
-				$this->redirect(array('site/index'));
 				Yii::app()->user->setFlash('success','Register success, check your email inbox');
+				$this->redirect(array('site/index'));
+				
 			}
 		}
 

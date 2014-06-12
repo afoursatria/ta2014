@@ -1,3 +1,5 @@
+<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap232.min.js"></script>
+<script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 <?php $this->breadcrumbs=array(
     'Register'
 );

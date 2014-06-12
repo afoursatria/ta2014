@@ -6653,3 +6653,11 @@ ul.news-operation li {
 div.login.col-md-5 {
 margin: 2% 31%;
 }
+
+#faqs-form .row {
+margin-left: 0;
+}
+hr {
+    border-top: 2px solid #A8A4A4;
+
+}

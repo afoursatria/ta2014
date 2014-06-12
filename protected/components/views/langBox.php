@@ -4,7 +4,7 @@
 	        <?php 
 	        echo CHtml::dropDownList(
 	        	'_lang', $currentLang, 
-	        	array('en' => '<span id="engdrops"></span>Eng', 'in' => 'Bahasa'), 
+	        	array('en' => '<span id="engdrops"></span>English', 'in' => 'Bahasa'), 
 	        	array(
 	        	'submit' => '',
 	        	'encode' => false,

@@ -21,21 +21,26 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'faqs_content'); ?>
+	</div>
+	<div class="row">
 		<?php echo $form->textArea($model,'faqs_content',array('rows'=>6, 'cols'=>50)); ?>
+		<?php $this->widget('application.extensions.tinymce.TinyMce'); ?>
+	</div>
+	<div class="row">
 		<?php echo $form->error($model,'faqs_content'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Create') : Yii::t('main_layout','Save'),array('id'=>'green','class'=>'button')); ?>
+		<?php echo CHtml::link(Yii::t('main_data','Cancel'),array('faqs/index'));?>
 	</div>
 
-	<?php $this->widget('application.extensions.tinymce.TinyMce'); ?>
  
 	<script>
 	    tinymce.init({
 	    selector: "textarea#Faqs_faqs_content",
 	    menubar: false,
-	    width: 600,
+	    width: 700,
 	    height: 300,
 	   toolbar1: "undo redo | bold | italic underline | alignleft aligncenter alignright alignjustify ", 
 	   toolbar2: "outdent indent | hr | sub sup | bullist numlist | formatselect fontselect fontsizeselect | cut copy paste pastetext pasteword | search replace ", 
