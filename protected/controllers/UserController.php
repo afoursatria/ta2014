@@ -73,7 +73,7 @@ class UserController extends Controller
 	{
 		$model=User::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,Yii::t('main_data','The requested page does not exist.'));
 		return $model;
 	}
 
@@ -155,7 +155,7 @@ class UserController extends Controller
 			$model->attributes=$_POST['ChangePasswordForm'];
 			if($model->validate() && $model->changePassword())
 				{
-					Yii::app()->user->setFlash('success','Password has been changed');
+					Yii::app()->user->setFlash('success',Yii::t('main_data','Password has been changed'));
 					$this->refresh();
 				}
 		}
@@ -281,7 +281,7 @@ class UserController extends Controller
 			$speciesModel->attributes=$_POST['Species'];
 			if($speciesModel->save())
 			{
-				Yii::app()->user->setFlash('success', "Species saved!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Species saved!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}
@@ -291,7 +291,7 @@ class UserController extends Controller
 			$localnameModel->attributes=$_POST['Localname'];
 			if($localnameModel->save())
 			{
-				Yii::app()->user->setFlash('success', "Localname saved!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Localname saved!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}
@@ -301,7 +301,7 @@ class UserController extends Controller
 			$aliasesModel->attributes=$_POST['Aliases'];
 			if($aliasesModel->save())
 			{
-				Yii::app()->user->setFlash('success', "Aliases saved!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Aliases saved!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}
@@ -311,7 +311,7 @@ class UserController extends Controller
 			$virtueModel->attributes=$_POST['Virtue'];
 			if($virtueModel->save())
 			{
-				Yii::app()->user->setFlash('success', "Virtue saved!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Virtue saved!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}
@@ -321,7 +321,7 @@ class UserController extends Controller
 			$referenceModel->attributes=$_POST['Ref'];
 			if($referenceModel->save())
 			{
-				Yii::app()->user->setFlash('success', "Reference saved!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Reference saved!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}
@@ -333,7 +333,7 @@ class UserController extends Controller
 			// $compoundModel->con_file_mol2=CUploadedFile::getInstance($compoundModel,'con_file_mol2');
 			if($compoundModel->save()){
                 // $model->image->saveAs('path/to/localFile');
-				Yii::app()->user->setFlash('success', "Contents saved!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Contents saved!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}
@@ -343,7 +343,7 @@ class UserController extends Controller
 			$contentGroupModel->attributes=$_POST['Contentgroup'];
 			if($contentGroupModel->save())
 			{
-				Yii::app()->user->setFlash('success', "Content group saved!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Content group saved!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}
@@ -353,7 +353,7 @@ class UserController extends Controller
 			$speciesContentModel->attributes=$_POST['Species_content'];
 			if($speciesContentModel->save())
 			{
-				Yii::app()->user->setFlash('success', "Content has been assigned to species!");
+				Yii::app()->user->setFlash('success', Yii::t('main_data',"Content has been assigned to species!"));
 				$this->redirect(array('insertData')); //bisa success alert
 			}
 		}

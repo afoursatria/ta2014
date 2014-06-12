@@ -184,16 +184,11 @@ class ContentsController extends Controller
 		// $criteria->limit = 5;
 		// $topCompound = Contents::model()->findAll($criteria);
 
-		$searchCriteria = new CDbCriteria();
-		$searchCriteria->with= array('Contents');
-		$model= new Species_content;
-
 		$compoundCriteria = new CDbCriteria;
-		$compoundCriteria->with= array('contents');
 		if( strlen( $compoundKey ) > 0 )
         	$compoundCriteria->addSearchCondition( 'con_contentname', $compoundKey, true);
 
-		$listCompound=new ApActiveDataProvider('Species_content',array(
+		$listCompound=new ApActiveDataProvider('Contents',array(
 			'criteria'=>$compoundCriteria,
 			'alphapagination'=>array(
 				'attribute'=>'con_contentname'),

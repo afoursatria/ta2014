@@ -86,6 +86,17 @@
 		'Refresh code'=>'Muat ulang kode',
 		'Please enter the letters as they are shown in the image above. <br/>Letters are not case-sensitive'=>'Masukkan huruf diatas, tidak <i>case-sensitive</i>',
 
+		//alert
+		"Species saved!"=>'Spesies bisa tersimpan!',
+		'The requested page does not exist.'=>'Halaman tidak tersedia',
+		'Password has been changed'=>'Kata sandi berhasil diubah',
+		"Localname saved!"=>"Nama lokal berhasil tersimpan",
+		"Aliases saved!"=>"Nama alias tersimpan",
+		"Virtue saved!"=>"Khasiat tersimpan",
+		"Reference saved!"=>"Referensi tersimpan",
+		"Contents saved!"=>"Senyawa tersimpan",
+		"Content group saved!"=>"Grup senyawa tersimpan",
+		"Content has been assigned to species!"=>"Senyawa telah diberikan ke spesies",
 		//translastion for hint
 		'Click text field to pick from calendar'=>'Klik untuk memiilih dari kalender',
 		'Choose Species of the aliases'=>'Pilih Spesies yang Ingin Diberikan Nama Alias',

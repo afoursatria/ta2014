@@ -16,6 +16,7 @@ return array(
 'Search'=>'Cari',
 'Verify'=>'Verifikasi',
 'Submit'=>'Kirim',
-'Profile'=>'Profil'
+'Profile'=>'Profil',
+'Register'=>'Daftar',
 );
 ?>
