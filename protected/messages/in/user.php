@@ -34,6 +34,8 @@ return array(
 	'Inactive'=>'Non-aktif',
 	'Registration Date'=>'Tanggal Registrasi',
 	'Activate'=>'Aktifkan',
-	'Back to User List'=>'Kembali ke Daftar Pengguna'
+	'Back to User List'=>'Kembali ke Daftar Pengguna',
+	'Logout succeed!'=>'Logout berhasil',
+	'Register success, check your email inbox'=>'Registrasi berhasil, silaka periksa kotak masuk email anda',
 	);
 ?>

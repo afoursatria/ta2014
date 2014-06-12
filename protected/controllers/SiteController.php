@@ -125,6 +125,8 @@ class SiteController extends Controller
 	public function actionLogout()
 	{
 		Yii::app()->user->logout();
+		Yii::app()->session->open();
+		Yii::app()->user->setFlash('success',Yii::t('user','Logout succeed!'));
 		$this->redirect(Yii::app()->homeUrl);
 	}
 
@@ -135,7 +137,6 @@ class SiteController extends Controller
 	public function actionRegister()
 	{
 		$model=new User;
-
 		$model->setScenario("register");	
 		if(isset($_POST['User']))
 		{	
@@ -163,8 +164,6 @@ class SiteController extends Controller
 					$uploadedCV->saveAs(Yii::app()->basePath.'/../assets/user/cv/CV-'.$model->use_username.'.pdf');  // image will uplode to rootDirectory/photo/
 				}
 				$this->sendRegistrationMail();
-				$this->redirect(array('site/index'));
-				Yii::app()->user->setFlash('success','Register success, check your email inbox');
 			}
 		}
 
@@ -216,7 +215,9 @@ class SiteController extends Controller
 			$message->addTo($email->use_email);        	
 		}
 		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB UI'));   
-      	Yii::app()->mail->send($message); 
+      	Yii::app()->mail->send($message);
+      	Yii::app()->session->open();
+		Yii::app()->user->setFlash('success',Yii::t('user','Register success, check your email inbox'));
 		$this->redirect(array('site/index'));
     }
 
