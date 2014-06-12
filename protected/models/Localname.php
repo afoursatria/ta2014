@@ -35,7 +35,7 @@ class Localname extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('spe_id, loc_localname, loc_region,ref_id', 'required', 'on'=>'insert', 'message'=>Yii::t('main_data','{attribute} cannot be blank')),
-			array('loc_localname, loc_region','unique', 'on'=>'insert','message'=>'{attribute}:{value} already exists!'),
+			// array('loc_localname, loc_region','unique', 'on'=>'insert','message'=>'{attribute}:{value} already exists!'),
 			array('loc_localname, loc_region', 'length', 'max'=>100, 'on'=>'insert'),
 			array('loc_insert_date, loc_update_date, loc_verified_date', 'length', 'max'=>20, 'on'=>'insert'),
 			// The following rule is used by search().
@@ -52,8 +52,8 @@ class Localname extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'ref' => array(self::BELONGS_TO, 'ref', 'ref_id'), //ref id foreign fro re_id
 			'species'=>array(self::BELONGS_TO, 'Species','spe_id'),
-			'ref_local'=>array(self::BELONGS_TO, 'Ref', 'ref_id'),
 		);
 	}
 

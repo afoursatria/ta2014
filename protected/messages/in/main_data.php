@@ -65,7 +65,7 @@
 
 		//translation for reference
 		'Reference Name'=>'Nama Referensi',
-		''=>'',
+		'Reference Source'=>'Sumber Referensi',
 		'Refs'=>'Referensi',
 
 		//translation for news

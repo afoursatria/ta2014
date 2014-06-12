@@ -94,10 +94,23 @@ if (Yii::app()->user->getState('role')==1) {
         <?php echo $form->error($model,'rol_id'); ?>
     </div>
     
-     <div class="row">
+    <div class="row">
         <span class ="col-md-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
         <span class="col-md-9"><?php echo CHtml::activeFileField($model, 'use_foto'); ?> </span>
         <?php echo $form->error($model,'use_foto'); ?>
+    </div>
+
+    <div class="row">
+        <span class="col-md-3"><?php echo $form->labelEx($model,'use_cv'); ?></span>
+        <span class="col-md-9"><?php echo $form->fileField($model,'use_cv'); ?>
+            <div class="row">
+                <?php echo $form->error($model,'use_cv'); ?>
+            </div>
+            <div class="row">
+                <?php if(!$model->isNewRecord){ ?>
+                <?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
+            </div>
+        </span>
     </div>
 
     <?php if(CCaptcha::checkRequirements()): ?>

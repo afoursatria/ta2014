@@ -31,6 +31,13 @@
 		<?php echo $form->error($model,'ref_name'); ?>
 	</div>
 
+	<div class="row">
+		<span class="col-md-3"><?php echo $form->labelEx($model,'ref_source'); ?></span>
+		<?php echo $form->textField($model,'ref_source',array('size'=>60,'maxlength'=>100)); ?>
+        <span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
+		<?php echo $form->error($model,'ref_source'); ?>
+	</div>
+
 	<div class="row buttons">
 		<div class="col-md-3"></div>
 		<div class="col-md-9">

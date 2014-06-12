@@ -35,7 +35,7 @@ class Aliases extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_id, ali_speciesname, ali_foundername, ali_varietyname, ref_id', 'required', 'on'=>'insert','message'=>Yii::t('main_data','{attribute} cannot be blank')),
+			array('spe_id, ali_speciesname, ali_foundername, ref_id', 'required', 'on'=>'insert','message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('ali_id, spe_id, ali_speciesname, ali_foundername, ali_varietyname, ref_id, ali_insert_by, ali_insert_date, ali_update_by, ali_update_date, ali_verified_by, ali_verified_date', 'safe', 'on'=>'search'),
@@ -50,6 +50,7 @@ class Aliases extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'species'=>array(self::BELONGS_TO, 'Species','spe_id'),
 			'ref'=>array(self::BELONGS_TO, 'Ref', 'ref_id'),
 		);
 	}

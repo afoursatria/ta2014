@@ -72,7 +72,8 @@
 			<div class ="row">
 				  	<?php
      	if($model->spe_foto == null){
-	     	echo CHtml::image(Yii::app()->request->baseUrl.'/images/species.png',"image",array("width"=>200));} 
+
+	     	if(!$model->isNewRecord) echo CHtml::image(Yii::app()->request->baseUrl.'/images/species.png',"image",array("width"=>200));} 
      		else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/species/pic/'.$model->spe_foto.'.jpg',"image",array("width"=>200)); ?>
 			</div>
 		</span>
@@ -82,13 +83,13 @@
 		<div class="control-group" id="fields">
 		
 			<?php 
-				$opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
-				$tes = Ref::model()->findAll();
-				$ref_array = array();
-				foreach ($tes as $key) {
-					array_push($ref_array, $key->ref_id);
-				}
-				// echo $tes;
+				// $opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
+				// $tes = Ref::model()->findAll();
+				// $ref_array = array();
+				// foreach ($tes as $key) {
+				// 	array_push($ref_array, $key->ref_id);
+				// }
+				// // echo $tes;
 			?>
 				<div class ="col-md-9">
 						<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
@@ -121,7 +122,6 @@
       'displayAttr'=>'ref_name',  // attribute or pseudo-attribute to display
       // length of the AutoComplete/display field, defaults to 50
       'autoCompleteLength'=>60,
-      'idSuffix'=>'lala',
       // any attributes of CJuiAutoComplete and jQuery JUI AutoComplete widget may 
       // also be defined.  read the code and docs for all options
       'options'=>array(

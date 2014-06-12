@@ -77,12 +77,13 @@
 			<?php echo $form->error($model,'con_file_mol1'); ?>
 		</span>
 	</div>
-	<?php 
-	// if($model->isNewRecord!='1'){ 
-		?>
+	
 	<div class="row">
+	<?php 
+	 if(!$model->isNewRecord){ 
+		?>
      	<?php echo CHtml::link(CHtml::encode($model->con_contentname.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_contentname.'.mol');
-     // } 
+     } 
      ?>
 	</div>
 	<div class="row">

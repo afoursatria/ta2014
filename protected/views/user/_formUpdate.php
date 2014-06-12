@@ -68,7 +68,7 @@
 				<?php echo $form->error($model,'use_cv'); ?>
 			</div>
 			<div class="row">
-				<?php if($model->isNewRecord!='1'){ ?>
+				<?php if(!$model->isNewRecord){ ?>
 		     	<?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
 			</div>
 		</span>

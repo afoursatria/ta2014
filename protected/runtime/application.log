@@ -42085,3 +42085,718 @@ Stack trace:
 REQUEST_URI=/newherbaldb/index.php/faqs/update/en
 HTTP_REFERER=http://localhost/newherbaldb/index.php/faqs
 ---
+2014/06/12 08:32:39 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:32:39 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:32:39 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:32:39 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:32:54 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:32:54 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:32:54 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:32:54 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:00 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:00 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:00 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:00 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:06 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:06 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:06 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:06 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:59 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:59 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:59 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:34:59 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:36:21 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:36:21 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:36:21 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:36:21 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:18 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:18 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:18 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:18 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:54 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:54 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:54 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:39:54 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:40:18 [warning] [application] Failed to set unsafe attribute "spe_varietyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:40:18 [warning] [application] Failed to set unsafe attribute "spe_familyname" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:40:18 [warning] [application] Failed to set unsafe attribute "spe_foundername" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:40:18 [warning] [application] Failed to set unsafe attribute "spe_foto" of "Species".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (280)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 08:52:51 [error] [exception.CException] exception 'CException' with message 'Property "Localname.ref" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('ref')
+#1 C:\wamp\www\newherbaldb\protected\extensions\EJuiAutoCompleteFkField.php(194): CActiveRecord->__get('ref')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(147): EJuiAutoCompleteFkField->init()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('EJuiAutoComplet...', Array)
+#4 C:\wamp\www\newherbaldb\protected\views\localname\_form.php(75): CBaseController->widget('EJuiAutoComplet...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(36): CController->renderPartial('//localname/_fo...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('insert_data', Array, true)
+#13 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(358): CController->render('insert_data', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('insertData')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/insertData')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+HTTP_REFERER=http://localhost/newherbaldb/index.php/contents/search
+---
+2014/06/12 08:54:01 [error] [exception.CException] exception 'CException' with message 'Property "Localname.ref_local" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('ref_local')
+#1 C:\wamp\www\newherbaldb\protected\views\localname\_view.php(44): CActiveRecord->__get('ref_local')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(130): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, false)
+#4 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): CBaseController->renderFile('C:\wamp\www\new...', Array)
+#5 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '<div class='row...')
+#8 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CBaseListView->renderContent()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(173): CBaseListView->run()
+#10 C:\wamp\www\newherbaldb\protected\views\localname\search.php(59): CBaseController->widget('application.ext...', Array)
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#13 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#14 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('search', Array, true)
+#15 C:\wamp\www\newherbaldb\protected\controllers\LocalnameController.php(166): CController->render('search', Array)
+#16 [internal function]: LocalnameController->actionSearch('')
+#17 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LocalnameController), Array)
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LocalnameController), Object(ReflectionMethod), Array)
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('search')
+#28 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('localname/searc...')
+#29 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#30 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/newherbaldb/index.php/localname/search
+HTTP_REFERER=http://localhost/newherbaldb/index.php/species/search
+---
+2014/06/12 09:01:01 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\contents\_view.php:16)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\newherbaldb\protected\views\species\_contents.php(35): SpeciesController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#10 C:\wamp\www\newherbaldb\protected\views\species\view.php(98): SpeciesController->renderPartial()
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#13 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#14 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#15 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(116): SpeciesController->render()
+#16 unknown(0): SpeciesController->actionView()
+#17 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#21 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#24 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#28 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#30 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/1
+in C:\wamp\www\newherbaldb\protected\views\contents\_view.php (16)
+in C:\wamp\www\newherbaldb\protected\views\species\_contents.php (35)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (98)
+2014/06/12 09:06:56 [warning] [application] Failed to set unsafe attribute "vir_value_en" of "Virtue".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (310)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:06:56 [warning] [application] Failed to set unsafe attribute "vir_value_latin" of "Virtue".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (310)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:07:43 [warning] [application] Failed to set unsafe attribute "vir_value_en" of "Virtue".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (310)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:07:43 [warning] [application] Failed to set unsafe attribute "vir_value_latin" of "Virtue".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (310)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:08:14 [warning] [application] Failed to set unsafe attribute "con_file_mol1" of "Contents".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (330)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:08:14 [warning] [application] Failed to set unsafe attribute "con_file_mol2" of "Contents".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (330)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:08:39 [warning] [application] Failed to set unsafe attribute "con_file_mol1" of "Contents".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (330)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:08:39 [warning] [application] Failed to set unsafe attribute "con_file_mol2" of "Contents".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (330)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 09:18:26 [error] [exception.CException] exception 'CException' with message 'Property "Virtue.ref" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('ref')
+#1 C:\wamp\www\newherbaldb\protected\extensions\EJuiAutoCompleteFkField.php(194): CActiveRecord->__get('ref')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(147): EJuiAutoCompleteFkField->init()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('EJuiAutoComplet...', Array)
+#4 C:\wamp\www\newherbaldb\protected\views\virtue\_form.php(96): CBaseController->widget('EJuiAutoComplet...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(86): CController->renderPartial('//virtue/_form', Array, true)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('insert_data', Array, true)
+#13 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(358): CController->render('insert_data', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('insertData')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/insertData')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:09:59 [warning] [application] Failed to set unsafe attribute "ali_varietyname" of "Aliases".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (300)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 12:31:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findSpe...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findSpeciesName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:31:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findSpe...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findSpeciesName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:32:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findSpe...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findSpeciesName?term=spe
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:32:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('species/findSpe...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/newherbaldb/index.php/species/findSpeciesName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:39:48 [error] [exception.CException] exception 'CException' with message 'Property "Aliases.species" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('species')
+#1 C:\wamp\www\newherbaldb\protected\extensions\EJuiAutoCompleteFkField.php(194): CActiveRecord->__get('species')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(147): EJuiAutoCompleteFkField->init()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('EJuiAutoComplet...', Array)
+#4 C:\wamp\www\newherbaldb\protected\views\aliases\_form.php(52): CBaseController->widget('EJuiAutoComplet...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(40): CController->renderPartial('//aliases/_form', Array, true)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('insert_data', Array, true)
+#13 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(358): CController->render('insert_data', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('insertData')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/insertData')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/page?view=about
+---
+2014/06/12 12:45:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findSpeciesName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findSpeciesName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findSpecie...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findSpeciesName?term=sac
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:46:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findSpeciesName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findSpeciesName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findSpecie...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findSpeciesName?term=sac
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:49:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findSpeciesName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findSpeciesName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findSpecie...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findSpeciesName?term=sas
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:49:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findSpeciesName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findSpeciesName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findSpecie...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findSpeciesName?term=sas
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:49:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findSpeciesName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findSpeciesName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findSpecie...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findSpeciesName?term=asdd
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:49:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "findSpeciesName".' in C:\wamp\www\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(270): CController->missingAction('findSpeciesName')
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('findSpeciesName')
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/findSpecie...')
+#3 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/newherbaldb/index.php/user/findSpeciesName?term=asd
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 12:54:21 [error] [exception.CException] exception 'CException' with message 'Property "Species_content.content" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('content')
+#1 C:\wamp\www\newherbaldb\protected\extensions\EJuiAutoCompleteFkField.php(194): CActiveRecord->__get('content')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(147): EJuiAutoCompleteFkField->init()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('EJuiAutoComplet...', Array)
+#4 C:\wamp\www\newherbaldb\protected\views\contents\_formAssignCompound.php(65): CBaseController->widget('EJuiAutoComplet...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(32): CController->renderPartial('//contents/_for...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('insert_data', Array, true)
+#13 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(358): CController->render('insert_data', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('insertData')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/insertData')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:01:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:01:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=ab
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:01:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:08:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:09:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=c
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:09:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=ca
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:11:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:11:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=s
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:12:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "content/findContentName".' in C:\wamp\www\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('content/findCon...')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/newherbaldb/index.php/content/findContentName?term=a
+HTTP_REFERER=http://localhost/newherbaldb/index.php/user/insertData
+---
+2014/06/12 13:15:21 [error] [exception.CException] exception 'CException' with message 'Property "Species_content.ref" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('ref')
+#1 C:\wamp\www\newherbaldb\protected\extensions\EJuiAutoCompleteFkField.php(194): CActiveRecord->__get('ref')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(147): EJuiAutoCompleteFkField->init()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('EJuiAutoComplet...', Array)
+#4 C:\wamp\www\newherbaldb\protected\views\contents\_formAssignCompound.php(96): CBaseController->widget('EJuiAutoComplet...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(32): CController->renderPartial('//contents/_for...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('insert_data', Array, true)
+#13 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(358): CController->render('insert_data', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('insertData')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/insertData')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+HTTP_REFERER=http://localhost/newherbaldb/index.php/faqs
+---
+2014/06/12 13:15:58 [error] [exception.CException] exception 'CException' with message 'Property "Species_content.ref" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('ref')
+#1 C:\wamp\www\newherbaldb\protected\extensions\EJuiAutoCompleteFkField.php(194): CActiveRecord->__get('ref')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(147): EJuiAutoCompleteFkField->init()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('EJuiAutoComplet...', Array)
+#4 C:\wamp\www\newherbaldb\protected\views\contents\_formAssignCompound.php(96): CBaseController->widget('EJuiAutoComplet...', Array)
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#6 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#7 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#8 C:\wamp\www\newherbaldb\protected\views\user\insert_data.php(32): CController->renderPartial('//contents/_for...', Array, true)
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#10 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#12 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('insert_data', Array, true)
+#13 C:\wamp\www\newherbaldb\protected\controllers\UserController.php(358): CController->render('insert_data', Array)
+#14 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): UserController->actionInsertData()
+#15 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('insertData')
+#24 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/insertData')
+#25 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/newherbaldb/index.php/user/insertData
+HTTP_REFERER=http://localhost/newherbaldb/index.php/faqs
+---
+2014/06/12 13:25:43 [warning] [application] Failed to set unsafe attribute "spe_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:25:43 [warning] [application] Failed to set unsafe attribute "con_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:25:43 [warning] [application] Failed to set unsafe attribute "ref_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:31:13 [warning] [application] Failed to set unsafe attribute "spe_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:31:13 [warning] [application] Failed to set unsafe attribute "con_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:31:13 [warning] [application] Failed to set unsafe attribute "ref_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:32:23 [warning] [application] Failed to set unsafe attribute "spe_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:32:23 [warning] [application] Failed to set unsafe attribute "con_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:32:23 [warning] [application] Failed to set unsafe attribute "ref_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:33:40 [warning] [application] Failed to set unsafe attribute "spe_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:33:40 [warning] [application] Failed to set unsafe attribute "con_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:33:40 [warning] [application] Failed to set unsafe attribute "ref_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:33:43 [warning] [application] Failed to set unsafe attribute "spe_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:33:43 [warning] [application] Failed to set unsafe attribute "con_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:33:43 [warning] [application] Failed to set unsafe attribute "ref_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:34:24 [warning] [application] Failed to set unsafe attribute "spe_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:34:24 [warning] [application] Failed to set unsafe attribute "con_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:34:24 [warning] [application] Failed to set unsafe attribute "ref_id" of "Contentgroup".
+in C:\wamp\www\newherbaldb\protected\controllers\UserController.php (353)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:45:08 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:45:16 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:45:21 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:45:34 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:49:20 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 13:49:28 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (143)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 14:02:15 [error] [exception.CException] exception 'CException' with message 'TbActiveForm and its behaviors do not have a method or closure named "activeFileField".' in C:\wamp\www\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 [internal function]: CComponent->__call('activeFileField', Array)
+#1 C:\wamp\www\newherbaldb\protected\views\site\register.php(105): TbActiveForm->activeFileField(Object(User), 'use_cv')
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\new...')
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\new...', Array, true)
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\new...', Array, true)
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#6 C:\wamp\www\newherbaldb\protected\controllers\SiteController.php(173): CController->render('register', Array)
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#12 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#13 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\newherbaldb\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/newherbaldb/index.php/site/register
+HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
+---

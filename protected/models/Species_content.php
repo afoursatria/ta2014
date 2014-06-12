@@ -33,10 +33,10 @@ class Species_content extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('specon_insert_by, specon_insert_date, specon_update_by, specon_update_date', 'required'),
-			array('spe_id, con_id, ref_id, specon_insert_by, specon_update_by, specon_verified_by', 'numerical', 'integerOnly'=>true),
-			array('specon_insert_date, specon_update_date, specon_verified_date', 'length', 'max'=>20),
-			// The following rule is used by search().
+			array('spe_id, con_id, ref_id','required', 'on'=>'insert'),
+			// array('spe_id, con_id, ref_id, specon_insert_by, specon_update_by, specon_verified_by', 'numerical', 'integerOnly'=>true),
+			// array('specon_insert_date, specon_update_date, specon_verified_date', 'length', 'max'=>20),
+			// // The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('specon_id, spe_id, con_id, ref_id, specon_insert_by, specon_insert_date, specon_update_by, specon_update_date, specon_verified_by, specon_verified_date', 'safe', 'on'=>'search'),
 		);
@@ -52,6 +52,7 @@ class Species_content extends CActiveRecord
 		return array(
 			'species' => array(self::BELONGS_TO, 'Species', 'spe_id'),
 			'contents' => array(self::BELONGS_TO, 'Contents', 'con_id'),
+			'ref' => array(self::BELONGS_TO, 'ref', 'ref_id'), //ref id foreign fro re_id
 		);
 	}
 
@@ -64,7 +65,7 @@ class Species_content extends CActiveRecord
 			'specon_id' => 'Specon',
 			'spe_id' => Yii::t('main_data','Species Name'),
 			'con_id' => Yii::t('main_data','Content Name'),
-			'ref_id' => 'Ref',
+			'ref_id' => Yii::t('main_data','Reference'),
 			'specon_insert_by' => 'Specon Insert By',
 			'specon_insert_date' => 'Specon Insert Date',
 			'specon_update_by' => 'Specon Update By',
@@ -127,4 +128,29 @@ class Species_content extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function beforeSave()
+    {
+    	if ($this->isNewRecord) {
+			$this->specon_insert_by = Yii::app()->user->role;
+    		$this->specon_insert_date = new CDbExpression('NOW()');
+    		return true;
+    	}
+
+    	else{
+    		if (Yii::app()->user->hasState('role')) {
+	    		$this->specon_update_by = Yii::app()->user->role;
+    			$this->specon_update_date = new CDbExpression('NOW()');
+    			return true;
+    		}    		
+    	}
+
+    	/*for status terverifikasi
+    	if (Yii::app()->user->role == '2' OR Yii::app()->user->role == '3') {
+    		$this->spe_insert_by = Yii::app()->user->role;
+    	}
+    	*/
+
+		return true;
+    }
 }

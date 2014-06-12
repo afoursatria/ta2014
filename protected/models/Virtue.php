@@ -37,7 +37,7 @@ class Virtue extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('spe_id, hp_code, vir_value, vir_type, ref_id', 'required', 'on'=>'insert','message'=>Yii::t('main_data','{attribute} cannot be blank')),
+			array('spe_id, hp_code, vir_value, ref_id', 'required', 'on'=>'insert','message'=>Yii::t('main_data','{attribute} cannot be blank')),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('vir_id, spe_id, hp_code, vir_type, vir_value, vir_value_en, vir_value_latin, ref_id, vir_insert_by, vir_insert_date, vir_update_by, vir_update_date, vir_verified_by, vir_verified_date', 'safe', 'on'=>'search'),
@@ -52,7 +52,9 @@ class Virtue extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'species'=>array(self::BELONGS_TO, 'Species','spe_id'),
 			'herbal_part'=>array(self::BELONGS_TO, 'HerbalPart', 'hp_code'),
+			'ref' => array(self::BELONGS_TO, 'ref', 'ref_id'), //ref id foreign fro re_id
 		);
 	}
 

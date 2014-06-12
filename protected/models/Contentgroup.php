@@ -114,4 +114,21 @@ class Contentgroup extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function beforeSave()
+    {
+    	if ($this->isNewRecord) {
+			$this->contgroup_insert_by = Yii::app()->user->role;
+    		$this->contgroup_insert_date = new CDbExpression('NOW()');
+    	}
+
+    	else{
+    		if (Yii::app()->user->hasState('role')) {
+	    		$this->contgroup_update_by = Yii::app()->user->role;
+    			$this->contgroup_update_date = new CDbExpression('NOW()');
+    		}    		
+    	}
+    	
+		return true;
+    }
 }

@@ -41,7 +41,7 @@
 	<br />
 
 	<span class="col-md-3"><b><?php echo CHtml::encode($data->getAttributeLabel('ref_id')); ?>:</b></span>
-	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref_local->ref_name);
+	<?php if (!is_null($data->ref_id)) echo CHtml::encode($data->ref->ref_name);
 	else echo "-";?>
 	<br />
 

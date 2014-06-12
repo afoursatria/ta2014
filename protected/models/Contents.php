@@ -178,4 +178,10 @@ class Contents extends CActiveRecord
     	$this->con_verified_date = new CDbExpression('NOW()');
     	return true;
     }
+
+    public function getContentName() 
+	{
+      // presuming PostCode, City and Province are fields
+      return $this->con_contentname; 
+ 	}
 }

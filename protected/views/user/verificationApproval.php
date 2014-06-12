@@ -7,7 +7,7 @@
             Hello User,
                 <br />Your account has been activated. You can login by following link below:
                 <br />
-               	<a href="http://localhost/index.php/site/login ">Login Page</a>;
+               	<a href="http://localhost/newherbaldb/index.php/site/login ">Login Page</a>;
                 <br />
         </body>
 </html>

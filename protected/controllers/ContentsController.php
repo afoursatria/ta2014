@@ -32,7 +32,7 @@ class ContentsController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','findContentName'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -249,4 +249,33 @@ class ContentsController extends Controller
 			Yii::app()->end();
 		}
 	}
+
+	public function actionFindContentName() 
+	{
+       $q = $_GET['term'];
+       if (isset($q)) {
+           $criteria = new CDbCriteria;
+           //condition to find your data, using q as the parameter field
+           $criteria->condition = 'con_contentname LIKE :q'; 
+           // $criteria->order = '...'; // correct order-by field
+           // $criteria->limit = 5; // probably a good idea to limit the results
+           // with trailing wildcard only; probably a good idea for large volumes of data
+           $criteria->params = array(':q' => trim($q) . '%'); 
+           $contentName = Contents::model()->findAll($criteria);
+ 
+           if (!empty($contentName)) {
+               $out = array();
+               foreach ($contentName as $p) {
+                   $out[] = array(
+                       // expression to give the string for the autoComplete drop-down
+                       'label' => $p->con_contentname,  
+                       'value' => $p->con_contentname,
+                       'id' => $p->con_id, // return value from autocomplete
+                   );
+               }
+               echo CJSON::encode($out);
+               Yii::app()->end();
+           }
+       }
+   }
 }
