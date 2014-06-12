@@ -3,7 +3,7 @@
 <script type="text/javascript" src = "<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
 
 <?php if(Yii::app()->user->hasFlash('success')):?>
-    <div class="alert alert-danger alert-dismissable">
+    <div class="alert alert-success alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <?php echo Yii::app()->user->getFlash('success'); ?>
     </div>

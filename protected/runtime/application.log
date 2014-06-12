@@ -42800,3 +42800,118 @@ Stack trace:
 REQUEST_URI=/newherbaldb/index.php/site/register
 HTTP_REFERER=http://localhost/newherbaldb/index.php/site/index
 ---
+2014/06/12 14:36:33 [error] [php] Trying to get property of non-object (C:\wamp\www\newherbaldb\protected\views\contents\_view.php:16)
+Stack trace:
+#0 C:\wamp\www\yii\framework\zii\widgets\CListView.php(291): SpeciesController->renderFile()
+#1 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#4 C:\wamp\www\yii\framework\zii\widgets\CBaseListView.php(135): CListView->renderContent()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(173): CListView->run()
+#6 C:\wamp\www\newherbaldb\protected\views\species\_contents.php(35): SpeciesController->widget()
+#7 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#9 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#10 C:\wamp\www\newherbaldb\protected\views\species\view.php(98): SpeciesController->renderPartial()
+#11 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#12 C:\wamp\www\yii\framework\web\CBaseController.php(95): SpeciesController->renderInternal()
+#13 C:\wamp\www\yii\framework\web\CController.php(869): SpeciesController->renderFile()
+#14 C:\wamp\www\yii\framework\web\CController.php(782): SpeciesController->renderPartial()
+#15 C:\wamp\www\newherbaldb\protected\controllers\SpeciesController.php(116): SpeciesController->render()
+#16 unknown(0): SpeciesController->actionView()
+#17 C:\wamp\www\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#18 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#19 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): SpeciesController->runAction()
+#21 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#23 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): SpeciesController->filterAccessControl()
+#24 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#25 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\wamp\www\yii\framework\web\CController.php(265): SpeciesController->runActionWithFilters()
+#27 C:\wamp\www\yii\framework\web\CWebApplication.php(282): SpeciesController->run()
+#28 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#29 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#30 C:\wamp\www\newherbaldb\index.php(13): CWebApplication->run()
+REQUEST_URI=/newherbaldb/index.php/species/1
+in C:\wamp\www\newherbaldb\protected\views\contents\_view.php (16)
+in C:\wamp\www\newherbaldb\protected\views\species\_contents.php (35)
+in C:\wamp\www\newherbaldb\protected\views\species\view.php (98)
+2014/06/12 16:55:53 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 16:55:53 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 16:56:00 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 16:56:00 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:00:27 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:00:27 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:00:34 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:00:34 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:02:15 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:02:15 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:02:20 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:02:20 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:07:37 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:07:37 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:07:42 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:07:42 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:13:21 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:13:21 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (145)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:17:53 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:17:53 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:18:00 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:18:00 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:20:36 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:20:36 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:20:56 [warning] [application] Failed to set unsafe attribute "use_foto" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
+2014/06/12 17:20:56 [warning] [application] Failed to set unsafe attribute "use_cv" of "User".
+in C:\wamp\www\newherbaldb\protected\controllers\SiteController.php (144)
+in C:\wamp\www\newherbaldb\index.php (13)
