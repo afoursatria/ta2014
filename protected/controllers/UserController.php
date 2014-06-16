@@ -159,7 +159,7 @@ class UserController extends Controller
 					$this->refresh();
 				}
 		}
-		$athis->render('changePassword',array('model'=>$model));
+		$this->render('changePassword',array('model'=>$model));
 	}
 
 	/**

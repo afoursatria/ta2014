@@ -1,9 +1,12 @@
 <h1><?php echo Yii::t('user','Change Password');?></h1>
+
 <?php if(Yii::app()->user->hasFlash('success')):?>
-    <div class="info">
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         <?php echo Yii::app()->user->getFlash('success'); ?>
     </div>
 <?php endif; ?>
+
 <div class="form">
     <?php $form=$this->beginWidget('CActiveForm', array(
     'id'=>'custom-form',
