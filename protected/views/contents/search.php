@@ -54,7 +54,7 @@ $(function(){
     $this->widget('application.extensions.alphapager.ApListView', array(
     'template'=>"<div class='row text-center'>.{alphapager}</div><div class='row'>{items}</div><div class='row'>{pager}</div>",
 	'dataProvider'=>$dataProvider,
-	'itemView'=>'//contents/_view',
+	'itemView'=>'//contents/_contentView',
 	'id'=> 'content_list',
     'emptyText'=>'-',
 )); ?>

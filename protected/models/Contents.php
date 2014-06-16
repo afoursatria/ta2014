@@ -39,7 +39,7 @@ class Contents extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('con_contentname, con_knapsack_id, con_metabolite_id, con_pubchem_id, contgroup_id, con_source', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank'), 'on'=>'insert'),
+			array('con_contentname, con_knapsack_id, con_metabolite_id, contgroup_id, con_source', 'required', 'message'=>Yii::t('main_data','{attribute} cannot be blank'), 'on'=>'insert'),
 			array('con_file_mol1','file', 'allowEmpty' => true, 'types'=>'mol', 'wrongType' => Yii::t('main_data','File Mol1 must be a mol.'), 'on'=>'insert, update'),
 			array('con_file_mol2','file', 'allowEmpty' => true, 'types'=>'mol2', 'wrongType' => Yii::t('main_data','Filem Mol2 must be a mol2.'), 'on'=>'insert, update'),
 			// array('con_knapsack_id, con_pubchem_id, con_insert_date, con_update_date, con_verified_date', 'length', 'max'=>20),

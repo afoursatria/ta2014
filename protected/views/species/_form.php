@@ -91,8 +91,8 @@
 				// }
 				// // echo $tes;
 			?>
-				<div class ="col-md-9">
 						<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
+			<div class="col-md-9">
 			<?php 
 				// $this->widget('bootstrap.widgets.TbTypeahead',array(
 				// 		'model'=>$model,
@@ -131,7 +131,7 @@
       ),
  	));
  		?>
- 		<button id="b1" class="btn add-more" type="button">+</button>
+ 		<!-- <button id="b1" class="btn add-more" type="button">+</button> -->
 				<?php
 					// $this->widget('bootstrap.widgets.TbTypeahead',array(
 					// 	'model'=>$model,
@@ -147,9 +147,10 @@
 					// 	)
 					// ));
 				?>
+
 			<!-- <button id="b1" class="btn add-more" type="button">+</button> -->
         	<span class="form-hint"><?php echo Yii::t('main_data','Max. Length 100 Characters')?></span>
-			</div>
+			</div><!--col-md=9-->
 		</div>
 		<?php echo $form->error($model,'ref_id'); ?>
 	</div>
