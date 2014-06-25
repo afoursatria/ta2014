@@ -64,7 +64,7 @@
 	</div>
 
 	<div class="row">
-        <span class="col-md-3"><?php echo $form->labelEx($model,'spe_foto'); ?></span>
+        <span class="col-md-3"><?php echo $form->labelEx($model,'spe_foto'); ?>(.jpg/.png)</span>
         <span class="col-md-9"><?php echo CHtml::activeFileField($model, 'spe_foto'); ?>
 	        <div class="row">
 	        	<?php echo $form->error($model,'spe_foto'); ?>	
@@ -91,7 +91,7 @@
 				// }
 				// // echo $tes;
 			?>
-						<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
+						<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?>(Typeahead)</span>
 			<div class="col-md-9">
 			<?php 
 				// $this->widget('bootstrap.widgets.TbTypeahead',array(
@@ -158,7 +158,7 @@
 	<div class="row buttons">
 		<div class="col-md-3"></div>
 		<div class="col-md-9">
-			<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
+			<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Create') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
 			<?php if (!$model->isNewRecord){
 			echo CHtml::link(Yii::t('main_data','Cancel'), array('species/view', 'id'=>$model->spe_id));
 			}?>

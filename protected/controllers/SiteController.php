@@ -240,7 +240,7 @@ class SiteController extends Controller
 		
 		$message->addTo($userModel->use_email);        	
 
-		$message->setFrom(array('admin@herbaldbui.meximas.com' => 'Herbal DB'));   
+		$message->setFrom(array('admin@herbaldbui.meximas.com'));   
       	Yii::app()->mail->send($message); 
     }
 
@@ -258,7 +258,7 @@ class SiteController extends Controller
 		
 		$message->addTo('admin@herbaldbui.meximas.com');        	
 
-		$message->setFrom(array('admin@herbaldbui.meximas.com' => 'Herbal DB'));   
+		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB'));   
       	Yii::app()->mail->send($message); 
     }
 }

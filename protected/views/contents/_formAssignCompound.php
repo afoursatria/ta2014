@@ -19,7 +19,7 @@
   <?php //echo $form->errorSummary($model); ?>
 
   <div class="row">
-    <span class="col-md-3"><?php echo $form->labelEx($model, 'spe_id'); ?></span>
+    <span class="col-md-3"><?php echo $form->labelEx($model, 'spe_id'); ?>(Typeahead)</span>
   <?php 
     
      $this->widget('EJuiAutoCompleteFkField', array(
@@ -47,7 +47,7 @@
      ?> 
   </div>
   <div class="row">
-    <span class="col-md-3"><?php echo $form->labelEx($model, 'con_id'); ?></span>
+    <span class="col-md-3"><?php echo $form->labelEx($model, 'con_id'); ?>(Typeahead)</span>
   <?php 
      $this->widget('EJuiAutoCompleteFkField', array(
             'model'=>$model, 
@@ -75,7 +75,7 @@
   </div>
 
   <div class="row">
-      <span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
+      <span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?>(Typeahead)</span>
       <?php 
         // $opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
         // echo $form->dropDownList($model,'ref_id', $opts, array('prompt'=>Yii::t('main_data','Choose Reference')));

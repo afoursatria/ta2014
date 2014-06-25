@@ -25,7 +25,7 @@
 	<?php //echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_id'); ?></span>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'spe_id'); ?>(Typeahead)</span>
 		<?php 
 		// echo $form->dropDownList($model,'spe_id', CHtml::listData(Species::model()->findAll(array('order' => 'spe_speciesname ASC')),'spe_id','spe_speciesname'),
 		// array('prompt'=>Yii::t('main_data','Choose Species'))); 
@@ -51,7 +51,7 @@
 		      ),
 		 	));
 		?>
-        <span class="form-hint"><?php echo Yii::t('main_data','Choose Species of the virtue')?></span>
+        <span class="form-hint"><?php echo Yii::t('main_data','Choose Species')?></span>
 		<?php echo $form->error($model,'spe_id'); ?>
 	</div>
 
@@ -91,7 +91,7 @@
 	</div>
 
 	<div class="row">
-		<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?></span>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'ref_id'); ?>(Typeahead)</span>
 		<?php 
 			// $opts = CHtml::listData(Ref::model()->findAll(),'ref_id','ref_name');
 			// echo $form->dropDownList($model,'ref_id', $opts, array('prompt'=>Yii::t('main_data','Choose Reference')));
@@ -123,7 +123,7 @@
 	<div class="row buttons">
 		<div class="col-md-3"></div>
 		<div class="col-md-9">
-			<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
+			<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Create') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
 			<?php if (!$model->isNewRecord){
 			echo CHtml::link(Yii::t('main_data','Cancel'), array('species/view', 'id'=>$model->spe_id));
 			}?>

@@ -41,7 +41,7 @@
 	<div class="row buttons">
 		<div class="col-md-3"></div>
 		<div class="col-md-9">
-			<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update')); ?>
+<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
 		</div>
 	</div>
 

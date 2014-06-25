@@ -71,7 +71,7 @@
 	</div>
 	
 	<div class="row">
-		<span class="col-md-3"><?php echo $form->labelEx($model,'con_file_mol1'); ?></span>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'con_file_mol1'); ?>(.mol)</span>
 		<span class="col-md-9">
 			<?php echo $form->fileField($model,'con_file_mol1'); ?>
 			<?php echo $form->error($model,'con_file_mol1'); ?>
@@ -80,14 +80,14 @@
 	
 	<div class="row">
 	<?php 
-	 if(!$model->isNewRecord && !is_null($model->con_file_mol1)){ 
+	 if(!$model->isNewRecord){ 
 		?>
-     	<?php echo CHtml::link(CHtml::encode($model->con_file_mol1.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_file_mol1.'.mol');
+     	<?php echo CHtml::link(CHtml::encode($model->con_contentname.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_contentname.'.mol');
      } 
      ?>
 	</div>
 	<div class="row">
-		<span class="col-md-3"><?php echo $form->labelEx($model,'con_file_mol2'); ?></span>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'con_file_mol2'); ?>(.mol)</span>
 		<span class="col-md-9"><?php echo $form->fileField($model,'con_file_mol2'); ?>
 			<?php echo $form->error($model,'con_file_mol2'); ?>
 		</span>
@@ -96,7 +96,7 @@
 	<div class="row buttons">
 		<div class="col-md-3"></div>
 		<div class="col-md-9">
-			<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
+			<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Create') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
 			<?php if (!$model->isNewRecord){
 			echo CHtml::link(Yii::t('main_data','Cancel'), array('contents/view', 'id'=>$model->con_id));
 			}?>

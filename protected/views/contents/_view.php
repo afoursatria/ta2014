@@ -6,7 +6,7 @@
 <div class="view">
 	<div class="entry">
 		<?php
-	if (Yii::app()->user->getState('role') == 1 && $data->contents->con_is_verified == 0) {
+	if ((Yii::app()->user->getState("role")==1 OR Yii::app()->user->getState("role")==2) && $data->contents->con_is_verified == 0) {
 		echo CHtml::link(Yii::t('main_layout','Verify'), array('contents/verify', 'id'=>$data->contents->con_id), array('submit'=>array('contents/verify', "id"=>$data->contents->con_id), 'confirm' => Yii::t('main_data','Are you sure you want to verify?')));
 	 } 
     ?>

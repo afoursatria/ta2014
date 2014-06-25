@@ -6,7 +6,7 @@
 <div class="view">
 		<div class="entry">
 			<?php
-	if (Yii::app()->user->getState('role') == 1 && $data->loc_is_verified == 0) {
+	if ((Yii::app()->user->getState("role")==1 OR Yii::app()->user->getState("role")==2) && $data->loc_is_verified == 0) {
 		echo CHtml::link(Yii::t('main_layout','Verify'), array('localname/verify', 'id'=>$data->loc_id), array('submit'=>array('localname/verify', "id"=>$data->loc_id), 'confirm' => Yii::t('main data','Are you sure you want to verify?')));
 	 } 
     ?>

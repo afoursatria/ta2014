@@ -232,7 +232,7 @@ class UserController extends Controller
         $message            = new YiiMailMessage;
           
         //this points to the file verificationRequest.php inside the view path
-        $message->view = "user\\verificationApproval";
+        $message->view = "user/verificationApproval";
         $criteria=new CDbCriteria;
 		// $criteria->select='use_email';  // only select the 'use_email' column
 		// $criteria->condition='rol_id='.$id;
@@ -243,7 +243,7 @@ class UserController extends Controller
 		
 		$message->addTo($userModel->use_email);        	
 
-		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB'));   
+		$message->setFrom(array('admin@herbaldbui.meximas.com' => 'Herbal DB'));   
       	Yii::app()->mail->send($message); 
     }
 
