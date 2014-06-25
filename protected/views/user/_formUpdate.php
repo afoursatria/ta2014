@@ -48,7 +48,7 @@
     </div>
 
 	<div class="row">
-        <span class="col-md-3"><?php echo $form->labelEx($model,'use_foto'); ?></span>
+        <span class="col-md-3"><?php echo $form->labelEx($model,'use_foto'); ?><span class="form-hint"><?php echo "(.jpg / .png)"?></span></span>
         <span class="col-md-9"><?php echo CHtml::activeFileField($model, 'use_foto'); ?>
 	        <div class="row">
 	        	<?php echo $form->error($model,'use_foto'); ?>	
@@ -58,11 +58,12 @@
      	if($model->use_foto == null){
 	     	echo CHtml::image(Yii::app()->request->baseUrl.'/images/user.png',"image",array("width"=>200));} 
      		else echo CHtml::image(Yii::app()->request->baseUrl.'/assets/user/photo/'.$model->use_foto.'.jpg',"image",array("width"=>200)); ?>
+			
 			</div>
 		</span>
 	</div>
 	<div class="row">
-		<span class="col-md-3"><?php echo $form->labelEx($model,'use_cv'); ?></span>
+		<span class="col-md-3"><?php echo $form->labelEx($model,'use_cv'); ?><span class="form-hint"><?php echo "(.pdf)"?></span></span>
 		<span class="col-md-9"><?php echo $form->fileField($model,'use_cv'); ?>
 			<div class="row">
 				<?php echo $form->error($model,'use_cv'); ?>
@@ -70,16 +71,19 @@
 			<div class="row">
 				<?php if(!$model->isNewRecord){ ?>
 		     	<?php echo CHtml::link(CHtml::encode($model->use_cv),Yii::app()->request->baseUrl.'/assets/user/cv/'.$model->use_cv.'.pdf');} ?>
+				
 			</div>
 		</span>
 	</div>
 	<div class="row buttons">
 		<div class="col-md-3"></div>
 		<div class="col-md-9">
-		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'), array('id'=>'blue','class'=>'button')); ?></div>
+		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'), array('id'=>'blue','class'=>'button')); ?>
 		<?php if (!$model->isNewRecord){
 			echo CHtml::link(Yii::t('main_data','Cancel'), array('user/profile', 'id'=>$model->use_id));
 			}?>
+	</div>
+		
 	</div>
 
 <?php $this->endWidget(); ?>
