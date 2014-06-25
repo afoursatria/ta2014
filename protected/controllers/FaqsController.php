@@ -97,8 +97,10 @@ class FaqsController extends Controller
 		if(isset($_POST['Faqs']))
 		{
 			$model->attributes=$_POST['Faqs'];
-			if($model->save())
+			if($model->save()){
+				Yii::app()->user->setFlash('success',Yii::t('main_data','FAQs has been updated'));
 				$this->redirect(array('index'));
+			}
 		}
 
 		$this->render('update',array(

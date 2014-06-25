@@ -75,7 +75,12 @@
 		'Recent Announcement'=>'Pengumuman Terkini',
 		'Recent Publication'=>'Publikasi Terkini',
 		'Read More'=>'Selengkapnya',
+		'News has been created'=>'Berita berhasil dibuat',
+		'News has been updated'=>'Berita berhasil diubah',
+		'News has been deleted'=>'Berita berhasil dihapus',
 		
+		//translation for FAQs
+		'FAQs has been updated'=>'FAQs berhasil diubah',
 
 		//translation for contact
 		'Contact Us'=>'Kontak Kami',

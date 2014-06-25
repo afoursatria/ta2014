@@ -159,7 +159,7 @@ class UserController extends Controller
 					$this->refresh();
 				}
 		}
-		$athis->render('changePassword',array('model'=>$model));
+		$this->render('changePassword',array('model'=>$model));
 	}
 
 	/**
@@ -255,10 +255,10 @@ class UserController extends Controller
 		$localnameModel = new Localname;
 		$localnameModel->setScenario('insert');
 		
-		$aliasesModel = new ALiases;
+		$aliasesModel = new Aliases;
 		$aliasesModel->setScenario('insert');
 		
-		$virtueModel = new virtue;
+		$virtueModel = new Virtue;
 		$virtueModel->setScenario('insert');
 		
 		$referenceModel = new Ref;

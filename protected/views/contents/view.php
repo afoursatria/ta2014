@@ -37,14 +37,18 @@ $this->breadcrumbs=array(
     		'value'=>$model->contgroup->contgroup_name,
 		),
 		'con_source',
-		'con_file_mol1',
-		'con_file_mol2',
-		// 'con_insert_by',
-		// 'con_insert_date',
-		// 'con_update_by',
-		// 'con_update_date',
-		// 'con_verified_by',
-		// 'con_verified_date',
+		array(
+            'name'=>'con_file_mol1',
+            'type'=>'raw',
+            'value'=> $model->con_file_mol1 == null ? '-':
+                CHtml::link(CHtml::encode($model->con_file_mol1.".mol"), Yii::app()->request->baseUrl."/assets/mol/mol1/".$model->con_file_mol1.'.mol'),
+			),
+		array(
+            'name'=>'con_file_mol2',
+            'type'=>'raw',
+            'value'=> $model->con_file_mol2 == null ? '-':
+                CHtml::link(CHtml::encode($model->con_file_mol2.".mol"), Yii::app()->request->baseUrl."/assets/mol/mol2/".$model->con_file_mol2.'.mol2'),
+			),
 	),
 	'nullDisplay'=>'-',
 )); ?>

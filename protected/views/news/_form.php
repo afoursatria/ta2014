@@ -17,7 +17,7 @@
 )); ?>
 	<p class="note"><?php echo Yii::t('main_data','Fields with').' '?> <span class="required">*</span><?php echo ' '.Yii::t('main_data','are required').'.'?></p>
 	<div class = "row">
-		<?php echo $form->errorSummary($model); ?>
+		<?php //echo $form->errorSummary($model); ?>
 	</div>
 	<div class = "row">
 		<span class = "col-md-3"><?php echo $form->labelEx($model,'news_title'); ?></span>
@@ -42,7 +42,7 @@
 		<div class="col-md-9">
 		<?php echo CHtml::submitButton($model->isNewRecord ? Yii::t('main_layout','Save') : Yii::t('main_layout','Update'),array('id'=>'blue','class'=>'button')); ?>
 		<?php if (!$model->isNewRecord){
-			echo CHtml::link(Yii::t('main_data','Cancel'), array('species/view', 'id'=>$model->spe_id));
+			echo CHtml::link(Yii::t('main_data','Cancel'), array('species/view', 'id'=>$model->news_id));
 			}?>
 	</div>
 	</div>

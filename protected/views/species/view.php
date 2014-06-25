@@ -23,7 +23,7 @@ $this->breadcrumbs=array(
 
 <h1 class="text-center"><?php echo $model->spe_speciesname; ?></h1>
 <ul class="news-operation">
-<li><?php echo CHtml::link(Yii::t('main_layout','Update'), array('contents/update', 'id'=>$model->spe_id));?></li>
+<li><?php echo CHtml::link(Yii::t('main_layout','Update'), array('species/update', 'id'=>$model->spe_id));?></li>
 <li><?php
     echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
           array('submit'=>array('contents/delete', 'id'=>$model->spe_id), 

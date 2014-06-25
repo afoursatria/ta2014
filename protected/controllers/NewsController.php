@@ -71,7 +71,10 @@ class NewsController extends Controller
 		{
 			$model->attributes=$_POST['News'];
 			if($model->save())
+			{
+				Yii::app()->user->setFlash('success',Yii::t('main_data','News has been created'));
 				$this->redirect('index');
+			}
 		}
 
 		$this->render('create',array(
@@ -95,7 +98,10 @@ class NewsController extends Controller
 		{
 			$model->attributes=$_POST['News'];
 			if($model->save())
+			{
+				Yii::app()->user->setFlash('success',Yii::t('main_data','News has been updated'));
 				$this->redirect(array('view','id'=>$model->news_id));
+			}
 		}
 
 		$this->render('update',array(
@@ -113,8 +119,10 @@ class NewsController extends Controller
 		$this->loadModel($id)->delete();
 		
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
+		if(!isset($_GET['ajax'])){
+			Yii::app()->user->setFlash('success',Yii::t('main_data','News has been deleted'));
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('index'));
+		}
 	}
 
 	/**

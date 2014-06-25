@@ -116,12 +116,32 @@ class ContentsController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		
 		if(isset($_POST['Contents']))
 		{
 			$model->attributes=$_POST['Contents'];
+			$uploadedMol1=CUploadedFile::getInstance($model,'con_file_mol1');
+			$uploadedMol2=CUploadedFile::getInstance($model,'con_file_mol2');
+            
+            $molName = $model->con_contentname;  
+
+            if(!empty($uploadedMol1)) $model->con_file_mol1 = $molName;
+            if(!empty($uploadedMol2)) $model->con_file_mol2 = $molName;
+
 			if($model->save())
-				$this->redirect(array('species/view','id'=>$speConModel->spe_id));
+			{
+				if(!empty($uploadedMol1))
+				{  // check if uploaded file is set or not
+					$uploadedMol1->saveAs(Yii::app()->basePath.'/../assets/mol/mol1/'.$model->con_contentname.'.mol1');  // image will uplode to rootDirectory/photo/
+				}
+
+				if(!empty($uploadedMol2))
+				{  // check if uploaded file is set or not
+					$uploadedMol2->saveAs(Yii::app()->basePath.'/../assets/mol/mol2/'.$model->con_contentname.'.mol2');  // image will uplode to rootDirectory/photo/
+				}
+
+				$this->redirect(array('contents/view','id'=>$model->con_id));
+			}
 		}
 
 		$this->render('update',array(

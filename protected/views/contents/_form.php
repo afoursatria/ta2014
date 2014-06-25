@@ -80,9 +80,9 @@
 	
 	<div class="row">
 	<?php 
-	 if(!$model->isNewRecord){ 
+	 if(!$model->isNewRecord && !is_null($model->con_file_mol1)){ 
 		?>
-     	<?php echo CHtml::link(CHtml::encode($model->con_contentname.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_contentname.'.mol');
+     	<?php echo CHtml::link(CHtml::encode($model->con_file_mol1.".mol"),Yii::app()->request->baseUrl.'/assets/mol/mol1/'.$model->con_file_mol1.'.mol');
      } 
      ?>
 	</div>

@@ -16,7 +16,7 @@
 	<?php echo CHtml::link(Yii::t('main_layout','<span class="glyphicon glyphicon-pencil green-text"></span>'.'Update'),  array('news/update', 'id'=>$data->news_id)); ?>
 	<?php
 	echo CHtml::link(Yii::t('main_layout','Delete'),"#", 
-          array('submit'=>array('localname/delete', 'id'=>$data->news_id), 
+          array('submit'=>array('news/delete', 'id'=>$data->news_id), 
                 'confirm' => Yii::t('main_data','Are you sure?'))); }?>
 	</div>
 	<!--Kategori-->

@@ -77,14 +77,19 @@ class SiteController extends Controller
 			$model->attributes=$_POST['ContactForm'];
 			if($model->validate())
 			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-Type: text/plain; charset=UTF-8";
+				$sender = $model->name;
+				$subject = $model->subject;
+				$senderEmail = $model->email;
+				$message = $model->body;
+				$this->sendContactMail($sender, $senderEmail, $subject, $message);
+				// $name='=?UTF-8?B?'.base64_encode($model->name).'?=';
+				// $subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
+				// $headers="From: $name <{$model->email}>\r\n".
+				// 	"Reply-To: {$model->email}\r\n".
+				// 	"MIME-Version: 1.0\r\n".
+				// 	"Content-Type: text/plain; charset=UTF-8";
 
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
+				// mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
 				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
 				$this->refresh();
 			}
@@ -214,7 +219,7 @@ class SiteController extends Controller
         foreach($adminModel1 as $email) {
 			$message->addTo($email->use_email);        	
 		}
-		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB UI'));   
+		$message->setFrom(array('admin@herbaldbui.meximas.com' => 'Herbal DB UI'));   
       	Yii::app()->mail->send($message);
       	Yii::app()->session->open();
 		Yii::app()->user->setFlash('success',Yii::t('user','Register success, check your email inbox'));
@@ -226,7 +231,7 @@ class SiteController extends Controller
         $message            = new YiiMailMessage;
           
         //this points to the file resetPasswordMail.php inside the view path
-        $message->view = "user\\resetPasswordMail";
+        $message->view = "user/resetPasswordMail";
         
 		$userModel=User::model()->find('use_email=:use_email', array('use_email'=>$email));
         $params              = array('myMail'=>$userModel, 'newPass'=>$newPass);
@@ -235,7 +240,25 @@ class SiteController extends Controller
 		
 		$message->addTo($userModel->use_email);        	
 
-		$message->setFrom(array('herbaldb.ui@gmail.com' => 'Herbal DB'));   
+		$message->setFrom(array('admin@herbaldbui.meximas.com' => 'Herbal DB'));   
+      	Yii::app()->mail->send($message); 
+    }
+
+    public function sendContactMail($name, $newPass)
+    {   
+        $message            = new YiiMailMessage;
+          
+        //this points to the file resetPasswordMail.php inside the view path
+        $message->view = "user/resetPasswordMail";
+        
+		$userModel=User::model()->find('use_email=:use_email', array('use_email'=>$email));
+        $params              = array('myMail'=>$userModel, 'newPass'=>$newPass);
+        $message->subject    = 'Password Reset';
+      	$message->setBody($params, 'text/html');               
+		
+		$message->addTo('admin@herbaldbui.meximas.com');        	
+
+		$message->setFrom(array('admin@herbaldbui.meximas.com' => 'Herbal DB'));   
       	Yii::app()->mail->send($message); 
     }
 }
